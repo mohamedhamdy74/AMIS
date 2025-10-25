@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-cairo: 'Cairo', sans-serif;
+}
+
+@layer base {
+    @font-face {
+        font-family: '29Lt Bukra';
+        src: url('../fonts/29LT-Bukra-Regular-1.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    html {
+        font-family: 'Cairo', sans-serif;
+    }
+}
+
+@layer utilities {
+    .cursor-pointer {
+        cursor: pointer;
+    }
+}

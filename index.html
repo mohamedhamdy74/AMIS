@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAHS - إدارة برامج الرعاية الصحية للشركات والجهات (TPA)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./src/output.css">
+    <script src="./slider.js"></script>
+    <style>
+        /* body { overflow-x: hidden; } */
+        .indicator.active {
+            background-color: white;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- header  -->
+    <header class="fixed top-7  left-5 right-5 z-50 ">
+  
+    <div class="bg-white  backdrop-blur-md rounded-full shadow-lg py-5 px-8   flex items-center justify-between gap-4 ">
+      <div class="flex items-center gap-8">
+        <img src="./imgs/cldlogo.png" alt="AMHS Logo" class="h-10" />
+        <nav class="hidden md:flex gap-6 text-sm font-bold">
+            <a href="#" class= "hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition ">الرئيسية</a>
+  <a href="#" class=" hover:text-[#0166B3] flex items-center gap-1 border-b-2 border-transparent hover:border-[#1B2128] transition flex-row-reverse">
+  <i class="fas fa-arrow-up rotate-45   text-xs"></i>
+  خدمات أونلاين
+</a>
+            <a href="#" class=" hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">بطاقة العضوية الرقمية</a>
+            <a href="#" class=" hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">تجديد الاشتراك</a>
+            <a href="#" class=" hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">عن الموقع</a>
+        </nav>
+      </div>
+
+      <!-- زر اشترك و search -->
+      <div class="relative flex gap-3 items-center">
+        <button class="bg-[#0166B3] text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition flex items-center gap-2">
+          <i class="fas fa-arrow-up -rotate-45 "></i>
+          اشترك الآن
+        </button>
+        <button id="toggleSearch" class="text-[#0166B3] bg-white border border-[#0166B3] px-3 py-2 rounded-full hover:bg-[#0166B3] hover:text-white transition">
+          <i class="fas fa-search"></i>
+        </button>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="ابحث هنا..."
+          class="hidden absolute top-full mt-2 right-0 w-48 px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-[#0166B3] text-sm text-gray-800 bg-white z-40"
+        />
+      </div>
+    </div>
+  
+</header>
+
+    <!-- Hero Section -->
+    <section class="relative hero-slider bg-cover bg-center rounded-b-4xl text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 right-20 w-64 h-64 bg-blue-400 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 left-20 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+        </div>
+
+        <!-- Slider Navigation -->
+        <button id="prevBtn" class="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 flex items-center justify-center p-5 w-[60px] h-[60px] bg-black/50 backdrop-blur-lg rounded-full border border-black/30 hover:bg-black/70 transition cursor-pointer">
+            <i class="fas fa-arrow-left text-white text-xl"></i>
+        </button>
+        <button id="nextBtn" class="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 flex items-center justify-center p-5 w-[60px] h-[60px] bg-black/50 backdrop-blur-lg rounded-full border border-black/30 hover:bg-black/70 transition cursor-pointer">
+            <i class="fas fa-arrow-right text-white text-xl"></i>
+        </button>
+
+        <!-- Indicators -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
+            <div class="indicator w-8 h-1 bg-white/50  cursor-pointer active"></div>
+            <div class="indicator w-8 h-1 bg-white/50  cursor-pointer"></div>
+           
+        </div>
+        
+        <div class="container mx-auto px-4 pt-40 pb-20 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <p class="text-blue-300 text-sm">MY AMIS</p>
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+                        إدارة برامج الرعاية<br/>
+                        الصحية للشركات<br/>
+                        والجهات (TPA)
+                    </h1>
+                    <p class="text-blue-100 text-lg">
+                        نظام متكامل لإدارة برامج الرعاية الصحية وتقديم أفضل الخدمات الطبية
+                    </p>
+                    <div class="flex gap-4">
+                        <button class="px-8 py-3 bg-sky-700 text-white rounded-full hover:bg-blue-700 font-semibold">
+                            اشتراك جديد
+                        </button>
+                        <button class="px-8 py-3 border-2 border-white text-white rounded-full hover:bg-white hover:text-blue-900 font-semibold">
+                           برنامج العلاج الشهري
+                        </button>
+                    </div>
+                    
+                
+                </div>
+                
+                
+                    <div class="relative w-full h-96">                        
+                            <a class="absolute bottom-0 left-0 flex flex-row justify-center p-5 items-center gap-3 w-[300px] h-[200px]  bg-black/50 backdrop-blur-lg rounded-3xl border border-black/30">
+                                <img class="w-[120px] h-[120px]" src="./imgs/doc.png" alt="">
+                                <h3 class="text-[40px] font-bold">  الدليل الطبي</h3>
+                            
+                            </a>
+                    </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="py-10 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <!-- نص نبذة مختصرة section  -->
+            <div class="text-start mb-12">
+                <h3 class="text-3xl font-bold text-sky-700 mb-4"> نبذة مختصرة عن نشاط ادارة برامج الرعاية الصحية</h2>
+                <p class="leading-8 text-[17px] font-bold ">
+قامت الشركة منذ منتصف عام 1995 بتصميم وتنظيم وإدارة العديد من برامج الرعاية الصحية للتجمعات النقابية والعاملين بالشركات والهيئات وأسرهم، وقد اختصت الشركة ولمدة 30 عاما بتصميم وتنظيم وإدارة برامج الرعاية الصحية المختلفة لنقابة تجاريين القاهرة، ويبلغ عدد المستفيدين الحاليين من برامج A.M.I.S للرعاية الصحية فى العديد من الهيئات والمؤسسات أكثر من 120 ألف مستفيد سنويا.
+                </p>
+            </div>
+         <!-- الخدمات العلاجية section  -->
+          <div class=" flex flex-row gap-10">
+            <!-- text  -->
+             <div class="flex flex-1 flex-col gap-5 items-start text-[20px]">
+             <h3 class=" font-bold">الخدمات العلاجية المتنوعة</h3>
+             <p class="text-[15px] leading-8 ">الكشف الطبي وإجراء الفحوصات الطبية المختلفة من تحاليل معملية وأشعات، وإجراء جلسات العلاج الطبيعي،
+-وصرف العقاقير الطبية، والإقامة داخل المستشفيات للعلاج وإجراء العمليات الجراحية بمختلف أنواعها، بالاضافة إلى خدمات خاصة برعاية الحالات الحرجة و الطارئة.</p>
+            <button class="px-8 py-3 bg-sky-700 text-white rounded-full hover:bg-blue-700 font-semibold"> اشتراك جديد</button>
+            </div>
+        <!-- cards  -->
+            <div class="flex-2 grid md:grid-cols-3 gap-1 mb-12">
+                <!-- card  -->
+                <div class="  rounded-xl flex flex-col gap-5 py-3 hover:shadow-md transition">
+                    <div class="pb-5 px-2 border-b border-gray-300">
+                   <img src="./imgs/medicalcalendar.png" alt="">
+                   </div>
+                    <h3 class="text-xl font-bold px-2"> برنامج العلاج الشهري</h3>
+                    <p class="text-gray-600 text-sm px-2">توصيل لأي مكان في مصر
+جميع الأدوية مرخصة من وزارة الصحة
+خدمة عملاء ومتابعة طول اليوم</p>
+                </div>
+                <!-- card  -->
+                <div class="  rounded-xl flex flex-col gap-5 py-3 hover:shadow-md transition">
+                    <div class="pb-5 px-2 border-b border-gray-300">
+                   <img src="./imgs/medicalapproval.svg" alt="">
+                   </div>
+                    <h3 class="text-xl font-bold px-2">  الموافقات الطبية </h3>
+                    <p class="text-gray-600 text-sm px-2">  طلب خطابات التحويل </p>
+                </div>
+                <!-- card  -->
+                <div class="  rounded-xl flex flex-col gap-5 py-3 hover:shadow-md transition">
+                    <div class="pb-5 px-2 border-b border-gray-300">
+                   <img src="./imgs/demands.svg" alt="">
+                   </div>
+                    <h3 class="text-xl font-bold px-2">  طلبات الاسترداد  </h3>
+                    <p class="text-gray-600 text-sm px-2">  الأوراق المطلوبة لتقديم طلب الاسترداد النقدي وكيفيه تقديمها</p>
+                </div>
+                <!-- card  -->
+                <div class="  rounded-xl flex flex-col gap-5 py-3 hover:shadow-md transition">
+                    <div class="pb-5 px-2 border-b border-gray-300">
+                   <img src="./imgs/req.svg" alt="">
+                   </div>
+                    <h3 class="text-xl font-bold px-2">      ادارة الاشتراكات</h3>
+                    <p class="text-gray-600 text-sm px-2"> تستطيع تجديد الاشتراك او اشتراك جديد من هنا</p>
+                </div>
+                <!-- card  -->
+                <div class="  rounded-xl flex flex-col gap-5 py-3 hover:shadow-md transition">
+                    <div class="pb-5 px-2 border-b border-gray-300">
+                   <img src="./imgs/pepole.svg" alt="">
+                   </div>
+                    <h3 class="text-xl font-bold px-2">  إضافة عضو تابع جديد </h3>
+                    <p class="text-gray-600 text-sm px-2">    إضافة عضو تابع الى اشتراكك الحالي</p>
+                </div>
+          
+
+                
+
+              
+            </div>
+            </div>
+        
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-10  bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-start mb-12">
+                <h2 class="text-3xl font-bold text-[#0166B3] mb-4">عروض وخصومات حصرية لعملائنا</h2>
+                <p class="text-4xl font-bold leading-12">
+                   استمتع بمزايا استثنائية وخصومات مميزة على مجموعة واسعة من الخدمات الطبية والصحية ضمن شبكتنا المتكاملة.
+                </p>
+            </div>
+        <div class="flex justify-between items-center gap-72 py-2">
+            <p class="text-xl">اكتشف أحدث العروض والخصومات المخصصة لك، لتوفير أكبر على الفحوصات، الاستشارات، العلاجات، والخدمات الطبية المتنوعة داخل الشبكة.</p>
+            <div class="flex">
+                 <button   class=" flex items-center justify-center p-5 w-[60px] h-[60px]  backdrop-blur-lg rounded-full  hover:bg-[#1B2128] transition cursor-pointer">
+            <i class="fas fa-arrow-right text-gray-400 text-2xl"></i>
+        </button>
+             <button   class="flex items-center justify-center p-5 w-[60px] h-[60px]  backdrop-blur-lg rounded-full  hover:bg-[#1B2128] transition cursor-pointer">
+            <i class="fas fa-arrow-left text-gray-400 font-light text-2xl "></i>
+        </button>
+       
+            </div>
+        </div>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="relative bg-gradient-to-br from-teal-600 to-teal-700 rounded-2xl p-6 text-white overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                        خصم حصري
+                    </div>
+                    <div class="relative z-10 h-full flex flex-col justify-between">
+                        <div class="text-center pt-8">
+                            <div class="text-6xl font-bold mb-2">40%</div>
+                            <p class="text-sm opacity-90">خصم على الفحوصات</p>
+                        </div>
+                        <p class="text-xs text-center opacity-80 mt-6">على جميع الفحوصات الطبية في المراكز المعتمدة</p>
+                    </div>
+                </div>
+
+                <div class="relative bg-gradient-to-br from-teal-600 to-teal-700 rounded-2xl p-6 text-white overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                        خصم حصري
+                    </div>
+                    <div class="relative z-10 h-full flex flex-col justify-between">
+                        <div class="text-center pt-8">
+                            <div class="text-6xl font-bold mb-2">30%</div>
+                            <p class="text-sm opacity-90">خصم على الأدوية</p>
+                        </div>
+
+                        <p class="text-xs text-center opacity-80 mt-6">خصم على جميع الأدوية من الصيدليات الشريكة</p>
+                    </div>
+                </div>
+
+                <div class="relative bg-gradient-to-br from-teal-600 to-teal-700 rounded-2xl p-6 text-white overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                        عرض خاص
+                    </div>
+                    <div class="relative z-10 h-full flex flex-col justify-between">
+                        <div class="text-center pt-8">
+                            <div class="text-6xl font-bold mb-2">50%</div>
+                            <p class="text-sm opacity-90">خصم على العلاج الطبيعي</p>
+                        </div>
+                        <p class="text-xs text-center opacity-80 mt-6">احصل على خصم كبير على جلسات العلاج الطبيعي</p>
+                    </div>
+                </div>
+
+                <div class="relative bg-gradient-to-br from-teal-600 to-teal-700 rounded-2xl p-6 text-white overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                        الأفضل
+                    </div>
+                    <div class="relative z-10 h-full flex flex-col justify-between">
+                        <div class="text-center pt-8">
+                            <div class="text-6xl font-bold mb-2">50%</div>
+                            <p class="text-sm opacity-90">على الدفع المسبق</p>
+                        </div>
+                        <p class="text-xs text-center opacity-80 mt-6">وفر أكثر عند الدفع المسبق للخدمات السنوية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-16 bg-gradient-to-br from-blue-900 to-blue-700">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden">
+                <div class="grid md:grid-cols-2">
+                    <div class="p-12 bg-gray-50">
+                        <h3 class="text-2xl font-bold mb-6">الشكوى الإلكترونية</h3>
+                        <form class="space-y-4">
+                            <input type="text" placeholder="الاسم الأول او اسم العائلة" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <input type="text" placeholder="رقم الهاتف" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <input type="email" placeholder="البريد الإلكتروني" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <input type="text" placeholder="العنوان" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <textarea placeholder="الرسالة" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                            <button type="submit" class="w-full bg-gray-900 text-white py-3 rounded-lg hover:bg-gray-800 font-semibold">
+                                إرسال
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="p-12 bg-blue-700 text-white flex flex-col justify-center">
+                        <h2 class="text-3xl font-bold mb-6">اتصل على مقدم<br/>الخدمة الأقرب إليك</h2>
+                        <p class="mb-8 text-blue-100">
+                            تواصل معنا الآن للحصول على أفضل الخدمات الصحية والطبية.<br/>
+                            فريقنا مستعد لمساعدتك في أي وقت
+                        </p>
+                        <button class="bg-white text-blue-700 px-8 py-3 rounded-full hover:bg-gray-100 font-semibold inline-block w-fit">
+                            تواصل معنا الآن
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="py-16 bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6">فيديوهات كيف<br/>تستخدم منصتنا</h2>
+                <p class="text-gray-300 mb-12">
+                    اتبع خطوات بسيطة عبر دليل فيديوهات<br/>
+                    وتأهل المفيد للخدمة الصحية وفوائدها
+                </p>
+                <div class="relative aspect-video bg-gray-800 rounded-2xl overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <button class="w-20 h-20 bg-white rounded-full flex items-center justify-center hover:scale-110 transition">
+                            <span class="text-blue-600 text-2xl">▶</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map & Properties Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">موقعنا</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="md:col-span-2">
+                    <div class="bg-gray-200 h-96 rounded-2xl overflow-hidden">
+                                        <        <div class="w-full h-full flex items-center justify-center text-gray-500">
+                            [خريطة تفاعلية]
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-white p-4 rounded-xl shadow-sm">
+                        <img src="https://via.placeholder.com/300x200" alt="مبنى" class="w-full h-32 object-cover rounded-lg mb-3">
+                        <h4 class="font-bold text-sm mb-1">مقر الشركة الرئيسي</h4>
+                        <p class="text-xs text-gray-600">العنوان التفصيلي للموقع</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm">
+                        <img src="https://via.placeholder.com/300x200" alt="مبنى" class="w-full h-32 object-cover rounded-lg mb-3">
+                        <h4 class="font-bold text-sm mb-1">الفرع الثاني</h4>
+                        <p class="text-xs text-gray-600">العنوان التفصيلي للموقع</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center items-center gap-12 flex-wrap opacity-50">
+                <img src="https://via.placeholder.com/120x40?text=Partner1" alt="Partner" class="h-8 grayscale">
+                <img src="https://via.placeholder.com/120x40?text=Partner2" alt="Partner" class="h-8 grayscale">
+                <img src="https://via.placeholder.com/120x40?text=Partner3" alt="Partner" class="h-8 grayscale">
+                <img src="https://via.placeholder.com/120x40?text=Partner4" alt="Partner" class="h-8 grayscale">
+                <img src="https://via.placeholder.com/120x40?text=Partner5" alt="Partner" class="h-8 grayscale">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="hidden md:block bg-[#1B2128] text-white py-16 px-5 w-full">
+    <div class="max-w-7xl mx-auto">
+      <!-- Newsletter Section -->
+      <div class="mb-12 ">
+        <div class="flex gap-3 items-center  justify-end">
+          <div class="relative">
+            <i class="fa-solid fa-user text-gray-400 absolute right-3 top-1/2 -translate-y-1/2"></i>
+
+            <input type="email" placeholder="ادخل البريد الالكتروني"
+              class="flex-1 w-full pl-4 pr-20 py-3 bg-gray-800 border border-gray-700 rounded-md text-white text-sm placeholder-gray-500 focus:outline-none focus:border-[#0166B3]">
+          </div>
+          <button
+            class="px-6 py-3 bg-[#0166B3] hover:bg-[#0152a3] text-white font-semibold rounded-md transition-colors duration-300 whitespace-nowrap">
+            متابعة
+          </button>
+        </div>
+        <div>
+          <h1 class="text-xl font-semibold text-right relative bottom-8">
+            هل ترغب في متابعة العروض؟
+          </h1>
+        </div>
+      </div>
+          <div
+        class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
+    
+      </div>
+
+      <!-- Footer Top Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
+        <!-- Column 1: Logo & Social Icons -->
+        <div class="lg:col-span-1">
+          <!-- Logo -->
+          <div class="flex items-center gap-3 mb-6">
+            <img class="w-[120px] h-[65px]" src="./imgs/logo.png" alt="">
+          </div>
+
+          <!-- Description -->
+          <p class="text-gray-400 text-sm leading-relaxed mb-6">
+        إتخذت شركة (التجاريون للإدارة والخدمات المتكاملة) A.M.I.S شكل شركة مساهمة مصرية خاضعة للقانون 159 لسنة 1981، منذ بدء نشاطها فى منتصف عام 1995.
+
+          </p>
+
+          <!-- Social Icons -->
+          <div class="flex gap-3 mt-6">
+            <a href="#"
+              class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#"
+              class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#"
+              class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#"
+              class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: روابط سريعة -->
+       
+        <!-- Column 3: روابط هامة -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">روابط هامة</h3>
+          <ul class="space-y-4">
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-angle-left text-xs"></i>
+                   <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                الرؤية والرسالة
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-angle-left text-xs"></i>
+                   <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                فريق العمل
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-angle-left text-xs"></i>
+                   <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                الأخبار والمدونة
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-angle-left text-xs"></i>
+                   <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                تواصل معنا
+              </a>
+            </li>
+          </ul>
+        </div>
+         <div>
+          <h3 class="text-lg font-semibold mb-6"> روابط سريعة</h3>
+          <ul class="space-y-4">
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-angle-left text-xs"></i>
+                 <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+             الكتيب الطبي
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2 relative " >
+                <i class="fas fa-angle-left text-xs"></i>
+                 <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+             طلبات الاسترداد
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-angle-left text-xs"></i>
+                 <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+             الشبكة الطبية
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-angle-left text-xs"></i>
+                <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                برنامج العلاج الشهري
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+        <!-- Column 4: تواصل معنا -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">تواصل معنا</h3>
+          <ul class="space-y-4">
+            <li>
+              <a href="mailto:info@youremail.com"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="far fa-envelope w-4"></i>
+                
+                info@youremail.com
+              </a>
+            </li>
+            <li>
+              <a href="tel:+123456789"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-phone w-4"></i>
+                01113311141
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-map-marker-alt w-4"></i>
+                فروعنا
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div
+      class="  pt-6 flex flex-col md:flex-row justify-between items-center  text-sm">
+         <a href="#" class=" transition-colors duration-300 ">الشروط والأحكام</a>
+          <a href="#" class=" duration-300 relative left-80">سياسة الاستخدام</a>
+        <div class="flex gap-6">
+
+          <p>جميع الحقوق محفوظة ©  شركة التجاريين للخدمات  المتكاملة </p>
+       
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

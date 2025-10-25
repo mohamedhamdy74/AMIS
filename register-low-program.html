@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="stylesheet" href="./src/output.css">
+  <title>Document</title>
+  <style>
+    .drop-shadow-lg {
+      text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    }
+
+    .drop-shadow-md {
+      text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    .page-frame {
+      border-style: dotted;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 font-cairo text-gray-800">
+  <!-- header (ثابت) -->
+  <header class="fixed top-5 left-5 right-5 z-50 hidden md:block">
+    <div
+      class="bg-white backdrop-blur-md rounded-full shadow-lg py-4 px-6 mx-5 flex items-center justify-between gap-4 border border-white/40">
+      <div class="flex items-center gap-6">
+        <img src="./imgs/cldlogo.png" alt="AMHS Logo" class="h-10" />
+        <nav class="hidden md:flex gap-6 text-sm font-bold">
+          <a href="#"
+            class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">الرئيسية</a>
+          <a href="#"
+            class="hover:text-[#0166B3] flex items-center gap-1 border-b-2 border-transparent hover:border-[#1B2128] transition flex-row-reverse">
+            <i class="fas fa-arrow-up rotate-45 text-xs"></i>
+            خدمات أونلاين
+          </a>
+          <a href="#" class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">بطاقة
+            العضوية
+            الرقمية</a>
+          <a href="#" class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">تجديد
+            الاشتراك</a>
+          <a href="#" class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">عن
+            الموقع</a>
+        </nav>
+      </div>
+
+      <!-- زر اشترك و search -->
+      <div class="relative flex gap-3 items-center">
+        <button
+          class="bg-[#0166B3] text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition flex items-center gap-2">
+          <i class="fas fa-arrow-up -rotate-45"></i> اشترك الآن
+        </button>
+
+        <button id="toggleSearch"
+          class="text-[#0166B3] bg-white border px-3 py-2 rounded-full hover:bg-[#0166B3] hover:text-white transition">
+          <i class="fas fa-search"></i>
+        </button>
+
+        <input type="text" id="searchInput" placeholder="ابحث هنا..."
+          class="hidden absolute top-full mt-2 right-0 w-56 px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-[#0166B3] text-sm text-gray-800 bg-white z-40" />
+      </div>
+    </div>
+  </header>
+
+  <!-- spacer علشان الـ header الثابت -->
+  <div class="h-[90px]"></div>
+
+  <!-- hero section تحت الـ navbar -->
+  <section class="relative w-full flex items-center justify-center hidden md:flex"
+    style="background-image: url('./imgs/Inner_Header.png'); background-size: cover; background-position: center; max-width:1600px; margin: 0 auto;">
+    <div class="w-full h-[300px] relative flex items-center justify-center">
+      <!-- overlay -->
+      <div class="absolute inset-0 bg-black/30"></div>
+
+      <div class="relative text-center text-white">
+        <h3 class="text-3xl font-bold mb-2 drop-shadow-lg">اشتراك جديد</h3>
+        <p class="text-sm font-medium drop-shadow-md">
+          <span class="opacity-90">الرئيسية</span><i class="fa-solid fa-angle-left p-1"></i> اشتراك جديد
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="w-full py-4 px-4 md:hidden">
+    <div class="flex items-center justify-start">
+      <i class="fa-solid fa-arrow-right ml-3 border border-gray-300 rounded-full p-2"></i>
+      <h2 class="text-xl font-bold text-gray-800">تفاصيل الاشتراك</h2>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="max-w-[1600px] mx-auto mt-8 mb-12 px-6">
+    <div class="rounded-lg p-6">
+      <!-- Page Header - Hidden on mobile -->
+      <div class="text-right mb-8 hidden md:block">
+        <p class="text-gray-500 text-sm flex items-center mb-12 gap-6">
+          <i class="fa-solid fa-arrow-right text-[#0166B3]"></i>
+          <span class="text-[#0166B3]">اشتراك جديد</span>
+          <i class="fa-solid fa-arrow-left text-[#0166B3]"></i>
+        </p>
+        <h1 class="text-2xl font-bold text-[#1B2128]">البرنامج المخفّض</h1>
+      </div>
+
+      <!-- Progress Steps -->
+      <div class="flex justify-center mb-8 px-2">
+        <nav
+          class="flex items-center justify-center gap-1 xs:gap-2 sm:gap-4 md:gap-8 lg:gap-12 max-w-[400px] sm:max-w-full">
+          <!-- Step 1 -->
+          <div class="flex items-center gap-0.5 sm:gap-2 flex-shrink-0">
+            <div
+              class="w-6 h-6 sm:w-10 sm:h-10 rounded-full border border-[#0166B3] flex items-center justify-center bg-white">
+              <i class="fas fa-rotate-right text-[#0166B3] text-[8px] sm:text-base"></i>
+            </div>
+            <span class="text-[9px] sm:text-sm md:text-lg font-semibold text-[#0166B3] whitespace-nowrap">تفاصيل
+              الاشتراك</span>
+          </div>
+
+          <div class="w-2 sm:w-8 md:w-12 h-[1px] sm:h-[2px] bg-gray-300 flex-shrink-0"></div>
+
+          <!-- Step 2 -->
+          <div class="flex items-center gap-0.5 sm:gap-2 flex-shrink-0">
+            <div
+              class="w-6 h-6 sm:w-10 sm:h-10 rounded-full border border-gray-300 flex items-center justify-center bg-white">
+              <span class="text-gray-400 font-bold text-[8px] sm:text-base">02</span>
+            </div>
+            <span class="text-[9px] sm:text-sm md:text-lg font-semibold text-gray-500 whitespace-nowrap">معلومات
+              المشترك</span>
+          </div>
+
+          <div class="w-2 sm:w-8 md:w-12 h-[1px] sm:h-[2px] bg-gray-300 flex-shrink-0"></div>
+
+          <!-- Step 3 -->
+          <div class="flex items-center gap-0.5 sm:gap-2 flex-shrink-0">
+            <div
+              class="w-6 h-6 sm:w-10 sm:h-10 rounded-full border border-gray-300 flex items-center justify-center bg-white">
+              <span class="text-gray-400 font-bold text-[8px] sm:text-base">03</span>
+            </div>
+            <span class="text-[9px] sm:text-sm md:text-lg font-semibold text-gray-500 whitespace-nowrap">الدفع
+              والتأكيد</span>
+          </div>
+        </nav>
+      </div>
+      <section class="text-right">
+        <h2 class="text-xl font-bold text-[#0166B3] mb-5 hidden md:block">تفاصيل الاشتراك</h2>
+
+        <div
+          class="mt-6 rounded-lg p-4 md:bg-transparent md:shadow-none md:p-0 text-right  relative left-10   md:static md:left-0">
+
+          <div class="flex items-start gap-3 mb-3 md:block">
+            <p
+              class="text-base text-[#1B2128] leading-relaxed font-semibold border-r-4 border-[#0166B3] pr-2 md:text-lg md:border-r-4 md:border-[#0166B3] md:pr-2">
+              <span class="md:inline">خدمات البرامج المخفض</span>
+            </p>
+          </div>
+
+          <div class="text-sm text-gray-700 md:hidden overflow-hidden">
+            <p class="block md-hidden text-[10px]">خصم على التحاليل والأشعة: من 40% إلى 70%</p>
+            <p class="block text-[10px] ">خصم على علاج الحالات المرضية والعمليات داخل المستشفى: من 10% إلى 25%</p>
+            <p class="block text-[10px]">خصم على صرف الأدوية: من 5% إلى 10%</p>
+          </div>
+
+          <p class="text-sm text-gray-600 mt-2 hidden md:block text-right">
+            (دون أي نسبة تحمل من النقابة في الخدمات الطبية التي يقدمها البرنامج)
+            <br>
+            يقوم المستفيد بسداد كامل التكاليف الفعلية بأسعار مخفضة خاصة بالبرنامج، وتتراوح نسبة التخفيضات ما بين 10%
+            إلى
+            60% تقريبًا، وقت حصوله على الخدمة له ولجميع أفراد أسرته. <br>
+            يستفيد جميع المشتركين بكافة الخدمات العلاجية في الجهات المتعاقدة، بغض النظر عن عدد مرات التردد عليها طوال
+            العام.
+          </p>
+        </div>
+        <!-- مدة الاشتراك -->
+        <div
+          class="mt-6 rounded-lg p-4 md:bg-transparent md:shadow-none md:p-0 text-right relative left-10 md:static md:left-0">
+          <!-- للموبايل فقط -->
+          <div class="flex items-start gap-3 mb-3 md:hidden relative bottom-5">
+            <p class="text-base text-[#1B2128] leading-relaxed font-semibold border-r-4 border-[#0166B3] pr-2">
+              <span>مدة الاشتراك</span>
+            </p>
+          </div>
+
+          <!-- للويب فقط -->
+          <div class="hidden md:block ">
+            <div class="flex items-start gap-3 mb-3">
+              <p class="text-lg text-[#1B2128] leading-relaxed font-semibold border-r-4 border-[#0166B3] pr-2">
+                <span>مدة الاشتراك</span>
+              </p>
+            </div>
+          </div>
+
+
+          <!-- للموبايل -->
+          <div class="text-sm text-gray-700 md:hidden overflow-hidden relative bottom-5">
+            <p class="block text-[10px]">
+              صلاحية الاشتراك الجديد: ستة كاملة من تاريخ الاشتراك
+            </p>
+          </div>
+
+          <!-- للديسكتوب -->
+          <p class="text-sm text-gray-600 mt-2 hidden md:block text-right">
+            يبدأ الاشتراك من 1/4/2025 وحتي 30/11/2025 <br />
+            يمكن الاستفادة من خدمات البرنامج حتي 31/3/2025
+          </p>
+        </div>
+
+
+        <!-- من له حق الاشتراك -->
+        <!-- الويب -->
+        <div class="mt-6 hidden md:block">
+          <p
+            class="text-base text-[#1B2128] leading-relaxed text-lg font-semibold border-r-4 border-[#0166B3] pr-2 mb-4">
+            من له حق الاشتراك:
+          </p>
+
+          <h4 class="mt-4">
+            <span class="text-[#0166B3] font-bold">أ. العضو الأساسي</span> (التجاري/التجارية): شرط أساسي لاشتراك
+            الأعضاء التابعين
+          </h4>
+
+          <h4 class="mt-6">
+            <span class="text-[#0166B3] font-bold">ب. الأعضاء التابعين</span>
+          </h4>
+
+          <ul class="mt-2 space-y-2">
+            <li class="flex items-start gap-3 text-sm">
+              <span class="text-lg leading-none">▪</span>
+              <span>الزوج أو الزوجة.</span>
+            </li>
+            <li class="flex items-start gap-3 text-sm">
+              <span class="text-lg leading-none">▪</span>
+              <span>الأبناء الذكور حتى سن 25 سنة.</span>
+            </li>
+            <li class="flex items-start gap-3 text-sm">
+              <span class="text-lg leading-none">▪</span>
+              <span>البنات غير المتزوجات وغير العاملات حتى 30 سنة.</span>
+            </li>
+            <li class="flex items-start gap-3 text-sm">
+              <span class="text-lg leading-none">▪</span>
+              <span>الوالدين.</span>
+            </li>
+            <li class="flex items-start gap-3 text-sm">
+              <span class="text-lg leading-none">▪</span>
+              <span>ذوي العضو الأساسي (الأخت/الأخ، العم/العمة، الخال/الخالة، الجد/الجدة).</span>
+            </li>
+          </ul>
+
+          <p class="text-[#B50644] text-sm mt-3">
+            --- في حالة وفاة العضو الأساسي: يمكن للورثة الاشتراك (الأرمل/الأرملة، الأبناء، الوالدين) بشرط تقديم
+            مستندات تثبت صلة العضو بالنقابة.
+          </p>
+
+          <h4 class="mt-6">
+            <span class="text-[#0166B3] font-bold">ج. أعضاء النقابات الفرعية</span>
+          </h4>
+          <p class="text-sm mt-2">
+            يُقبل اشتراك جميع أعضاء النقابات الفرعية للتجاريين (باستثناء نقابة تجاريين القاهرة)، مع زيادة 10% من قيمة
+            الاشتراك والمصروفات الإدارية.
+          </p>
+        </div>
+
+        <!-- الموبايل -->
+        <div class=" md:hidden text-right relative left-6 ">
+          <p
+            class="text-base text-[#1B2128] leading-relaxed text-[10px] font-semibold border-r-4 border-[#0166B3] pr-2 mb-4">
+            وثيقة تغطية علاج أمراض السرطان
+          </p>
+
+          <p class=" text-gray-700 mb-2 text-[10px]">
+            <span class="text-[#0166B3] font-semibold">تصدرها: شركة جى آى جى - مصر</span>
+          </p>
+
+          <p class=" text-gray-700 mb-2 text-[10px]">
+            تُدار بواسطة: شركة أميس للرعاية الصحية<br />
+            (متاحة فقط بمنافذ الاشتراك)
+          </p>
+
+          <p class="text-[10px] text-gray-700 mb-2">
+            <span class="block text-[#0166B3] font-semibold mb-1">التفاصيل:</span>
+            الوثيقة متاحة للأشخاص من عمر 14 يومًا وحتى 65 عامًا<br />
+            تمنح تغطية كاملة ضد أمراض السرطان حتى 50,000 جم
+          </p>
+
+          <p class="text-[#B50644] font-semibold text-[10px] mt-3">
+            حالات لا تشمل التغطية:
+          </p>
+          <ul class="text-sm mt-1 text-gray-700 space-y-1 list-none relative left-1">
+            <li>الحالات السرطانية المعلومة مسبقًا للعميل</li>
+            <li>أو التي ظهرت قبل بدء التأمين</li>
+            <li>أو التي تم تشخيصها خلال الـ6 أشهر الأولى من الاشتراك</li>
+          </ul>
+        </div>
+
+
+
+        <!-- المستندات المطلوبة للاشتراك -->
+        <!-- المحتوى الكامل (يختفي في الموبايل) -->
+        <div class="hidden md:block">
+          <!-- المستندات المطلوبة للاشتراك -->
+          <div class="mt-6">
+            <p class="text-base text-[#1B2128] leading-relaxed text-lg font-semibold border-r-4 border-[#0166B3] pr-2">
+              المستندات المطلوبة للاشتراك
+            </p>
+            <ul class="mt-2 space-y-2">
+              <li class="flex items-start gap-3 text-sm">
+                <span class="text-lg leading-none">▪</span>
+                <span>صورة كارنيه النقابة أو صورة المؤهل التجاري.</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm">
+                <span class="text-lg leading-none">▪</span>
+                <span>صورة بطاقة الرقم القومي أفراد الأسرة.</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm">
+                <span class="text-lg leading-none">▪</span>
+                <span>صورة شخصية حديثة لكل مشترك.</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm">
+                <span class="text-lg leading-none">▪</span>
+                <span>صور مستندات تثبت درجة القرابة:</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm">
+                <span class="text-lg leading-none">▪</span>
+                <span>شهادات ميلاد الأبناء (مميكنة).</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm">
+                <span class="text-lg leading-none">▪</span>
+                <span>وثيقة الزواج.</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm">
+                <span class="text-lg leading-none">▪</span>
+                <span>في حالة الاشتراك للوالدين: صورة من شهادة ميلاد العضو الأساسي (لا تُقبل الشهادات الخطية).</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- سداد الرسوم -->
+          <div class="mt-6">
+            <p class="text-base text-[#1B2128] leading-relaxed text-lg font-semibold border-r-4 border-[#0166B3] pr-2">
+              سداد الرسوم
+            </p>
+            <h4 class="mt-4">
+              <span class="text-[#1B2128] font-bold"> رسوم تجديد : </span>125 جنيهًا يتم سدادها في حالة تجديد الاشتراك
+            </h4>
+          </div>
+
+          <!-- طرق السداد -->
+          <div class="mt-6">
+            <p class="text-base text-[#1B2128] leading-relaxed text-lg font-semibold border-r-4 border-[#0166B3] pr-2">
+              طرق السداد
+            </p>
+            <h4 class="mt-4">
+              <span class="text-[#1B2128] font-bold"> يتم السداد الكترونيا او من خلال المنافذ المحددة </span>
+            </h4>
+
+            <p class="text-[#0166B3] text-base mt-6 font-bold">
+              -- <span class="mr-1">السداد من خلال المنافذ التالية:</span>
+            </p>
+
+            <ul class="mt-2 space-y-2">
+              <li class="flex items-start gap-3 text-sm">
+                <span class="text-lg leading-none">▪</span>
+                <span>منفذ رمسيس: مبنى نقابة التجاريين – 30 شارع رمسيس – وسط البلد.</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm">
+                <span class="text-lg leading-none">▪</span>
+                <span>منفذ العباسية: النقابة العامة للتجاريين – 29 امتداد شارع رمسيس – العباسية.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- استلام البطاقات -->
+          <div class="mt-6  pr-3 h-full">
+            <p
+              class="text-base text-[#1B2128] leading-relaxed text-lg font-semibold border-r-4 border-[#0166B3] pr-4 relative left-4">
+              استعلام البطاقات
+            </p>
+            <p class="mt-2 text-[#1B2128] font-bold relative left-2">
+              يتم تسليم البطاقات خلال خمسة أيام عمل من اليوم التالي للسداد، عن طريق البريد السريع على العنوان الذي يحدده
+              العضو (سواء تم السداد إلكترونيًا أو من خلال المنافذ).
+            </p>
+
+            <p class="text-[#0166B3] text-base mt-6 font-bold relative left-2.5">
+              -- <span class="mr-1"> الخدمات قبل استلام البطاقة</span>
+            </p>
+
+            <ul class="mt-2 space-y-2 relative left-2.5">
+              <li class="flex items-start gap-3 text-sm">
+                <span class="text-lg leading-none">▪</span>
+                <span>يمكن للعضو أو التابعين استخدام صورة بطاقة العضوية من خلال التطبيق، عبر الضغط على أيقونة "بطاقة
+                  العضوية".</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- زر المتابعة (يظهر فقط في الموبايل) -->
+        <div class="mt-10">
+          <!-- زرار الموبايل -->
+          <button
+            class="flex md:hidden items-center justify-center gap-2 bg-[#0166B3] text-white px-5 py-2.5 w-full rounded-full shadow-lg hover:bg-blue-700 transition">
+            متابعة <i class="fas fa-arrow-left text-sm ml-2"></i>
+          </button>
+
+          <!-- زرار الويب -->
+          <div class=" flex justify-end relative top-4">
+            <button
+              class="hidden md:flex items-center gap-2 bg-[#0166B3] text-white px-5 py-2 rounded-full shadow-lg hover:bg-blue-700 transition ml-5 mb-5">
+              متابعة <i class="fas fa-arrow-left text-sm ml-2"></i>
+            </button>
+          </div>
+
+        </div>
+
+
+
+    </div>
+    </section>
+    </div>
+
+
+
+  </main>
+  <footer class="hidden md:block bg-[#1B2128] text-white py-16 px-5 w-full">
+    <div class="max-w-7xl mx-auto">
+      <!-- Newsletter Section -->
+      <div class="mb-12 ">
+        <div class="flex gap-3 items-center  justify-end">
+          <div class="relative">
+            <i class="fa-solid fa-user text-gray-400 absolute right-3 top-1/2 -translate-y-1/2"></i>
+
+            <input type="email" placeholder="ادخل البريد الالكتروني"
+              class="flex-1 w-full pl-4 pr-20 py-3 bg-gray-800 border border-gray-700 rounded-md text-white text-sm placeholder-gray-500 focus:outline-none focus:border-[#0166B3]">
+          </div>
+          <button
+            class="px-6 py-3 bg-[#0166B3] hover:bg-[#0152a3] text-white font-semibold rounded-md transition-colors duration-300 whitespace-nowrap">
+            متابعة
+          </button>
+        </div>
+        <div>
+          <h1 class="text-xl font-semibold text-right relative bottom-8">
+            هل ترغب في متابعة العروض؟
+          </h1>
+        </div>
+      </div>
+          <div
+        class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
+    
+      </div>
+
+      <!-- Footer Top Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
+        <!-- Column 1: Logo & Social Icons -->
+        <div class="lg:col-span-1">
+          <!-- Logo -->
+          <div class="flex items-center gap-3 mb-6">
+            <img class="w-[120px] h-[65px]" src="./imgs/logo.png" alt="">
+          </div>
+
+          <!-- Description -->
+          <p class="text-gray-400 text-sm leading-relaxed mb-6">
+        إتخذت شركة (التجاريون للإدارة والخدمات المتكاملة) A.M.I.S شكل شركة مساهمة مصرية خاضعة للقانون 159 لسنة 1981، منذ بدء نشاطها فى منتصف عام 1995.
+
+          </p>
+
+          <!-- Social Icons -->
+          <div class="flex gap-3 mt-6">
+            <a href="#"
+              class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#"
+              class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#"
+              class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#"
+              class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: روابط سريعة -->
+       
+        <!-- Column 3: روابط هامة -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">روابط هامة</h3>
+          <ul class="space-y-4">
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-angle-left text-xs"></i>
+                   <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                الرؤية والرسالة
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-angle-left text-xs"></i>
+                   <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                فريق العمل
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-angle-left text-xs"></i>
+                   <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                الأخبار والمدونة
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-angle-left text-xs"></i>
+                   <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                تواصل معنا
+              </a>
+            </li>
+          </ul>
+        </div>
+         <div>
+          <h3 class="text-lg font-semibold mb-6"> روابط سريعة</h3>
+          <ul class="space-y-4">
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-angle-left text-xs"></i>
+                 <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+             الكتيب الطبي
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2 relative " >
+                <i class="fas fa-angle-left text-xs"></i>
+                 <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+             طلبات الاسترداد
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-angle-left text-xs"></i>
+                 <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+             الشبكة الطبية
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-angle-left text-xs"></i>
+                <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                برنامج العلاج الشهري
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+        <!-- Column 4: تواصل معنا -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">تواصل معنا</h3>
+          <ul class="space-y-4">
+            <li>
+              <a href="mailto:info@youremail.com"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="far fa-envelope w-4"></i>
+                
+                info@youremail.com
+              </a>
+            </li>
+            <li>
+              <a href="tel:+123456789"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-phone w-4"></i>
+                01113311141
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-map-marker-alt w-4"></i>
+                فروعنا
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div
+      class="  pt-6 flex flex-col md:flex-row justify-between items-center  text-sm">
+         <a href="#" class=" transition-colors duration-300 ">الشروط والأحكام</a>
+          <a href="#" class=" duration-300 relative left-80">سياسة الاستخدام</a>
+        <div class="flex gap-6">
+
+          <p>جميع الحقوق محفوظة ©  شركة التجاريين للخدمات  المتكاملة </p>
+       
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('toggleSearch').addEventListener('click', function () {
+      const input = document.getElementById('searchInput');
+      input.classList.toggle('hidden');
+      if (!input.classList.contains('hidden')) {
+        input.focus();
+      }
+    });
+  </script>
+</body>
+
+</html>
