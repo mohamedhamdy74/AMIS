@@ -55,3 +55,27 @@ document.addEventListener('DOMContentLoaded', function() {
     updateBackground();
 });
  
+ 
+// handle contact form 
+
+        function handleSubmit(event) {
+          event.preventDefault();
+
+          // جمع البيانات من الفورم
+          const formData = {
+            searchTerm: event.target[0].value,
+            governorate: event.target[1].value,
+            serviceType: event.target[2].value,
+          };
+
+          console.log("بيانات البحث:", formData);
+
+          // هنا تقدر تعمل API call أو أي logic تاني
+          alert("جاري البحث في الشبكة الطبية...");
+
+          // مثال: لو عايز تعمل validation
+          if (!formData.governorate || !formData.serviceType) {
+            alert("برجاء اختيار المحافظة ونوع الجهة");
+            return;
+          }
+        }

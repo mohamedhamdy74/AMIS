@@ -1,0 +1,261 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const heroSection = document.querySelector(".hero-slider");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  const indicators = document.querySelectorAll(".indicator");
+
+  // Array of background images
+  const images = [
+    "/imgs/homeimg.png",
+    "/imgs/homeimg.png", // Add more images as needed
+  ];
+
+  let currentIndex = 0;
+
+  // Function to update background image
+  function updateBackground() {
+    heroSection.style.backgroundImage = `url('${images[currentIndex]}')`;
+    // Update indicators
+    indicators.forEach((indicator, index) => {
+      if (index === currentIndex) {
+        indicator.classList.add("active");
+      } else {
+        indicator.classList.remove("active");
+      }
+    });
+  }
+
+  // Next button click
+  nextBtn.addEventListener("click", function () {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateBackground();
+  });
+
+  // Previous button click
+  prevBtn.addEventListener("click", function () {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateBackground();
+  });
+
+  // Indicator click
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener("click", function () {
+      currentIndex = index;
+      updateBackground();
+    });
+  });
+
+  // Auto slide (optional)
+  setInterval(function () {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateBackground();
+  }, 5000); // Change image every 5 seconds
+
+  // Initialize
+  updateBackground();
+});
+
+// handle contact form
+
+function handleSubmit(event) {
+  event.preventDefault();
+
+  // جمع البيانات من الفورم
+  const formData = {
+    searchTerm: event.target[0].value,
+    governorate: event.target[1].value,
+    serviceType: event.target[2].value,
+  };
+
+  console.log("بيانات البحث:", formData);
+
+  // هنا تقدر تعمل API call أو أي logic تاني
+  alert("جاري البحث في الشبكة الطبية...");
+
+  // مثال: لو عايز تعمل validation
+  if (!formData.governorate || !formData.serviceType) {
+    alert("برجاء اختيار المحافظة ونوع الجهة");
+    return;
+  }
+}
+
+// map handler
+// Show video title on hover
+function showVideoTitle(videoNumber) {
+  const title = document.getElementById(`video-title-${videoNumber}`);
+  title.classList.remove("hidden");
+}
+
+// Hide video title
+function hideVideoTitle(videoNumber) {
+  const title = document.getElementById(`video-title-${videoNumber}`);
+  title.classList.add("hidden");
+}
+
+// Play main video
+function playMainVideo() {
+  alert("تشغيل الفيديو الرئيسي");
+  // هنا تقدر تفتح modal أو تشغل فيديو
+}
+
+// Dynamic scroll indicators for services section
+document.addEventListener("DOMContentLoaded", function () {
+  const servicesContainer = document.querySelector(".modern-scroll");
+  const indicators = document.querySelectorAll(".flex.justify-center.gap-2.lg\\:hidden .w-2");
+
+  if (servicesContainer && indicators.length > 0) {
+    function updateIndicators() {
+      const scrollLeft = servicesContainer.scrollLeft;
+      const scrollWidth = servicesContainer.scrollWidth - servicesContainer.clientWidth;
+      const scrollPercentage = scrollLeft / scrollWidth;
+
+      // Calculate which indicator should be active
+      const activeIndex = Math.round(scrollPercentage * (indicators.length - 1));
+
+      indicators.forEach((indicator, index) => {
+        if (index === activeIndex) {
+          indicator.classList.remove("bg-gray-300");
+          indicator.classList.add("bg-sky-700");
+        } else {
+          indicator.classList.remove("bg-sky-700");
+          indicator.classList.add("bg-gray-300");
+        }
+      });
+    }
+
+    servicesContainer.addEventListener("scroll", updateIndicators);
+    updateIndicators(); // Initial call
+  }
+
+  // Toggle branches visibility on mobile
+  const toggleBranchesBtn = document.getElementById("toggleBranches");
+  const branchesContainer = document.getElementById("branchesContainer");
+
+  if (toggleBranchesBtn && branchesContainer) {
+    toggleBranchesBtn.addEventListener("click", function () {
+      branchesContainer.classList.toggle("hidden");
+      if (branchesContainer.classList.contains("hidden")) {
+        toggleBranchesBtn.textContent = "عرض جميع الفروع";
+      } else {
+        toggleBranchesBtn.textContent = "إخفاء الفروع";
+      }
+    });
+  }
+});
+
+// Initialize Leaflet Map
+function initMap() {
+  // إحداثيات القاهرة (المركز)
+  const cairoCenter = [30.0444, 31.2357];
+
+  // إنشاء الخريطة
+  const map = L.map("map").setView(cairoCenter, 11);
+
+  // إضافة طبقة الخريطة من OpenStreetMap
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 19,
+  }).addTo(map);
+
+  // بيانات الفروع
+  const branches = [
+    {
+      name: "27 شارع عباس - الدور الخامس",
+      address: "شقة 805 - الدقي - القاهرة",
+      phone: "02-26793013",
+          coords: [30.0378, 31.2108], // الدقي
+      img:"./imgs/branch.png"
+    },
+    {
+      name: "9 أ في مجمع حسن فتحي",
+      address: "المنطقة السادسة - مدينة نصر",
+      phone: "02-26711055",
+      coords: [30.0594, 31.3362], // مدينة نصر
+      img: "./imgs/branch.png"
+    },
+    {
+      name: "30 شارع شريف - وسط البلد",
+      address: "بناية تجاريين القاهرة",
+      phone: "02-25768490",
+      coords: [30.0499, 31.2381], // وسط البلد
+      img: "./imgs/branch.png"
+    },
+    {
+      name: "29 امتداد رمسيس - العباسية",
+      address: "النقابة العامة للتجاريين",
+      phone: "02-26784900",
+      coords: [30.0715, 31.2805], // العباسية
+      img: "./imgs/branch.png"
+    },
+  ];
+
+  // إنشاء أيقونة مخصصة للماركرز
+  const customIcon = L.divIcon({
+    className: "custom-marker",
+    html: '<div style="background-color: #0166B3; width: 30px; height: 30px; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.3);"></div>',
+    iconSize: [30, 30],
+    iconAnchor: [15, 15],
+  });
+
+ // إضافة الماركرز على الخريطة
+ branches.forEach((branch, index) => {
+   const marker = L.marker(branch.coords, { icon: customIcon }).addTo(map);
+
+   // إضافة popup عند الضغط على الماركر
+   const isMobile = window.innerWidth < 1024;
+   let popupContent;
+   if (isMobile) {
+     popupContent = `<div style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden; border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.3);"><img src="${branch.img}" alt="صورة الفرع" style="width: 100%; height: 100%; object-fit: cover;"></div>`;
+   } else {
+     popupContent = `
+       <div class="popup-content w-full bg-white h-full font-cairo">
+           <div class=" flex gap-3 ">
+
+               <div class="flex-grow ">
+
+                   <div class="text-right mb-4">
+                       <h3 class="font-bold text-base leading-snug text-gray-800">
+                           ${branch.name}
+                       </h3>
+                       <p class="text-sm text-gray-600 leading-snug">
+                           ${branch.address}
+                       </p>
+                   </div>
+
+                   <div class="w-full h-px bg-gray-200 my-2"></div>
+
+                   <div class="flex justify-between items-center mt-3">
+
+                       <button class="bg-gray-800 hover:bg-gray-700 text-white text-sm font-semibold py-1 px-2 rounded-full transition-colors duration-200">
+                           التفاصيل
+                       </button>
+
+                       <div class="flex items-center gap-1">
+                           <span class="text-gray-800 text-sm font-semibold">${branch.phone}</span>
+
+                           <div class="w-5 h-5 rounded-full bg-gray-800 flex items-center justify-center text-white text-xs">
+                               <i class="fas fa-phone"></i>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+
+               <div class="w-32 h-32 flex-shrink-0 rounded-lg overflow-hidden">
+                   <img src="${branch.img}" alt="صورة الفرع" class="w-full h-full object-cover">
+               </div>
+
+           </div>
+       </div>
+     `;
+   }
+   marker.bindPopup(popupContent, {maxWidth: isMobile ? 100 : 350});
+   if (index === 0) {
+     marker.openPopup();
+   }
+ });
+
+} // end initMap
+initMap();
+// تشغيل الخريطة عند تحميل الصفحة
+// window.addEventListener("load", initMap);
