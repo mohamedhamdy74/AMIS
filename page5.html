@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./src/output.css">
-    <script src="./slider.js"></script>
+   
     <title>البرنامج المخفض - استمارة الاشتراك - أضافة عضو تابع
     </title>
 </head>
@@ -58,10 +58,10 @@
     </header>
 
     <!-- spacer علشان الـ header الثابت -->
-    <div class="h-[90px]"></div>
+    <div class="md:h-[90px]"></div>
 
     <!-- hero section تحت الـ navbar -->
-    <section class="relative w-full flex items-center justify-center hidden md:flex"
+    <section class="relative w-full  items-center justify-center hidden md:flex"
         style="background-image: url('./imgs/Inner_Header.png'); background-size: cover; background-position: center; max-width:1600px; margin: 0 auto;">
         <div class="w-full h-[300px] relative flex items-center justify-center">
             <!-- overlay -->
@@ -83,10 +83,10 @@
 
 
 
+    <div class="container mx-auto">
+    <div class="w-full py-8">
 
-    <div class="max-w-6xl mx-auto px-4 py-8">
-
-        <div class="text-right mb-8 hidden md:block">
+       <div class="text-right mb-8 hidden md:block">
 
             <p class="text-gray-500 text-sm flex items-center mb-12 gap-6 relative top-7 right-4">
                 <i class="fa-solid fa-arrow-right text-[#0166B3] "></i>
@@ -147,50 +147,49 @@
         </div>
     </div>
 
-    <div class="hidden md:flex items-center justify-between mt-9 border-b border-gray-300 pb-5">
+    <div class="hidden md:flex items-center justify-between mt-9 border-b mb-5 border-gray-300 pb-5">
         <!-- العنوان -->
         <h2 class="text-2xl font-bold text-[#0166B3] border-gray-300 flex-1 text-right">
             بيانات العضوية
         </h2>
 
         <!-- الأيقونة -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" class="ml-4 flex-shrink-0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" class=" flex-shrink-0 cursor-pointer toggle-icon" id="toggleMembership">
             <circle cx="12" cy="12" r="10" fill="#0166B3" stroke="white" stroke-width="2" />
             <rect x="7" y="11" width="10" height="2" fill="white" />
         </svg>
     </div>
 
 
-    <div class="space-y-8 w-full">
-
+    <div class="space-y-8 w-full ">
+<div class="section-to-toggle">
         <!-- بيانات العضوية -->
         <!-- فورم الويب -->
-        <div class="hidden md:block">
+        <div class="hidden md:block membership-data">
             <h2 class="font-bold text-lg mb-4">بيانات العضوية</h2>
 
-            <div class="bg-white rounded-lg shadow p-6">
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="flex items-center" style="gap: 130px;">
-                        <span class="font-semibold text-gray-700">نوع مقدم الطلب</span>
-                        <span class="text-[#666666]">عضو أساسي</span>
-                    </div>
-
-                    <div class="flex items-center bg-gray-200 py-4 px-3" style="gap: 100px;">
-                        <span class="font-semibold text-gray-400">أسم العضو الأساسي</span>
-                        <span class="text-[#666666]">علي محمد علي</span>
-                    </div>
-
-                    <div class="flex items-center" style="gap: 135px;">
-                        <span class="font-semibold text-gray-400">النقابة التابع لها</span>
-                        <span class="text-[#666666]">تجاريين القاهرة</span>
-                    </div>
-
-                    <div class="flex items-center bg-gray-200 py-4 px-3" style="gap: 118px;">
-                        <span class="font-semibold text-gray-400">رقم عضوية النقابة</span>
-                        <span class="text-[#666666]">890425191156932</span>
-                    </div>
-                </div>
-            </div>
+<div class=" overflow-hidden mb-8">
+  <table class="w-full text-right border-collapse">
+    <tbody>
+      <tr class="bg-gray-50 border-b border-gray-300">
+        <td class="w-2/12 py-3 px-4 font-medium text-gray-800 border-l border-gray-300">نوع مقدم الطلب</td>
+        <td class="w-10/12 py-3 px-4 text-gray-700">عضو أساسي</td>
+      </tr>
+      <tr class="bg-white border-b border-gray-300">
+        <td class="w-2/12 py-3 px-4 font-medium text-gray-800 border-l border-gray-300">اسم العضو الأساسي</td>
+        <td class="w-10/12 py-3 px-4 text-gray-700">علاء محمد علي</td>
+      </tr>
+      <tr class="bg-gray-50 border-b border-gray-300">
+        <td class="w-2/12 py-3 px-4 font-medium text-gray-800 border-l border-gray-300">النقابة التابع لها</td>
+        <td class="w-10/12 py-3 px-4 text-gray-700">تجاريين القاهرة</td>
+      </tr>
+      <tr class="bg-white">
+        <td class="w-2/12 py-3 px-4 font-medium text-gray-800 border-l border-gray-300">رقم عضوية النقابة</td>
+        <td class="w-10/12 py-3 px-4 text-gray-700">890425191156932</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
         </div>
 
         <!-- فورم الموبايل -->
@@ -205,11 +204,19 @@
                             class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600 pl-8"
                             style="color: rgb(143, 136, 136); opacity: 1;" onfocus="this.placeholder='';"
                             onblur="this.placeholder='   حدد تاريخ الميلاد';" />
+                        <style>
+                            input[type="text"]::-webkit-calendar-picker-indicator {
+                                display: none;
+                            }
+                        </style>
 
-                        <!-- سهم لتحت -->
-                        <svg class="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none ml-2"
-                            fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        <!-- أيقونة التقويم -->
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 text-[#0166B3] pointer-events-none ml-2"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 11v6m-3-3h6" />
                         </svg>
                     </div>
                 </div>
@@ -233,43 +240,41 @@
                     class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm" />
             </div>
         </div>
-
-
-
         <!-- البيانات الشخصية -->
         <!-- نسخة الويب -->
         <div class="hidden md:block">
             <h2 class="font-bold text-lg mb-4">البيانات الشخصية</h2>
 
-            <div class="rounded-lg p-6">
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="flex items-center" style="gap: 143px;">
-                        <span class="font-semibold text-gray-400">الرقم القومي</span>
-                        <span class="text-[#666666]">890425191156932</span>
-                    </div>
-
-                    <div class="flex items-center bg-gray-200 py-4 px-3" style="gap: 185px;">
-                        <span class="font-semibold text-gray-400">العنوان</span>
-                        <span class="text-[#666666]">18 شارع محمود المنشاوي - مصر الجديدة القاهرة</span>
-                    </div>
-                </div>
-            </div>
+<div class=" overflow-hidden mb-8">
+  <table class="w-full text-right border-collapse">
+    <tbody>
+      <tr class="bg-gray-50 border-b border-gray-300">
+        <td class="w-2/12 py-3 px-4 font-medium text-gray-800 border-l border-gray-300">الرقم القومي</td>
+        <td class="w-10/12 py-3 px-4 text-gray-700">890425191156932</td>
+      </tr>
+      <tr class="bg-white">
+        <td class="w-2/12 py-3 px-4 font-medium text-gray-800 border-l border-gray-300">العنوان</td>
+        <td class="w-10/12 py-3 px-4 text-gray-700">18 شارع محمود المنشاوي - مصر الجديدة القاهرة</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
         </div>
-
+</div>
         <!-- نسخة الموبايل -->
 
 
 
         <!-- العضو التابع -->
-        <div class="flex items-center justify-between mt-9 border-b-2 border-gray-300 pb-5">
-            <h2 class="text-2xl font-bold text-[#0166B3] flex-1 text-right">
+        <div class="flex items-center justify-between mt-12 border-b-2 border-gray-300 pb-5">
+            <h2 class="text-xl font-bold text-[#0166B3] flex-1 text-right">
                 العضو التابع
                 <span class="font-semibold hidden md:inline">( محمود محمد علي )</span>
             </h2>
 
             <!-- الأيقونة -->
            <button id="showFormBtn"
-    class="px-2 py-2 bg-white border border-[#0166B3] relative left-2 text-[#0166B3] rounded-full flex items-center gap-2 hover:bg-[#0166B3] hover:text-white transition-all">
+    class="px-1 py-1 bg-white border border-[#0166B3] relative  text-[#0166B3] rounded-full flex items-center gap-2 hover:bg-[#0166B3] hover:text-white transition-all">
     <i class="fas fa-plus"></i>
 </button>
         </div>
@@ -294,15 +299,15 @@
 
         <!-- مولود حديث و تاريخ الميلاد -->
         <div class="mb-4">
-            <div class="flex items-center mb-2">
+            <div class="flex items-center border mb-2">
                 <input type="checkbox" class="w-5 h-5 accent-[#0166B3] rounded border-gray-300 focus:ring-[#0166B3]" />
                 <h3 class="text-lg font-semibold text-gray-800 relative right-3">مولود حديث</h3>
             </div>
 
             <label class="font-semibold text-gray-700 mb-2 block">تاريخ الميلاد <span class="text-[#B50644]">*</span></label>
             <div class="relative w-full">
-                <input type="text" placeholder="حدد تاريخ الميلاد"
-                    class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600 pl-8" />
+                <input type="date" placeholder="حدد تاريخ الميلاد"
+                    class="w-full flex flex-row-reverse px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600 pl-8" />
                 <!-- أيقونة التقويم باللون الأزرق -->
                 <svg xmlns="http://www.w3.org/2000/svg"
                     class="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 text-[#0166B3] pointer-events-none ml-2"
@@ -341,7 +346,7 @@
                         <span>سحب وادراج الملف هنا او <span class="text-[#0166B3]">اختار ملف</span></span>
                         <span class="text-xs text-gray-400 mt-0.5">صيغ الملفات المسموح بها: pdf, png, jpg - الحد الأقصى 5mb</span>
                     </div>
-                    <input type="file" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
+                    <input  type="file" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
                 </label>
             </div>
 
@@ -390,13 +395,13 @@
 
 
         <!-- كارت الفورم للويب -->
-        <div class="bg-gray-200 p-8 rounded-2xl shadow-lg border-white relative top-4 hidden md:block">
+        <div class="bg-gray-100 py-8 rounded-2xl  border border-gray-300 relative  hidden md:block form-card">
             <div class="flex mb-6">
                 <h2 class="text-xl font-bold text-[#0166B3] relative right-3 top-4">إضافة عضو تابع</h2>
             </div>
 
-            <div class="mb-6">
-                <div class="bg-gray-200 p-4   rounded-lg">
+            <div class="">
+                <div class="bg-gray-100 p-4   rounded-lg">
                     <h3 class="text-lg font-semibold text-gray-800 mb-4">بيانات العضوية</h3>
                     <div class="flex flex-col">
                         <label class="font-semibold text-gray-700 mb-2 text-right">
@@ -409,8 +414,8 @@
                     </div>
                 </div>
             </div>
-            <div class="mb-6">
-                <div class="bg-gray-200 p-4   rounded-lg">
+            <div class="">
+                <div class="bg-gray-100 p-4   rounded-lg">
                     <div class="flex flex-col">
                         <label class="font-semibold text-gray-700 mb-2 text-right">
                             صفة العضو التابع <span class="text-[#B50644]">*</span>
@@ -423,15 +428,9 @@
 
                     </div>
                 </div>
-                <div class="mb-6">
-                    <div class="bg-gray-200 p-4 rounded-lg">
-
-
-
-
-
-
-                        <div class="bg-gray-200 p- rounded-lg">
+                <div class="">
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <div class="bg-gray-100 p- rounded-lg">
                             <div class="flex items-center mb-4">
                                 <input type="checkbox"
                                     class="w-5 h-5 accent-[#0166B3] rounded border-gray-300 focus:ring-[#0166B3]" />
@@ -443,9 +442,9 @@
                             </label>
 
                             <div class="relative w-full">
-                                <input type="text" placeholder="   حدد تاريخ الميلاد"
-                                    class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600 pl-8"
-                                    style="color: rgb(143, 136, 136); opacity: 1;" onfocus="this.placeholder='';"
+                                <input type="date" placeholder="   حدد تاريخ الميلاد"
+                                    class="appearance-none w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600 pl-8"
+                                    style="display: flex; flex-direction: row-reverse; color: rgb(143, 136, 136); opacity: 1;" onfocus="this.placeholder='';"
                                     onblur="this.placeholder='   حدد تاريخ الميلاد';" />
 
                                 <!-- سهم لتحت -->
@@ -463,8 +462,8 @@
                         </div>
 
                     </div>
-                    <div class="mb-6">
-                        <div class="bg-gray-200 p-4   rounded-lg">
+                    <div class="">
+                        <div class="bg-gray-100 p-4   rounded-lg">
                             <div class="flex flex-col">
                                 <label class="font-semibold text-gray-700 mb-2 text-right">
                                     الرقم القومي <span class="text-[#B50644]">*</span>
@@ -631,14 +630,15 @@
                 </button>
             </div>
         </div>
-
+    </div>
+    </div>
         <!-- نسخة الموبايل -->
 
 
 
 
 
-        <footer class="hidden md:block bg-[#1B2128] text-white py-16 px-5 w-full">
+    <footer class="hidden md:block bg-[#1B2128] text-white py-16 px-5 w-full">
             <div class="max-w-7xl mx-auto">
                 <!-- Newsletter Section -->
                 <div class="mb-12 ">
@@ -825,22 +825,11 @@
                     </div>
                 </div>
             </div>
-        </footer>
+     </footer>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+ <script src="./slider.js"></script>
 
 </body>
 

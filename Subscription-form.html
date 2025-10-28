@@ -92,19 +92,19 @@
 
 
 
-    <div class="text-right mb-8 mr-5 hidden md:block">
+    <div class="text-right container mx-auto mb-8  hidden md:block">
 
         <p class="text-gray-500 text-sm flex items-center mb-12 gap-6 relative top-4">
             <i class="fa-solid fa-arrow-right text-[#0166B3] "></i>
             <span class="text-[#0166B3]">اشتراك جديد</span>
             <i class="fa-solid fa-arrow-left text-[#0166B3]"></i>
         </p>
-        <h1 class="text-2xl font-bold text-[#1B2128]">البرنامج المخفّض</h1>
+        <h1 class="text-2xl font-bold text-[#1B2128] font-cairo">البرنامج المخفّض</h1>
 
     </div>
 
     
-    <div class="max-w-6xl mx-auto px-4 py-8">
+    <div class="container  mx-auto  py-8">
 
         <p class="text-xl font-bold text-[#000000] block md:hidden flex items-center gap-2 mb-10">
             <span class="w-8 h-8 border border-gray-300 rounded-md flex items-center justify-center bg-transparent">
@@ -164,7 +164,7 @@
         </h2>
 
         <!-- للويب -->
-        <h2 class="text-xl font-bold text-[#0166B3] mb-5 hidden md:block">
+        <h2 class="text-xl font-bold text-[#0166B3] mb-5 hidden md:block font-cairo">
             استمارة الاشتراك
         </h2>
 
@@ -383,7 +383,7 @@
 
                     <!-- Right Button -->
                     <div class="order-2">
-                        <button type="button"
+                        <button type="button" id="addDependentWeb" onclick="openModal()"
                             class="px-8 py-3 border-2 border-[#0166B3] text-[#0166B3] rounded-full font-semibold hover:bg-[#0166B3] hover:text-white transition-all">
                             إضافة عضو تابع
                         </button>
@@ -399,10 +399,11 @@
       حفظ ومتابعة
     </button>
 
-    <button type="button"
-      class="flex-1 px-4 py-2 border-2 border-[#0166B3] text-[#0166B3] rounded-full font-semibold hover:bg-[#0166B3] hover:text-white transition-all">
+    <button type="button" id="addDependentMobile" onclick="openModal()"
+      class="md:hidden flex-1 px-4 py-2 border-2 border-[#0166B3] text-[#0166B3] rounded-full font-semibold hover:bg-[#0166B3] hover:text-white transition-all">
       إضافة عضو تابع
     </button>
+    
   </div>
 </div>
 
@@ -414,6 +415,123 @@
         </form>
     </div>
     </div>
+
+    <!-- Modal for Adding Dependent Member -->
+    <div id="mobileForm" class="hidden fixed inset-0 bg-black/50 flex items-end justify-center z-50 ">
+  <div
+    class="w-full max-h-[90vh] overflow-y-auto bg-white rounded-t-3xl shadow-lg p-5 text-sm flex flex-col gap-2 sm:max-w-md">
+    <h2 class="font-bold text-lg">استمارة اشتراك</h2>
+
+    <!-- اسم عضو التابع -->
+    <div class="flex flex-col relative">
+      <label class="font-semibold mb-2">اسم عضو التابع <span class="text-[#B50644]">*</span></label>
+      <input type="text" placeholder="اسم العضو الأساسي"
+        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600 pl-8" />
+    </div>
+
+    <!-- صفة العضو التابع -->
+    <div class="flex flex-col relative">
+      <label class="font-semibold mb-2">صفة العضو التابع <span class="text-[#B50644]">*</span></label>
+      <input type="text" placeholder="صفة العضو التابع"
+        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600 pl-8" />
+    </div>
+
+    <!-- مولود حديث و تاريخ الميلاد -->
+    <div class="flex flex-col gap-1">
+      <div class="flex items-center border border-transparent mb-2">
+        <input type="checkbox" class="w-5 h-5 accent-[#0166B3] rounded border border-gray-300 focus:ring-[#0166B3]" />
+        <h3 class="text-lg font-semibold text-gray-800 relative right-3">مولود حديث</h3>
+      </div>
+
+      <label class="font-semibold text-gray-700 block">تاريخ الميلاد <span class="text-[#B50644]">*</span></label>
+      <div class="relative w-full">
+        <input type="date" placeholder="حدد تاريخ الميلاد"
+          class="w-full flex flex-row-reverse px-4 py-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600 pl-8" />
+        <svg xmlns="http://www.w3.org/2000/svg"
+          class="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 text-[#0166B3] pointer-events-none ml-2" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- رفع الملفات -->
+    <div class="flex flex-col gap-1">
+      <!-- رقم القومي -->
+      <div class="flex flex-col gap-1 mb-2">
+        <label class="font-semibold text-gray-700 text-right">
+          الرقم القومي <span class="text-[#B50644]">*</span>
+        </label>
+        <input type="text" placeholder=" رقم القومي"
+          class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600" />
+      </div>
+
+      <!-- Upload 1 -->
+      <div class="flex flex-col gap-1 mb-2">
+        <h3>صورة بطاقة الرقم القومي <span class="text-[#B50644]">*</span></h3>
+        <label
+          class="border-2 border-dotted border-[#0166B3] rounded-lg p-4 flex items-center gap-3 cursor-pointer transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0166B3"
+            class="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M9 12h6m-3-3v6m3 9H6a2.25 2.25 0 01-2.25-2.25V4.5A2.25 2.25 0 016 2.25h7.5L18 6.75V21a2.25 2.25 0 01-2.25 2.25z" />
+          </svg>
+          <div class="flex flex-col text-sm text-gray-600">
+            <span>سحب وادراج الملف هنا او <span class="text-[#0166B3]">اختار ملف</span></span>
+            <span class="text-xs text-gray-400 mt-0.5">pdf, png, jpg - الحد الأقصى 5mb</span>
+          </div>
+          <input type="file" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
+        </label>
+      </div>
+
+      <!-- Upload 2 -->
+      <div class="flex flex-col gap-1 mb-2">
+        <h3>الصورة الشخصية <span class="text-[#B50644]">*</span></h3>
+        <label
+          class="border-2 border-dotted border-[#0166B3] rounded-lg p-4 flex items-center gap-3 cursor-pointer transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0166B3"
+            class="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M9 12h6m-3-3v6m3 9H6a2.25 2.25 0 01-2.25-2.25V4.5A2.25 2.25 0 016 2.25h7.5L18 6.75V21a2.25 2.25 0 01-2.25 2.25z" />
+          </svg>
+          <div class="flex flex-col text-sm text-gray-600">
+            <span>سحب وادراج الملف هنا او <span class="text-[#0166B3]">اختار ملف</span></span>
+            <span class="text-xs text-gray-400 mt-0.5">jpg, png, jpeg - 2MB</span>
+          </div>
+          <input type="file" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
+        </label>
+      </div>
+
+      <!-- Upload 3 -->
+      <div class="flex flex-col gap-1 mb-2">
+        <h3>مستندات اثبات صلة القرابة <span class="text-[#B50644]">*</span></h3>
+        <label
+          class="border-2 border-dotted border-[#0166B3] rounded-lg p-4 flex items-center gap-3 cursor-pointer transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0166B3"
+            class="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M9 12h6m-3-3v6m3 9H6a2.25 2.25 0 01-2.25-2.25V4.5A2.25 2.25 0 016 2.25h7.5L18 6.75V21a2.25 2.25 0 01-2.25 2.25z" />
+          </svg>
+          <div class="flex flex-col text-sm text-gray-600">
+            <span>سحب وادراج الملف هنا او <span class="text-[#0166B3]">اختار ملف</span></span>
+            <span class="text-xs text-gray-400 mt-0.5">jpg, png, jpeg - 2MB</span>
+          </div>
+          <input type="file" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
+        </label>
+      </div>
+    </div>
+
+    <!-- أزرار -->
+    <div class="flex flex-col gap-2 mt-3">
+      <button type="submit"
+        class="w-full px-4 py-2 bg-[#0166B3] text-white rounded-full font-semibold hover:bg-[#0152a3] transition-colors">اضافة</button>
+      <button type="button" onclick="closeModal()"
+        class="w-full px-4 py-2 border-2 border-[#0166B3] text-[#0166B3] rounded-full font-semibold hover:bg-[#0166B3] hover:text-white transition-all">الغاء</button>
+    </div>
+  </div>
+</div>
+
 
 
     <footer class="hidden md:block bg-[#1B2128] text-white py-16 px-5 w-full">
@@ -605,26 +723,8 @@
     </footer>
 
 
-    <script>
-
-        document.querySelectorAll('input[type="file"]').forEach(input => {
-            input.addEventListener('change', function (e) {
-                const fileName = e.target.files[0]?.name;
-                if (fileName) {
-                    const label = e.target.closest('label');
-                    const textElement = label.querySelector('p.text-xs');
-                    textElement.textContent = `تم اختيار: ${fileName}`;
-                    textElement.classList.add('text-[#0166B3]', 'font-semibold');
-                }
-            });
-        });
-        document.getElementById('toggleSearch').addEventListener('click', function () {
-            const input = document.getElementById('searchInput');
-            input.classList.toggle('hidden');
-            if (!input.classList.contains('hidden')) {
-                input.focus();
-            }
-        });
+    <script src="./main.js">
+    
     </script>
 </body>
 

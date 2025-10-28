@@ -332,3 +332,40 @@ window.addEventListener("load", initMap);
                <span class="text-xs text-gray-600">الدور الثامن - شقة 805<br>التوفيقية - القاهرة</span>
            </div>
        `);
+
+
+
+//modal subscription form
+           function openModal() {
+            document.getElementById('mobileForm').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('mobileForm').classList.add('hidden');
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('mobileForm').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        document.querySelectorAll('input[type="file"]').forEach(input => {
+            input.addEventListener('change', function (e) {
+                const fileName = e.target.files[0]?.name;
+                if (fileName) {
+                    const label = e.target.closest('label');
+                    const textElement = label.querySelector('p.text-xs');
+                    textElement.textContent = `تم اختيار: ${fileName}`;
+                    textElement.classList.add('text-[#0166B3]', 'font-semibold');
+                }
+            });
+        });
+        document.getElementById('toggleSearch').addEventListener('click', function () {
+            const input = document.getElementById('searchInput');
+            input.classList.toggle('hidden');
+            if (!input.classList.contains('hidden')) {
+                input.focus();
+            }
+        });
