@@ -24,7 +24,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    const showBtn = document.getElementById('showFormBtn');
+  const mobileForm = document.getElementById('mobileForm');
 
+  showBtn.addEventListener('click', () => {
+    mobileForm.classList.toggle('hidden'); // يظهر أو يخفي الفورم
+   
+  });
     // Next button click
     nextBtn.addEventListener('click', function() {
         currentIndex = (currentIndex + 1) % images.length;
@@ -55,3 +61,16 @@ document.addEventListener('DOMContentLoaded', function() {
     updateBackground();
 });
  
+const addButton = document.getElementById('addMemberBtn');
+const mobileForm = document.getElementById('mobileForm');
+
+
+
+
+
+
+
+
+
+
+
