@@ -22,7 +22,7 @@
   </style>
 </head>
 
-<body class= "font-cairo text-gray-800">
+<body class=" font-cairo text-gray-800">
   <!-- header (ثابت) -->
   <header class="fixed top-5 left-5 right-5 z-50 hidden md:block">
     <div
@@ -66,10 +66,10 @@
   </header>
 
   <!-- spacer علشان الـ header الثابت -->
-<div class="h-[90px]"></div>
+  <div class="md:h-[90px]"></div>
 
   <!-- hero section تحت الـ navbar -->
-  <section class="relative w-full   items-center justify-center hidden md:flex"
+  <section class="relative w-full flex items-center justify-center hidden md:flex"
     style="background-image: url('./imgs/Inner_Header.png'); background-size: cover; background-position: center; max-width:1600px; margin: 0 auto;">
     <div class="w-full h-[300px] relative flex items-center justify-center">
       <!-- overlay -->
@@ -83,162 +83,142 @@
       </div>
     </div>
   </section>
- <main dir="rtl" class="bg-white min-h-screen py-10 container mx-auto">
-    <!-- البرنامج المخفض -  اشتراك جديد -->
-    <div class="text-right mb-8 hidden md:block">
 
-        <p class="text-gray-500 text-sm flex items-center mb-12 gap-6 relative top-4">
-            <i class="fa-solid fa-arrow-right text-[#0166B3] "></i>
-            <span class="text-[#0166B3]">اشتراك جديد</span>
-            <i class="fa-solid fa-arrow-left text-[#0166B3]"></i>
-        </p>
-        <h1 class="text-2xl font-bold text-[#1B2128]">البرنامج المخفّض</h1>
-
+  <section class="w-full py-4 px-4 md:hidden">
+    <div class="flex items-center justify-start">
+      <i class="fa-solid fa-arrow-right ml-3 border border-gray-300 rounded-full p-2"></i>
+      <h2 class="text-xl font-bold text-gray-800">تفاصيل الاشتراك</h2>
     </div>
-  <!-- Progress Steps -->
-   <div class="flex justify-center mb-8 px-2">
+  </section>
 
-            <nav
-                class="flex items-center justify-center gap-1 xs:gap-2 sm:gap-4 md:gap-8 lg:gap-12 max-w-[400px] sm:max-w-full">
-                <!-- Step 1 -->
-                <div class="flex items-center gap-0.5 sm:gap-2 flex-shrink-0">
-                    <div
-                        class="w-6 h-6 sm:w-10 sm:h-10 rounded-full border border-[#0166B3] flex items-center justify-center bg-[#0166B3]">
-                        <i class="fa-solid fa-check text-white "></i>
-                    </div>
+ <!-- Main Content -->
+<main class="container mx-auto mt-8 mb-12 px-6 text-right font-cairo">
+    
+  <div class="rounded-lg p-6">
+    <!-- عنوان الصفحة -->
+    <div class="text-right mb-8 hidden md:block">
+         <!-- Page Header - Hidden on mobile -->
+      <div class="text-right mb-8 hidden md:block">
+        <p class="text-gray-500 text-sm flex items-center mb-5 gap-6">
+          <i class="fa-solid fa-arrow-right text-[#0166B3]"></i>
+          <span class="text-[#0166B3]">اشتراك جديد</span>
+          <i class="fa-solid fa-arrow-left text-[#0166B3]"></i>
+        </p>
+        <h1 class="text-2xl font-bold text-[#1B2128]">أميس رعاية أكثر</h1>
+      </div>
+     
+    </div>
+   <!-- Progress Steps -->
+      <div class="flex justify-center mb-8 px-2">
+        <nav
+          class="flex items-center justify-center gap-1 xs:gap-2 sm:gap-4 md:gap-8 lg:gap-12 max-w-[400px] sm:max-w-full">
+          <!-- Step 1 -->
+          <div class="flex items-center gap-0.5 sm:gap-2 flex-shrink-0">
+            <div
+              class="w-6 h-6 sm:w-10 sm:h-10 rounded-full border border-[#0166B3] flex items-center justify-center bg-white">
+              <i class="fas fa-rotate-right text-[#0166B3] text-[8px] sm:text-base"></i>
+            </div>
+            <span class="text-[9px] sm:text-sm md:text-lg font-semibold text-[#0166B3] whitespace-nowrap">تفاصيل
+              الاشتراك</span>
+          </div>
 
-                    <span
-                        class="text-[9px] sm:text-sm md:text-lg font-semibold text-[#0166B3] whitespace-nowrap ">تفاصيل
-                        الاشتراك</span>
-                </div>
+          <div class="w-2 sm:w-8 md:w-12 h-[1px] sm:h-[2px] bg-gray-300 flex-shrink-0"></div>
 
-                <div class="w-4 sm:w-8 md:w-12 h-[1px] sm:h-[2px] bg-[#0166B3] flex-shrink-0 "></div>
+          <!-- Step 2 -->
+          <div class="flex items-center gap-0.5 sm:gap-2 flex-shrink-0">
+            <div
+              class="w-6 h-6 sm:w-10 sm:h-10 rounded-full border border-gray-300 flex items-center justify-center bg-white">
+              <span class="text-gray-400 font-bold text-[8px] sm:text-base">02</span>
+            </div>
+            <span class="text-[9px] sm:text-sm md:text-lg font-semibold text-gray-500 whitespace-nowrap">معلومات
+              المشترك</span>
+          </div>
 
-                <!-- Step 2 -->
-                       <div class="flex items-center gap-0.5 sm:gap-2 flex-shrink-0">
-                    <div
-                        class="w-6 h-6 sm:w-10 sm:h-10 rounded-full border border-[#0166B3] flex items-center justify-center bg-[#0166B3]">
-                        <i class="fa-solid fa-check text-white "></i>
-                    </div>
+          <div class="w-2 sm:w-8 md:w-12 h-[1px] sm:h-[2px] bg-gray-300 flex-shrink-0"></div>
 
-                    <span
-                        class="text-[9px] sm:text-sm md:text-lg font-semibold text-[#0166B3] whitespace-nowrap ">استمارة
-                        الاشتراك</span>
-                </div>
+          <!-- Step 3 -->
+          <div class="flex items-center gap-0.5 sm:gap-2 flex-shrink-0">
+            <div
+              class="w-6 h-6 sm:w-10 sm:h-10 rounded-full border border-gray-300 flex items-center justify-center bg-white">
+              <span class="text-gray-400 font-bold text-[8px] sm:text-base">03</span>
+            </div>
+            <span class="text-[9px] sm:text-sm md:text-lg font-semibold text-gray-500 whitespace-nowrap">الدفع
+              والتأكيد</span>
+          </div>
+        </nav>
+      </div>
+    <!-- القسم الرئيسي -->
+    <section class="space-y-10">
+      <!-- خدمات البرنامج -->
+      <div class="text-right">
+        <h2 class="text-lg md:text-xl font-semibold border-r-4 border-[#0166B3] pr-3 text-[#1B2128] mb-4">
+          خدمات البرنامج المخفض
+        </h2>
 
-                <div class="w-4 sm:w-8 md:w-12 h-[1px] sm:h-[2px] bg-gray-300 flex-shrink-0"></div>
-
-                <!-- Step 3 -->
-              <div class="flex items-center gap-0.5 sm:gap-2 flex-shrink-0">
-                    <div
-                        class="w-6 h-6 sm:w-10 sm:h-10 rounded-full border border-[#0166B3] flex items-center justify-center bg-white">
-                        <span class="text-gray-400 font-bold text-[8px] sm:text-base"> <i
-                                class="fas fa-rotate-right text-[#0166B3] text-[8px] sm:text-base "></i></span>
-                    </div>
-                    <span
-                        class="text-[9px] sm:text-sm md:text-lg font-semibold text-[#0166B3] whitespace-nowrap">تأكيد 
-                        الاشتراك والسداد</span>
-                </div>
-            </nav>
+        <!-- محتوى الموبايل -->
+        <div class="md:hidden text-[11px] leading-relaxed text-gray-700 space-y-1">
+          <p>خصم على التحاليل والأشعة: من 40% إلى 70%</p>
+          <p>خصم على علاج الحالات المرضية والعمليات داخل المستشفى: من 10% إلى 25%</p>
+          <p>خصم على صرف الأدوية: من 5% إلى 10%</p>
         </div>
 
-  <!-- Header Row -->
-  <div class="flex items-center justify-between mb-6">
-    <h2 class=" text-2xl font-semibold text-[#0166B3] ">بيانات الفاتورة</h2>
-    <button class="flex items-center gap-2  text-[#0166B3] border bordre-[#0166B3] px-4 py-2 rounded-full hover:bg-blue-700 hover:text-white transition">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2V9a2 2 0 012-2h16a2 2 0 012 2v7a2 2 0 01-2 2h-2m-4 0v4H10v-4m4 0H10" />
-      </svg>
-      <span>طباعة الفاتورة</span>
-    </button>
-  </div>
-
-  <!-- بيانات العضو -->
-
-<div class="border border-gray-300 rounded-lg overflow-hidden mb-8">
-  <table class="w-full text-right border-collapse">
-    <tbody>
-      <tr class="bg-gray-50 border-b border-gray-300">
-        <td class="w-2/12 py-3 px-4 font-medium text-gray-800 border-l border-gray-300">نوع مقدم الطلب</td>
-        <td class="w-10/12 py-3 px-4 text-gray-700">عضو أساسي</td>
-      </tr>
-      <tr class="bg-white border-b border-gray-300">
-        <td class="w-2/12 py-3 px-4 font-medium text-gray-800 border-l border-gray-300">اسم العضو الأساسي</td>
-        <td class="w-10/12 py-3 px-4 text-gray-700">علاء محمد علي</td>
-      </tr>
-      <tr class="bg-gray-50 border-b border-gray-300">
-        <td class="w-2/12 py-3 px-4 font-medium text-gray-800 border-l border-gray-300">النقابة التابع لها</td>
-        <td class="w-10/12 py-3 px-4 text-gray-700">تجاريين القاهرة</td>
-      </tr>
-      <tr class="bg-white">
-        <td class="w-2/12 py-3 px-4 font-medium text-gray-800 border-l border-gray-300">رقم عضوية النقابة</td>
-        <td class="w-10/12 py-3 px-4 text-gray-700">890425191156932</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-
-  <!-- جدول الفاتورة -->
-  <div class="border border-gray-200 rounded-lg overflow-hidden mb-8">
-    <table class="w-full text-right  ">
-      <thead class=" text-[#0166B3]">
-        <tr>
-          <th class="py-3 px-4 font-semibold">البيان</th>
-          <th class="py-3 px-4 font-semibold">تغطية الوحدة</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="bg-gray-100 font-bold ">
-          <td class="py-3 px-4">وثيقة تأمين على عضو نقابة</td>
-          <td class="py-3 px-4">711.38 جم</td>
-        </tr>
-        <tr class="font-bold">
-          <td class="py-3 px-4">عضو تابعي (<span class=" font-normal"> محمد علي </span>)</td>
-          <td class="py-3 px-4">300.38 جم</td>
-        </tr>
-        <tr class="font-bold bg-gray-100">
-          <td class="py-3 px-4">مصاريف التوصيل</td>
-          <td class="py-3 px-4">0.00 جم</td>
-        </tr>
-        <tr class="font-bold bg-gray-100 ">
-          <td class="py-3 px-4">الإجمالي</td>
-          <td class="py-3 px-4">1011.76 جم</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-<!-- الخط الفاصل  -->
-    <hr class="border-t border-gray-300 mb-8">
-  <!-- معلومات الفاتورة -->
-  <div class="grid grid-col-1 gap-4 text-gray-800 mb-10">
-    <div class="flex items-center justify-between">
-      <p class="font-bold">رقم الفاتورة</p>
-      <p class="font-medium text-gray-500">890425191156932</p>
-    </div>
-    <div class="flex items-center  justify-between">
-      <p class="font-bold">حالة الفاتورة</p>
-      <div class="flex items-center gap-1 bg-green-100 rounded-full px-3 py-1">
-        <span class="w-2.5 h-2.5 bg-green-500 rounded-full"></span>
-        <p class="font-medium text-green-600">مسددة</p>
+        <!-- محتوى الديسكتوب -->
+        <div class="hidden md:block text-sm text-gray-700 leading-relaxed">
+          <p>خصم على التحاليل والأشعة: من 40% إلى 70%</p>
+          <p>خصم على علاج الحالات المرضية والعمليات داخل المستشفى: من 10% إلى 25%</p>
+          <p>خصم على صرف الأدوية: من 5% إلى 10%</p>
+        </div>
       </div>
-    </div>
-    <div class="flex items-center justify-between">
-      <p class="font-bold">تاريخ الإنشاء</p>
-      <p class="text-gray-500 font-medium">11 سبتمبر 2025 | 12:45 صباحاً</p>
-    </div>
-    <div class="flex items-center justify-between">
-      <p class="font-bold">تاريخ الإنتهاء</p>
-      <p class="text-gray-500 font-medium">27 أكتوبر 2025 | 11:59 مساءً</p>
-    </div>
-  </div>
 
-  <!-- زر العودة -->
-  <div class="flex justify-center">
-    <button class="bg-blue-600 w-full text-white px-6 py-3 rounded-full md:w-fit hover:bg-blue-700 transition">
-      العودة للصفحة الرئيسية
-    </button>
+      <!-- مدة الاشتراك -->
+      <div class="text-right">
+        <h2 class="text-lg md:text-xl font-semibold border-r-4 border-[#0166B3] pr-3 text-[#1B2128] mb-4">
+          مدة الاشتراك والاستفادة
+        </h2>
+
+        <div class="text-[11px] md:text-sm text-gray-700 leading-relaxed">
+          <p>صلاحية الاشتراك الجديد: ستة كاملة من تاريخ الاشتراك</p>
+        </div>
+      </div>
+
+      <!-- وثيقة تغطية علاج أمراض السرطان -->
+      <div class="text-right">
+        <h2 class="text-lg md:text-xl font-semibold border-r-4 border-[#0166B3] pr-3 text-[#1B2128] mb-4">
+          وثيقة تغطية علاج أمراض السرطان
+        </h2>
+
+        <div class="space-y-2 text-[11px] md:text-sm text-gray-700 leading-relaxed">
+          <p><span class="text-[#0166B3] font-semibold">تصدرها:</span> شركة جى آى جى - مصر</p>
+          <p><span class="text-[#0166B3] font-semibold">تُدار بواسطة:</span> شركة أميس للرعاية الصحية</p>
+          <p class="text-gray-600">(متاحة فقط بمنافذ الاشتراك)</p>
+        </div>
+
+        <div class="mt-4">
+          <p class="text-[#0166B3] font-bold text-[12px] md:text-base mb-2">التفاصيل:</p>
+          <ul class="list-disc pr-5 text-[11px] md:text-sm text-gray-700 leading-relaxed space-y-1">
+            <li>الوثيقة متاحة للأشخاص من عمر 14 يومًا وحتى 65 عامًا</li>
+            <li>تمنح تغطية كاملة ضد أمراض السرطان حتى 50,000 جم</li>
+          </ul>
+        </div>
+
+        <div class="mt-4">
+          <p class="text-[#B50644] font-semibold text-[12px] md:text-base mb-2">حالات لا تشمل التغطية:</p>
+          <ul class="list-disc pr-5 text-[11px] md:text-sm text-gray-700 leading-relaxed space-y-1">
+            <li>الحالات السرطانية المعلومة مسبقًا للعميل</li>
+            <li>أو التي ظهرت قبل بدء التأمين</li>
+            <li>أو التي تم تشخيصها خلال الـ6 أشهر الأولى من الاشتراك</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- زر المتابعة -->
+      <div class="mt-10 flex justify-end">
+        <button
+          class="bg-[#0166B3] text-white px-6 py-2 rounded-full shadow-md hover:bg-blue-700 transition flex items-center gap-2">
+          متابعة <i class="fas fa-arrow-left text-sm"></i>
+        </button>
+      </div>
+    </section>
   </div>
 </main>
 
@@ -430,7 +410,15 @@
     </div>
   </footer>
 
-
+  <script>
+    document.getElementById('toggleSearch').addEventListener('click', function () {
+      const input = document.getElementById('searchInput');
+      input.classList.toggle('hidden');
+      if (!input.classList.contains('hidden')) {
+        input.focus();
+      }
+    });
+  </script>
 </body>
 
 </html>
