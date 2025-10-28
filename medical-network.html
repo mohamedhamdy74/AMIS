@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="stylesheet" href="./src/output.css">
+  <title>Document</title>
+  <style>
+    .drop-shadow-lg {
+      text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    }
+
+    .drop-shadow-md {
+      text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    .page-frame {
+      border-style: dotted;
+    }
+  </style>
+</head>
+
+<body class="font-cairo text-gray-800">
+  <!-- header (ثابت) -->
+  <header class="fixed top-5 left-5 right-5 z-50 hidden md:block">
+    <div
+      class="bg-white backdrop-blur-md rounded-full shadow-lg py-4 px-6 mx-5 flex items-center justify-between gap-4 border border-white/40">
+      <div class="flex items-center gap-6">
+        <img src="./imgs/cldlogo.png" alt="AMHS Logo" class="h-10" />
+        <nav class="hidden md:flex gap-6 text-sm font-bold">
+          <a href="#"
+            class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">الرئيسية</a>
+          <a href="#"
+            class="hover:text-[#0166B3] flex items-center gap-1 border-b-2 border-transparent hover:border-[#1B2128] transition flex-row-reverse">
+            <i class="fas fa-arrow-up rotate-45 text-xs"></i>
+            خدمات أونلاين
+          </a>
+          <a href="#" class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">بطاقة
+            العضوية
+            الرقمية</a>
+          <a href="#" class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">تجديد
+            الاشتراك</a>
+          <a href="#" class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">عن
+            الموقع</a>
+        </nav>
+      </div>
+
+      <!-- زر اشترك و search -->
+      <div class="relative flex gap-3 items-center">
+        <button
+          class="bg-[#0166B3] text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition flex items-center gap-2">
+          <i class="fas fa-arrow-up -rotate-45"></i> اشترك الآن
+        </button>
+
+        <button id="toggleSearch"
+          class="text-[#0166B3] bg-white border px-3 py-2 rounded-full hover:bg-[#0166B3] hover:text-white transition">
+          <i class="fas fa-search"></i>
+        </button>
+
+        <input type="text" id="searchInput" placeholder="ابحث هنا..."
+          class="hidden absolute top-full mt-2 right-0 w-56 px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-[#0166B3] text-sm text-gray-800 bg-white z-40" />
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Header -->
+  <header class="md:hidden bg-white border-b border-gray-200 py-4 px-4 flex items-center justify-between">
+   
+     <button class="text-[#0166B3]">
+      <i class="fas fa-arrow-right text-xl"></i>
+    </button>
+    <h1 class="text-lg font-semibold text-gray-800">بحث داخل الشبكة الطبية</h1>
+    <button class="text-gray-600">
+      <i class="fas fa-bars text-xl"></i>
+    </button>
+  </header>
+
+  <!-- tab bar  -->
+ <nav class="fixed overflow-x-auto whitespace-nowrap bottom-0 right-0 left-0 bg-white border-t border-gray-200 shadow-xl z-50 flex justify-around py-2.5 px-1 lg:hidden font-cairo" style="direction: rtl;">
+
+    <a href="#" class="flex flex-col items-center text-xs font-semibold text-[#1B2128] w-1/5">
+        <i class="fas fa-home text-xs mb-0.5 text-[#0166B3]"></i>
+        <span>الرئيسية</span>
+    </a>
+
+    <a href="#" class="flex flex-col items-center text-xs font-medium text-gray-500 hover:text-[#0166B3] w-1/5 transition-colors">
+        <i class="fas fa-globe text-xs mb-0.5"></i>
+        <span>خدمات أونلاين</span>
+    </a>
+
+    <a href="#" class="flex flex-col items-center justify-center text-xs font-medium text-gray-500 hover:text-[#0166B3] w-1/5 transition-colors">
+        <i class="fas fa-credit-card text-xs mb-0.5"></i>
+        <span>بطاقة العضوية</span>
+    </a>
+
+    <a href="#" class="flex flex-col items-center text-xs font-medium text-gray-500 hover:text-[#0166B3] w-1/5 transition-colors">
+        <i class="fas fa-refresh text-xs mb-0.5"></i>
+        <span>تجديد الاشتراك</span>
+    </a>
+
+    <a href="#" class="flex flex-col items-center text-xs font-medium text-gray-500 hover:text-[#0166B3] w-1/5 transition-colors">
+        <i class="fas fa-info-circle text-xs mb-0.5"></i>
+        <span>عن الموقع</span>
+    </a>
+
+</nav>
+
+  <!-- spacer علشان الـ header الثابت -->
+  <div class="md:h-[90px]"></div>
+
+  <!-- hero section تحت الـ navbar -->
+  <section class="relative w-full flex items-center justify-center hidden md:flex"
+    style="background-image: url('./imgs/Inner_Header.png'); background-size: cover; background-position: center; max-width:1600px; margin: 0 auto;">
+    <div class="w-full h-[300px] relative flex items-center justify-center">
+      <!-- overlay -->
+      <div class="absolute inset-0 bg-black/30"></div>
+
+      <div class="relative text-center text-white">
+        <h3 class="text-3xl font-bold mb-2 drop-shadow-lg">الشبكة الطبية </h3>
+        <p class="text-sm font-medium drop-shadow-md">
+          <span class="opacity-90">الرئيسية</span><i class="fa-solid fa-angle-left p-1"></i> الشبكة الطبية
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <main dir="rtl" class="bg-white min-h-screen py-6 px-4 md:py-10 md:px-6 pb-24 md:pb-10">
+    <!-- البرنامج المخفض -  اشتراك جديد -->
+    <div class="text-right mb-8 hidden md:block">
+      <p class="text-gray-500 text-sm flex items-center mb-12 gap-6 relative top-4">
+        <i class="fa-solid fa-arrow-right text-[#0166B3]"></i>
+        <span class="text-[#0166B3]"> الشبكة الطبية</span>
+        <i class="fa-solid fa-arrow-left text-[#0166B3]"></i>
+      </p>
+      <h1 class="text-2xl font-bold text-[#1B2128]"> بحث داخل الشبكة الطبية</h1>
+    </div>
+
+    <!-- Mobile Page Title -->
+    <div class="md:hidden mb-6">
+      <h2 class="text-lg font-semibold text-gray-800 text-center">البحث بأسم الجهة</h2>
+    </div>
+
+    <!-- search section  -->
+    <div class="mx-auto bg-white">
+      <!-- Header - Desktop Only -->
+      <div class="mb-8 hidden md:block">
+        <h1 class="text-3xl font-bold text-[#0166B3] mb-6">البحث</h1>
+        <h2 class="text-xl font-semibold text-gray-800 mb-2">البحث بأسم الجهة او عبر الفلتر</h2>
+        <p class="text-gray-600">البحث بأسم الجهة</p>
+      </div>
+
+      <!-- Search Form -->
+      <form class="space-y-4 md:space-y-6">
+        <!-- Search Input -->
+        <div class="relative">
+          <input type="text" placeholder="البحث بأسم الجهة"
+            class="w-full px-4 py-3 pr-10 border text-gray-500 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-right">
+          <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+        </div>
+
+        <!-- Mobile Filters Row -->
+        <div class="flex gap-3 md:hidden">
+          <!-- نوع الجهة Dropdown -->
+          <div class="flex-1">
+            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-right text-gray-500 text-sm appearance-none bg-white">
+              <option value="">نوع الجهة</option>
+              <option value="government">حكومية</option>
+              <option value="private">خاصة</option>
+              <option value="ngo">منظمة غير حكومية</option>
+            </select>
+          </div>
+
+          <!-- المحافظة Dropdown -->
+          <div class="flex-1">
+            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-right text-gray-500 text-sm appearance-none bg-white">
+              <option value="">المحافظة</option>
+              <option value="cairo">القاهرة</option>
+              <option value="giza">الجيزة</option>
+              <option value="alexandria">الإسكندرية</option>
+              <option value="portsaid">بورسعيد</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Desktop Filters -->
+        <div class="hidden md:block space-y-6">
+          <!-- Governorate Dropdown -->
+          <div>
+            <label class="block text-gray-700 font-semibold mb-2">
+              المحافظة <span class="text-red-500">*</span>
+            </label>
+            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-right text-gray-500">
+              <option value="">اختار المحافظة</option>
+              <option value="cairo">القاهرة</option>
+              <option value="giza">الجيزة</option>
+              <option value="alexandria">الإسكندرية</option>
+              <option value="portsaid">بورسعيد</option>
+            </select>
+          </div>
+
+          <!-- Destination Type Dropdown -->
+          <div>
+            <label class="block text-gray-700 font-semibold mb-2">
+              نوع الجهة <span class="text-red-500">*</span>
+            </label>
+            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-right text-gray-500">
+              <option value="">اختار نوع الجهة</option>
+              <option value="government">حكومية</option>
+              <option value="private">خاصة</option>
+              <option value="ngo">منظمة غير حكومية</option>
+            </select>
+          </div>
+
+          <!-- Search Button -->
+          <div class="flex justify-end">
+            <button type="submit"
+              class="bg-[#0166B3] hover:opacity-90 text-white font-semibold px-16 py-3 rounded-full transition duration-200">
+              بحث
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Mobile Results Count -->
+      <div class="md:hidden text-start text-gray-500 text-sm mt-4">
+        120 of 290 results
+      </div>
+    </div>
+
+    <!-- Results Section -->
+    <div class="mx-auto mt-8 md:mt-12">
+      <!-- Header - Desktop Only -->
+      <h1 class="text-3xl font-bold text-[#0166B3] mb-8 hidden md:block">نتائج البحث</h1>
+
+      <!-- Desktop Table -->
+      <div class="bg-white rounded-lg shadow-sm overflow-hidden hidden md:block">
+        <table class="w-full">
+          <!-- Table Header -->
+          <thead class="bg-gray-50 border-b border-gray-200">
+            <tr>
+              <th class="px-6 py-4 text-right text-gray-700 font-semibold">الجهة</th>
+              <th class="px-6 py-4 text-right text-gray-700 font-semibold">العنوان</th>
+              <th class="px-6 py-4 text-right text-gray-700 font-semibold">الموقع</th>
+            </tr>
+          </thead>
+
+          <!-- Table Body -->
+          <tbody class="divide-y divide-gray-200">
+            <tr class="hover:bg-gray-50">
+              <td class="px-6 py-4 text-gray-800 font-semibold">معمل الفا إسكان</td>
+              <td class="px-6 py-4 text-gray-700">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</td>
+              <td class="px-6 py-4">
+                <button class="flex items-center gap-2 text-gray-600 hover:text-[#0166B3] bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-full transition">
+                  <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
+                  <span>عرض التفاصيل</span>
+                </button>
+              </td>
+            </tr>
+
+            <tr class="hover:bg-gray-50">
+              <td class="px-6 py-4 text-gray-800 font-semibold">معمل الفا إسكان</td>
+              <td class="px-6 py-4 text-gray-700">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</td>
+              <td class="px-6 py-4">
+                <button class="flex items-center gap-2 text-gray-600 hover:text-[#0166B3] bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-full transition">
+                  <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
+                  <span>عرض التفاصيل</span>
+                </button>
+              </td>
+            </tr>
+
+            <tr class="hover:bg-gray-50">
+              <td class="px-6 py-4 text-gray-800 font-semibold">معمل الفا إسكان</td>
+              <td class="px-6 py-4 text-gray-700">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</td>
+              <td class="px-6 py-4">
+                <button class="flex items-center gap-2 text-gray-600 hover:text-[#0166B3] bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-full transition">
+                  <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
+                  <span>عرض التفاصيل</span>
+                </button>
+              </td>
+            </tr>
+
+            <tr class="hover:bg-gray-50">
+              <td class="px-6 py-4 text-gray-800 font-semibold">معمل الفا اسكان</td>
+              <td class="px-6 py-4 text-gray-700">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</td>
+              <td class="px-6 py-4">
+                <button class="flex items-center gap-2 text-gray-600 hover:text-[#0166B3] bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-full transition">
+                  <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
+                  <span>عرض التفاصيل</span>
+                </button>
+              </td>
+            </tr>
+
+            <tr class="hover:bg-gray-50">
+              <td class="px-6 py-4 text-gray-800 font-semibold">معمل الفا اسكان</td>
+              <td class="px-6 py-4 text-gray-700">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</td>
+              <td class="px-6 py-4">
+                <button class="flex items-center gap-2 text-gray-600 hover:text-[#0166B3] bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-full transition">
+                  <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
+                  <span>عرض التفاصيل</span>
+                </button>
+              </td>
+            </tr>
+
+            <tr class="hover:bg-gray-50">
+              <td class="px-6 py-4 text-gray-800 font-semibold">معمل الفا اسكان</td>
+              <td class="px-6 py-4 text-gray-700">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</td>
+              <td class="px-6 py-4">
+                <button class="flex items-center gap-2 text-gray-600 hover:text-[#0166B3] bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-full transition">
+                  <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
+                  <span>عرض التفاصيل</span>
+                </button>
+              </td>
+            </tr>
+
+            <tr class="hover:bg-gray-50">
+              <td class="px-6 py-4 text-gray-800 font-semibold">معمل الفا اسكان</td>
+              <td class="px-6 py-4 text-gray-700">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</td>
+              <td class="px-6 py-4">
+                <button class="flex items-center gap-2 text-gray-600 hover:text-[#0166B3] bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-full transition">
+                  <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
+                  <span>عرض التفاصيل</span>
+                </button>
+              </td>
+            </tr>
+
+            <tr class="hover:bg-gray-50">
+              <td class="px-6 py-4 text-gray-800 font-semibold">معمل الفا اسكان</td>
+              <td class="px-6 py-4 text-gray-700">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</td>
+              <td class="px-6 py-4">
+                <button class="flex items-center gap-2 text-gray-600 hover:text-[#0166B3] bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-full transition">
+                  <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
+                  <span>عرض التفاصيل</span>
+                </button>
+              </td>
+            </tr>
+
+            <tr class="hover:bg-gray-50">
+              <td class="px-6 py-4 text-gray-800 font-semibold">معمل الفا اسكان</td>
+              <td class="px-6 py-4 text-gray-700">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</td>
+              <td class="px-6 py-4">
+                <button class="flex items-center gap-2 text-gray-600 hover:text-[#0166B3] bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-full transition">
+                  <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
+                  <span>عرض التفاصيل</span>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile List View -->
+      <div class="md:hidden space-y-4">
+        <!-- Result Card -->
+        <div class="bg-white border-b border-gray-200 pb-4">
+          <div class="flex justify-between items-start mb-2">
+           
+            <div class="flex-1 text-right">
+              <h3 class="text-[#0166B3] font-semibold mb-1">معمل الفا إسكان</h3>
+              <p class="text-gray-600 text-sm">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</p>
+            </div>
+             <button class="text-gray-600">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+          </div>
+        </div>
+        <div class="bg-white border-b border-gray-200 pb-4">
+          <div class="flex justify-between items-start mb-2">
+           
+            <div class="flex-1 text-right">
+              <h3 class="text-[#0166B3] font-semibold mb-1">معمل الفا إسكان</h3>
+              <p class="text-gray-600 text-sm">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</p>
+            </div>
+             <button class="text-gray-600">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+          </div>
+        </div>
+        <div class="bg-white border-b border-gray-200 pb-4">
+          <div class="flex justify-between items-start mb-2">
+           
+            <div class="flex-1 text-right">
+              <h3 class="text-[#0166B3] font-semibold mb-1">معمل الفا إسكان</h3>
+              <p class="text-gray-600 text-sm">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</p>
+            </div>
+             <button class="text-gray-600">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+          </div>
+        </div>
+        <div class="bg-white border-b border-gray-200 pb-4">
+          <div class="flex justify-between items-start mb-2">
+           
+            <div class="flex-1 text-right">
+              <h3 class="text-[#0166B3] font-semibold mb-1">معمل الفا إسكان</h3>
+              <p class="text-gray-600 text-sm">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</p>
+            </div>
+             <button class="text-gray-600">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+          </div>
+        </div>
+        <div class="bg-white border-b border-gray-200 pb-4">
+          <div class="flex justify-between items-start mb-2">
+           
+            <div class="flex-1 text-right">
+              <h3 class="text-[#0166B3] font-semibold mb-1">معمل الفا إسكان</h3>
+              <p class="text-gray-600 text-sm">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</p>
+            </div>
+             <button class="text-gray-600">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pagination -->
+      <div class="flex justify-center items-center gap-2 mt-8">
+        <button class="px-3 py-2 bg-[#0166B3] text-white rounded transition">01</button>
+        <button class="px-3 py-2 text-gray-600 hover:text-[#0166B3] hover:bg-gray-100 rounded transition">02</button>
+        <button class="px-3 py-2 text-gray-600 hover:text-[#0166B3] hover:bg-gray-100 rounded transition">03</button>
+        <button class="px-3 py-2 text-gray-600 hover:text-[#0166B3] hover:bg-gray-100 rounded transition">04</button>
+        <button class="px-3 py-2 text-gray-600 hover:text-[#0166B3] hover:bg-gray-100 rounded transition">05</button>
+        <button class="px-3 py-2 text-gray-600 hover:text-[#0166B3] hover:bg-gray-100 rounded transition">06</button>
+        <button class="px-3 py-2 text-gray-600 hover:text-[#0166B3] hover:bg-gray-100 rounded transition">...</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="hidden md:block bg-[#1B2128] text-white py-16 px-5 w-full">
+    <div class="max-w-7xl mx-auto">
+      <!-- Newsletter Section -->
+      <div class="mb-12 ">
+        <div class="flex gap-3 items-center justify-end">
+          <div class="relative">
+            <i class="fa-solid fa-user text-gray-400 absolute right-3 top-1/2 -translate-y-1/2"></i>
+
+            <input type="email" placeholder="ادخل البريد الالكتروني"
+              class="flex-1 w-full pl-4 pr-20 py-3 bg-gray-800 border border-gray-700 rounded-md text-white text-sm placeholder-gray-500 focus:outline-none focus:border-[#0166B3]">
+          </div>
+          <button
+            class="px-6 py-3 bg-[#0166B3] hover:bg-[#0152a3] text-white font-semibold rounded-md transition-colors duration-300 whitespace-nowrap">
+            متابعة
+          </button>
+        </div>
+        <div>
+          <h1 class="text-xl font-semibold text-right relative bottom-8">
+            هل ترغب في متابعة العروض؟
+          </h1>
+        </div>
+      </div>
+      <div
+        class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
+
+      </div>
+
+      <!-- Footer Top Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
+        <!-- Column 1: Logo & Social Icons -->
+        <div class="lg:col-span-1">
+          <!-- Logo -->
+          <div class="flex items-center gap-3 mb-6">
+            <img class="w-[120px] h-[65px]" src="./imgs/logo.png" alt="">
+          </div>
+
+          <!-- Description -->
+          <p class="text-gray-400 text-sm leading-relaxed mb-6">
+            إتخذت شركة (التجاريون للإدارة والخدمات المتكاملة) A.M.I.S شكل شركة مساهمة مصرية خاضعة للقانون 159 لسنة 1981، منذ بدء نشاطها فى منتصف عام 1995.
+          </p>
+
+          <!-- Social Icons -->
+          <div class="flex gap-3 mt-6">
+            <a href="#"
+              class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#"
+              class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#"
+              class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#"
+              class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: روابط هامة -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">روابط هامة</h3>
+          <ul class="space-y-4">
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-angle-left text-xs"></i>
+                <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                الرؤية والرسالة
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-angle-left text-xs"></i>
+                <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                فريق العمل
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-angle-left text-xs"></i>
+                <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                الأخبار والمدونة
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-angle-left text-xs"></i>
+                <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                تواصل معنا
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 3: روابط سريعة -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6"> روابط سريعة</h3>
+          <ul class="space-y-4">
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-angle-left text-xs"></i>
+                <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                الكتيب الطبي
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2 relative">
+                <i class="fas fa-angle-left text-xs"></i>
+                <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                طلبات الاسترداد
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-angle-left text-xs"></i>
+                <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                الشبكة الطبية
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-angle-left text-xs"></i>
+                <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                برنامج العلاج الشهري
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: تواصل معنا -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">تواصل معنا</h3>
+          <ul class="space-y-4">
+            <li>
+              <a href="mailto:info@youremail.com"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="far fa-envelope w-4"></i>
+                info@youremail.com
+              </a>
+            </li>
+            <li>
+              <a href="tel:+123456789"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-phone w-4"></i>
+                01113311141
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
+                <i class="fas fa-map-marker-alt w-4"></i>
+                فروعنا
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div
+        class="pt-6 flex flex-col md:flex-row justify-between items-center text-sm">
+        <a href="#" class="transition-colors duration-300">الشروط والأحكام</a>
+        <a href="#" class="duration-300 relative left-80">سياسة الاستخدام</a>
+        <div class="flex gap-6">
+          <p>جميع الحقوق محفوظة © شركة التجاريين للخدمات المتكاملة </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -256,6 +256,79 @@ function initMap() {
  });
 
 } // end initMap
-initMap();
+
 // تشغيل الخريطة عند تحميل الصفحة
-// window.addEventListener("load", initMap);
+window.addEventListener("load", initMap);
+
+
+// medical network map 
+      // Initialize map centered on Cairo (approximate location)
+       const map = L.map('map2').setView([30.0444, 31.2357], 15);
+
+       // Add OpenStreetMap tile layer
+       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+           attribution: '© OpenStreetMap contributors',
+           maxZoom: 19
+       }).addTo(map);
+
+       // Create custom icon
+       const customIcon = L.divIcon({
+           className: 'custom-marker',
+           html: `
+               <div class="bg-red-500 w-10 h-10 rounded-full border-4 border-white shadow-lg flex items-center justify-center transform -rotate-45" style="border-radius: 50% 50% 50% 0;">
+                   <svg class="w-5 h-5 text-white transform rotate-45" fill="currentColor" viewBox="0 0 20 20">
+                       <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                   </svg>
+               </div>
+           `,
+           iconSize: [40, 40],
+           iconAnchor: [20, 40],
+           popupAnchor: [0, -40]
+       });
+
+       // Add marker
+       const marker = L.marker([30.0444, 31.2357], { icon: customIcon }).addTo(map);
+
+       // Add popup to marker
+       marker.bindPopup(`
+           <div class="font-cairo text-right" dir="rtl">
+               <strong class="text-sm">27 شارع عرابي</strong><br>
+               <span class="text-xs text-gray-600">الدور الثامن - شقة 805<br>التوفيقية - القاهرة</span>
+           </div>
+       `);
+
+       // medical network map in mobile view
+      // Initialize map centered on Cairo (approximate location)
+       const mapm = L.map('map3').setView([30.0444, 31.2357], 15);
+
+       // Add OpenStreetMap tile layer
+       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+           attribution: '© OpenStreetMap contributors',
+           maxZoom: 19
+       }).addTo(mapm);
+
+       // Create custom icon
+       const customIconm = L.divIcon({
+           className: 'custom-marker',
+           html: `
+               <div class="bg-red-500 w-10 h-10 rounded-full border-4 border-white shadow-lg flex items-center justify-center transform -rotate-45" style="border-radius: 50% 50% 50% 0;">
+                   <svg class="w-5 h-5 text-white transform rotate-45" fill="currentColor" viewBox="0 0 20 20">
+                       <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                   </svg>
+               </div>
+           `,
+           iconSize: [40, 40],
+           iconAnchor: [20, 40],
+           popupAnchor: [0, -40]
+       });
+
+       // Add marker
+       const markerm = L.marker([30.0444, 31.2357], { icon: customIconm }).addTo(mapm);
+
+       // Add popup to marker
+       markerm.bindPopup(`
+           <div class="font-cairo text-right" dir="rtl">
+               <strong class="text-sm">27 شارع عرابي</strong><br>
+               <span class="text-xs text-gray-600">الدور الثامن - شقة 805<br>التوفيقية - القاهرة</span>
+           </div>
+       `);

@@ -15,6 +15,12 @@
     html {
         font-family: 'Cairo', sans-serif;
     }
+    * {
+        font-family: '29Lt Bukra', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6,table,tr,th,td,strong,button {
+        font-family: 'Cairo', sans-serif;
+    }
 }
 
 @layer utilities {
