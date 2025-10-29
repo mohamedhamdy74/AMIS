@@ -1,3 +1,37 @@
+// Invoice Modal Functions
+function openInvoiceModal() {
+    const modal = document.getElementById('invoiceModal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+}
+
+function closeInvoiceModal() {
+    const modal = document.getElementById('invoiceModal');
+    if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    }
+}
+
+function shareInvoice() {
+    // Simple share functionality - you can enhance this
+    if (navigator.share) {
+        navigator.share({
+            title: 'الفاتورة',
+            text: 'مشاركة الفاتورة',
+            url: window.location.href
+        });
+    } else {
+        // Fallback for browsers that don't support Web Share API
+        const url = window.location.href;
+        navigator.clipboard.writeText(url).then(() => {
+            alert('تم نسخ رابط الفاتورة إلى الحافظة');
+        });
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const heroSection = document.querySelector(".hero-slider");
   const prevBtn = document.getElementById("prevBtn");
@@ -26,16 +60,20 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Next button click
-  nextBtn.addEventListener("click", function () {
-    currentIndex = (currentIndex + 1) % images.length;
-    updateBackground();
-  });
+  if (nextBtn) {
+    nextBtn.addEventListener("click", function () {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateBackground();
+    });
+  }
 
   // Previous button click
-  prevBtn.addEventListener("click", function () {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    updateBackground();
-  });
+  if (prevBtn) {
+    prevBtn.addEventListener("click", function () {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateBackground();
+    });
+  }
 
   // Indicator click
   indicators.forEach((indicator, index) => {
@@ -145,11 +183,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Initialize Leaflet Map
 function initMap() {
+  // Check if Leaflet is available
+  if (typeof L === 'undefined') {
+    console.warn('Leaflet library not loaded');
+    return;
+  }
+
   // إحداثيات القاهرة (المركز)
   const cairoCenter = [30.0444, 31.2357];
 
   // إنشاء الخريطة
-  const map = L.map("map").setView(cairoCenter, 11);
+  const map = L.map("mapp").setView(cairoCenter, 11);
 
   // إضافة طبقة الخريطة من OpenStreetMap
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -261,9 +305,16 @@ function initMap() {
 window.addEventListener("load", initMap);
 
 
-// medical network map 
-      // Initialize map centered on Cairo (approximate location)
-       const map = L.map('map2').setView([30.0444, 31.2357], 15);
+// medical network map
+function initMap2() {
+       // Check if Leaflet is available
+       if (typeof L === 'undefined') {
+         console.warn('Leaflet library not loaded for map2');
+         return;
+       }
+
+       // Initialize map centered on Cairo (approximate location)
+        const map = L.map('map2').setView([30.0444, 31.2357], 15);
 
        // Add OpenStreetMap tile layer
        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -296,8 +347,16 @@ window.addEventListener("load", initMap);
                <span class="text-xs text-gray-600">الدور الثامن - شقة 805<br>التوفيقية - القاهرة</span>
            </div>
        `);
+}
 
-       // medical network map in mobile view
+// medical network map in mobile view
+function initMap3() {
+      // Check if Leaflet is available
+      if (typeof L === 'undefined') {
+        console.warn('Leaflet library not loaded for map3');
+        return;
+      }
+
       // Initialize map centered on Cairo (approximate location)
        const mapm = L.map('map3').setView([30.0444, 31.2357], 15);
 
@@ -332,8 +391,8 @@ window.addEventListener("load", initMap);
                <span class="text-xs text-gray-600">الدور الثامن - شقة 805<br>التوفيقية - القاهرة</span>
            </div>
        `);
-
-
+}
+initMap3();
 
 //modal subscription form
            function openModal() {
@@ -369,3 +428,17 @@ window.addEventListener("load", initMap);
                 input.focus();
             }
         });
+
+// FAQ Collapse Functionality
+function toggleCollapse(faqId) {
+    const content = document.getElementById(`content-${faqId}`);
+    const icon = document.getElementById(`icon-${faqId}`);
+
+    if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+    } else {
+        content.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+    }
+}
