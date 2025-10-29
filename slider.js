@@ -75,7 +75,7 @@ const mobileForm = document.getElementById('mobileForm');
 
 
  
-// handle contact form 
+// handle contact form
 
         function handleSubmit(event) {
           event.preventDefault();
@@ -98,3 +98,52 @@ const mobileForm = document.getElementById('mobileForm');
             return;
           }
         }
+
+// Toggle membership data section
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleMembership = document.getElementById('toggleMembership');
+  if (toggleMembership) {
+    toggleMembership.addEventListener('click', function() {
+      const membershipData = document.querySelector('.membership-data');
+      const toggleIcon = document.getElementById('toggleMembership');
+
+      if (membershipData.classList.contains('hidden')) {
+        membershipData.classList.remove('hidden');
+        toggleIcon.innerHTML = `
+          <circle cx="12" cy="12" r="10" fill="#0166B3" stroke="white" stroke-width="2" />
+          <rect x="7" y="11" width="10" height="2" fill="white" />
+        `;
+      } else {
+        membershipData.classList.add('hidden');
+        toggleIcon.innerHTML = `
+          <circle cx="12" cy="12" r="10" fill="#0166B3" stroke="white" stroke-width="2" />
+          <rect x="7" y="11" width="10" height="2" fill="white" />
+          <rect x="11" y="7" width="2" height="10" fill="white" />
+        `;
+      }
+    });
+  }
+
+  // Toggle the entire section
+  const toggleSectionBtn = document.getElementById('toggleMembership');
+  if (toggleSectionBtn) {
+    toggleSectionBtn.addEventListener('click', function() {
+      const sectionToToggle = document.querySelector('.section-to-toggle');
+      if (sectionToToggle) {
+        sectionToToggle.classList.toggle('hidden');
+      }
+    });
+  }
+
+  // Toggle the form card
+  const showFormBtn = document.getElementById('showFormBtn');
+  if (showFormBtn) {
+    showFormBtn.addEventListener('click', function() {
+      const formCard = document.querySelector('.form-card');
+      if (formCard) {
+        formCard.classList.toggle('md:hidden');
+        console.log('Toggled form card');
+      }
+    });
+  }
+});

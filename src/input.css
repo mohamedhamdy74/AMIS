@@ -27,4 +27,22 @@
     .cursor-pointer {
         cursor: pointer;
     }
+    ::-webkit-scrollbar {
+  width: 2px; /* عرض الشريط */
+  height: 2px; /* للـ horizontal scroll */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* لون الخلفية */
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c0c0c0; /* لون السحب */
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0; /* عند التحريك */
+}
 }
