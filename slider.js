@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Array of background images
     const images = [
-        '/imgs/homeimg.png',
-        '/imgs/homeimg.png', // Add more images as needed
+        './imgs/homeimg.png',
+        './imgs/homeimg.png', // Add more images as needed
     ];
 
     let currentIndex = 0;
