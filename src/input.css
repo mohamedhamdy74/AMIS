@@ -45,4 +45,11 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #a0a0a0; /* عند التحريك */
 }
+@media (min-width: 768px) {
+  .hero-bg {
+    background-image: url('../imgs/videoimg.png');
+    background-size: cover;
+    background-position: center;
+  }
+}
 }
