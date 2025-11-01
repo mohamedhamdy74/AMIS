@@ -3,11 +3,12 @@
 
 @theme {
     --font-cairo: 'Cairo', sans-serif;
+    --font-bukra: '29Lt Bukra', sans-serif;
 }
 
 @layer base {
     @font-face {
-        font-family: '29Lt Bukra';
+        font-family: 'Bukra';
         src: url('../fonts/29LT-Bukra-Regular-1.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
@@ -16,16 +17,16 @@
         font-family: 'Cairo', sans-serif;
     }
     * {
-        font-family: '29Lt Bukra', sans-serif;
-    }
-    h1, h2, h3, h4, h5, h6,table,tr,th,td,strong,button {
-        font-family: 'Cairo', sans-serif;
+        font-family: 'cairo', sans-serif;
     }
 }
 
 @layer utilities {
     .cursor-pointer {
         cursor: pointer;
+    }
+    .font-bukra {
+        font-family: '29Lt Bukra', sans-serif;
     }
     ::-webkit-scrollbar {
   width: 2px; /* عرض الشريط */
@@ -52,4 +53,174 @@
     background-position: center;
   }
 }
+
+/* From subscription-mc-form.html */
+.drop-shadow-lg {
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.drop-shadow-md {
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.page-frame {
+    border-style: dotted;
+}
+
+/* From subscription-invoice.html */
+.drop-shadow-lg {
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.drop-shadow-md {
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.page-frame {
+    border-style: dotted;
+}
+
+/* From Subscription-form.html */
+.drop-shadow-lg {
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.drop-shadow-md {
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.page-frame {
+    border-style: dotted;
+}
+
+/* From register-more-care.html */
+.drop-shadow-lg {
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.drop-shadow-md {
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.page-frame {
+    border-style: dotted;
+}
+
+/* From register-low-program.html */
+.drop-shadow-lg {
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.drop-shadow-md {
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.page-frame {
+    border-style: dotted;
+}
+
+/* From referralsview.html */
+.drop-shadow-lg {
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.drop-shadow-md {
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.page-frame {
+    border-style: dotted;
+}
+
+/* From referalexport.html */
+.drop-shadow-lg {
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.drop-shadow-md {
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.page-frame {
+    border-style: dotted;
+}
+
+/* From new-register.html */
+.drop-shadow-lg {
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.drop-shadow-md {
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.page-frame {
+    border-style: dotted;
+}
+
+/* From membershipdetails.html */
+input[type="text"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+/* From membershipdetails-mc.html */
+input[type="text"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+/* From medical-network.html */
+.drop-shadow-lg {
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.drop-shadow-md {
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.page-frame {
+    border-style: dotted;
+}
+
+/* From confirm-mc.html */
+.drop-shadow-lg {
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.drop-shadow-md {
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.page-frame {
+    border-style: dotted;
+}
+
+/* From confirm-low-program.html */
+.drop-shadow-lg {
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.drop-shadow-md {
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.page-frame {
+    border-style: dotted;
+}
+
+/* From index.html */
+body { overflow-x: hidden; }
+.hero-slider {
+    background-image: url('../imgs/homeimg.png');
+}
+.indicator.active {
+    background-color: white !important;
+}
+.indicator:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.hh{
+    display: none;
+}
+
+/* إخفاء شريط التمرير على متصفحات Webkit (Chrome, Safari) */
 }

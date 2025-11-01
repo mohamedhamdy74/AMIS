@@ -7,63 +7,52 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
   <link rel="stylesheet" href="./src/output.css">
   <title>Document</title>
-  <style>
-    .drop-shadow-lg {
-      text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-    }
-
-    .drop-shadow-md {
-      text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
-    }
-
-    .page-frame {
-      border-style: dotted;
-    }
-  </style>
 </head>
 
 <body class="font-cairo text-gray-800">
-  <!-- header (ثابت) -->
-  <header class="fixed top-5 left-5 right-5 z-50 hidden md:block">
-    <div
-      class="bg-white backdrop-blur-md rounded-full shadow-lg py-4 px-6 mx-5 flex items-center justify-between gap-4 border border-white/40">
-      <div class="flex items-center gap-6">
+<header class="hidden lg:block md:fixed md:top-7  md:left-5 md:right-5 md:z-50 ">
+
+    <div class="bg-white  backdrop-blur-md rounded-full shadow-lg py-5 px-8   flex items-center justify-between gap-4 ">
+      <div class="flex items-center gap-8">
         <img src="./imgs/cldlogo.png" alt="AMHS Logo" class="h-10" />
         <nav class="hidden md:flex gap-6 text-sm font-bold">
           <a href="index.html"
-            class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">الرئيسية</a>
+            class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition ">الرئيسية</a>
           <a href="new-register.html"
-            class="hover:text-[#0166B3] flex items-center gap-1 border-b-2 border-transparent hover:border-[#1B2128] transition flex-row-reverse">
-            <i class="fas fa-arrow-up rotate-45 text-xs"></i>
+            class=" hover:text-[#0166B3] flex items-center gap-1 border-b-2 border-transparent hover:border-[#1B2128] transition flex-row-reverse">
+            <i class="fas fa-arrow-up rotate-45 text-gray-300  text-xs"></i>
             خدمات أونلاين
           </a>
-          <a href="membershipdetails.html" class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">بطاقة
-            العضوية
+          <a href="membershipdetails.html"
+            class=" hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">بطاقة العضوية
             الرقمية</a>
-          <a href="register-low-program.html" class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">تجديد
+          <a href="./signup.html"
+            class=" hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">تجديد
             الاشتراك</a>
-          <a href="medical-network.html" class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">الشبكة
-            الطبية</a>
+          <a href="#" class=" hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">
+            تواصل معنا</a>
         </nav>
       </div>
 
       <!-- زر اشترك و search -->
       <div class="relative flex gap-3 items-center">
+        <a href="./referal-sign-up.html">
         <button
-          class="bg-[#0166B3] text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition flex items-center gap-2">
-          <i class="fas fa-arrow-up -rotate-45"></i> اشترك الآن
+          class="bg-[#0166B3] text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition flex items-center gap-2">
+          اشترك الآن
+           <i class="fas fa-arrow-right rotate-225 "></i>
         </button>
-
+        </a>
         <button id="toggleSearch"
-          class="text-[#0166B3] bg-white border px-3 py-2 rounded-full hover:bg-[#0166B3] hover:text-white transition">
+          class=" bg-white px-3 py-2 rounded-full hover:bg-[#0166B3] hover:text-white transition">
           <i class="fas fa-search"></i>
         </button>
-
         <input type="text" id="searchInput" placeholder="ابحث هنا..."
-          class="hidden absolute top-full mt-2 right-0 w-56 px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-[#0166B3] text-sm text-gray-800 bg-white z-40" />
+          class="hidden absolute top-full mt-2 right-0 w-48 px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-[#0166B3] text-sm text-gray-800 bg-white z-40" />
       </div>
     </div>
-  </header>
+
+</header>
 
   <!-- Mobile Header -->
   <header class="md:hidden bg-white border-b border-gray-200 py-4 px-4 flex items-center justify-between">
@@ -78,31 +67,31 @@
   </header>
 
   <!-- tab bar  -->
- <nav class="fixed overflow-x-auto whitespace-nowrap bottom-0 right-0 left-0 bg-white border-t border-gray-200 shadow-xl z-50 flex justify-around py-2.5 px-1 lg:hidden font-cairo" style="direction: rtl;">
+ <nav class="fixed overflow-x-scroll whitespace-nowrap w-full bottom-0  bg-white border-t border-gray-200 shadow-xl z-50 flex justify-around items-center  gap-5 py-2.5 px-5 lg:hidden font-cairo" style="direction: rtl;">
 
-    <a href="#" class="flex flex-col items-center text-xs font-semibold text-[#1B2128] w-1/5">
-        <i class="fas fa-home text-xs mb-0.5 text-[#0166B3]"></i>
+    <a href="./index.html" class="flex flex-col items-center justify-center text-xs font-semibold text-[#1B2128] ">
+        <i class="fas fa-home text-2xl mb-0.5 text-[#0166B3]"></i>
         <span>الرئيسية</span>
     </a>
 
-    <a href="#" class="flex flex-col items-center text-xs font-medium text-gray-500 hover:text-[#0166B3] w-1/5 transition-colors">
-        <i class="fas fa-globe text-xs mb-0.5"></i>
+    <a href="./new-register.html" class="flex flex-col items-center justify-center text-xs font-medium text-gray-500 hover:text-[#0166B3]  transition-colors">
+        <i class="fas fa-globe text-2xl mb-0.5"></i>
         <span>خدمات أونلاين</span>
     </a>
 
-    <a href="#" class="flex flex-col items-center justify-center text-xs font-medium text-gray-500 hover:text-[#0166B3] w-1/5 transition-colors">
-        <i class="fas fa-credit-card text-xs mb-0.5"></i>
+    <a href="./medical-network.html" class="flex flex-col items-center justify-center text-xs font-medium text-gray-500 hover:text-[#0166B3]  transition-colors">
+        <i class="fas fa-credit-card text-2xl mb-0.5"></i>
         <span>بطاقة العضوية</span>
     </a>
 
-    <a href="#" class="flex flex-col items-center text-xs font-medium text-gray-500 hover:text-[#0166B3] w-1/5 transition-colors">
-        <i class="fas fa-refresh text-xs mb-0.5"></i>
+    <a href="./signup.html" class="flex flex-col items-center justify-center text-xs font-medium text-gray-500 hover:text-[#0166B3] transition-colors">
+        <i class="fas fa-refresh text-2xl mb-0.5"></i>
         <span>تجديد الاشتراك</span>
     </a>
 
-    <a href="#" class="flex flex-col items-center text-xs font-medium text-gray-500 hover:text-[#0166B3] w-1/5 transition-colors">
-        <i class="fas fa-info-circle text-xs mb-0.5"></i>
-        <span>عن الموقع</span>
+    <a href="./referalexport.html" class="flex flex-col items-center text-xs font-medium text-gray-500 hover:text-[#0166B3] transition-colors">
+        <i class="fas fa-envelope text-2xl mb-0.5"></i>
+        <span>تواصل معنا</span>
     </a>
 
 </nav>

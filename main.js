@@ -348,7 +348,7 @@ function initMap2() {
            </div>
        `);
 }
-
+initMap2();
 // medical network map in mobile view
 function initMap3() {
       // Check if Leaflet is available
@@ -395,20 +395,43 @@ function initMap3() {
 initMap3();
 
 //modal subscription form
-           function openModal() {
-            document.getElementById('mobileForm').classList.remove('hidden');
-        }
+function openModal() {
+    document.getElementById('mobileForm').classList.remove('hidden');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
 
-        function closeModal() {
-            document.getElementById('mobileForm').classList.add('hidden');
-        }
+function closeModal() {
+    document.getElementById('mobileForm').classList.add('hidden');
+    document.body.style.overflow = 'auto'; // Restore scrolling
+}
 
-        // Close modal when clicking outside
-        document.getElementById('mobileForm').addEventListener('click', function(e) {
+// Close modal when clicking outside
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileForm = document.getElementById('mobileForm');
+    if (mobileForm) {
+        mobileForm.addEventListener('click', function(e) {
             if (e.target === this) {
                 closeModal();
             }
         });
+    }
+
+    // Add event listener for mobile button
+    const showFormBtnMobile = document.getElementById('showFormBtnMobile');
+    if (showFormBtnMobile) {
+        showFormBtnMobile.addEventListener('click', function() {
+            openModal();
+        });
+    }
+
+    // Add event listener for close button
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', function() {
+            closeModal();
+        });
+    }
+});
 
         document.querySelectorAll('input[type="file"]').forEach(input => {
             input.addEventListener('change', function (e) {

@@ -1,836 +1,1215 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./src/output.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./src/output.css">
-   
-    <title>البرنامج المخفض - استمارة الاشتراك - أضافة عضو تابع
-    </title>
-</head>
+    <title>البرنامج المخفض - استمارة الاشتراك - أضافة عضو تابع</title>
+  </head>
 
-<body class="bg-white">
-    <header class="fixed top-5 left-5 right-5 z-50 hidden md:block">
-        <div
-            class="bg-white backdrop-blur-md rounded-full shadow-lg py-4 px-6 mx-5 flex items-center justify-between gap-4 border border-white/40">
-            <div class="flex items-center gap-6">
-                <img src="./imgs/cldlogo.png" alt="AMHS Logo" class="h-10" />
-                <nav class="hidden md:flex gap-6 text-sm font-bold">
-                    <a href="index.html"
-                        class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">الرئيسية</a>
-                    <a href="new-register.html"
-                        class="hover:text-[#0166B3] flex items-center gap-1 border-b-2 border-transparent hover:border-[#1B2128] transition flex-row-reverse">
-                        <i class="fas fa-arrow-up rotate-45 text-xs"></i>
-                        خدمات أونلاين
-                    </a>
-                    <a href="membershipdetails.html"
-                        class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">بطاقة
-                        العضوية
-                        الرقمية</a>
-                    <a href="register-low-program.html"
-                        class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">تجديد
-                        الاشتراك</a>
-                    <a href="medical-network.html"
-                        class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">الشبكة
-                        الطبية</a>
-                </nav>
-            </div>
-
-            <!-- زر اشترك و search -->
-            <div class="relative flex gap-3 items-center">
-                <button
-                    class="bg-[#0166B3] text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition flex items-center gap-2">
-                    <i class="fas fa-arrow-up -rotate-45"></i> اشترك الآن
-                </button>
-
-                <button id="toggleSearch"
-                    class="text-[#0166B3] bg-white border px-3 py-2 rounded-full hover:bg-[#0166B3] hover:text-white transition">
-                    <i class="fas fa-search"></i>
-                </button>
-
-                <input type="text" id="searchInput" placeholder="ابحث هنا..."
-                    class="hidden absolute top-full mt-2 right-0 w-56 px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-[#0166B3] text-sm text-gray-800 bg-white z-40" />
-            </div>
+  <body class="bg-white">
+    <header
+      class="hidden lg:block md:fixed md:top-7 md:left-5 md:right-5 md:z-50"
+    >
+      <div
+        class="bg-white backdrop-blur-md rounded-full shadow-lg py-5 px-8 flex items-center justify-between gap-4"
+      >
+        <div class="flex items-center gap-8">
+          <img src="./imgs/cldlogo.png" alt="AMHS Logo" class="h-10" />
+          <nav class="hidden md:flex gap-6 text-sm font-bold">
+            <a
+              href="index.html"
+              class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition"
+              >الرئيسية</a
+            >
+            <a
+              href="new-register.html"
+              class="hover:text-[#0166B3] flex items-center gap-1 border-b-2 border-transparent hover:border-[#1B2128] transition flex-row-reverse"
+            >
+              <i class="fas fa-arrow-up rotate-45 text-gray-300 text-xs"></i>
+              خدمات أونلاين
+            </a>
+            <a
+              href="membershipdetails.html"
+              class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition"
+              >بطاقة العضوية الرقمية</a
+            >
+            <a
+              href="./signup.html"
+              class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition"
+              >تجديد الاشتراك</a
+            >
+            <a
+              href="#"
+              class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition"
+            >
+              تواصل معنا</a
+            >
+          </nav>
         </div>
+
+        <!-- زر اشترك و search -->
+        <div class="relative flex gap-3 items-center">
+          <a href="./referal-sign-up.html">
+            <button
+              class="bg-[#0166B3] text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition flex items-center gap-2"
+            >
+              اشترك الآن
+              <i class="fas fa-arrow-right rotate-225"></i>
+            </button>
+          </a>
+          <button
+            id="toggleSearch"
+            class="bg-white px-3 py-2 rounded-full hover:bg-[#0166B3] hover:text-white transition"
+          >
+            <i class="fas fa-search"></i>
+          </button>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="ابحث هنا..."
+            class="hidden absolute top-full mt-2 right-0 w-48 px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring focus:ring-[#0166B3] text-sm text-gray-800 bg-white z-40"
+          />
+        </div>
+      </div>
     </header>
 
     <!-- spacer علشان الـ header الثابت -->
     <div class="md:h-[90px]"></div>
 
     <!-- hero section تحت الـ navbar -->
-    <section class="relative w-full  items-center justify-center hidden md:flex"
-        style="background-image: url('./imgs/Inner_Header.png'); background-size: cover; background-position: center; max-width:1600px; margin: 0 auto;">
-        <div class="w-full h-[300px] relative flex items-center justify-center">
-            <!-- overlay -->
-            <div class="absolute inset-0 bg-black/30"></div>
+    <section
+      class="relative w-full items-center justify-center hidden md:flex"
+      style="
+        background-image: url('./imgs/Inner_Header.png');
+        background-size: cover;
+        background-position: center;
+        max-width: 1600px;
+        margin: 0 auto;
+      "
+    >
+      <div class="w-full h-[300px] relative flex items-center justify-center">
+        <!-- overlay -->
+        <div class="absolute inset-0 bg-black/30"></div>
 
-            <div class="relative text-center text-white">
-                <h3 class="text-3xl font-bold mb-2 drop-shadow-lg">اشتراك جديد</h3>
-                <p class="text-sm font-medium drop-shadow-md">
-                    <span class="opacity-90">الرئيسية</span><i class="fa-solid fa-angle-left p-1"></i> اشتراك جديد
-                </p>
-            </div>
+        <div class="relative text-center text-white">
+          <h3 class="text-3xl font-bold mb-2 drop-shadow-lg">اشتراك جديد</h3>
+          <p class="text-sm font-medium drop-shadow-md">
+            <span class="opacity-90">الرئيسية</span
+            ><i class="fa-solid fa-angle-left p-1"></i> اشتراك جديد
+          </p>
         </div>
-
+      </div>
     </section>
 
-
-
-
-
-
-
     <div class="container mx-auto px-6">
-    <div class="w-full py-8">
-
-       <div class="text-right mb-8 hidden md:block">
-
-            <p class="text-gray-500 text-sm flex items-center mb-12 gap-6 relative top-7 right-4">
-                <i class="fa-solid fa-arrow-right text-[#0166B3] "></i>
-                <span class="text-[#0166B3]">اشتراك جديد</span>
-                <i class="fa-solid fa-arrow-left text-[#0166B3]"></i>
-            </p>
-            <h1 class="text-2xl font-bold text-[#1B2128] relative right-3">البرنامج المخفّض</h1>
-
-        </div>
-        <p class="text-xl font-bold text-[#000000] block md:hidden flex items-center gap-2 mb-10">
-            <span class="w-8 h-8 border border-gray-300 rounded-md flex items-center justify-center bg-transparent">
-                <i class="fa-solid fa-arrow-right text[#000000] text-lg"></i>
-            </span>
+      <div class="w-full py-8">
+        <div class="text-right mb-8 hidden md:block">
+          <p
+            class="text-gray-500 text-sm flex items-center mb-12 gap-6 relative top-7 right-4"
+          >
+            <i class="fa-solid fa-arrow-right text-[#0166B3]"></i>
+            <span class="text-[#0166B3]">اشتراك جديد</span>
+            <i class="fa-solid fa-arrow-left text-[#0166B3]"></i>
+          </p>
+          <h1 class="text-2xl font-bold text-[#1B2128] relative right-3">
             البرنامج المخفّض
+          </h1>
+        </div>
+        <p
+          class="text-xl font-bold text-[#000000] block md:hidden flex items-center gap-2 mb-10"
+        >
+          <span
+            class="w-8 h-8 border border-gray-300 rounded-md flex items-center justify-center bg-transparent"
+          >
+            <i class="fa-solid fa-arrow-right text[#000000] text-lg"></i>
+          </span>
+          البرنامج المخفّض
         </p>
         <div class="flex justify-center mb-8 px-2">
+          <nav
+            class="flex items-center justify-center gap-1 xs:gap-2 sm:gap-4 md:gap-8 lg:gap-12 max-w-[400px] sm:max-w-full"
+          >
+            <!-- Step 1 -->
+            <div class="flex items-center gap-0.5 sm:gap-2 flex-shrink-0">
+              <div
+                class="w-6 h-6 sm:w-10 sm:h-10 rounded-full border border-[#0166B3] flex items-center justify-center bg-[#0166B3]"
+              >
+                <i class="fa-solid fa-check text-white"></i>
+              </div>
 
-            <nav
-                class="flex items-center justify-center gap-1 xs:gap-2 sm:gap-4 md:gap-8 lg:gap-12 max-w-[400px] sm:max-w-full ">
-                <!-- Step 1 -->
-                <div class="flex items-center gap-0.5 sm:gap-2 flex-shrink-0">
-                    <div
-                        class="w-6 h-6 sm:w-10 sm:h-10 rounded-full border border-[#0166B3] flex items-center justify-center bg-[#0166B3]">
-                        <i class="fa-solid fa-check text-white "></i>
-                    </div>
+              <span
+                class="text-[9px] sm:text-sm md:text-lg font-semibold text-[#0166B3] whitespace-nowrap"
+                >تفاصيل الاشتراك</span
+              >
+            </div>
 
-                    <span
-                        class="text-[9px] sm:text-sm md:text-lg font-semibold text-[#0166B3] whitespace-nowrap ">تفاصيل
-                        الاشتراك</span>
-                </div>
+            <div
+              class="w-4 sm:w-8 md:w-12 h-[1px] sm:h-[2px] bg-[#0166B3] flex-shrink-0"
+            ></div>
 
-                <div class="w-4 sm:w-8 md:w-12 h-[1px] sm:h-[2px] bg-[#0166B3] flex-shrink-0 "></div>
+            <!-- Step 2 -->
+            <div class="flex items-center gap-0.5 sm:gap-2 flex-shrink-0">
+              <div
+                class="w-6 h-6 sm:w-10 sm:h-10 rounded-full border border-[#0166B3] flex items-center justify-center bg-white"
+              >
+                <span class="text-gray-400 font-bold text-[8px] sm:text-base">
+                  <i
+                    class="fas fa-rotate-right text-[#0166B3] text-[8px] sm:text-base"
+                  ></i
+                ></span>
+              </div>
+              <span
+                class="text-[9px] sm:text-sm md:text-lg font-semibold text-[#0166B3] whitespace-nowrap"
+                >استمارة المشترك</span
+              >
+            </div>
 
-                <!-- Step 2 -->
-                <div class="flex items-center gap-0.5 sm:gap-2 flex-shrink-0">
-                    <div
-                        class="w-6 h-6 sm:w-10 sm:h-10 rounded-full border border-[#0166B3] flex items-center justify-center bg-white">
-                        <span class="text-gray-400 font-bold text-[8px] sm:text-base"> <i
-                                class="fas fa-rotate-right text-[#0166B3] text-[8px] sm:text-base "></i></span>
-                    </div>
-                    <span
-                        class="text-[9px] sm:text-sm md:text-lg font-semibold text-[#0166B3] whitespace-nowrap">استمارة
-                        المشترك</span>
-                </div>
+            <div
+              class="w-4 sm:w-8 md:w-12 h-[1px] sm:h-[2px] bg-gray-300 flex-shrink-0"
+            ></div>
 
-                <div class="w-4 sm:w-8 md:w-12 h-[1px] sm:h-[2px] bg-gray-300 flex-shrink-0"></div>
-
-                <!-- Step 3 -->
-                <div class="flex items-center gap-0.5 sm:gap-2 flex-shrink-0">
-                    <div
-                        class="w-6 h-6 sm:w-10 sm:h-10 rounded-full border border-gray-300 flex items-center justify-center bg-white">
-                        <span class="text-gray-400 font-bold text-[8px] sm:text-base">03</span>
-                    </div>
-                    <span class="text-[9px] sm:text-sm md:text-lg font-semibold text-gray-500 whitespace-nowrap">الدفع
-                        والتأكيد</span>
-                </div>
-            </nav>
+            <!-- Step 3 -->
+            <div class="flex items-center gap-0.5 sm:gap-2 flex-shrink-0">
+              <div
+                class="w-6 h-6 sm:w-10 sm:h-10 rounded-full border border-gray-300 flex items-center justify-center bg-white"
+              >
+                <span class="text-gray-400 font-bold text-[8px] sm:text-base"
+                  >03</span
+                >
+              </div>
+              <span
+                class="text-[9px] sm:text-sm md:text-lg font-semibold text-gray-500 whitespace-nowrap"
+                >الدفع والتأكيد</span
+              >
+            </div>
+          </nav>
         </div>
-    </div>
+      </div>
 
-    <div class="hidden md:flex items-center justify-between mt-9 border-b mb-5 border-gray-300 pb-5">
+      <div
+        class="hidden md:flex items-center justify-between mt-9 border-b mb-5 border-gray-300 pb-5"
+      >
         <!-- العنوان -->
-        <h2 class="text-2xl font-bold text-[#0166B3] border-gray-300 flex-1 text-right">
-            بيانات العضوية
+        <h2
+          class="text-2xl font-bold text-[#0166B3] border-gray-300 flex-1 text-right"
+        >
+          بيانات العضوية
         </h2>
 
         <!-- الأيقونة -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" class=" flex-shrink-0 cursor-pointer toggle-icon" id="toggleMembership">
-            <circle cx="12" cy="12" r="10" fill="#0166B3" stroke="white" stroke-width="2" />
-            <rect x="7" y="11" width="10" height="2" fill="white" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="30"
+          height="30"
+          class="flex-shrink-0 cursor-pointer toggle-icon"
+          id="toggleMembership"
+        >
+          <circle
+            cx="12"
+            cy="12"
+            r="10"
+            fill="#0166B3"
+            stroke="white"
+            stroke-width="2"
+          />
+          <rect x="7" y="11" width="10" height="2" fill="white" />
         </svg>
-    </div>
+      </div>
 
-
-    <div class="space-y-8 w-full ">
-<div class="section-to-toggle">
-        <!-- بيانات العضوية -->
-        <!-- فورم الويب -->
-        <div class="hidden md:block membership-data">
+      <div class="space-y-8 w-full">
+        <div class="section-to-toggle">
+          <!-- بيانات العضوية -->
+          <!-- فورم الويب -->
+          <div class="hidden md:block membership-data">
             <h2 class="font-bold text-lg mb-4">بيانات العضوية</h2>
 
-<div class=" overflow-hidden mb-8">
-  <table class="w-full text-right border-collapse">
-    <tbody>
-      <tr class="bg-gray-50 border-b border-gray-300">
-        <td class="w-2/12 py-3 px-4 font-medium text-gray-800 border-l border-gray-300">نوع مقدم الطلب</td>
-        <td class="w-10/12 py-3 px-4 text-gray-700">عضو أساسي</td>
-      </tr>
-      <tr class="bg-white border-b border-gray-300">
-        <td class="w-2/12 py-3 px-4 font-medium text-gray-800 border-l border-gray-300">اسم العضو الأساسي</td>
-        <td class="w-10/12 py-3 px-4 text-gray-700">علاء محمد علي</td>
-      </tr>
-      <tr class="bg-gray-50 border-b border-gray-300">
-        <td class="w-2/12 py-3 px-4 font-medium text-gray-800 border-l border-gray-300">النقابة التابع لها</td>
-        <td class="w-10/12 py-3 px-4 text-gray-700">تجاريين القاهرة</td>
-      </tr>
-      <tr class="bg-white">
-        <td class="w-2/12 py-3 px-4 font-medium text-gray-800 border-l border-gray-300">رقم عضوية النقابة</td>
-        <td class="w-10/12 py-3 px-4 text-gray-700">890425191156932</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-        </div>
+            <div class="overflow-hidden mb-8">
+              <table class="w-full text-right border-collapse">
+                <tbody>
+                  <tr class="bg-gray-50 border-b border-gray-300">
+                    <td
+                      class="w-2/12 py-3 px-4 font-medium text-gray-800 border-l border-gray-300"
+                    >
+                      نوع مقدم الطلب
+                    </td>
+                    <td class="w-10/12 py-3 px-4 text-gray-700">عضو أساسي</td>
+                  </tr>
+                  <tr class="bg-white border-b border-gray-300">
+                    <td
+                      class="w-2/12 py-3 px-4 font-medium text-gray-800 border-l border-gray-300"
+                    >
+                      اسم العضو الأساسي
+                    </td>
+                    <td class="w-10/12 py-3 px-4 text-gray-700">
+                      علاء محمد علي
+                    </td>
+                  </tr>
+                  <tr class="bg-gray-50 border-b border-gray-300">
+                    <td
+                      class="w-2/12 py-3 px-4 font-medium text-gray-800 border-l border-gray-300"
+                    >
+                      النقابة التابع لها
+                    </td>
+                    <td class="w-10/12 py-3 px-4 text-gray-700">
+                      تجاريين القاهرة
+                    </td>
+                  </tr>
+                  <tr class="bg-white">
+                    <td
+                      class="w-2/12 py-3 px-4 font-medium text-gray-800 border-l border-gray-300"
+                    >
+                      رقم عضوية النقابة
+                    </td>
+                    <td class="w-10/12 py-3 px-4 text-gray-700">
+                      890425191156932
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
 
-        <!-- فورم الموبايل -->
-        <div class="block md:hidden p-4 bg-white rounded-lg shadow-md">
+          <!-- فورم الموبايل -->
+          <div class="block md:hidden p-4 bg-white rounded-lg shadow-md">
             <h2 class="font-bold text-lg mb-4">استمارة اشتراك</h2>
 
             <div class="flex flex-col mb-4 relative">
-                <label class="font-semibold text-gray-700 mb-2">نوع مقدم الطلب</label>
-                <div class="relative">
-                    <div class="relative w-full">
-                        <input type="text" placeholder="    تاريخ الميلاد"
-                            class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600 pl-8"
-                            style="color: rgb(143, 136, 136); opacity: 1;" onfocus="this.placeholder='';"
-                            onblur="this.placeholder='   حدد تاريخ الميلاد';" />
-                        <style>
-                            input[type="text"]::-webkit-calendar-picker-indicator {
-                                display: none;
-                            }
-                        </style>
+              <label class="font-semibold text-gray-700 mb-2"
+                >نوع مقدم الطلب</label
+              >
+              <div class="relative">
+                <div class="relative w-full">
+                  <input
+                    type="text"
+                    placeholder="    تاريخ الميلاد"
+                    class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600 pl-8"
+                    style="color: rgb(143, 136, 136); opacity: 1"
+                    onfocus="this.placeholder='';"
+                    onblur="this.placeholder='   حدد تاريخ الميلاد';"
+                  />
 
-                        <!-- أيقونة التقويم -->
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            class="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 text-[#0166B3] pointer-events-none ml-2"
-                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 11v6m-3-3h6" />
-                        </svg>
-                    </div>
+                  <!-- أيقونة التقويم -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 text-[#0166B3] pointer-events-none ml-2"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 11v6m-3-3h6"
+                    />
+                  </svg>
                 </div>
+              </div>
             </div>
 
             <div class="flex flex-col mb-4 relative">
-                <label class="font-semibold text-gray-700 mb-2">أسم العضو الأساسي</label>
-                <input type="text" placeholder="أدخل اسم العضو"
-                    class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm" />
+              <label class="font-semibold text-gray-700 mb-2"
+                >أسم العضو الأساسي</label
+              >
+              <input
+                type="text"
+                placeholder="أدخل اسم العضو"
+                class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm"
+              />
             </div>
 
             <div class="flex flex-col mb-4 relative">
-                <label class="font-semibold text-gray-700 mb-2">النقابة التابع لها</label>
-                <input type="text" placeholder="أدخل النقابة"
-                    class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm" />
+              <label class="font-semibold text-gray-700 mb-2"
+                >النقابة التابع لها</label
+              >
+              <input
+                type="text"
+                placeholder="أدخل النقابة"
+                class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm"
+              />
             </div>
 
             <div class="flex flex-col mb-4 relative">
-                <label class="font-semibold text-gray-700 mb-2">رقم عضوية النقابة</label>
-                <input type="text" placeholder="أدخل رقم العضوية"
-                    class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm" />
+              <label class="font-semibold text-gray-700 mb-2"
+                >رقم عضوية النقابة</label
+              >
+              <input
+                type="text"
+                placeholder="أدخل رقم العضوية"
+                class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm"
+              />
             </div>
-        </div>
-        <!-- البيانات الشخصية -->
-        <!-- نسخة الويب -->
-        <div class="hidden md:block">
+          </div>
+          <!-- البيانات الشخصية -->
+          <!-- نسخة الويب -->
+          <div class="hidden md:block">
             <h2 class="font-bold text-lg mb-4">البيانات الشخصية</h2>
 
-<div class=" overflow-hidden mb-8">
-  <table class="w-full text-right border-collapse">
-    <tbody>
-      <tr class="bg-gray-50 border-b border-gray-300">
-        <td class="w-2/12 py-3 px-4 font-medium text-gray-800 border-l border-gray-300">الرقم القومي</td>
-        <td class="w-10/12 py-3 px-4 text-gray-700">890425191156932</td>
-      </tr>
-      <tr class="bg-white">
-        <td class="w-2/12 py-3 px-4 font-medium text-gray-800 border-l border-gray-300">العنوان</td>
-        <td class="w-10/12 py-3 px-4 text-gray-700">18 شارع محمود المنشاوي - مصر الجديدة القاهرة</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+            <div class="overflow-hidden mb-8">
+              <table class="w-full text-right border-collapse">
+                <tbody>
+                  <tr class="bg-gray-50 border-b border-gray-300">
+                    <td
+                      class="w-2/12 py-3 px-4 font-medium text-gray-800 border-l border-gray-300"
+                    >
+                      الرقم القومي
+                    </td>
+                    <td class="w-10/12 py-3 px-4 text-gray-700">
+                      890425191156932
+                    </td>
+                  </tr>
+                  <tr class="bg-white">
+                    <td
+                      class="w-2/12 py-3 px-4 font-medium text-gray-800 border-l border-gray-300"
+                    >
+                      العنوان
+                    </td>
+                    <td class="w-10/12 py-3 px-4 text-gray-700">
+                      18 شارع محمود المنشاوي - مصر الجديدة القاهرة
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
-</div>
         <!-- نسخة الموبايل -->
 
-
-
         <!-- العضو التابع -->
-        <div class="flex items-center justify-between mt-12 border-b-2 border-gray-300 pb-5">
-            <h2 class="text-xl font-bold text-[#0166B3] flex-1 text-right">
-                العضو التابع
-                <span class="font-semibold hidden md:inline">( محمود محمد علي )</span>
-            </h2>
+        <div
+          class="flex items-center justify-between mt-12 border-b-2 border-gray-300 pb-5"
+        >
+          <h2 class="text-xl font-bold text-[#0166B3] flex-1 text-right">
+            العضو التابع
+            <span class="font-semibold hidden md:inline"
+              >( محمود محمد علي )</span
+            >
+          </h2>
 
-            <!-- الأيقونة -->
-           <button id="showFormBtn"
-    class="px-1 py-1 bg-white border border-[#0166B3] relative  text-[#0166B3] rounded-full flex items-center gap-2 hover:bg-[#0166B3] hover:text-white transition-all">
-    <i class="fas fa-plus"></i>
-</button>
+          <!-- الأيقونة -->
+          <button
+            id="showFormBtn"
+            class="px-1 py-1 bg-white border border-[#0166B3] relative text-[#0166B3] rounded-full flex items-center gap-2 hover:bg-[#0166B3] hover:text-white transition-all"
+          >
+            <i class="fas fa-plus"></i>
+          </button>
         </div>
 
-       <div id="mobileForm" class="hidden p-4 rounded-xl shadow-lg border border-white md:hidden bg-gray-50">
-    <div class="block md:hidden p-4 bg-white rounded-lg shadow-md">
-        <h2 class="font-bold text-lg mb-4">استمارة اشتراك</h2>
+        <div
+          id="mobileForm"
+          class="fixed inset-0 bg-black/50 flex items-end justify-center z-50 hidden p-4 rounded-xl shadow-lg border border-white md:hidden bg-gray-50"
+        >
+          <div class="w-full max-h-[90vh] overflow-y-auto bg-white rounded-t-3xl shadow-lg p-5 text-sm flex flex-col gap-2 sm:max-w-md">
+            <h2 class="font-bold text-lg">استمارة اشتراك</h2>
 
-        <!-- اسم عضو التابع -->
-        <div class="flex flex-col mb-4 relative">
-            <label class="font-semibold mb-2">اسم عضو التابع <span class="text-[#B50644]">*</span></label>
-            <input type="text" placeholder="اسم العضو الأساسي"
-                class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600 pl-8" />
-        </div>
-
-        <!-- صفة العضو التابع -->
-        <div class="flex flex-col mb-4 relative">
-            <label class="font-semibold mb-2">صفة العضو التابع <span class="text-[#B50644]">*</span></label>
-            <input type="text" placeholder="صفة العضو التابع"
-                class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600 pl-8" />
-        </div>
-
-        <!-- مولود حديث و تاريخ الميلاد -->
-        <div class="mb-4">
-            <div class="flex items-center border mb-2">
-                <input type="checkbox" class="w-5 h-5 accent-[#0166B3] rounded border-gray-300 focus:ring-[#0166B3]" />
-                <h3 class="text-lg font-semibold text-gray-800 relative right-3">مولود حديث</h3>
+            <!-- اسم عضو التابع -->
+            <div class="flex flex-col mb-4 relative">
+              <label class="font-semibold mb-2"
+                >اسم عضو التابع <span class="text-[#B50644]">*</span></label
+              >
+              <input
+                type="text"
+                placeholder="اسم العضو الأساسي"
+                class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600 pl-8"
+              />
             </div>
 
-            <label class="font-semibold text-gray-700 mb-2 block">تاريخ الميلاد <span class="text-[#B50644]">*</span></label>
-            <div class="relative w-full">
-                <input type="date" placeholder="حدد تاريخ الميلاد"
-                    class="w-full flex flex-row-reverse px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600 pl-8" />
+            <!-- صفة العضو التابع -->
+            <div class="flex flex-col mb-4 relative">
+              <label class="font-semibold mb-2"
+                >صفة العضو التابع <span class="text-[#B50644]">*</span></label
+              >
+              <input
+                type="text"
+                placeholder="صفة العضو التابع"
+                class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600 pl-8"
+              />
+            </div>
+
+            <!-- مولود حديث و تاريخ الميلاد -->
+            <div class="mb-4">
+              <div class="flex items-center border mb-2">
+                <input
+                  type="checkbox"
+                  class="w-5 h-5 accent-[#0166B3] rounded border-gray-300 focus:ring-[#0166B3]"
+                />
+                <h3
+                  class="text-lg font-semibold text-gray-800 relative right-3"
+                >
+                  مولود حديث
+                </h3>
+              </div>
+
+              <label class="font-semibold text-gray-700 mb-2 block"
+                >تاريخ الميلاد <span class="text-[#B50644]">*</span></label
+              >
+              <div class="relative w-full">
+                <input
+                  type="date"
+                  placeholder="حدد تاريخ الميلاد"
+                  class="w-full flex flex-row-reverse px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600 pl-8"
+                />
                 <!-- أيقونة التقويم باللون الأزرق -->
-                <svg xmlns="http://www.w3.org/2000/svg"
-                    class="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 text-[#0166B3] pointer-events-none ml-2"
-                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 11v6m-3-3h6" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 text-[#0166B3] pointer-events-none ml-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 11v6m-3-3h6"
+                  />
                 </svg>
+              </div>
             </div>
-        </div>
 
-        <!-- رفع الملفات -->
-        <div class="space-y-4 pt-4">
-            <!-- Upload 1 -->
-             
-          <div class="flex flex-col">
-                        <label class="font-semibold text-gray-700 mb-2 text-right">
-                            الرقم القومي <span class="text-[#B50644]">*</span>
-                        </label>
+            <!-- رفع الملفات -->
+            <div class="space-y-4 pt-4">
+              <!-- Upload 1 -->
 
-                        <input type="text" placeholder=" رقم القومي"
-                            class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm"
-                            style="color: rgb(143, 136, 136); opacity: 1;" onfocus="this.placeholder='';"
-                            onblur="this.placeholder='';" />
-
-                            <!-- File Uploads -->
-                        </div>
-            <div>
-                <h3 class="mb-2">صورة بطاقة الرقم القومي <span class="text-[#B50644]">*</span></h3>
-                <label class="border-2 border-dotted border-[#0166B3] rounded-lg p-4 hover:border-[#0166B3] transition-colors flex items-center gap-3 cursor-pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0166B3" class="w-8 h-8">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M9 12h6m-3-3v6m3 9H6a2.25 2.25 0 01-2.25-2.25V4.5A2.25 2.25 0 016 2.25h7.5L18 6.75V21a2.25 2.25 0 01-2.25 2.25z"/>
-                    </svg>
-                    <div class="flex flex-col text-sm text-gray-600">
-                        <span>سحب وادراج الملف هنا او <span class="text-[#0166B3]">اختار ملف</span></span>
-                        <span class="text-xs text-gray-400 mt-0.5">صيغ الملفات المسموح بها: pdf, png, jpg - الحد الأقصى 5mb</span>
-                    </div>
-                    <input  type="file" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
+              <div class="flex flex-col">
+                <label class="font-semibold text-gray-700 mb-2 text-right">
+                  الرقم القومي <span class="text-[#B50644]">*</span>
                 </label>
-            </div>
 
-            <!-- Upload 2 -->
-            <div>
-                <h3 class="mb-2">الصورة الشخصية <span class="text-[#B50644]">*</span></h3>
-                <label class="border-2 border-dotted border-[#0166B3] rounded-lg p-4 hover:border-[#0166B3] transition-colors flex items-center gap-3 cursor-pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0166B3" class="w-8 h-8">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M9 12h6m-3-3v6m3 9H6a2.25 2.25 0 01-2.25-2.25V4.5A2.25 2.25 0 016 2.25h7.5L18 6.75V21a2.25 2.25 0 01-2.25 2.25z"/>
-                    </svg>
-                    <div class="flex flex-col text-sm text-gray-600">
-                        <span>سحب وادراج الملف هنا او <span class="text-[#0166B3]">اختار ملف</span></span>
-                        <span class="text-xs text-gray-400 mt-0.5">الحد الأقصى لحجم الملف 2 ميجا، صيغة الملف jpg, png, jpeg</span>
-                    </div>
-                    <input type="file" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
+                <input
+                  type="text"
+                  placeholder=" رقم القومي"
+                  class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm"
+                  style="color: rgb(143, 136, 136); opacity: 1"
+                  onfocus="this.placeholder='';"
+                  onblur="this.placeholder='';"
+                />
+
+                <!-- File Uploads -->
+              </div>
+              <div>
+                <h3 class="mb-2">
+                  صورة بطاقة الرقم القومي <span class="text-[#B50644]">*</span>
+                </h3>
+                <label
+                  class="border-2 border-dotted border-[#0166B3] rounded-lg p-4 hover:border-[#0166B3] transition-colors flex items-center gap-3 cursor-pointer"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="#0166B3"
+                    class="w-8 h-8"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12h6m-3-3v6m3 9H6a2.25 2.25 0 01-2.25-2.25V4.5A2.25 2.25 0 016 2.25h7.5L18 6.75V21a2.25 2.25 0 01-2.25 2.25z"
+                    />
+                  </svg>
+                  <div class="flex flex-col text-sm text-gray-600">
+                    <span
+                      >سحب وادراج الملف هنا او
+                      <span class="text-[#0166B3]">اختار ملف</span></span
+                    >
+                    <span class="text-xs text-gray-400 mt-0.5"
+                      >صيغ الملفات المسموح بها: pdf, png, jpg - الحد الأقصى
+                      5mb</span
+                    >
+                  </div>
+                  <input
+                    type="file"
+                    class="hidden"
+                    accept=".pdf,.jpg,.jpeg,.png"
+                  />
                 </label>
-            </div>
+              </div>
 
-            <!-- Upload 3 -->
-            <div>
-                <h3 class="mb-2">مستندات اثبات صلة القرابة <span class="text-[#B50644]">*</span></h3>
-                <label class="border-2 border-dotted border-[#0166B3] rounded-lg p-4 hover:border-[#0166B3] transition-colors flex items-center gap-3 cursor-pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0166B3" class="w-8 h-8">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M9 12h6m-3-3v6m3 9H6a2.25 2.25 0 01-2.25-2.25V4.5A2.25 2.25 0 016 2.25h7.5L18 6.75V21a2.25 2.25 0 01-2.25 2.25z"/>
-                    </svg>
-                    <div class="flex flex-col text-sm text-gray-600">
-                        <span>سحب وادراج الملف هنا او <span class="text-[#0166B3]">اختار ملف</span></span>
-                        <span class="text-xs text-gray-400 mt-0.5">الحد الأقصى لحجم الملف 2 ميجا، صيغة الملف jpg, png, jpeg</span>
-                    </div>
-                    <input type="file" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
+              <!-- Upload 2 -->
+              <div>
+                <h3 class="mb-2">
+                  الصورة الشخصية <span class="text-[#B50644]">*</span>
+                </h3>
+                <label
+                  class="border-2 border-dotted border-[#0166B3] rounded-lg p-4 hover:border-[#0166B3] transition-colors flex items-center gap-3 cursor-pointer"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="#0166B3"
+                    class="w-8 h-8"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12h6m-3-3v6m3 9H6a2.25 2.25 0 01-2.25-2.25V4.5A2.25 2.25 0 016 2.25h7.5L18 6.75V21a2.25 2.25 0 01-2.25 2.25z"
+                    />
+                  </svg>
+                  <div class="flex flex-col text-sm text-gray-600">
+                    <span
+                      >سحب وادراج الملف هنا او
+                      <span class="text-[#0166B3]">اختار ملف</span></span
+                    >
+                    <span class="text-xs text-gray-400 mt-0.5"
+                      >الحد الأقصى لحجم الملف 2 ميجا، صيغة الملف jpg, png,
+                      jpeg</span
+                    >
+                  </div>
+                  <input
+                    type="file"
+                    class="hidden"
+                    accept=".pdf,.jpg,.jpeg,.png"
+                  />
                 </label>
+              </div>
+
+              <!-- Upload 3 -->
+              <div>
+                <h3 class="mb-2">
+                  مستندات اثبات صلة القرابة
+                  <span class="text-[#B50644]">*</span>
+                </h3>
+                <label
+                  class="border-2 border-dotted border-[#0166B3] rounded-lg p-4 hover:border-[#0166B3] transition-colors flex items-center gap-3 cursor-pointer"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="#0166B3"
+                    class="w-8 h-8"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12h6m-3-3v6m3 9H6a2.25 2.25 0 01-2.25-2.25V4.5A2.25 2.25 0 016 2.25h7.5L18 6.75V21a2.25 2.25 0 01-2.25 2.25z"
+                    />
+                  </svg>
+                  <div class="flex flex-col text-sm text-gray-600">
+                    <span
+                      >سحب وادراج الملف هنا او
+                      <span class="text-[#0166B3]">اختار ملف</span></span
+                    >
+                    <span class="text-xs text-gray-400 mt-0.5"
+                      >الحد الأقصى لحجم الملف 2 ميجا، صيغة الملف jpg, png,
+                      jpeg</span
+                    >
+                  </div>
+                  <input
+                    type="file"
+                    class="hidden"
+                    accept=".pdf,.jpg,.jpeg,.png"
+                  />
+                </label>
+              </div>
             </div>
+
+            <!-- أزرار -->
+            <div class="flex flex-col gap-2 mt-3">
+              <button type="submit"
+                class="w-full px-4 py-2 bg-[#0166B3] text-white rounded-full font-semibold hover:bg-[#0152a3] transition-colors">اضافة</button>
+              <button type="button" id="closeModalBtn"
+                class="w-full px-4 py-2 border-2 border-[#0166B3] text-[#0166B3] rounded-full font-semibold hover:bg-[#0166B3] hover:text-white transition-all">الغاء</button>
+            </div>
+          </div>
         </div>
-
-        <!-- أزرار -->
-        <div class="flex flex-col gap-3 mt-4">
-            <button type="submit" class="w-full px-4 py-2 bg-[#0166B3] text-white rounded-full font-semibold hover:bg-[#0152a3] transition-colors">اضافة</button>
-            <button type="button" class="w-full px-4 py-2 border-2 border-[#0166B3] text-[#0166B3] rounded-full font-semibold hover:bg-[#0166B3] hover:text-white transition-all">الغاء</button>
-        </div>
-    </div>
-</div>
-
-
-
 
         <!-- كارت الفورم للويب -->
-        <div class="bg-gray-100 py-8 rounded-2xl  border border-gray-300 relative  hidden md:block form-card">
-            <div class="flex mb-6">
-                <h2 class="text-xl font-bold text-[#0166B3] relative right-3 top-4">إضافة عضو تابع</h2>
-            </div>
+        <div
+          class="bg-gray-100 py-8 rounded-2xl border border-gray-300 relative hidden md:block form-card"
+        >
+          <div class="flex mb-6">
+            <h2 class="text-xl font-bold text-[#0166B3] relative right-3 top-4">
+              إضافة عضو تابع
+            </h2>
+          </div>
 
+          <div class="">
+            <div class="bg-gray-100 p-4 rounded-lg">
+              <h3 class="text-lg font-semibold text-gray-800 mb-4">
+                بيانات العضوية
+              </h3>
+              <div class="flex flex-col">
+                <label class="font-semibold text-gray-700 mb-2 text-right">
+                  اسم العضو التابع <span class="text-[#B50644]">*</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="البريد الإلكتروني "
+                  class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm"
+                  style="color: rgb(143, 136, 136); opacity: 1"
+                  onfocus="this.placeholder='';"
+                  onblur="this.placeholder=' برجاء اختيار النقابة ';"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <div class="bg-gray-100 p-4 rounded-lg">
+              <div class="flex flex-col">
+                <label class="font-semibold text-gray-700 mb-2 text-right">
+                  صفة العضو التابع <span class="text-[#B50644]">*</span>
+                </label>
+
+                <input
+                  type="text"
+                  placeholder="أختر صفة العضو التابع "
+                  class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm"
+                  style="color: rgb(143, 136, 136); opacity: 1"
+                  onfocus="this.placeholder='';"
+                  onblur="this.placeholder='';"
+                />
+              </div>
+            </div>
             <div class="">
-                <div class="bg-gray-100 p-4   rounded-lg">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-4">بيانات العضوية</h3>
-                    <div class="flex flex-col">
-                        <label class="font-semibold text-gray-700 mb-2 text-right">
-                            اسم العضو التابع <span class="text-[#B50644]">*</span>
-                        </label>
-                        <input type="text" placeholder="البريد الإلكتروني "
-                            class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm"
-                            style="color: rgb(143, 136, 136); opacity: 1;" onfocus="this.placeholder='';"
-                            onblur="this.placeholder=' برجاء اختيار النقابة ';" />
-                    </div>
+              <div class="bg-gray-100 p-4 rounded-lg">
+                <div class="bg-gray-100 p- rounded-lg">
+                  <div class="flex items-center mb-4">
+                    <input
+                      type="checkbox"
+                      class="w-5 h-5 accent-[#0166B3] rounded border-gray-300 focus:ring-[#0166B3]"
+                    />
+                    <h3
+                      class="text-lg font-semibold text-gray-800 relative right-3"
+                    >
+                      مولود حديث
+                    </h3>
+                  </div>
+
+                  <label
+                    class="font-semibold text-gray-700 mb-2 text-right block"
+                  >
+                    تاريخ الميلاد <span class="text-[#B50644]">*</span>
+                  </label>
+
+                  <div class="relative w-full">
+                    <input
+                      type="date"
+                      placeholder="   حدد تاريخ الميلاد"
+                      class="appearance-none w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600 pl-8"
+                      style="
+                        display: flex;
+                        flex-direction: row-reverse;
+                        color: rgb(143, 136, 136);
+                        opacity: 1;
+                      "
+                      onfocus="this.placeholder='';"
+                      onblur="this.placeholder='   حدد تاريخ الميلاد';"
+                    />
+
+                    <!-- سهم لتحت -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 text-[#0166B3] pointer-events-none ml-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <!-- تقويم مع علامة + -->
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 11v6m-3-3h6"
+                      />
+                    </svg>
+                  </div>
                 </div>
-            </div>
-            <div class="">
-                <div class="bg-gray-100 p-4   rounded-lg">
-                    <div class="flex flex-col">
-                        <label class="font-semibold text-gray-700 mb-2 text-right">
-                            صفة العضو التابع <span class="text-[#B50644]">*</span>
-                        </label>
+              </div>
+              <div class="">
+                <div class="bg-gray-100 p-4 rounded-lg">
+                  <div class="flex flex-col">
+                    <label class="font-semibold text-gray-700 mb-2 text-right">
+                      الرقم القومي <span class="text-[#B50644]">*</span>
+                    </label>
 
-                        <input type="text" placeholder="أختر صفة العضو التابع "
-                            class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm"
-                            style="color: rgb(143, 136, 136); opacity: 1;" onfocus="this.placeholder='';"
-                            onblur="this.placeholder='';" />
-
+                    <input
+                      type="text"
+                      placeholder=" رقم الهاتف"
+                      class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm"
+                      style="color: rgb(143, 136, 136); opacity: 1"
+                      onfocus="this.placeholder='';"
+                      onblur="this.placeholder='';"
+                    />
+                  </div>
+                  <!-- File Uploads -->
+                  <div class="space-y-4 pt-4 relative top-5">
+                    <!-- Upload 1 -->
+                    <div>
+                      <h3>
+                        صورة بطاقة الرقم القومي
+                        <span class="text-[#B50644]">*</span>
+                      </h3>
                     </div>
-                </div>
-                <div class="">
-                    <div class="bg-gray-100 p-4 rounded-lg">
-                        <div class="bg-gray-100 p- rounded-lg">
-                            <div class="flex items-center mb-4">
-                                <input type="checkbox"
-                                    class="w-5 h-5 accent-[#0166B3] rounded border-gray-300 focus:ring-[#0166B3]" />
-                                <h3 class="text-lg font-semibold text-gray-800 relative right-3">مولود حديث </h3>
-                            </div>
+                    <div
+                      style="border-style: dotted"
+                      class="border-2 border-dotted border-[#0166B3] rounded-lg p-4 hover:border-[#0166B3] transition-colors"
+                    >
+                      <label
+                        class="flex items-center justify-between cursor-pointer"
+                      >
+                        <div class="flex items-center gap-3">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="#0166B3"
+                            class="w-8 h-8"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M9 12h6m-3-3v6m3 9H6a2.25 2.25 0 01-2.25-2.25V4.5A2.25 2.25 0 016 2.25h7.5L18 6.75V21a2.25 2.25 0 01-2.25 2.25z"
+                            />
+                          </svg>
 
-                            <label class="font-semibold text-gray-700 mb-2 text-right block">
-                                تاريخ الميلاد <span class="text-[#B50644]">*</span>
-                            </label>
-
-                            <div class="relative w-full">
-                                <input type="date" placeholder="   حدد تاريخ الميلاد"
-                                    class="appearance-none w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600 pl-8"
-                                    style="display: flex; flex-direction: row-reverse; color: rgb(143, 136, 136); opacity: 1;" onfocus="this.placeholder='';"
-                                    onblur="this.placeholder='   حدد تاريخ الميلاد';" />
-
-                                <!-- سهم لتحت -->
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 text-[#0166B3] pointer-events-none ml-2"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <!-- تقويم مع علامة + -->
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 11v6m-3-3h6" />
-                                </svg>
-
-                            </div>
-
+                          <div>
+                            <p class="text-sm text-gray-600">
+                              سحب وادراج الملف هنا او
+                              <span class="text-[#0166B3]">اختار ملف </span>
+                              (يمكن ارفاق اكثر من ملف)
+                            </p>
+                            <p class="text-xs text-gray-400 mt-0.5">
+                              صيغ الملفات المدفوعة
+                              <span dir="rtl">pdf- png - jpg</span> الحجم
+                              المسموح
+                              <span dir="ltr">5 mb</span>
+                            </p>
+                          </div>
                         </div>
-
+                        <input
+                          type="file"
+                          class="hidden"
+                          accept=".pdf,.jpg,.jpeg,.png"
+                        />
+                      </label>
                     </div>
-                    <div class="">
-                        <div class="bg-gray-100 p-4   rounded-lg">
-                            <div class="flex flex-col">
-                                <label class="font-semibold text-gray-700 mb-2 text-right">
-                                    الرقم القومي <span class="text-[#B50644]">*</span>
-                                </label>
 
-                                <input type="text" placeholder=" رقم الهاتف"
-                                    class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm"
-                                    style="color: rgb(143, 136, 136); opacity: 1;" onfocus="this.placeholder='';"
-                                    onblur="this.placeholder='';" />
+                    <!-- Upload 2 -->
+                    <div>
+                      <h3>
+                        الصورة الشخصية<span class="text-[#B50644]">*</span>
+                      </h3>
+                    </div>
+                    <div
+                      style="border-style: dotted"
+                      class="border-2 border-dotted border-[#0166B3] rounded-lg p-4 hover:border-[#0166B3] transition-colors"
+                    >
+                      <label
+                        class="flex items-center justify-between cursor-pointer"
+                      >
+                        <div class="flex items-center gap-3">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="#0166B3"
+                            class="w-8 h-8"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M9 12h6m-3-3v6m3 9H6a2.25 2.25 0 01-2.25-2.25V4.5A2.25 2.25 0 016 2.25h7.5L18 6.75V21a2.25 2.25 0 01-2.25 2.25z"
+                            />
+                          </svg>
 
-                            </div>
-                            <!-- File Uploads -->
-                            <div class="space-y-4 pt-4 relative top-5">
-                                <!-- Upload 1 -->
-                                <div>
-                                    <h3>
-                                        صورة بطاقة الرقم القومي <span class="text-[#B50644]">*</span>
-                                    </h3>
-                                </div>
-                                <div style="border-style: dotted;"
-                                    class="border-2 border-dotted border-[#0166B3] rounded-lg p-4 hover:border-[#0166B3] transition-colors">
-                                    <label class="flex items-center justify-between cursor-pointer">
-                                        <div class="flex items-center gap-3">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke-width="1.5" stroke="#0166B3" class="w-8 h-8">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M9 12h6m-3-3v6m3 9H6a2.25 2.25 0 01-2.25-2.25V4.5A2.25 2.25 0 016 2.25h7.5L18 6.75V21a2.25 2.25 0 01-2.25 2.25z" />
-                                            </svg>
-
-                                            <div>
-                                                <p class="text-sm text-gray-600">
-                                                    سحب وادراج الملف هنا او <span class="text-[#0166B3]">اختار ملف
-                                                    </span> (يمكن
-                                                    ارفاق اكثر من ملف) </p>
-                                                <p class="text-xs text-gray-400 mt-0.5">
-                                                    صيغ الملفات المدفوعة <span dir="rtl">pdf- png - jpg</span> الحجم
-                                                    المسموح
-                                                    <span dir="ltr">5 mb</span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <input type="file" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
-                                    </label>
-                                </div>
-
-                                <!-- Upload 2 -->
-                                <div>
-                                    <h3>
-                                        الصورة الشخصية<span class="text-[#B50644]">*</span>
-                                    </h3>
-                                </div>
-                                <div style="border-style: dotted;"
-                                    class="border-2 border-dotted border-[#0166B3] rounded-lg p-4 hover:border-[#0166B3] transition-colors">
-                                    <label class="flex items-center justify-between cursor-pointer">
-                                        <div class="flex items-center gap-3">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke-width="1.5" stroke="#0166B3" class="w-8 h-8">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M9 12h6m-3-3v6m3 9H6a2.25 2.25 0 01-2.25-2.25V4.5A2.25 2.25 0 016 2.25h7.5L18 6.75V21a2.25 2.25 0 01-2.25 2.25z" />
-                                            </svg>
-
-                                            <div>
-                                                <p class="text-sm text-gray-600">
-                                                    سحب وادراج الملف هنا او <span class="text-[#0166B3]">اختار ملف
-                                                    </span> (يمكن
-                                                    ارفاق اكثر من ملف) </p>
-                                                <p class="text-xs text-gray-400 mt-0.5">
-                                                    الحد الأقصى لحجم الملف 2 ميجا، صيغة الملف (jpg, png, jpeg)
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <input type="file" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
-                                    </label>
-                                </div>
-
-                                <!-- Upload 3 -->
-                                <div>
-                                    <h3>
-                                        مستندات اثبات صلة القرابة<span class="text-[#B50644]">*</span>
-                                    </h3>
-                                </div>
-                                <div style="border-style: dotted;"
-                                    class="border-2 border-dotted border-[#0166B3] rounded-lg p-4 hover:border-[#0166B3] transition-colors">
-                                    <label class="flex items-center justify-between cursor-pointer">
-                                        <div class="flex items-center gap-3">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke-width="1.5" stroke="#0166B3" class="w-8 h-8">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M9 12h6m-3-3v6m3 9H6a2.25 2.25 0 01-2.25-2.25V4.5A2.25 2.25 0 016 2.25h7.5L18 6.75V21a2.25 2.25 0 01-2.25 2.25z" />
-                                            </svg>
-
-                                            <div>
-                                                <p class="text-sm text-gray-600">
-                                                    سحب وادراج الملف هنا او <span class="text-[#0166B3]">اختار ملف
-                                                    </span> (يمكن
-                                                    ارفاق اكثر من ملف) </p>
-                                                <p class="text-xs text-gray-400 mt-0.5">
-                                                    الحد الأقصى لحجم الملف 2 ميجا، صيغة الملف (jpg, png, jpeg)
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <input type="file" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
-
-                                    </label>
-
-                                </div>
-
-                            </div>
+                          <div>
+                            <p class="text-sm text-gray-600">
+                              سحب وادراج الملف هنا او
+                              <span class="text-[#0166B3]">اختار ملف </span>
+                              (يمكن ارفاق اكثر من ملف)
+                            </p>
+                            <p class="text-xs text-gray-400 mt-0.5">
+                              الحد الأقصى لحجم الملف 2 ميجا، صيغة الملف (jpg,
+                              png, jpeg)
+                            </p>
+                          </div>
                         </div>
-
-
+                        <input
+                          type="file"
+                          class="hidden"
+                          accept=".pdf,.jpg,.jpeg,.png"
+                        />
+                      </label>
                     </div>
 
+                    <!-- Upload 3 -->
+                    <div>
+                      <h3>
+                        مستندات اثبات صلة القرابة<span class="text-[#B50644]"
+                          >*</span
+                        >
+                      </h3>
+                    </div>
+                    <div
+                      style="border-style: dotted"
+                      class="border-2 border-dotted border-[#0166B3] rounded-lg p-4 hover:border-[#0166B3] transition-colors"
+                    >
+                      <label
+                        class="flex items-center justify-between cursor-pointer"
+                      >
+                        <div class="flex items-center gap-3">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="#0166B3"
+                            class="w-8 h-8"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M9 12h6m-3-3v6m3 9H6a2.25 2.25 0 01-2.25-2.25V4.5A2.25 2.25 0 016 2.25h7.5L18 6.75V21a2.25 2.25 0 01-2.25 2.25z"
+                            />
+                          </svg>
+
+                          <div>
+                            <p class="text-sm text-gray-600">
+                              سحب وادراج الملف هنا او
+                              <span class="text-[#0166B3]">اختار ملف </span>
+                              (يمكن ارفاق اكثر من ملف)
+                            </p>
+                            <p class="text-xs text-gray-400 mt-0.5">
+                              الحد الأقصى لحجم الملف 2 ميجا، صيغة الملف (jpg,
+                              png, jpeg)
+                            </p>
+                          </div>
+                        </div>
+                        <input
+                          type="file"
+                          class="hidden"
+                          accept=".pdf,.jpg,.jpeg,.png"
+                        />
+                      </label>
+                    </div>
+                  </div>
                 </div>
-                <div dir="ltr "
-                    class="flex md:hidden flex-row justify-between relative bottom-5 items-center gap-4 pt-8 mt-8 border-t-2 border-gray-200">
-
-                    <!-- Left Buttons -->
-                    <div class="flex gap-3 order-2  relative right-5">
-                        <button type="button" style=" padding-left: 60px; padding-right: 60px;"
-                            class="px-8 py-3 border-2 border-[#0166B3] text-[#0166B3] rounded-full font-semibold hover:bg-[#0166B3] hover:text-white transition-all">
-                            الغاء
-                        </button>
-
-
-                    </div>
-
-                    <!-- Right Button -->
-                    <div class="order-2 relative left-5">
-
-                        <button type="submit" style=" padding-left: 60px; padding-right: 60px;"
-                            class="px-8 py-3 bg-[#0166B3]  text-white rounded-full font-semibold hover:bg-[#0152a3] transition-colors">
-                            أضافة
-                        </button>
-                    </div>
-                </div>
+              </div>
             </div>
+            <div
+              dir="ltr "
+              class="flex md:hidden flex-row justify-between relative bottom-5 items-center gap-4 pt-8 mt-8 border-t-2 border-gray-200"
+            >
+              <!-- Left Buttons -->
+              <div class="flex gap-3 order-2 relative right-5">
+                <button
+                  type="button"
+                  style="padding-left: 60px; padding-right: 60px"
+                  class="px-8 py-3 border-2 border-[#0166B3] text-[#0166B3] rounded-full font-semibold hover:bg-[#0166B3] hover:text-white transition-all"
+                >
+                  الغاء
+                </button>
+              </div>
 
-
+              <!-- Right Button -->
+              <div class="order-2 relative left-5">
+                <button
+                  type="submit"
+                  style="padding-left: 60px; padding-right: 60px"
+                  class="px-8 py-3 bg-[#0166B3] text-white rounded-full font-semibold hover:bg-[#0152a3] transition-colors"
+                >
+                  أضافة
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- نسخة الويب -->
-        <div dir="ltr "
-            class="flex flex-row justify-center  md:justify-between relative bottom-5 items-center gap-4 pt-8 mt-8 border-t-2 border-gray-200">
+        <div
+          dir="ltr "
+          class="flex flex-row justify-center md:justify-between relative bottom-5 items-center gap-4 pt-8 mt-8 border-t-2 border-gray-200"
+        >
+          <!-- Left Buttons -->
+          <div class="flex gap-3 order-1">
+            <a href="./confirm-low-program.html"
+              ><button
+                type="submit"
+                class="md:px-8 py-3 w-40 bg-[#0166B3] text-white rounded-full font-semibold hover:bg-[#0152a3] transition-colors"
+              >
+                حفظ ومتابعة
+              </button></a
+            >
 
-            <!-- Left Buttons -->
-            <div class=" flex gap-3 order-1 ">
-                <a href="./confirm-low-program.html"><button type="submit"
-                    class="md:px-8 py-3 w-40 bg-[#0166B3] text-white rounded-full font-semibold hover:bg-[#0152a3] transition-colors">
-                    حفظ ومتابعة
-                </button></a>
+            <button
+              type="button"
+              class="hidden md:block px-8 py-3 border-2 border-[#0166B3] text-[#0166B3] rounded-full font-semibold hover:bg-[#0166B3] hover:text-white transition-all"
+            >
+              عودة
+            </button>
+          </div>
 
-                <button type="button"
-                    class="hidden  md:block px-8 py-3 border-2 border-[#0166B3] text-[#0166B3] rounded-full font-semibold hover:bg-[#0166B3] hover:text-white transition-all">
-                    عودة
-                </button>
-            </div>
-
-            <!-- Right Button -->
-            <div class=" order-2">
-                <button type="button"
-                    class=" w-40 py-3 border-2 border-[#0166B3] text-[#0166B3] rounded-full font-semibold hover:bg-[#0166B3] hover:text-white transition-all">
-                    إضافة عضو تابع
-                </button>
-            </div>
+          <!-- Right Button -->
+          <div class="order-2">
+            <button
+              type="button"
+              id="showFormBtnMobile"
+              class="w-40 py-3 border-2 border-[#0166B3] text-[#0166B3] rounded-full font-semibold hover:bg-[#0166B3] hover:text-white transition-all"
+            >
+              إضافة عضو تابع
+            </button>
+          </div>
         </div>
+      </div>
     </div>
-    </div>
-        <!-- نسخة الموبايل -->
-
-
-
-
+    <!-- نسخة الموبايل -->
 
     <footer class="hidden md:block bg-[#1B2128] text-white py-16 px-5 w-full">
-            <div class="max-w-7xl mx-auto">
-                <!-- Newsletter Section -->
-                <div class="mb-12 ">
-                    <div class="flex gap-3 items-center  justify-end">
-                        <div class="relative">
-                            <i class="fa-solid fa-user text-gray-400 absolute right-3 top-1/2 -translate-y-1/2"></i>
+      <div class="max-w-7xl mx-auto">
+        <!-- Newsletter Section -->
+        <div class="mb-12">
+          <div class="flex gap-3 items-center justify-end">
+            <div class="relative">
+              <i
+                class="fa-solid fa-user text-gray-400 absolute right-3 top-1/2 -translate-y-1/2"
+              ></i>
 
-                            <input type="email" placeholder="ادخل البريد الالكتروني"
-                                class="flex-1 w-full pl-4 pr-20 py-3 bg-gray-800 border border-gray-700 rounded-md text-white text-sm placeholder-gray-500 focus:outline-none focus:border-[#0166B3]">
-                        </div>
-                        <button
-                            class="px-6 py-3 bg-[#0166B3] hover:bg-[#0152a3] text-white font-semibold rounded-md transition-colors duration-300 whitespace-nowrap">
-                            متابعة
-                        </button>
-                    </div>
-                    <div>
-                        <h1 class="text-xl font-semibold text-right relative bottom-8">
-                            هل ترغب في متابعة العروض؟
-                        </h1>
-                    </div>
-                </div>
-                <div
-                    class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
-
-                </div>
-
-                <!-- Footer Top Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-
-                    <!-- Column 1: Logo & Social Icons -->
-                    <div class="lg:col-span-1">
-                        <!-- Logo -->
-                        <div class="flex items-center gap-3 mb-6">
-                            <img class="w-[120px] h-[65px]" src="./imgs/logo.png" alt="">
-                        </div>
-
-                        <!-- Description -->
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                            إتخذت شركة (التجاريون للإدارة والخدمات المتكاملة) A.M.I.S شكل شركة مساهمة مصرية خاضعة
-                            للقانون
-                            159 لسنة 1981، منذ بدء نشاطها فى منتصف عام 1995.
-
-                        </p>
-
-                        <!-- Social Icons -->
-                        <div class="flex gap-3 mt-6">
-                            <a href="#"
-                                class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#"
-                                class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#"
-                                class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#"
-                                class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Column 2: روابط سريعة -->
-
-                    <!-- Column 3: روابط هامة -->
-                    <div>
-                        <h3 class="text-lg font-semibold mb-6">روابط هامة</h3>
-                        <ul class="space-y-4">
-                            <li>
-                                <a href="#"
-                                    class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
-                                    <i class="fas fa-angle-left text-xs"></i>
-                                    <i class="fas fa-angle-left text-xs relative left-2.5"></i>
-                                    الرؤية والرسالة
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
-                                    <i class="fas fa-angle-left text-xs"></i>
-                                    <i class="fas fa-angle-left text-xs relative left-2.5"></i>
-                                    فريق العمل
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
-                                    <i class="fas fa-angle-left text-xs"></i>
-                                    <i class="fas fa-angle-left text-xs relative left-2.5"></i>
-                                    الأخبار والمدونة
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
-                                    <i class="fas fa-angle-left text-xs"></i>
-                                    <i class="fas fa-angle-left text-xs relative left-2.5"></i>
-                                    تواصل معنا
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-semibold mb-6"> روابط سريعة</h3>
-                        <ul class="space-y-4">
-                            <li>
-                                <a href="#"
-                                    class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
-                                    <i class="fas fa-angle-left text-xs"></i>
-                                    <i class="fas fa-angle-left text-xs relative left-2.5"></i>
-                                    الكتيب الطبي
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2 relative ">
-                                    <i class="fas fa-angle-left text-xs"></i>
-                                    <i class="fas fa-angle-left text-xs relative left-2.5"></i>
-                                    طلبات الاسترداد
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
-                                    <i class="fas fa-angle-left text-xs"></i>
-                                    <i class="fas fa-angle-left text-xs relative left-2.5"></i>
-                                    الشبكة الطبية
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
-                                    <i class="fas fa-angle-left text-xs"></i>
-                                    <i class="fas fa-angle-left text-xs relative left-2.5"></i>
-                                    برنامج العلاج الشهري
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-
-                    <!-- Column 4: تواصل معنا -->
-                    <div>
-                        <h3 class="text-lg font-semibold mb-6">تواصل معنا</h3>
-                        <ul class="space-y-4">
-                            <li>
-                                <a href="mailto:info@youremail.com"
-                                    class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
-                                    <i class="far fa-envelope w-4"></i>
-
-                                    info@youremail.com
-                                </a>
-                            </li>
-                            <li>
-                                <a href="tel:+123456789"
-                                    class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
-                                    <i class="fas fa-phone w-4"></i>
-                                    01113311141
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
-                                    <i class="fas fa-map-marker-alt w-4"></i>
-                                    فروعنا
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <!-- Footer Bottom -->
-                <div class="  pt-6 flex flex-col md:flex-row justify-between items-center  text-sm">
-                    <a href="#" class=" transition-colors duration-300 ">الشروط والأحكام</a>
-                    <a href="#" class=" duration-300 relative left-80">سياسة الاستخدام</a>
-                    <div class="flex gap-6">
-
-                        <p>جميع الحقوق محفوظة © شركة التجاريين للخدمات المتكاملة </p>
-
-                    </div>
-                </div>
+              <input
+                type="email"
+                placeholder="ادخل البريد الالكتروني"
+                class="flex-1 w-full pl-4 pr-20 py-3 bg-gray-800 border border-gray-700 rounded-md text-white text-sm placeholder-gray-500 focus:outline-none focus:border-[#0166B3]"
+              />
             </div>
-     </footer>
+            <button
+              class="px-6 py-3 bg-[#0166B3] hover:bg-[#0152a3] text-white font-semibold rounded-md transition-colors duration-300 whitespace-nowrap"
+            >
+              متابعة
+            </button>
+          </div>
+          <div>
+            <h1 class="text-xl font-semibold text-right relative bottom-8">
+              هل ترغب في متابعة العروض؟
+            </h1>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm"
+        ></div>
 
+        <!-- Footer Top Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12"
+        >
+          <!-- Column 1: Logo & Social Icons -->
+          <div class="lg:col-span-1">
+            <!-- Logo -->
+            <div class="flex items-center gap-3 mb-6">
+              <img class="w-[120px] h-[65px]" src="./imgs/logo.png" alt="" />
+            </div>
 
+            <!-- Description -->
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+              إتخذت شركة (التجاريون للإدارة والخدمات المتكاملة) A.M.I.S شكل شركة
+              مساهمة مصرية خاضعة للقانون 159 لسنة 1981، منذ بدء نشاطها فى منتصف
+              عام 1995.
+            </p>
 
- <script src="./slider.js"></script>
+            <!-- Social Icons -->
+            <div class="flex gap-3 mt-6">
+              <a
+                href="#"
+                class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
 
-</body>
+          <!-- Column 2: روابط سريعة -->
 
+          <!-- Column 3: روابط هامة -->
+          <div>
+            <h3 class="text-lg font-semibold mb-6">روابط هامة</h3>
+            <ul class="space-y-4">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <i class="fas fa-angle-left text-xs"></i>
+                  <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                  الرؤية والرسالة
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <i class="fas fa-angle-left text-xs"></i>
+                  <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                  فريق العمل
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <i class="fas fa-angle-left text-xs"></i>
+                  <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                  الأخبار والمدونة
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <i class="fas fa-angle-left text-xs"></i>
+                  <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                  تواصل معنا
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-6">روابط سريعة</h3>
+            <ul class="space-y-4">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <i class="fas fa-angle-left text-xs"></i>
+                  <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                  الكتيب الطبي
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2 relative"
+                >
+                  <i class="fas fa-angle-left text-xs"></i>
+                  <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                  طلبات الاسترداد
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <i class="fas fa-angle-left text-xs"></i>
+                  <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                  الشبكة الطبية
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <i class="fas fa-angle-left text-xs"></i>
+                  <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                  برنامج العلاج الشهري
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 4: تواصل معنا -->
+          <div>
+            <h3 class="text-lg font-semibold mb-6">تواصل معنا</h3>
+            <ul class="space-y-4">
+              <li>
+                <a
+                  href="mailto:info@youremail.com"
+                  class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <i class="far fa-envelope w-4"></i>
+
+                  info@youremail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:+123456789"
+                  class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <i class="fas fa-phone w-4"></i>
+                  01113311141
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <i class="fas fa-map-marker-alt w-4"></i>
+                  فروعنا
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div
+          class="pt-6 flex flex-col md:flex-row justify-between items-center text-sm"
+        >
+          <a href="#" class="transition-colors duration-300">الشروط والأحكام</a>
+          <a href="#" class="duration-300 relative left-80">سياسة الاستخدام</a>
+          <div class="flex gap-6">
+            <p>جميع الحقوق محفوظة © شركة التجاريين للخدمات المتكاملة</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./main.js"></script>
+    <script src="./slider.js"></script>
+  </body>
 </html>
