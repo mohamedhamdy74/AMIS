@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Array of background images
   const images = [
     "./imgs/homeimg.png",
-    "./imgs/homeimg.png", // Add more images as needed
+    "./imgs/homepage2.jpg", // Add more images as needed
   ];
 
   let currentIndex = 0;
@@ -139,23 +139,45 @@ function playMainVideo() {
 // Dynamic scroll indicators for services section
 document.addEventListener("DOMContentLoaded", function () {
   const servicesContainer = document.querySelector(".modern-scroll");
-  const indicators = document.querySelectorAll(".flex.justify-center.gap-2.lg\\:hidden .w-2");
+  const dotsContainer = document.querySelector(".flex.justify-center.gap-2.lg\\:hidden");
 
-  if (servicesContainer && indicators.length > 0) {
+  if (servicesContainer && dotsContainer) {
+    // Get the number of service items
+    const serviceItems = servicesContainer.querySelectorAll(".flex-shrink-0.w-\\[150px\\].lg\\:w-auto");
+    const numServices = serviceItems.length;
+
+    // Clear existing dots
+    dotsContainer.textContent = '';
+
+    // Create dynamic dots
+    for (let i = 0; i < numServices; i++) {
+      const dot = document.createElement('div');
+      dot.className = "w-3 h-3 bg-gray-300 rounded-full cursor-pointer";
+      dotsContainer.appendChild(dot);
+    }
+
+    // Get the newly created indicators
+    const indicators = dotsContainer.querySelectorAll('.w-3');
+
     function updateIndicators() {
       const scrollLeft = servicesContainer.scrollLeft;
-      const scrollWidth = servicesContainer.scrollWidth - servicesContainer.clientWidth;
-      const scrollPercentage = scrollLeft / scrollWidth;
+      const itemWidth = 100 + 16; // 150px width + 16px gap (gap-4 = 1rem = 16px)
 
-      // Calculate which indicator should be active
-      const activeIndex = Math.round(scrollPercentage * (indicators.length - 1));
+      // Calculate which item is most visible in the viewport
+      // Since scrollLeft can be negative (RTL), we need to handle it properly
+      const absoluteScroll = Math.abs(scrollLeft);
+      const activeIndex = Math.floor(absoluteScroll / itemWidth);
+
+      // Ensure activeIndex is within bounds
+      const clampedIndex = Math.max(0, Math.min(activeIndex, indicators.length - 1));
+
 
       indicators.forEach((indicator, index) => {
-        if (index === activeIndex) {
+        if (index === clampedIndex) {
           indicator.classList.remove("bg-gray-300");
-          indicator.classList.add("bg-sky-700");
+          indicator.classList.add("bg-sky-700", "border-2", "border-white", "outline", "outline-sky-700");
         } else {
-          indicator.classList.remove("bg-sky-700");
+          indicator.classList.remove("bg-sky-700", "border-2", "border-white", "outline", "outline-sky-700");
           indicator.classList.add("bg-gray-300");
         }
       });
