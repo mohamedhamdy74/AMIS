@@ -1386,6 +1386,9 @@
   .text-start {
     text-align: start;
   }
+  .font-bukra {
+    font-family: var(--font-bukra);
+  }
   .font-cairo {
     font-family: var(--font-cairo);
   }
