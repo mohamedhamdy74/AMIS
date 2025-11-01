@@ -292,18 +292,17 @@ function initMap() {
                    <div class="w-full h-px bg-gray-200 my-2"></div>
 
                    <div class="flex justify-between items-center mt-3">
-
+                      
+                       <div class="flex items-center gap-2">
+                           <div class="w-5 h-5 rounded-full bg-gray-800 flex items-center justify-center text-white text-xs">
+                               <i class="fas fa-phone"></i>
+                           </div>
+                           <span class="text-gray-800 text-sm font-semibold">${branch.phone}</span>
+                       </div>
                        <button class="bg-gray-800 hover:bg-gray-700 text-white text-sm font-semibold py-1 px-2 rounded-full transition-colors duration-200">
                            التفاصيل
                        </button>
 
-                       <div class="flex items-center gap-1">
-                           <span class="text-gray-800 text-sm font-semibold">${branch.phone}</span>
-
-                           <div class="w-5 h-5 rounded-full bg-gray-800 flex items-center justify-center text-white text-xs">
-                               <i class="fas fa-phone"></i>
-                           </div>
-                       </div>
                    </div>
                </div>
 

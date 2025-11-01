@@ -187,7 +187,7 @@
                     <h2 class="text-sm font-bold text-sky-700">جميع الخدمات</h2>
                 </div>
 
-                <div class="flex lg:grid lg:grid-cols-3 gap-4 lg:gap-1 mb-12 overflow-x-auto lg:overflow-visible modern-scroll">
+                <div class="flex lg:grid lg:grid-cols-3 gap-4 lg:gap-1 mb-5 overflow-x-auto lg:overflow-visible modern-scroll">
                     
                     <div class="flex-shrink-0 w-[150px] lg:w-auto p-4 bg-white lg:bg-transparent rounded-xl flex flex-col items-center lg:items-start text-center lg:text-right gap-2 shadow-md hover:shadow-xl lg:shadow-none lg:hover:shadow-md transition">
                         <div class="relative flex pb-2 lg:pb-5 w-full border-b-0 lg:border-b border-gray-300">
@@ -253,7 +253,7 @@
 
 
     <!-- contact form section  --> <!-- Background Section with Gradient -->
-   <section class="relative z-20 container mx-auto my-10 mb-64 md:mb-10 min-h-screen lg:min-h-screen bg-gradient-to-br from-[#011270] to-[#0166B3] flex flex-col lg:flex-row items-center justify-center pt-20 pb-10 lg:py-20 px-4 rounded-t-4xl lg:rounded-3xl ">
+   <section class="relative z-20 container mx-auto my-3 mb-64 md:mb-10 min-h-screen lg:min-h-screen bg-gradient-to-br from-[#011270] to-[#0166B3] flex flex-col lg:flex-row items-center justify-center pt-20 pb-10 lg:py-20 px-4 rounded-t-4xl lg:rounded-3xl ">
     <div class="relative z-10 max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
          <div class="relative z-50 bg-white rounded-3xl shadow-2xl p-8 md:p-12 order-2 lg:order-1 w-full max-w-lg lg:max-w-none mx-auto -mb-60 md:mb-0 lg:mt-0">
             <h3 class="text-2xl md:text-3xl font-extrabold text-gray-900 text-center mb-2">الشبكة الطبية</h3>
@@ -332,7 +332,7 @@
 </section>
 
      <!-- Services Section -->
-<section class="py-10 bg-white font-cairo">
+<section class="py-3 bg-white font-cairo">
     
     
     <div class="container mx-auto px-4">
@@ -514,29 +514,33 @@
     </div>
 </section>
 <!-- map  -->
-<section class="bg-gray-100 lg:rounded-4xl lg:shadow-2xl lg:-mt-30 relative z-10 container mx-auto font-cairo">
+<section class="bg-white lg:rounded-4xl lg:shadow-2xl lg:-mt-30 relative z-10 container mx-auto font-cairo">
     <div class="py-10 lg:py-20">
         <div class="container mx-auto px-4">
 
             <div class="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-10">
                 
-                <div class="w-full lg:w-[700px] bg-white rounded-2xl shadow-lg overflow-hidden order-1 lg:order-2">
+                <div class="w-full lg:self-end lg:w-[700px] bg-white rounded-2xl shadow-lg overflow-hidden order-1 lg:order-2">
                     <div class="flex justify-between items-center py-5 px-4 pt-4 lg:hidden">
-                        <h2 class="text-xl font-bold text-gray-900">فروعنا الأقرب إليك</h2>
-                        <h2 id="toggleBranches" class=" text-xl font-bold text-[#0166B3]">جميع الفروع</h2>
+                        <h2 class="text-sm font-bold text-gray-900">فروعنا الأقرب إليك</h2>
+                        <h2 id="toggleBranches" class=" text-sm font-bold text-[#0166B3]">جميع الفروع</h2>
                     </div>
-                    <div id="mapp" class="w-full h-[300px] lg:h-[600px] lg:rounded-2xl">
-                         <img src="./imgs/map.png" alt="خريطة الفروع" class="w-full h-full object-cover rounded-2xl">
+                    <div id="mapp" class="w-full h-[300px] lg:h-[620px]  lg:rounded-2xl">
+                         <!-- <img src="./imgs/map.png" alt="خريطة الفروع" class="w-full h-full object-cover rounded-2xl"> -->
                     </div>
                 </div>
 
                 <div class="w-full lg:flex-1 order-2 lg:order-1">
-                    <h2 class="text-4xl font-extrabold text-gray-900 text-start hidden lg:block ml-10 mb-12">فروعنا</h2>
+                    <h2 class="text-2xl font-extrabold text-gray-900 text-start hidden lg:block ml-10 mb-5">فروعنا</h2>
                   
                     <div id="branchesContainer" class="flex cursor-pointer lg:grid lg:grid-cols-2 gap-4 lg:gap-4 overflow-x-auto lg:overflow-visible hide-scrollbar hidden lg:flex">
                         
                             <!-- card  -->
-                        <div class="flex-shrink-0 w-[270px] lg:w-auto bg-white h-auto rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 font-cairo" style="direction: rtl;">
+                        <div class="relative flex-shrink-0 w-[270px] lg:w-auto bg-white h-auto rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 font-cairo" style="direction: rtl;">
+                               <div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold z-10 hidden lg:block">
+                    المركز الرئيسي 
+                </div>
+                <!-- img and description  -->
                             <div class="relative w-full h-40">
                                 <img src="./imgs/branch.png" alt="صورة الفرع" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
@@ -545,20 +549,24 @@
                                     <p class="text-xs">السادسة - مدينة نصر</p>
                                 </div>
                             </div>
+                            <!-- text area  -->
                             <div class="p-4 pt-3 text-right">
-                                <h3 class="font-bold text-gray-900 text-base mb-3 leading-snug">91 أ ش محمد حسين هيكل - المنطقة السادسة - مدينة نصر</h3>
+                                <h3 class="font-bold text-gray-900 text-base mb-3 leading-snug border-b border-gray-200 py-2">91 أ ش محمد حسين هيكل - المنطقة السادسة - مدينة نصر</h3>
+                                <!-- phone and details button -->
                                 <div class="flex justify-between items-center mt-4">
-                                       <div class="flex items-center gap-0.5 ">
-                                        <div class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-white text-base"><i class="fas fa-phone"></i></div>
+                                       <div class="flex items-center gap-2 ">
+                                        <div class="w-6 h-6 rounded-full bg-gray-800 flex items-center justify-center text-white text-base"><i class="fas fa-phone"></i></div>
                                         <span class="text-gray-800 text-sm font-semibold">02-26711359</span>
                                     </div>
-                                    <button class="bg-gray-800 hover:bg-gray-700 text-white text-sm font-semibold py-2 px-5 rounded-full transition-colors duration-200">التفاصيل</button>
+                                    <button class="bg-gray-800 hover:bg-gray-700 text-white text-sm font-semibold py-2 px-3 rounded-full transition-colors duration-200">التفاصيل</button>
                                  
                                 </div>
                             </div>
                         </div>
+                        <!-- end card -->
                             <!-- card  -->
-                        <div class="flex-shrink-0 w-[270px] lg:w-auto bg-white h-auto rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 font-cairo" style="direction: rtl;">
+                        <div class="relative flex-shrink-0 w-[270px] lg:w-auto bg-white h-auto rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 font-cairo" style="direction: rtl;">
+                          <!-- img and description  -->
                             <div class="relative w-full h-40">
                                 <img src="./imgs/branch.png" alt="صورة الفرع" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
@@ -567,20 +575,24 @@
                                     <p class="text-xs">السادسة - مدينة نصر</p>
                                 </div>
                             </div>
+                            <!-- text area  -->
                             <div class="p-4 pt-3 text-right">
-                                <h3 class="font-bold text-gray-900 text-base mb-3 leading-snug">91 أ ش محمد حسين هيكل - المنطقة السادسة - مدينة نصر</h3>
+                                <h3 class="font-bold text-gray-900 text-base mb-3 leading-snug border-b border-gray-200 py-2">91 أ ش محمد حسين هيكل - المنطقة السادسة - مدينة نصر</h3>
+                                <!-- phone and details button -->
                                 <div class="flex justify-between items-center mt-4">
-                                       <div class="flex items-center gap-0.5 ">
-                                        <div class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-white text-base"><i class="fas fa-phone"></i></div>
+                                       <div class="flex items-center gap-2 ">
+                                        <div class="w-6 h-6 rounded-full bg-gray-800 flex items-center justify-center text-white text-base"><i class="fas fa-phone"></i></div>
                                         <span class="text-gray-800 text-sm font-semibold">02-26711359</span>
                                     </div>
-                                    <button class="bg-gray-800 hover:bg-gray-700 text-white text-sm font-semibold py-2 px-5 rounded-full transition-colors duration-200">التفاصيل</button>
+                                    <button class="bg-gray-800 hover:bg-gray-700 text-white text-sm font-semibold py-2 px-3 rounded-full transition-colors duration-200">التفاصيل</button>
                                  
                                 </div>
                             </div>
                         </div>
+                        <!-- end card -->
                             <!-- card  -->
-                        <div class="flex-shrink-0 w-[270px] lg:w-auto bg-white h-auto rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 font-cairo" style="direction: rtl;">
+                        <div class="relative flex-shrink-0 w-[270px] lg:w-auto bg-white h-auto rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 font-cairo" style="direction: rtl;">
+                          <!-- img and description  -->
                             <div class="relative w-full h-40">
                                 <img src="./imgs/branch.png" alt="صورة الفرع" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
@@ -589,20 +601,24 @@
                                     <p class="text-xs">السادسة - مدينة نصر</p>
                                 </div>
                             </div>
+                            <!-- text area  -->
                             <div class="p-4 pt-3 text-right">
-                                <h3 class="font-bold text-gray-900 text-base mb-3 leading-snug">91 أ ش محمد حسين هيكل - المنطقة السادسة - مدينة نصر</h3>
+                                <h3 class="font-bold text-gray-900 text-base mb-3 leading-snug border-b border-gray-200 py-2">91 أ ش محمد حسين هيكل - المنطقة السادسة - مدينة نصر</h3>
+                                <!-- phone and details button -->
                                 <div class="flex justify-between items-center mt-4">
-                                       <div class="flex items-center gap-0.5 ">
-                                        <div class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-white text-base"><i class="fas fa-phone"></i></div>
+                                       <div class="flex items-center gap-2 ">
+                                        <div class="w-6 h-6 rounded-full bg-gray-800 flex items-center justify-center text-white text-base"><i class="fas fa-phone"></i></div>
                                         <span class="text-gray-800 text-sm font-semibold">02-26711359</span>
                                     </div>
-                                    <button class="bg-gray-800 hover:bg-gray-700 text-white text-sm font-semibold py-2 px-5 rounded-full transition-colors duration-200">التفاصيل</button>
+                                    <button class="bg-gray-800 hover:bg-gray-700 text-white text-sm font-semibold py-2 px-3 rounded-full transition-colors duration-200">التفاصيل</button>
                                  
                                 </div>
                             </div>
                         </div>
+                        <!-- end card -->
                             <!-- card  -->
-                        <div class="flex-shrink-0 w-[270px] lg:w-auto bg-white h-auto rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 font-cairo" style="direction: rtl;">
+                        <div class="relative flex-shrink-0 w-[270px] lg:w-auto bg-white h-auto rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 font-cairo" style="direction: rtl;">
+                          <!-- img and description  -->
                             <div class="relative w-full h-40">
                                 <img src="./imgs/branch.png" alt="صورة الفرع" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
@@ -611,18 +627,21 @@
                                     <p class="text-xs">السادسة - مدينة نصر</p>
                                 </div>
                             </div>
+                            <!-- text area  -->
                             <div class="p-4 pt-3 text-right">
-                                <h3 class="font-bold text-gray-900 text-base mb-3 leading-snug">91 أ ش محمد حسين هيكل - المنطقة السادسة - مدينة نصر</h3>
+                                <h3 class="font-bold text-gray-900 text-base mb-3 leading-snug border-b border-gray-200 py-2">91 أ ش محمد حسين هيكل - المنطقة السادسة - مدينة نصر</h3>
+                                <!-- phone and details button -->
                                 <div class="flex justify-between items-center mt-4">
-                                       <div class="flex items-center gap-0.5 ">
-                                        <div class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-white text-base"><i class="fas fa-phone"></i></div>
+                                       <div class="flex items-center gap-2 ">
+                                        <div class="w-6 h-6 rounded-full bg-gray-800 flex items-center justify-center text-white text-base"><i class="fas fa-phone"></i></div>
                                         <span class="text-gray-800 text-sm font-semibold">02-26711359</span>
                                     </div>
-                                    <button class="bg-gray-800 hover:bg-gray-700 text-white text-sm font-semibold py-2 px-5 rounded-full transition-colors duration-200">التفاصيل</button>
+                                    <button class="bg-gray-800 hover:bg-gray-700 text-white text-sm font-semibold py-2 px-3 rounded-full transition-colors duration-200">التفاصيل</button>
                                  
                                 </div>
                             </div>
                         </div>
+                        <!-- end card -->
 
                     </div>
                 </div>
@@ -630,7 +649,7 @@
         </div>
     </div>
     <!-- parteners  -->
-    <section class="pb-20 lg:bg-gray-100">
+    <section class="pb-20 lg:bg-white border-t border-gray-200 pt-5 lg:mt-0">
         <div class="container mx-auto px-4">
             <div class="flex justify-center items-center gap-3 md:gap-16 flex-wrap lg:flex-nowrap opacity-60 grayscale hover:grayscale-0 transition duration-500 overflow-x-auto lg:overflow-visible">
                 <img src="./imgs/bayern.png" alt="Bayern" class="h-4 lg:h-10 object-contain flex-shrink-0">

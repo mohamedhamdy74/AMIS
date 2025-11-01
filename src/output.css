@@ -421,6 +421,12 @@
   .my-2 {
     margin-block: calc(var(--spacing) * 2);
   }
+  .my-3 {
+    margin-block: calc(var(--spacing) * 3);
+  }
+  .my-5 {
+    margin-block: calc(var(--spacing) * 5);
+  }
   .my-8 {
     margin-block: calc(var(--spacing) * 8);
   }
@@ -1420,11 +1426,17 @@
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
   }
+  .pt-5 {
+    padding-top: calc(var(--spacing) * 5);
+  }
   .pt-6 {
     padding-top: calc(var(--spacing) * 6);
   }
   .pt-8 {
     padding-top: calc(var(--spacing) * 8);
+  }
+  .pt-10 {
+    padding-top: calc(var(--spacing) * 10);
   }
   .pt-20 {
     padding-top: calc(var(--spacing) * 20);
@@ -2449,6 +2461,11 @@
       margin-top: calc(var(--spacing) * 0);
     }
   }
+  .lg\:mt-5 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * 5);
+    }
+  }
   .lg\:mb-10 {
     @media (width >= 64rem) {
       margin-bottom: calc(var(--spacing) * 10);
@@ -2497,6 +2514,21 @@
   .lg\:h-\[600px\] {
     @media (width >= 64rem) {
       height: 600px;
+    }
+  }
+  .lg\:h-\[620px\] {
+    @media (width >= 64rem) {
+      height: 620px;
+    }
+  }
+  .lg\:h-\[650px\] {
+    @media (width >= 64rem) {
+      height: 650px;
+    }
+  }
+  .lg\:h-\[700px\] {
+    @media (width >= 64rem) {
+      height: 700px;
     }
   }
   .lg\:h-auto {
@@ -2629,6 +2661,11 @@
       gap: calc(var(--spacing) * 20);
     }
   }
+  .lg\:self-end {
+    @media (width >= 64rem) {
+      align-self: flex-end;
+    }
+  }
   .lg\:overflow-visible {
     @media (width >= 64rem) {
       overflow: visible;
@@ -2684,6 +2721,11 @@
   .lg\:bg-transparent {
     @media (width >= 64rem) {
       background-color: transparent;
+    }
+  }
+  .lg\:bg-white {
+    @media (width >= 64rem) {
+      background-color: var(--color-white);
     }
   }
   .lg\:px-0 {
