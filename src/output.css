@@ -90,7 +90,6 @@
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --font-cairo: 'Cairo', sans-serif;
-    --font-bukra: '29Lt Bukra', sans-serif;
   }
 }
 @layer base {
@@ -2270,6 +2269,11 @@
   .md\:py-10 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:pt-20 {
+    @media (width >= 48rem) {
+      padding-top: calc(var(--spacing) * 20);
     }
   }
   .md\:pr-2 {
