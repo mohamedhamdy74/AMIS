@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateIndicators() {
       const scrollLeft = servicesContainer.scrollLeft;
-      const itemWidth = 100 + 16; // 150px width + 16px gap (gap-4 = 1rem = 16px)
+      const itemWidth = 90 + 16; // 150px width + 16px gap (gap-4 = 1rem = 16px)
 
       // Calculate which item is most visible in the viewport
       // Since scrollLeft can be negative (RTL), we need to handle it properly
@@ -486,3 +486,40 @@ function toggleCollapse(faqId) {
         icon.classList.remove('rotate-180');
     }
 }
+
+
+
+
+
+
+
+    document.getElementById('toggleSearch').addEventListener('click', function () {
+      const input = document.getElementById('searchInput');
+      input.classList.toggle('hidden');
+      if (!input.classList.contains('hidden')) {
+        input.focus();
+      }
+    });
+
+
+
+            document.querySelectorAll('input[type="file"]').forEach((input) => {
+              input.addEventListener("change", function (e) {
+                const fileName = e.target.files[0]?.name;
+                if (fileName) {
+                  const label = e.target.closest("label");
+                  const textElement = label.querySelector("p.text-xs");
+                  textElement.textContent = `تم اختيار: ${fileName}`;
+                  textElement.classList.add("text-[#0166B3]", "font-semibold");
+                }
+              });
+            });
+            document
+              .getElementById("toggleSearch")
+              .addEventListener("click", function () {
+                const input = document.getElementById("searchInput");
+                input.classList.toggle("hidden");
+                if (!input.classList.contains("hidden")) {
+                  input.focus();
+                }
+              });

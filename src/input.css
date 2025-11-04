@@ -8,7 +8,7 @@
 
 @layer base {
     @font-face {
-        font-family: 'Bukra';
+        font-family: '29Lt Bukra';
         src: url('../fonts/29LT-Bukra-Regular-1.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
@@ -16,9 +16,7 @@
     html {
         font-family: 'Cairo', sans-serif;
     }
-    * {
-        font-family: 'cairo', sans-serif;
-    }
+   
 }
 
 @layer utilities {
