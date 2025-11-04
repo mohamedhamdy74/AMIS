@@ -521,6 +521,9 @@
   .mb-48 {
     margin-bottom: calc(var(--spacing) * 48);
   }
+  .mb-52 {
+    margin-bottom: calc(var(--spacing) * 52);
+  }
   .mb-64 {
     margin-bottom: calc(var(--spacing) * 64);
   }
@@ -1473,6 +1476,9 @@
   }
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
+  }
+  .py-7 {
+    padding-block: calc(var(--spacing) * 7);
   }
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
@@ -2855,6 +2861,11 @@
   .lg\:py-20 {
     @media (width >= 64rem) {
       padding-block: calc(var(--spacing) * 20);
+    }
+  }
+  .lg\:py-24 {
+    @media (width >= 64rem) {
+      padding-block: calc(var(--spacing) * 24);
     }
   }
   .lg\:py-30 {
