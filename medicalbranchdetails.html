@@ -71,13 +71,21 @@
 
   <!-- Mobile Header -->
   <header class="md:hidden bg-white border-b border-gray-200 py-4 px-4 flex items-center justify-between">
-   
-     <button class="text-[#0166B3]">
-      <i class="fas fa-arrow-right text-xl"></i>
+   <div class="flex items-center gap-5">
+     <button class="border border-gray-200 p-2 rounded-xl">
+      <i class="fas fa-arrow-right text-lg"></i>
     </button>
-    <h1 class="text-lg font-semibold text-gray-800">بحث داخل الشبكة الطبية</h1>
-    <button class="text-gray-600">
-      <i class="fas fa-bars text-xl"></i>
+    <h1 class="text-lg font-medium text-start ">بحث داخل الشبكة الطبية</h1>
+    </div>
+    <button class="border border-gray-200 p-2 rounded-xl text-gray-400">
+      <!-- SVG bars-filter -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+  <rect x="3"  y="5"  width="18" height="2" rx="1"/>
+  <rect x="6"  y="11" width="12" height="2" rx="1"/>
+  <rect x="9"  y="17" width="6"  height="2" rx="1"/>
+</svg>
+
+
     </button>
   </header>
 
@@ -165,10 +173,10 @@
       <h1 class="text-2xl font-bold text-[#1B2128]"> عنوان الفرع</h1>
     </div>
 
-   <div class=" mx-auto px-4 py-12">
+   <div class=" mx-auto px-4 md:py-12">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <!-- Right Column - Branch Details -->
-            <div class="space-y-8 order-2 lg:order-1">
+            <div class="space-y-3 md:space-y-8 order-2 lg:order-1">
               <!-- Working Hours and Visit Days -->
               <div class="flex ">
                 <!-- Working Hours -->
@@ -199,17 +207,18 @@
                 </div>
              </div>
                 <!-- Address -->
-                <div class="bg-white py-3">
+                <div class="py-0 my-3 md:mt-0 md:py-3">
                     <h3 class="text-xl font-bold text-gray-800 mb-4">عنوان الفرع</h3>
-                    <p class="text-gray-600  text-sm md:text-lg leading-relaxed">
+                    <p class="text-gray-600  text-[12px] md:text-lg ">
                         27 شارع عرابي - الدور الثامن - شقة 805 - التوفيقية - القاهرة
                     </p>
                 </div>
                 <!-- map im mobile view  -->
-                   <div class="bg-white rounded-xl p-2 shadow-sm md:hidden w-full">
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">الموقع على الخريطة</h3>
-                    <div id="map2" class="h-[223px] w-full rounded-xl"></div>
+                   <div class="bg-white  md:hidden ">
+                    <div id="map2" class="h-[223px] w-full rounded-lg"></div>
+                    <a class="text-blue-500 underline mt-3 text-[10px]"> فتح الخرائط علي Google Map</a>
                 </div>
+
                 <!-- Contact Information -->
                 <div class="bg-white rounded-xl p-6 shadow-sm">
                     <h3 class="text-xl font-bold text-gray-800 mb-6">بيانات التواصل</h3>

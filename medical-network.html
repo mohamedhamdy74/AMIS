@@ -56,13 +56,21 @@
 
   <!-- Mobile Header -->
   <header class="md:hidden bg-white border-b border-gray-200 py-4 px-4 flex items-center justify-between">
-   
-     <button class="text-[#0166B3]">
-      <i class="fas fa-arrow-right text-xl"></i>
+   <div class="flex items-center gap-5">
+     <button class="border border-gray-200 p-2 rounded-xl">
+      <i class="fas fa-arrow-right text-lg"></i>
     </button>
-    <h1 class="text-lg font-semibold text-gray-800">بحث داخل الشبكة الطبية</h1>
-    <button class="text-gray-600">
-      <i class="fas fa-bars text-xl"></i>
+    <h1 class="text-lg font-medium text-start ">بحث داخل الشبكة الطبية</h1>
+    </div>
+    <button class="border border-gray-200 p-2 rounded-xl text-gray-400">
+      <!-- SVG bars-filter -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+  <rect x="3"  y="5"  width="18" height="2" rx="1"/>
+  <rect x="6"  y="11" width="12" height="2" rx="1"/>
+  <rect x="9"  y="17" width="6"  height="2" rx="1"/>
+</svg>
+
+
     </button>
   </header>
 
@@ -150,10 +158,7 @@
       <h1 class="text-2xl font-bold text-[#1B2128]"> بحث داخل الشبكة الطبية</h1>
     </div>
 
-    <!-- Mobile Page Title -->
-    <div class="md:hidden mb-6">
-      <h2 class="text-lg font-semibold text-gray-800 text-center">البحث بأسم الجهة</h2>
-    </div>
+
 
     <!-- search section  -->
     <div class="mx-auto bg-white">
@@ -166,19 +171,19 @@
       <!-- Search Form -->
       <form class="space-y-4 md:space-y-6 font-bukra">
         <!-- Search Input -->
-        <div class="relative">
-                  <p class=" mb-2">البحث بأسم الجهة</p>
+        <div class="relative font-cairo lg:font-bukra">
+                  <p class=" mb-2 ">البحث بأسم الجهة</p>
 
           <input type="text" placeholder="البحث بأسم الجهة"
             class="w-full px-4 py-3 pr-10 border text-gray-500 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-right">
-          <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+          <i class="fas fa-search absolute left-4 top-1/2 translate-y-1/2 text-gray-400"></i>
         </div>
 
         <!-- Mobile Filters Row -->
-        <div class="flex gap-3 md:hidden">
+        <div class="flex gap-3 md:hidden font-cairo">
           <!-- نوع الجهة Dropdown -->
-          <div class="flex-1">
-            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-right text-gray-500 text-sm appearance-none bg-white">
+          <div class="">
+            <select class=" w-28 h-10 px-2 border bg-gray-50 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-right text-sm  ">
               <option value="">نوع الجهة</option>
               <option value="government">حكومية</option>
               <option value="private">خاصة</option>
@@ -187,8 +192,8 @@
           </div>
 
           <!-- المحافظة Dropdown -->
-          <div class="flex-1">
-            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-right text-gray-500 text-sm appearance-none bg-white">
+          <div class="">
+            <select class="w-28 h-10 px-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-right  text-sm  bg-gray-50">
               <option value="">المحافظة</option>
               <option value="cairo">القاهرة</option>
               <option value="giza">الجيزة</option>
@@ -238,13 +243,12 @@
       </form>
 
       <!-- Mobile Results Count -->
-      <div class="md:hidden text-start text-gray-500 text-sm mt-4">
-        120 of 290 results
-      </div>
+      <div style="direction: ltr;" class="md:hidden text-end   text-gray-500 text-sm mt-2">
+120 of 290 results      </div>
     </div>
 
     <!-- Results Section -->
-    <div class="mx-auto mt-8 md:mt-12">
+    <div class="mx-auto mt-2 md:mt-12">
       <!-- Header - Desktop Only -->
       <h1 class="text-3xl font-bold text-[#0166B3] mb-8 hidden md:block">نتائج البحث</h1>
 
@@ -371,9 +375,9 @@
       </div>
 
       <!-- Mobile List View -->
-      <div class="md:hidden space-y-4">
+      <div class="md:hidden space-y-2 font-bukra">
         <!-- Result Card -->
-        <div class="bg-white border-b border-gray-200 pb-4">
+        <div class="bg-white border border-gray-200 rounded-lg p-3">
           <div class="flex justify-between items-start mb-2">
 
             <div class="flex-1 text-right">
@@ -385,7 +389,7 @@
             </button></a>
           </div>
         </div>
-        <div class="bg-white border-b border-gray-200 pb-4">
+        <div class="bg-gray-50 border border-gray-200 rounded-lg p-3">
           <div class="flex justify-between items-start mb-2">
 
             <div class="flex-1 text-right">
@@ -397,7 +401,7 @@
             </button></a>
           </div>
         </div>
-        <div class="bg-white border-b border-gray-200 pb-4">
+        <div class=" border border-gray-200 rounded-lg p-3">
           <div class="flex justify-between items-start mb-2">
 
             <div class="flex-1 text-right">
@@ -409,7 +413,7 @@
             </button></a>
           </div>
         </div>
-        <div class="bg-white border-b border-gray-200 pb-4">
+        <div class="bg-gray-50 border border-gray-200 rounded-lg p-3">
           <div class="flex justify-between items-start mb-2">
 
             <div class="flex-1 text-right">
@@ -421,30 +425,19 @@
             </button></a>
           </div>
         </div>
-        <div class="bg-white border-b border-gray-200 pb-4">
-          <div class="flex justify-between items-start mb-2">
-
-            <div class="flex-1 text-right">
-              <h3 class="text-[#0166B3] font-semibold mb-1">معمل الفا إسكان</h3>
-              <p class="text-gray-600 text-sm">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</p>
-            </div>
-             <a href="./medicalbranchdetails.html"><button class="text-gray-600">
-              <i class="fas fa-ellipsis-v"></i>
-            </button></a>
-          </div>
-        </div>
+      
 
       </div>
 
       <!-- Pagination -->
       <div class="flex justify-center items-center gap-2 mt-8">
-        <button class="px-3 py-2 bg-[#0166B3] text-white rounded transition">01</button>
-        <button class="px-3 py-2 text-gray-600 hover:text-[#0166B3] hover:bg-gray-100 rounded transition">02</button>
-        <button class="px-3 py-2 text-gray-600 hover:text-[#0166B3] hover:bg-gray-100 rounded transition">03</button>
-        <button class="px-3 py-2 text-gray-600 hover:text-[#0166B3] hover:bg-gray-100 rounded transition">04</button>
-        <button class="px-3 py-2 text-gray-600 hover:text-[#0166B3] hover:bg-gray-100 rounded transition">05</button>
-        <button class="px-3 py-2 text-gray-600 hover:text-[#0166B3] hover:bg-gray-100 rounded transition">06</button>
-        <button class="px-3 py-2 text-gray-600 hover:text-[#0166B3] hover:bg-gray-100 rounded transition">...</button>
+        <button class="px-3 py-2 border border-gray-300 p-2  rounded-lg transition">01</button>
+        <button class="px-3 py-2 hover:border hover:rounded-lg p-2 border-gray-300 transition">02</button>
+        <button class="px-3 py-2 hover:border hover:rounded-lg p-2 border-gray-300 transition">03</button>
+        <button class="px-3 py-2 hover:border hover:rounded-lg p-2 border-gray-300 transition">04</button>
+        <button class="px-3 py-2 hover:border hover:rounded-lg p-2 border-gray-300 transition">05</button>
+        <button class="px-3 py-2 hover:border hover:rounded-lg p-2 border-gray-300 transition">06</button>
+        <button class="px-3 py-2 hover:border hover:rounded-lg p-2 border-gray-300 transition">...</button>
       </div>
     </div>
   </main>

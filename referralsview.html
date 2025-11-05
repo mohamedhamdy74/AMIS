@@ -56,13 +56,21 @@
 
   <!-- Mobile Header -->
   <header class="md:hidden bg-white border-b border-gray-200 py-4 px-4 flex items-center justify-between">
-   
-     <button class="text-[#0166B3]">
-      <i class="fas fa-arrow-right text-xl"></i>
+   <div class="flex items-center gap-5">
+     <button class="border border-gray-200 p-2 rounded-xl">
+      <i class="fas fa-arrow-right text-lg"></i>
     </button>
-    <h1 class="text-lg font-semibold text-gray-800">  عرض خطابات التحويل   </h1>
-    <button class="text-gray-600">
-      <i class="fas fa-bars text-xl"></i>
+    <h1 class="text-lg font-medium text-start ">  عرض خطابات التحويل   </h1>
+    </div>
+    <button class="border border-gray-200 p-2 rounded-xl text-gray-400">
+      <!-- SVG bars-filter -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+  <rect x="3"  y="5"  width="18" height="2" rx="1"/>
+  <rect x="6"  y="11" width="12" height="2" rx="1"/>
+  <rect x="9"  y="17" width="6"  height="2" rx="1"/>
+</svg>
+
+
     </button>
   </header>
 
@@ -294,109 +302,148 @@
         </div>
         <div class="md:hidden space-y-4">
             <!-- Card 1 - جديد -->
-            <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
-                <div class="flex justify-between items-start mb-3">
-                    <div class="text-right">
-                        <h3 class="text-[#0166B3] font-bold text-lg">معمل ألفا إسكان</h3>
-                    </div>
-                    <div class="text-left text-sm text-gray-600">
+            <div class="bg-gray-50 rounded-xl shadow-sm border border-gray-200 p-4">
+                <div class="flex justify-between items-center mb-3">
+                    
+                        <h3 class="text-[#0166B3] text-right font-bold text-lg font-bukra">معمل ألفا إسكان</h3>
+                    
+                    <div class="text-left flex text-[10px]  text-nowrap gap-2 items-center text-gray-600">
                         <span class="font-bold">09/11/2025</span>
                         <span class="text-[#0166B3] font-bold block">12:30 مساء</span>
                     </div>
                 </div>
                 <div class="flex justify-between items-center mb-3">
-                    <p class="text-gray-600 font-bold text-sm">الرقم #46046332</p>
-                    <span class="px-3 py-1 text-xs font-bold rounded-md bg-green-100 text-green-700">جديد</span>
+                    <p class="text-gray-600 font-bold text-sm font-bukra">الرقم #46046332</p>
+                    <span class="px-3 py-1 text-xs font-bold rounded-md font-bukra bg-green-100 text-green-700">جديد</span>
                 </div>
-                <div class="flex gap-2 pt-3 border-t border-gray-200">
-                    <button class="flex-1 flex items-center justify-center gap-2 text-[#0166B3] font-bold py-2 border border-[#0166B3] rounded-lg hover:bg-[#0166B3]/10">
-                        <i class="fa-solid fa-eye"></i>
-                        عرض الخطاب
-                    </button>
-                    <button class="flex-1 flex items-center justify-center gap-2 text-[#0166B3] font-bold py-2 border border-[#0166B3] rounded-lg hover:bg-[#0166B3]/10">
-                        <i class="fa-solid fa-download"></i>
+                <div class="flex justify-center items-center  gap-5   border-gray-200">
+                  
+                    <button class=" flex items-center justify-center gap-2 text-[10px] text-[#0166B3] font-semibold py-2  rounded-lg hover:bg-[#0166B3]/10">
+                        <svg width="15" height="15" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.5 4.75V3L6 0.5H0.5V10.5H4.5M5.5 0.5V3.5H8.5M6.25 9.022L8 10.752L9.75 9.022M8 10.15V6.5" stroke="#0166B3" stroke-linecap="square"/>
+</svg>
+
                         تحميل الخطاب
+                    </button>
+                      <button class=" flex items-center justify-center gap-2 text-[10px] text-[#0166B3] font-semibold py-2  rounded-lg hover:bg-[#0166B3]/10">
+<svg width="15" height="15" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.25 9.75C8.66421 9.75 9 9.41421 9 9C9 8.58579 8.66421 8.25 8.25 8.25C7.83579 8.25 7.5 8.58579 7.5 9C7.5 9.41421 7.83579 9.75 8.25 9.75Z" fill="#0166B3"/>
+<path d="M11.1664 8.80463C10.9347 8.21433 10.5348 7.70501 10.0164 7.33979C9.49803 6.97456 8.88384 6.76949 8.25 6.75C7.61616 6.76949 7.00197 6.97456 6.48357 7.33979C5.96516 7.70501 5.56533 8.21433 5.33362 8.80463L5.25 9L5.33362 9.19575C5.56539 9.78597 5.96525 10.2952 6.48365 10.6604C7.00205 11.0255 7.6162 11.2305 8.25 11.25C8.8838 11.2305 9.49795 11.0255 10.0164 10.6604C10.5348 10.2952 10.9346 9.78597 11.1664 9.19575L11.25 9L11.1664 8.80463ZM8.25 10.5C7.95333 10.5 7.66332 10.412 7.41664 10.2472C7.16997 10.0824 6.97771 9.84811 6.86418 9.57402C6.75065 9.29994 6.72094 8.99834 6.77882 8.70736C6.8367 8.41639 6.97956 8.14912 7.18934 7.93934C7.39912 7.72956 7.66639 7.5867 7.95736 7.52882C8.24834 7.47094 8.54994 7.50065 8.82402 7.61418C9.09811 7.72771 9.33238 7.91997 9.4972 8.16664C9.66203 8.41332 9.75 8.70333 9.75 9C9.7495 9.39767 9.59131 9.77891 9.31011 10.0601C9.02891 10.3413 8.64767 10.4995 8.25 10.5Z" fill="#0166B3"/>
+<path d="M4.5 10.5002H3V1.50017H6V3.75017C6.00059 3.9489 6.0798 4.13932 6.22033 4.27985C6.36085 4.42037 6.55127 4.49958 6.75 4.50017H9V6.00017H9.75V3.75017C9.75132 3.70089 9.74195 3.6519 9.72253 3.60659C9.70311 3.56127 9.6741 3.5207 9.6375 3.48767L7.0125 0.862672C6.97963 0.825872 6.93909 0.796726 6.89374 0.777289C6.84838 0.757851 6.79932 0.748595 6.75 0.750172H3C2.80127 0.750766 2.61085 0.829974 2.47033 0.970498C2.3298 1.11102 2.25059 1.30144 2.25 1.50017V10.5002C2.25059 10.6989 2.3298 10.8893 2.47033 11.0298C2.61085 11.1704 2.80127 11.2496 3 11.2502H4.5V10.5002ZM6.75 1.65017L8.85 3.75017H6.75V1.65017Z" fill="#0166B3"/>
+</svg>
+
+                        عرض الخطاب
                     </button>
                 </div>
             </div>
 
             <!-- Card 2 - قيد التنفيذ -->
             <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
-                <div class="flex justify-between items-start mb-3">
-                    <div class="text-right">
-                        <h3 class="text-[#0166B3] font-bold text-lg">معمل ألفا إسكان</h3>
-                    </div>
-                    <div class="text-left text-sm text-gray-600">
+                <div class="flex justify-between items-center mb-3">
+
+                        <h3 class="text-[#0166B3] text-right font-bold text-lg font-bukra">معمل ألفا إسكان</h3>
+
+
+                    <div class="text-left flex text-[10px]  text-nowrap gap-2 items-center text-gray-600">
                         <span class="font-bold">09/11/2025</span>
                         <span class="text-[#0166B3] font-bold block">12:30 مساء</span>
                     </div>
                 </div>
                 <div class="flex justify-between items-center mb-3">
-                    <p class="text-gray-600 font-bold text-sm">الرقم #46046332</p>
+                    <p class="text-gray-600 font-bold text-sm font-bukra">الرقم #46046332</p>
                     <span class="px-3 py-1 text-xs font-bold rounded-md bg-yellow-100 text-yellow-700">قيد التنفيذ</span>
                 </div>
-                <div class="flex gap-2 pt-3 border-t border-gray-200">
-                    <button class="flex-1 flex items-center justify-center gap-2 text-[#0166B3] font-bold py-2 border border-[#0166B3] rounded-lg hover:bg-[#0166B3]/10">
-                        <i class="fa-solid fa-eye"></i>
-                        عرض الخطاب
-                    </button>
-                    <button class="flex-1 flex items-center justify-center gap-2 text-[#0166B3] font-bold py-2 border border-[#0166B3] rounded-lg hover:bg-[#0166B3]/10">
-                        <i class="fa-solid fa-download"></i>
+                <div class="flex justify-center items-center  gap-5   border-gray-200">
+
+                    <button class=" flex items-center justify-center gap-2 text-[10px] text-[#0166B3] font-semibold py-2  rounded-lg hover:bg-[#0166B3]/10">
+                        <svg width="15" height="15" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.5 4.75V3L6 0.5H0.5V10.5H4.5M5.5 0.5V3.5H8.5M6.25 9.022L8 10.752L9.75 9.022M8 10.15V6.5" stroke="#0166B3" stroke-linecap="square"/>
+</svg>
+
                         تحميل الخطاب
+                    </button>
+                      <button class=" flex items-center justify-center gap-2 text-[10px] text-[#0166B3] font-semibold py-2  rounded-lg hover:bg-[#0166B3]/10">
+<svg width="15" height="15" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.25 9.75C8.66421 9.75 9 9.41421 9 9C9 8.58579 8.66421 8.25 8.25 8.25C7.83579 8.25 7.5 8.58579 7.5 9C7.5 9.41421 7.83579 9.75 8.25 9.75Z" fill="#0166B3"/>
+<path d="M11.1664 8.80463C10.9347 8.21433 10.5348 7.70501 10.0164 7.33979C9.49803 6.97456 8.88384 6.76949 8.25 6.75C7.61616 6.76949 7.00197 6.97456 6.48357 7.33979C5.96516 7.70501 5.56533 8.21433 5.33362 8.80463L5.25 9L5.33362 9.19575C5.56539 9.78597 5.96525 10.2952 6.48365 10.6604C7.00205 11.0255 7.6162 11.2305 8.25 11.25C8.8838 11.2305 9.49795 11.0255 10.0164 10.6604C10.5348 10.2952 10.9346 9.78597 11.1664 9.19575L11.25 9L11.1664 8.80463ZM8.25 10.5C7.95333 10.5 7.66332 10.412 7.41664 10.2472C7.16997 10.0824 6.97771 9.84811 6.86418 9.57402C6.75065 9.29994 6.72094 8.99834 6.77882 8.70736C6.8367 8.41639 6.97956 8.14912 7.18934 7.93934C7.39912 7.72956 7.66639 7.5867 7.95736 7.52882C8.24834 7.47094 8.54994 7.50065 8.82402 7.61418C9.09811 7.72771 9.33238 7.91997 9.4972 8.16664C9.66203 8.41332 9.75 8.70333 9.75 9C9.7495 9.39767 9.59131 9.77891 9.31011 10.0601C9.02891 10.3413 8.64767 10.4995 8.25 10.5Z" fill="#0166B3"/>
+<path d="M4.5 10.5002H3V1.50017H6V3.75017C6.00059 3.9489 6.0798 4.13932 6.22033 4.27985C6.36085 4.42037 6.55127 4.49958 6.75 4.50017H9V6.00017H9.75V3.75017C9.75132 3.70089 9.74195 3.6519 9.72253 3.60659C9.70311 3.56127 9.6741 3.5207 9.6375 3.48767L7.0125 0.862672C6.97963 0.825872 6.93909 0.796726 6.89374 0.777289C6.84838 0.757851 6.79932 0.748595 6.75 0.750172H3C2.80127 0.750766 2.61085 0.829974 2.47033 0.970498C2.3298 1.11102 2.25059 1.30144 2.25 1.50017V10.5002C2.25059 10.6989 2.3298 10.8893 2.47033 11.0298C2.61085 11.1704 2.80127 11.2496 3 11.2502H4.5V10.5002ZM6.75 1.65017L8.85 3.75017H6.75V1.65017Z" fill="#0166B3"/>
+</svg>
+
+                        عرض الخطاب
                     </button>
                 </div>
             </div>
 
             <!-- Card 3 - مرفوض -->
-            <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
-                <div class="flex justify-between items-start mb-3">
-                    <div class="text-right">
-                        <h3 class="text-[#0166B3] font-bold text-lg">معمل ألفا إسكان</h3>
-                    </div>
-                    <div class="text-left text-sm text-gray-600">
+            <div class="bg-gray-50 rounded-xl shadow-sm border border-gray-200 p-4">
+                <div class="flex justify-between items-center mb-3">
+
+                        <h3 class="text-[#0166B3] text-right font-bold text-lg font-bukra">معمل ألفا إسكان</h3>
+
+
+                    <div class="text-left flex text-[10px]  text-nowrap gap-2 items-center text-gray-600">
                         <span class="font-bold">09/11/2025</span>
                         <span class="text-[#0166B3] font-bold block">12:30 مساء</span>
                     </div>
                 </div>
                 <div class="flex justify-between items-center mb-3">
-                    <p class="text-gray-600 font-bold text-sm">الرقم #46046332</p>
+                    <p class="text-gray-600 font-bold text-sm font-bukra">الرقم #46046332</p>
                     <span class="px-3 py-1 text-xs font-bold rounded-md bg-red-100 text-[#B50644]">مرفوض</span>
                 </div>
-                <div class="flex gap-2 pt-3 border-t border-gray-200">
-                    <button class="flex-1 flex items-center justify-center gap-2 text-[#0166B3] font-bold py-2 border border-[#0166B3] rounded-lg hover:bg-[#0166B3]/10">
-                        <i class="fa-solid fa-eye"></i>
-                        عرض الخطاب
-                    </button>
-                    <button class="flex-1 flex items-center justify-center gap-2 text-[#0166B3] font-bold py-2 border border-[#0166B3] rounded-lg hover:bg-[#0166B3]/10">
-                        <i class="fa-solid fa-download"></i>
+                <div class="flex justify-center items-center  gap-5   border-gray-200">
+
+                    <button class=" flex items-center justify-center gap-2 text-[10px] text-[#0166B3] font-semibold py-2  rounded-lg hover:bg-[#0166B3]/10">
+                        <svg width="15" height="15" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.5 4.75V3L6 0.5H0.5V10.5H4.5M5.5 0.5V3.5H8.5M6.25 9.022L8 10.752L9.75 9.022M8 10.15V6.5" stroke="#0166B3" stroke-linecap="square"/>
+</svg>
+
                         تحميل الخطاب
+                    </button>
+                      <button class=" flex items-center justify-center gap-2 text-[10px] text-[#0166B3] font-semibold py-2  rounded-lg hover:bg-[#0166B3]/10">
+<svg width="15" height="15" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.25 9.75C8.66421 9.75 9 9.41421 9 9C9 8.58579 8.66421 8.25 8.25 8.25C7.83579 8.25 7.5 8.58579 7.5 9C7.5 9.41421 7.83579 9.75 8.25 9.75Z" fill="#0166B3"/>
+<path d="M11.1664 8.80463C10.9347 8.21433 10.5348 7.70501 10.0164 7.33979C9.49803 6.97456 8.88384 6.76949 8.25 6.75C7.61616 6.76949 7.00197 6.97456 6.48357 7.33979C5.96516 7.70501 5.56533 8.21433 5.33362 8.80463L5.25 9L5.33362 9.19575C5.56539 9.78597 5.96525 10.2952 6.48365 10.6604C7.00205 11.0255 7.6162 11.2305 8.25 11.25C8.8838 11.2305 9.49795 11.0255 10.0164 10.6604C10.5348 10.2952 10.9346 9.78597 11.1664 9.19575L11.25 9L11.1664 8.80463ZM8.25 10.5C7.95333 10.5 7.66332 10.412 7.41664 10.2472C7.16997 10.0824 6.97771 9.84811 6.86418 9.57402C6.75065 9.29994 6.72094 8.99834 6.77882 8.70736C6.8367 8.41639 6.97956 8.14912 7.18934 7.93934C7.39912 7.72956 7.66639 7.5867 7.95736 7.52882C8.24834 7.47094 8.54994 7.50065 8.82402 7.61418C9.09811 7.72771 9.33238 7.91997 9.4972 8.16664C9.66203 8.41332 9.75 8.70333 9.75 9C9.7495 9.39767 9.59131 9.77891 9.31011 10.0601C9.02891 10.3413 8.64767 10.4995 8.25 10.5Z" fill="#0166B3"/>
+<path d="M4.5 10.5002H3V1.50017H6V3.75017C6.00059 3.9489 6.0798 4.13932 6.22033 4.27985C6.36085 4.42037 6.55127 4.49958 6.75 4.50017H9V6.00017H9.75V3.75017C9.75132 3.70089 9.74195 3.6519 9.72253 3.60659C9.70311 3.56127 9.6741 3.5207 9.6375 3.48767L7.0125 0.862672C6.97963 0.825872 6.93909 0.796726 6.89374 0.777289C6.84838 0.757851 6.79932 0.748595 6.75 0.750172H3C2.80127 0.750766 2.61085 0.829974 2.47033 0.970498C2.3298 1.11102 2.25059 1.30144 2.25 1.50017V10.5002C2.25059 10.6989 2.3298 10.8893 2.47033 11.0298C2.61085 11.1704 2.80127 11.2496 3 11.2502H4.5V10.5002ZM6.75 1.65017L8.85 3.75017H6.75V1.65017Z" fill="#0166B3"/>
+</svg>
+
+                        عرض الخطاب
                     </button>
                 </div>
             </div>
 
             <!-- Card 4 - منتهي -->
             <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
-                <div class="flex justify-between items-start mb-3">
-                    <div class="text-right">
-                        <h3 class="text-[#0166B3] font-bold text-lg">معمل ألفا إسكان</h3>
-                    </div>
-                    <div class="text-left text-sm text-gray-600">
+                <div class="flex justify-between items-center mb-3">
+
+                        <h3 class="text-[#0166B3] text-right font-bold text-lg font-bukra">معمل ألفا إسكان</h3>
+
+
+                    <div class="text-left flex text-[10px]  text-nowrap gap-2 items-center text-gray-600">
                         <span class="font-bold">09/11/2025</span>
                         <span class="text-[#0166B3] font-bold block">12:30 مساء</span>
                     </div>
                 </div>
                 <div class="flex justify-between items-center mb-3">
-                    <p class="text-gray-600 font-bold text-sm">الرقم #46046332</p>
+                    <p class="text-gray-600 font-bold text-sm font-bukra">الرقم #46046332</p>
                     <span class="px-3 py-1 text-xs font-bold rounded-md bg-gray-200 text-gray-600">منتهي</span>
                 </div>
-                <div class="flex gap-2 pt-3 border-t border-gray-200">
-                    <button class="flex-1 flex items-center justify-center gap-2 text-[#0166B3] font-bold py-2 border border-[#0166B3] rounded-lg hover:bg-[#0166B3]/10">
-                        <i class="fa-solid fa-eye"></i>
-                        عرض الخطاب
-                    </button>
-                    <button class="flex-1 flex items-center justify-center gap-2 text-[#0166B3] font-bold py-2 border border-[#0166B3] rounded-lg hover:bg-[#0166B3]/10">
-                        <i class="fa-solid fa-download"></i>
+                <div class="flex justify-center items-center  gap-5   border-gray-200">
+
+                    <button class=" flex items-center justify-center gap-2 text-[10px] text-[#0166B3] font-semibold py-2  rounded-lg hover:bg-[#0166B3]/10">
+                        <svg width="15" height="15" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.5 4.75V3L6 0.5H0.5V10.5H4.5M5.5 0.5V3.5H8.5M6.25 9.022L8 10.752L9.75 9.022M8 10.15V6.5" stroke="#0166B3" stroke-linecap="square"/>
+</svg>
+
                         تحميل الخطاب
+                    </button>
+                      <button class=" flex items-center justify-center gap-2 text-[10px] text-[#0166B3] font-semibold py-2  rounded-lg hover:bg-[#0166B3]/10">
+<svg width="15" height="15" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.25 9.75C8.66421 9.75 9 9.41421 9 9C9 8.58579 8.66421 8.25 8.25 8.25C7.83579 8.25 7.5 8.58579 7.5 9C7.5 9.41421 7.83579 9.75 8.25 9.75Z" fill="#0166B3"/>
+<path d="M11.1664 8.80463C10.9347 8.21433 10.5348 7.70501 10.0164 7.33979C9.49803 6.97456 8.88384 6.76949 8.25 6.75C7.61616 6.76949 7.00197 6.97456 6.48357 7.33979C5.96516 7.70501 5.56533 8.21433 5.33362 8.80463L5.25 9L5.33362 9.19575C5.56539 9.78597 5.96525 10.2952 6.48365 10.6604C7.00205 11.0255 7.6162 11.2305 8.25 11.25C8.8838 11.2305 9.49795 11.0255 10.0164 10.6604C10.5348 10.2952 10.9346 9.78597 11.1664 9.19575L11.25 9L11.1664 8.80463ZM8.25 10.5C7.95333 10.5 7.66332 10.412 7.41664 10.2472C7.16997 10.0824 6.97771 9.84811 6.86418 9.57402C6.75065 9.29994 6.72094 8.99834 6.77882 8.70736C6.8367 8.41639 6.97956 8.14912 7.18934 7.93934C7.39912 7.72956 7.66639 7.5867 7.95736 7.52882C8.24834 7.47094 8.54994 7.50065 8.82402 7.61418C9.09811 7.72771 9.33238 7.91997 9.4972 8.16664C9.66203 8.41332 9.75 8.70333 9.75 9C9.7495 9.39767 9.59131 9.77891 9.31011 10.0601C9.02891 10.3413 8.64767 10.4995 8.25 10.5Z" fill="#0166B3"/>
+<path d="M4.5 10.5002H3V1.50017H6V3.75017C6.00059 3.9489 6.0798 4.13932 6.22033 4.27985C6.36085 4.42037 6.55127 4.49958 6.75 4.50017H9V6.00017H9.75V3.75017C9.75132 3.70089 9.74195 3.6519 9.72253 3.60659C9.70311 3.56127 9.6741 3.5207 9.6375 3.48767L7.0125 0.862672C6.97963 0.825872 6.93909 0.796726 6.89374 0.777289C6.84838 0.757851 6.79932 0.748595 6.75 0.750172H3C2.80127 0.750766 2.61085 0.829974 2.47033 0.970498C2.3298 1.11102 2.25059 1.30144 2.25 1.50017V10.5002C2.25059 10.6989 2.3298 10.8893 2.47033 11.0298C2.61085 11.1704 2.80127 11.2496 3 11.2502H4.5V10.5002ZM6.75 1.65017L8.85 3.75017H6.75V1.65017Z" fill="#0166B3"/>
+</svg>
+
+                        عرض الخطاب
                     </button>
                 </div>
             </div>
