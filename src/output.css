@@ -2913,6 +2913,11 @@
   .container {
     max-width: 90%;
   }
+  @media screen {
+    .container {
+      max-width: 100%;
+    }
+  }
   .drop-shadow-lg {
     text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
   }

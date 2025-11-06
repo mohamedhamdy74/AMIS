@@ -57,6 +57,11 @@ scrollbar-gutter: stable;
 .container{
     max-width: 90%;
 }
+@media screen {
+    .container {
+        max-width: 100%;
+    }
+}
 
 /* From subscription-mc-form.html */
 .drop-shadow-lg {
