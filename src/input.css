@@ -51,6 +51,12 @@
     background-position: center;
   }
 }
+html{
+scrollbar-gutter: stable;
+}
+.container{
+    max-width: 90%;
+}
 
 /* From subscription-mc-form.html */
 .drop-shadow-lg {
