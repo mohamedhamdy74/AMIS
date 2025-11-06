@@ -50,17 +50,18 @@
     background-size: cover;
     background-position: center;
   }
-}
+  
 html{
 scrollbar-gutter: stable;
 }
 .container{
-    max-width: 90%;
+    width: 90%;
 }
-@media screen {
+@media (max-width: 768px) {
     .container {
-        max-width: 100%;
+        width: 100%;
     }
+}
 }
 
 /* From subscription-mc-form.html */

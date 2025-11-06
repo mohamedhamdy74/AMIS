@@ -2906,16 +2906,16 @@
       background-size: cover;
       background-position: center;
     }
-  }
-  html {
-    scrollbar-gutter: stable;
-  }
-  .container {
-    max-width: 90%;
-  }
-  @media screen {
+    html {
+      scrollbar-gutter: stable;
+    }
     .container {
-      max-width: 100%;
+      width: 90%;
+    }
+    @media (max-width: 768px) {
+      .container {
+        width: 100%;
+      }
     }
   }
   .drop-shadow-lg {
