@@ -632,6 +632,9 @@
   .h-\[400px\] {
     height: 400px;
   }
+  .h-\[800px\] {
+    height: 800px;
+  }
   .h-auto {
     height: auto;
   }
@@ -977,6 +980,9 @@
   }
   .rounded-4xl {
     border-radius: var(--radius-4xl);
+  }
+  .rounded-\[14px\] {
+    border-radius: 14px;
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
@@ -2266,6 +2272,11 @@
       }
     }
   }
+  .md\:rounded-none {
+    @media (width >= 48rem) {
+      border-radius: 0;
+    }
+  }
   .md\:rounded-b-none {
     @media (width >= 48rem) {
       border-bottom-right-radius: 0;
@@ -2358,6 +2369,11 @@
       padding-right: calc(var(--spacing) * 12);
     }
   }
+  .md\:pr-\[72px\] {
+    @media (width >= 48rem) {
+      padding-right: 72px;
+    }
+  }
   .md\:pb-10 {
     @media (width >= 48rem) {
       padding-bottom: calc(var(--spacing) * 10);
@@ -2408,6 +2424,21 @@
     @media (width >= 48rem) {
       font-size: var(--text-xl);
       line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
+  .md\:text-\[14px\] {
+    @media (width >= 48rem) {
+      font-size: 14px;
+    }
+  }
+  .md\:text-\[16px\] {
+    @media (width >= 48rem) {
+      font-size: 16px;
+    }
+  }
+  .md\:text-\[28px\] {
+    @media (width >= 48rem) {
+      font-size: 28px;
     }
   }
   .md\:text-\[30px\] {
