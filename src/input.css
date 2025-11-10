@@ -234,3 +234,76 @@ body { overflow-x: hidden; }
 
 /* إخفاء شريط التمرير على متصفحات Webkit (Chrome, Safari) */
 }
+
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply bg-[#0166B3] text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition flex items-center gap-2;
+  }
+
+  .btn-secondary {
+    @apply bg-[#0166B3] hover:opacity-90 text-white font-semibold px-16 py-3 rounded-full transition duration-200;
+  }
+
+  .btn-outline {
+    @apply border-2 border-[#0166B3] text-[#0166B3] rounded-full font-semibold hover:bg-[#0166B3] hover:text-white transition-all;
+  }
+
+  /* Form Inputs */
+  .form-input {
+    @apply w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-sm;
+  }
+
+  .form-input-gray {
+    @apply w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600;
+  }
+
+  /* Text Colors */
+  .text-primary {
+    @apply text-[#0166B3];
+  }
+
+  .text-primary-bold {
+    @apply text-[#0166B3] font-bold;
+  }
+
+  /* Tables */
+  .table-container {
+    @apply border border-gray-300 rounded-lg overflow-hidden mb-8 font-bukra text-[10px];
+  }
+
+  /* File Upload Areas */
+  .file-upload {
+    @apply border-2 border-dotted border-[#0166B3] rounded-lg p-4 hover:border-[#0166B3] transition-colors;
+  }
+
+  /* Navigation Breadcrumb */
+  .breadcrumb {
+    @apply text-gray-500 text-sm flex items-center mb-12 gap-6 relative top-4;
+  }
+
+  .breadcrumb-text {
+    @apply text-[#0166B3];
+  }
+
+  .breadcrumb-arrow {
+    @apply text-[#0166B3];
+  }
+
+  /* Section Headers */
+  .section-title {
+    @apply text-2xl font-bold text-[#1B2128] font-cairo;
+  }
+
+  .section-title-mobile {
+    @apply text-xl font-medium text-[#000000] block md:hidden flex items-center gap-2 mr-3 mb-7;
+  }
+
+  .section-title-mobile-icon {
+    @apply w-8 h-8 border border-gray-300 rounded-md flex items-center justify-center bg-transparent;
+  }
+
+  .section-title-mobile-icon-i {
+    @apply text-lg;
+  }
+}

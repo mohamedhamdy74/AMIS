@@ -4,10 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
   <link rel="stylesheet" href="./src/output.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Local Font Awesome -->
+  <link rel="stylesheet" href="./fonts/fontawesome/css/all.min.css" />
+  <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="./libs/leaflet/leaflet.min.css" />
+  <script src="./libs/leaflet/leaflet.min.js" defer></script>
   <title>تفاصيل الفرع الطبي - الموقع والمعلومات</title>
   <meta name="description" content="تفاصيل الفرع الطبي - الموقع على الخريطة، مواعيد العمل، بيانات التواصل والخدمات المتاحة">
   <style>
@@ -54,12 +56,12 @@
       <div class="relative flex gap-3 items-center">
         <a href="./referal-sign-up.html">
         <button
-          class="bg-[#0166B3] text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition flex items-center gap-2">
+          class="btn-primary">
           اشترك الآن
            <i class="fas fa-arrow-right rotate-225 "></i>
         </button>
         </a>
-        <button id="toggleSearch"
+        <button id="toggleSearch" onclick="toggleSearch()"
           class=" bg-white px-3 py-2 rounded-full hover:bg-[#0166B3] hover:text-white transition">
           <i class="fas fa-search"></i>
         </button>
@@ -469,10 +471,10 @@
       </div>
     </div>
   </footer>
-<script src="./main.js"></script>
-<script>
- 
-   </script>
+<script src="./background.js"></script>
+<script src="./map.js"></script>
+<script src="./forms.js"></script>
+<script src="./ui.js"></script>
 </body>
 
 </html>

@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./src/output.css">
-    <script src="./slider.js"></script>
+   
     <title>استمارة الاشتراك - أميس رعاية أكتر</title>
     <meta name="description" content="استمارة الاشتراك في برنامج أميس رعاية أكتر - أدخل بياناتك الشخصية واستكمل عملية الاشتراك">
 </head>
@@ -41,12 +41,12 @@
       <div class="relative flex gap-3 items-center">
         <a href="./referal-sign-up.html">
         <button
-          class="bg-[#0166B3] text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition flex items-center gap-2">
+          class="btn-primary">
           اشترك الآن
            <i class="fas fa-arrow-right rotate-225 "></i>
         </button>
         </a>
-        <button id="toggleSearch"
+        <button id="toggleSearch" onclick="toggleSearch()"
           class=" bg-white px-3 py-2 rounded-full hover:bg-[#0166B3] hover:text-white transition">
           <i class="fas fa-search"></i>
         </button>
@@ -94,7 +94,7 @@
     
     <div class="container  mx-auto px-5   py-8">
 
-        <p class="text-xl font-medium text-[#000000]  md:hidden flex items-center gap-2 mb-10">
+        <p class="text-xl font-medium text-[#000000] block md:hidden flex items-center gap-2 mr-3 mb-7">
             <span class="w-8 h-8 border border-gray-300 rounded-md flex items-center justify-center bg-transparent">
                 <i class="fa-solid fa-arrow-right text[#000000] text-lg"></i>
             </span>
@@ -665,8 +665,6 @@
     </div>
   </footer>
 
-
-    <script src="./main.js">
     
     </script>
 </body>

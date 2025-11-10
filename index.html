@@ -9,9 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./src/output.css">
-     <!-- Leaflet CSS & JS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <!-- Local Font Awesome -->
+    <link rel="stylesheet" href="./fonts/fontawesome/css/all.min.css" />
+    <!-- Leaflet CSS & JS -->
+    <link rel="stylesheet" href="./libs/leaflet/leaflet.min.css" />
+    <script src="./libs/leaflet/leaflet.min.js" defer></script>
 </head>
 
 <body class="bg-white">
@@ -44,12 +46,12 @@
       <div class="relative flex gap-3 items-center">
         <a href="./referal-sign-up.html">
         <button
-          class="bg-[#0166B3] text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition flex items-center gap-2">
+          class="btn-primary">
           اشترك الآن
            <i class="fas fa-arrow-right rotate-225 "></i>
         </button>
         </a>
-        <button id="toggleSearch"
+        <button id="toggleSearch" onclick="toggleSearch()"
           class=" bg-white px-3 py-2 rounded-full hover:bg-[#0166B3] hover:text-white transition">
           <i class="fas fa-search"></i>
         </button>
@@ -175,10 +177,10 @@
         </div>
     </div>
     
-    <button id="prevBtn" class="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 flex items-center justify-center p-5 w-[60px] h-[60px] bg-black/50 backdrop-blur-lg rounded-full border border-black/30 hover:bg-black/70 transition cursor-pointer hidden lg:flex">
+    <button id="prevBtn" onclick="prevSlide()" class="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 flex items-center justify-center p-5 w-[60px] h-[60px] bg-black/50 backdrop-blur-lg rounded-full border border-black/30 hover:bg-black/70 transition cursor-pointer hidden lg:flex">
         <i class="fas fa-chevron-left text-white text-xl"></i>
     </button>
-    <button id="nextBtn" class="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 flex items-center justify-center p-5 w-[60px] h-[60px] bg-black/50 backdrop-blur-lg rounded-full border border-black/30 hover:bg-black/70 transition cursor-pointer hidden lg:flex">
+    <button id="nextBtn" onclick="nextSlide()" class="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 flex items-center justify-center p-5 w-[60px] h-[60px] bg-black/50 backdrop-blur-lg rounded-full border border-black/30 hover:bg-black/70 transition cursor-pointer hidden lg:flex">
         <i class="fas fa-chevron-right text-white text-xl"></i>
     </button>
 
@@ -376,10 +378,10 @@
         <div class="w-full justify-between items-center gap-72 hidden mb-12 lg:flex">
             <h4 class="text-xl py-3">اكتشف أحدث العروض والخصومات المخصصة لك، لتوفير أكبر على الفحوصات، الاستشارات، العلاجات، والخدمات الطبية المتنوعة داخل الشبكة.</h4>
             <div class="flex">
-                <button id="prevBtn" class="flex items-center justify-center p-5 w-[60px] h-[60px] backdrop-blur-lg rounded-full hover:bg-[#1B2128] transition cursor-pointer">
+                <button id="prevBtn" onclick="prevOffer()" class="flex items-center justify-center p-5 w-[60px] h-[60px] backdrop-blur-lg rounded-full hover:bg-[#1B2128] transition cursor-pointer">
                     <i class="fas fa-arrow-right text-gray-400 text-2xl"></i>
                 </button>
-                <button id="nextBtn" class="flex items-center justify-center p-5 w-[60px] h-[60px] backdrop-blur-lg rounded-full hover:bg-[#1B2128] transition cursor-pointer">
+                <button id="nextBtn" onclick="nextOffer()" class="flex items-center justify-center p-5 w-[60px] h-[60px] backdrop-blur-lg rounded-full hover:bg-[#1B2128] transition cursor-pointer">
                     <i class="fas fa-arrow-left text-gray-400 font-light text-2xl "></i>
                 </button>
             </div>
@@ -458,7 +460,7 @@
                 <button onclick="playMainVideo()" class="w-20 h-20 bg-white rounded-full flex items-center justify-center hover:scale-110 transition transform shadow-2xl">
                     <i class="fas fa-play text-black text-xl mr-1"></i>
                 </button>
-                 <button onclick="playMainVideo()" class="w-20 h-20 bg-inherit rounded-full border border-white flex items-center justify-center hover:scale-110 transition transform shadow-2xl -mr-7">    
+                  <button onclick="playMainVideo()" class="w-20 h-20 bg-inherit rounded-full border border-white flex items-center justify-center hover:scale-110 transition transform shadow-2xl -mr-7">
                 </button>
             </div>
             
@@ -502,7 +504,7 @@
                 </div>
 
                 <!-- Desktop version -->
-                <div class="hidden lg:relative lg:flex lg:items-center lg:gap-2 lg:group lg:cursor-pointer" onmouseenter="showVideoTitle(1)" onmouseleave="hideVideoTitle(1)">
+                <div class="hidden lg:relative lg:flex lg:items-center lg:gap-2 lg:group lg:cursor-pointer" onmouseover="showVideoTitle(1)" onmouseout="hideVideoTitle(1)">
                     <div class="w-20 h-[60px] rounded-2xl overflow-hidden border-4 border-white/30 shadow-xl">
                         <img src="./imgs/Rectv1.png" alt="فيديو 1" class="w-full h-full object-cover">
                     </div>
@@ -511,7 +513,7 @@
                     </div>
                 </div>
 
-                <div class="hidden lg:relative lg:flex lg:items-center lg:gap-2 lg:group lg:cursor-pointer" onmouseenter="showVideoTitle(2)" onmouseleave="hideVideoTitle(2)">
+                <div class="hidden lg:relative lg:flex lg:items-center lg:gap-2 lg:group lg:cursor-pointer" onmouseover="showVideoTitle(2)" onmouseout="hideVideoTitle(2)">
                     <div class="w-20 h-[60px] rounded-2xl overflow-hidden border-4 border-white/30 shadow-xl">
                         <img src="./imgs/Rectv2.png" alt="فيديو 2" class="w-full h-full object-cover">
                     </div>
@@ -520,7 +522,7 @@
                     </div>
                 </div>
 
-                <div class="hidden lg:relative lg:flex lg:items-center lg:gap-2 lg:group lg:cursor-pointer" onmouseenter="showVideoTitle(3)" onmouseleave="hideVideoTitle(3)">
+                <div class="hidden lg:relative lg:flex lg:items-center lg:gap-2 lg:group lg:cursor-pointer" onmouseover="showVideoTitle(3)" onmouseout="hideVideoTitle(3)">
                     <div class="w-20 h-[60px] rounded-2xl overflow-hidden border-4 border-white/30 shadow-xl">
                         <img src="./imgs/Rectv3.png" alt="فيديو 3" class="w-full h-full object-cover">
                     </div>
@@ -529,7 +531,7 @@
                     </div>
                 </div>
 
-                <div class="hidden lg:relative lg:flex lg:items-center lg:gap-2 lg:group lg:cursor-pointer" onmouseenter="showVideoTitle(4)" onmouseleave="hideVideoTitle(4)">
+                <div class="hidden lg:relative lg:flex lg:items-center lg:gap-2 lg:group lg:cursor-pointer" onmouseover="showVideoTitle(4)" onmouseout="hideVideoTitle(4)">
                     <div class="w-20 h-[60px] rounded-2xl overflow-hidden border-4 border-white/30 shadow-xl">
                         <img src="./imgs/Rectv4.png" alt="فيديو 4" class="w-full h-full object-cover">
                     </div>
@@ -552,7 +554,7 @@
                         <h2 class="text-sm font-bold text-gray-900">فروعنا الأقرب إليك</h2>
                         <h2 id="toggleBranches" class=" text-sm font-bold text-[#0166B3]">جميع الفروع</h2>
                     </div>
-                    <div id="mapp" class="w-full h-[300px] lg:h-[620px]  lg:rounded-2xl">
+                    <div id="mapp" class="w-full  h-[300px] lg:h-[620px]  lg:rounded-2xl">
                          <!-- <img src="./imgs/map.png" alt="خريطة الفروع" class="w-full h-full object-cover rounded-2xl"> -->
                     </div>
                 </div>
@@ -560,7 +562,7 @@
                 <div class="w-full lg:flex-1 order-2 lg:order-1">
                     <h2 class="text-2xl font-extrabold text-gray-900 text-start hidden lg:block ml-10 mb-5">فروعنا</h2>
                   
-                    <div id="branchesContainer" class="flex cursor-pointer lg:grid lg:grid-cols-2 gap-4 lg:gap-4 overflow-x-auto lg:overflow-visible hide-scrollbar hidden lg:flex">
+                    <div id="branchesContainer" class="flex cursor-pointer lg:w-[500px] lg:grid lg:grid-cols-2 gap-4 lg:gap-2  overflow-x-auto lg:overflow-visible hide-scrollbar hidden lg:flex">
                         
                             <!-- card  -->
                         <div class="relative flex-shrink-0 w-[270px] lg:w-auto bg-white h-auto rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 font-cairo" style="direction: rtl;">
@@ -883,7 +885,10 @@
       </div>
     </div>
   </footer>
-    <script src="./main.js"></script>
+    <script src="./background.js"></script>
+    <script src="./map.js"></script>
+    <script src="./forms.js"></script>
+    <script src="./ui.js"></script>
 
 </body>
 

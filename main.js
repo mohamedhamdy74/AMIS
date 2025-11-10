@@ -48,15 +48,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to update background image
   function updateBackground() {
-    heroSection.style.backgroundImage = `url('${images[currentIndex]}')`;
-    // Update indicators
-    indicators.forEach((indicator, index) => {
-      if (index === currentIndex) {
-        indicator.classList.add("active");
-      } else {
-        indicator.classList.remove("active");
-      }
-    });
+    if (heroSection) {
+      heroSection.style.backgroundImage = `url('${images[currentIndex]}')`;
+      // Update indicators
+      indicators.forEach((indicator, index) => {
+        if (index === currentIndex) {
+          indicator.classList.add("active");
+        } else {
+          indicator.classList.remove("active");
+        }
+      });
+    }
   }
 
   // Next button click
@@ -89,8 +91,10 @@ document.addEventListener("DOMContentLoaded", function () {
     updateBackground();
   }, 5000); // Change image every 5 seconds
 
-  // Initialize
-  updateBackground();
+  // Initialize only if heroSection exists
+  if (heroSection) {
+    updateBackground();
+  }
 });
 
 // handle contact form
@@ -121,13 +125,17 @@ function handleSubmit(event) {
 // Show video title on hover
 function showVideoTitle(videoNumber) {
   const title = document.getElementById(`video-title-${videoNumber}`);
-  title.classList.remove("hidden");
+  if (title) {
+    title.classList.remove("hidden");
+  }
 }
 
 // Hide video title
 function hideVideoTitle(videoNumber) {
   const title = document.getElementById(`video-title-${videoNumber}`);
-  title.classList.add("hidden");
+  if (title) {
+    title.classList.add("hidden");
+  }
 }
 
 // Play main video
@@ -323,7 +331,13 @@ function initMap() {
 } // end initMap
 
 // تشغيل الخريطة عند تحميل الصفحة
-window.addEventListener("load", initMap);
+window.addEventListener("load", function() {
+  setTimeout(function() {
+    if (document.getElementById('mapp') && typeof L !== 'undefined') {
+      initMap();
+    }
+  }, 100);
+});
 
 
 // medical network map
@@ -331,6 +345,11 @@ function initMap2() {
        // Check if Leaflet is available
        if (typeof L === 'undefined') {
          console.warn('Leaflet library not loaded for map2');
+         return;
+       }
+
+       const map2Element = document.getElementById('map2');
+       if (!map2Element) {
          return;
        }
 
@@ -369,12 +388,16 @@ function initMap2() {
            </div>
        `);
 }
-initMap2();
 // medical network map in mobile view
 function initMap3() {
       // Check if Leaflet is available
       if (typeof L === 'undefined') {
         console.warn('Leaflet library not loaded for map3');
+        return;
+      }
+
+      const map3Element = document.getElementById('map3');
+      if (!map3Element) {
         return;
       }
 
@@ -413,7 +436,6 @@ function initMap3() {
            </div>
        `);
 }
-initMap3();
 
 //modal subscription form
 function openModal() {
@@ -459,9 +481,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 const fileName = e.target.files[0]?.name;
                 if (fileName) {
                     const label = e.target.closest('label');
-                    const textElement = label.querySelector('p.text-xs');
-                    textElement.textContent = `تم اختيار: ${fileName}`;
-                    textElement.classList.add('text-[#0166B3]', 'font-semibold');
+                    if (label) {
+                        const textElement = label.querySelector('p.text-xs');
+                        if (textElement) {
+                            textElement.textContent = `تم اختيار: ${fileName}`;
+                            textElement.classList.add('text-[#0166B3]', 'font-semibold');
+                        }
+                    }
                 }
             });
         });
@@ -475,15 +501,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // FAQ Collapse Functionality
 function toggleCollapse(faqId) {
+    // Close all FAQs first
+    for (let i = 1; i <= 7; i++) {
+        const content = document.getElementById(`content-faq${i}`);
+        const icon = document.getElementById(`icon-faq${i}`);
+        if (content && icon) {
+            content.classList.add('hidden');
+            icon.classList.remove('rotate-180');
+        }
+    }
+
+    // Then open the clicked one
     const content = document.getElementById(`content-${faqId}`);
     const icon = document.getElementById(`icon-${faqId}`);
-
-    if (content.classList.contains('hidden')) {
+    if (content && icon) {
         content.classList.remove('hidden');
         icon.classList.add('rotate-180');
-    } else {
-        content.classList.add('hidden');
-        icon.classList.remove('rotate-180');
     }
 }
 
@@ -508,9 +541,13 @@ function toggleCollapse(faqId) {
                 const fileName = e.target.files[0]?.name;
                 if (fileName) {
                   const label = e.target.closest("label");
-                  const textElement = label.querySelector("p.text-xs");
-                  textElement.textContent = `تم اختيار: ${fileName}`;
-                  textElement.classList.add("text-[#0166B3]", "font-semibold");
+                  if (label) {
+                    const textElement = label.querySelector("p.text-xs");
+                    if (textElement) {
+                      textElement.textContent = `تم اختيار: ${fileName}`;
+                      textElement.classList.add("text-[#0166B3]", "font-semibold");
+                    }
+                  }
                 }
               });
             });
