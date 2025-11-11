@@ -1,21 +1,22 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-  <link rel="stylesheet" href="./src/output.css">
-  <title>الشبكة الطبية - البحث عن مقدمي الخدمات</title>
-  <meta name="description" content="الشبكة الطبية - ابحث عن مقدمي الخدمات الطبية والمستشفيات والعيادات في شبكتنا الطبية الواسعة">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اشتراك جديد - AMIS رعاية صحية</title>
+    <meta name="description" content="اشتراك جديد في برامج الرعاية الصحية - اختر بين البرنامج المخفض أو أميس رعاية أكتر للحصول على خدمات طبية شاملة">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="../src/output.css">
 </head>
 
-<body class="font-cairo text-gray-800">
+<body class="font-cairo text-gray-800 ">
+
 <header class="hidden lg:block md:fixed md:top-7  md:left-5 md:right-5 md:z-50 ">
 
     <div class="bg-white  backdrop-blur-md rounded-full shadow-lg py-5 px-8   flex items-center justify-between gap-4 ">
       <div class="flex items-center gap-8">
-        <img src="./imgs/cldlogo.png" alt="AMHS Logo" class="h-10" />
+        <img src="../imgs/cldlogo.png" alt="AMHS Logo" class="h-10" />
         <nav class="hidden md:flex gap-6 text-sm font-bold">
           <a href="index.html"
             class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition ">الرئيسية</a>
@@ -54,29 +55,7 @@
     </div>
 
 </header>
-
-  <!-- Mobile Header -->
-  <header class="md:hidden bg-white border-b border-gray-200 py-4 px-4 flex items-center justify-between">
-   <div class="flex items-center gap-5">
-     <button class="border border-gray-200 p-2 rounded-xl">
-      <i class="fas fa-arrow-right text-lg"></i>
-    </button>
-    <h3 class="text-lg font-medium text-start ">بحث داخل الشبكة الطبية</h3>
-    </div>
-    <button class="border border-gray-200 p-2 rounded-xl text-gray-400">
-      <!-- SVG bars-filter -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
-  <rect x="3"  y="5"  width="18" height="2" rx="1"/>
-  <rect x="6"  y="11" width="12" height="2" rx="1"/>
-  <rect x="9"  y="17" width="6"  height="2" rx="1"/>
-</svg>
-
-
-    </button>
-  </header>
-
-  <!-- tab bar  -->
-  <nav class="fixed  whitespace-nowrap w-full bottom-0  bg-white border-t border-gray-200 shadow-xl z-50 flex justify-evenly items-center   py-2.5  lg:hidden font-cairo" style="direction: rtl;">
+ <nav class="fixed  whitespace-nowrap w-full bottom-0  bg-white border-t border-gray-200 shadow-xl z-50 flex justify-evenly items-center   py-2.5  lg:hidden font-cairo" style="direction: rtl;">
 
     <a href="./index.html" class="flex flex-col items-center justify-center text-[10px] font-semibold text-[#1B2128] ">
         <svg class="text-[#0166B3] mb-0.5" width="27" height="27" viewBox="0 0 27 27" fill="currentColor"  xmlns="http://www.w3.org/2000/svg">
@@ -129,321 +108,356 @@
 
 </nav>
 
-  <!-- spacer علشان الـ header الثابت -->
-  <div class="md:h-[90px]"></div>
+    <div class="md:h-[90px]"></div>
+    <!-- hero section تحت الـ navbar -->
+    <section class="relative w-full flex items-center justify-center hidden md:flex"
+        style="background-image: url('../imgs/Inner_Header.png'); background-size: cover; background-position: center; max-width:1600px; margin: 0 auto;">
+        <div class="w-full h-[300px] relative flex items-center justify-center">
+            <!-- overlay -->
+            <div class="absolute inset-0 bg-black/30"></div>
 
-  <!-- hero section تحت الـ navbar -->
-  <section class="relative w-full flex items-center justify-center hidden md:flex"
-    style="background-image: url('./imgs/Inner_Header.png'); background-size: cover; background-position: center; max-width:1600px; margin: 0 auto;">
-    <div class="w-full h-[300px] relative flex items-center justify-center">
-      <!-- overlay -->
-      <div class="absolute inset-0 bg-black/30"></div>
+            <div class="relative text-center text-white">
+                <h3 class="text-3xl font-bold mb-2 drop-shadow-lg">اشتراك جديد</h3>
+                <p class="text-sm font-medium drop-shadow-md">
+                    <span class="opacity-90">الرئيسية</span><i class="fa-solid fa-angle-left p-1"></i> اشتراك جديد
+                </p>
+            </div>
+        </div>
+    </section>
 
-      <div class="relative text-center text-white">
-        <h3 class="text-3xl font-bold mb-2 drop-shadow-lg">الشبكة الطبية </h3>
-        <p class="text-sm font-medium drop-shadow-md">
-          <span class="opacity-90">الرئيسية</span><i class="fa-solid fa-angle-left p-1"></i> الشبكة الطبية
-        </p>
+
+    <!-- Main Content -->
+    <section class=" bg-white min-h-screen py-10 px-5  container mx-auto">
+        <div class="  ">
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+
+                <!-- Right Column - اميس رعاية اكثر -->
+                <div class="text-center">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">اميس رعاية اكثر</h2>
+                    <p class="text-gray-600 mb-6">صلاحية الاشتراك الجديد سنة كاملة من تاريخ الاشتراك</p>
+                    <div class="bg-[#E6F0F8] border-[0.5px] border-white rounded-full py-5  mb-6 inline-flex px-20 md:px-40 lg:px-50">
+                        
+                        <div class="text-center">
+                            <span class="text-4xl font-extrabold text-[#1B2128]">711.36</span>
+                            <span class="text-2xl text-gray-700 mr-2">جنيه</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-5 mb-6 text-right">
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="flex items-center justify-center w-6 h-6 rounded-full bg-[#0166B3] border border-white flex-shrink-0 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-white" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <p class="text-gray-700">خصم على كل التحاليل والأشعة من %40 إلى %70</p>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="flex items-center justify-center w-6 h-6 rounded-full bg-[#0166B3] border border-white flex-shrink-0 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-white" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <p class="text-gray-700">خصم على كافة الخدمات الجراحية والتحاليل داخل المستشفى من %10 إلى
+                                %25</p>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="flex items-center justify-center w-6 h-6 rounded-full bg-[#0166B3] border border-white flex-shrink-0 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-white" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <p class="text-gray-700">خصم على زيارة الأطباء- الكشف من كل إلى %10</p>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="flex items-center justify-center w-6 h-6 rounded-full bg-[#0166B3] border border-white flex-shrink-0 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-white" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <p class="text-gray-700">خصم على كل التحاليل والأشعة من %40 إلى %70</p>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="flex items-center justify-center w-6 h-6 rounded-full bg-[#0166B3] border border-white flex-shrink-0 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-white" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <p class="text-gray-700">زيارة منزلية مجانية لعلاج أمراض السرطان</p>
+                        </div>
+                    </div>
+
+                    <a href="./register-more-care.html"><button
+                        class="w-full bg-[#0166b3] text-white py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition">
+                        اشتراك الان
+                    </button></a>
+                </div>
+
+                <!-- Left Column - البرنامج المخفض -->
+                <div class="text-center">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">البرنامج المخفض</h2>
+                    <p class="text-gray-600 mb-6">يبدأ الاشتراك من 1/4/2025 ويمكن الاستفادة من خدمات البرنامج حتى
+                        31/3/2026</p>
+
+                    <div class="bg-[#E6F0F8] border border-[#0166B3] rounded-3xl px-20 md:px-40 lg:px-50 mb-6 inline-block border-[0.5px] border-white rounded-full py-5 mb-6 inline-flex"
+                        >
+                        <div class="text-center">
+                            <span class="text-4xl font-extrabold text-[#1B2128]">711.36</span>
+                            <span class="text-2xl text-gray-700 mr-2">جنيه</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-5 mb-6 text-right">
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="flex items-center justify-center w-6 h-6 rounded-full bg-[#0166B3] border border-white flex-shrink-0 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-white" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <p class="text-gray-700">خيارين او نسبة تخفيض في التحاليل والاشعة التي يشملها البرنامج</p>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="flex items-center justify-center w-6 h-6 rounded-full bg-[#0166B3] border border-white flex-shrink-0 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-white" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <p class="text-gray-700">يلتزم المستفيد بسداد كامل التكاليف الفعلية للاسعار محددة خاصة
+                                بالبرنامج</p>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="flex items-center justify-center w-6 h-6 rounded-full bg-[#0166B3] border border-white flex-shrink-0 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-white" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <p class="text-gray-700">تتراوح نسبة التخفيضات من %10 إلى %60 وفقا لحصوله على الخدمة او
+                                تخفيض الموارد لإدارته</p>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="flex items-center justify-center w-6 h-6 rounded-full bg-[#0166B3] border border-white flex-shrink-0 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-white" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <p class="text-gray-700">يستفيد جميع المشتركين بجميع الخدمات المتعاقدة، بغض النظر عن عدد
+                                مرات التردد عليها خلال العام</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-2xl  mt-6 text-right">
+                            <h3 class="font-bold text-gray-800 mb-3">من له حق الاشتراك</h3>
+
+                            <div class="flex items-start gap-2">
+                                <div
+                                    class="flex items-center justify-center w-6 h-6 rounded-full bg-[#0166B3] border border-white flex-shrink-0 mt-[2px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-white" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+
+                                <p class="text-gray-700 text-sm">
+                                    المجموعة السياحية الخامسة/ بالطائرة/ بدورية انتقائية لاشتراك الاعضاء الاصليين
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                   <a href="./register-low-program.html"> <button
+                        class="w-full bg-gray-800 text-white py-4 rounded-full font-bold text-lg hover:bg-gray-900 transition">
+                        اشتراك الان
+                    </button></a>
+                </div>
+            </div>
+
+           <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-start justify-between gap-10 py-16 px-5 relative">
+  <!-- العمود اليمين -->
+  <div class="space-y-6 text-right relative">
+    <h2 class="text-3xl font-bold text-gray-900">الأسئلة الشائعة</h2>
+    <p class="text-gray-600 leading-relaxed" style="font-size: 15px;">
+      تعرّف على إجابات لكل الأسئلة التي يمكن أن تساعدك في اختيار<br> الاشتراك الأنسب لك
+    </p>
+<button 
+  class="bg-[#0166B3] text-white text-sm font-medium py-3 px-5 rounded-full hover:bg-[#005a9a] transition flex items-center justify-center gap-2">
+  <span>أترك سؤالك</span>
+  <svg  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+    stroke-width="0" class="w-4 h-4 transform rotate-45">
+    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.59 5.58L20 12l-8-8-8 8z" />
+  </svg>
+</button>
+
+    <!-- الصورة تحت الزرار -->
+    
+      <img src="../imgs/qmark.png" alt="question mark"
+        class="w-32 md:w-52 mr-20 md:mr-50 mt-20 md:mt-50 opacity-90 pointer-events-none select-none" />
+    
+  </div>
+
+  <!-- العمود الشمال -->
+<!-- FAQ Section Static -->
+ <div class=" max-w-3xl mx-auto " style="position: relative; right: 0;" >
+  <div class="space-y-4 relative z-10">
+
+    <!-- Item 1 -->
+    <div class="bg-[#0166B3]/10 rounded-xl overflow-hidden border border-gray-200">
+      <div class="bg-[#0166B3] text-white p-5 flex items-center justify-between rounded-t-xl cursor-pointer" onclick="toggleCollapse('faq1')">
+        <span class="font-bold text-lg">من هم الأعضاء التأمينيين في البرنامج المخفض؟</span>
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+  stroke-width="2" stroke="black"
+  class="w-5 h-5 bg-white rounded-full p-1 transition-transform duration-300" id="icon-faq1">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+</svg>
+
+      </div>
+
+      <div class=" py-4 text-gray-800 space-y-2 bg-[#E6F0F8] " style="font-size: 12px; padding-right:10px; padding-left: 10px;" id="content-faq1">
+        <p>- الوالد أو الوالدة</p>
+        <p>- الأبناء الأحداث حتى سن 25 سنة</p>
+        <p>- الأبناء غير المتزوجات وغير العاملات حتى 30 سنة</p>
+        <p>- الوالدين</p>
+        <p>-  ذوي العضو الأساسي (الأخت/الأخ، العم/العمة، الخال/الخالة، الجد/الجدة).
+</p>
+        <p>-    في حالة وفاة العضو الأساسي: يمكن للورثة الاشتراك (الأرمل/الأرملة، الأبناء، الوالدين) بشرط تقديم مستندات تثبت صلة العضو بالنقابة.</p>
       </div>
     </div>
-  </section>
 
-  <main dir="rtl" class="bg-white container mx-auto min-h-screen py-6 px-4 md:py-10 md:px-6 pb-24 md:pb-10">
-    <!-- البرنامج المخفض -  اشتراك جديد -->
-    <div class="text-right mb-8 hidden md:block">
-      <p class="text-gray-500 text-sm flex items-center mb-12 gap-6 relative top-4">
-        <i class="fa-solid fa-arrow-right text-[#0166B3]"></i>
-        <span class="text-[#0166B3]"> الشبكة الطبية</span>
-        <i class="fa-solid fa-arrow-left text-[#0166B3]"></i>
-      </p>
-      <h1 class="text-2xl font-bold text-[#1B2128]"> بحث داخل الشبكة الطبية</h1>
-    </div>
-
-
-
-    <!-- search section  -->
-    <div class="mx-auto bg-white">
-      <!-- Header - Desktop Only -->
-      <div class="mb-8 hidden md:block">
-        <h2 class="text-3xl font-bold text-[#0166B3] mb-6">البحث</h2>
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">البحث بأسم الجهة او عبر الفلتر</h3>
+    <!-- Item 2 -->
+     <div class="bg-[#E6F0F8] rounded-xl overflow-hidden border border-gray-200">
+      <div class="p-5 flex items-center justify-between text-right cursor-pointer" onclick="toggleCollapse('faq2')">
+        <span class="font-bold text-gray-800">تفاصيل اشتراك أعضاء النقابات الفرعية </span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        style="background-color: black;"
+          stroke-width="2" stroke="white"
+          class="w-5 h-5 bg-white border border-white rounded-full p-1 transition-transform duration-300" id="icon-faq2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
       </div>
-
-      <!-- Search Form -->
-      <form class="space-y-4 md:space-y-6 font-bukra">
-        <!-- Search Input -->
-        <div class="relative font-cairo lg:font-bukra">
-                  <p class=" mb-2 ">البحث بأسم الجهة</p>
-
-          <input type="text" placeholder="البحث بأسم الجهة"
-            class="w-full px-4 py-3 pr-10 border text-gray-500 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-right">
-          <i class="fas fa-search absolute left-4 top-1/2 translate-y-1/2 text-gray-400"></i>
-        </div>
-
-        <!-- Mobile Filters Row -->
-        <div class="flex gap-3 md:hidden font-cairo">
-          <!-- نوع الجهة Dropdown -->
-          <div class="">
-            <select class=" w-28 h-10 px-2 border bg-gray-50 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-right text-sm  ">
-              <option value="">نوع الجهة</option>
-              <option value="government">حكومية</option>
-              <option value="private">خاصة</option>
-              <option value="ngo">منظمة غير حكومية</option>
-            </select>
-          </div>
-
-          <!-- المحافظة Dropdown -->
-          <div class="">
-            <select class="w-28 h-10 px-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-right  text-sm  bg-gray-50">
-              <option value="">المحافظة</option>
-              <option value="cairo">القاهرة</option>
-              <option value="giza">الجيزة</option>
-              <option value="alexandria">الإسكندرية</option>
-              <option value="portsaid">بورسعيد</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- Desktop Filters -->
-        <div class="hidden md:block space-y-6">
-          <!-- Governorate Dropdown -->
-          <div>
-            <label class="block   mb-2">
-              المحافظة <span class="text-red-500">*</span>
-            </label>
-            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-right text-gray-500">
-              <option value="">اختار المحافظة</option>
-              <option value="cairo">القاهرة</option>
-              <option value="giza">الجيزة</option>
-              <option value="alexandria">الإسكندرية</option>
-              <option value="portsaid">بورسعيد</option>
-            </select>
-          </div>
-
-          <!-- Destination Type Dropdown -->
-          <div>
-            <label class="block  mb-2">
-              نوع الجهة <span class="text-red-500">*</span>
-            </label>
-            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-right text-gray-500">
-              <option value="">اختار نوع الجهة</option>
-              <option value="government">حكومية</option>
-              <option value="private">خاصة</option>
-              <option value="ngo">منظمة غير حكومية</option>
-            </select>
-          </div>
-
-          <!-- Search Button -->
-          <div class="flex justify-end">
-            <button type="submit"
-              class="btn-secondary">
-              بحث
-            </button>
-          </div>
-        </div>
-      </form>
-
-      <!-- Mobile Results Count -->
-      <div style="direction: ltr;" class="md:hidden text-end   text-gray-500 text-sm mt-2">
-120 of 290 results      </div>
-    </div>
-
-    <!-- Results Section -->
-    <div class="mx-auto mt-2 md:mt-12">
-      <!-- Header - Desktop Only -->
-      <h2 class="text-3xl font-bold text-[#0166B3] mb-8 hidden md:block">نتائج البحث</h2>
-
-      <!-- Desktop Table -->
-      <div class="bg-white rounded-lg shadow-sm overflow-hidden hidden md:block">
-        <table class="w-full">
-          <!-- Table Header -->
-          <thead class="bg-gray-50 border-b border-gray-200">
-            <tr>
-              <th class="px-6 py-4 text-right text-gray-700 font-semibold">الجهة</th>
-              <th class="px-6 py-4 text-right text-gray-700 font-semibold">العنوان</th>
-              <th class="px-6 py-4 text-right text-gray-700 font-semibold">الموقع</th>
-            </tr>
-          </thead>
-
-          <!-- Table Body -->
-          <tbody class="divide-y divide-gray-200">
-            <tr class="hover:bg-gray-50">
-              <td class="px-6 py-4 text-gray-800 font-semibold">معمل الفا إسكان</td>
-              <td class="px-6 py-4 text-gray-700">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</td>
-              <td class="px-6 py-4">
-              <a href="./medicalbranchdetails.html">  <button class="flex items-center gap-2 text-gray-600 hover:text-[#0166B3] bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-full transition">
-                  <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
-                  <span>عرض التفاصيل</span>
-                </button></a>
-              </td>
-            </tr>
-
-            <tr class="hover:bg-gray-50">
-              <td class="px-6 py-4 text-gray-800 font-semibold">معمل الفا إسكان</td>
-              <td class="px-6 py-4 text-gray-700">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</td>
-              <td class="px-6 py-4">
-                <a href="./medicalbranchdetails.html"><button class="flex items-center gap-2 text-gray-600 hover:text-[#0166B3] bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-full transition">
-                  <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
-                  <span>عرض التفاصيل</span>
-                </button></a>
-              </td>
-            </tr>
-
-            <tr class="hover:bg-gray-50">
-              <td class="px-6 py-4 text-gray-800 font-semibold">معمل الفا إسكان</td>
-              <td class="px-6 py-4 text-gray-700">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</td>
-              <td class="px-6 py-4">
-                <a href="./medicalbranchdetails.html"><button class="flex items-center gap-2 text-gray-600 hover:text-[#0166B3] bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-full transition">
-                  <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
-                  <span>عرض التفاصيل</span>
-                </button></a>
-              </td>
-            </tr>
-
-            <tr class="hover:bg-gray-50">
-              <td class="px-6 py-4 text-gray-800 font-semibold">معمل الفا اسكان</td>
-              <td class="px-6 py-4 text-gray-700">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</td>
-              <td class="px-6 py-4">
-                <a href="./medicalbranchdetails.html"><button class="flex items-center gap-2 text-gray-600 hover:text-[#0166B3] bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-full transition">
-                  <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
-                  <span>عرض التفاصيل</span>
-                </button></a>
-              </td>
-            </tr>
-
-            <tr class="hover:bg-gray-50">
-              <td class="px-6 py-4 text-gray-800 font-semibold">معمل الفا اسكان</td>
-              <td class="px-6 py-4 text-gray-700">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</td>
-              <td class="px-6 py-4">
-                <a href="medicalbranchdetails.html">
-                  <button class="flex items-center gap-2 text-gray-600 hover:text-[#0166B3] bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-full transition">
-                    <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
-                    <span>عرض التفاصيل</span>
-                  </button>
-                </a>
-              </td>
-            </tr>
-
-            <tr class="hover:bg-gray-50">
-              <td class="px-6 py-4 text-gray-800 font-semibold">معمل الفا اسكان</td>
-              <td class="px-6 py-4 text-gray-700">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</td>
-              <td class="px-6 py-4">
-                <a href="medicalbranchdetails.html">
-                  <button class="flex items-center gap-2 text-gray-600 hover:text-[#0166B3] bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-full transition">
-                    <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
-                    <span>عرض التفاصيل</span>
-                  </button>
-                </a>
-              </td>
-            </tr>
-
-            <tr class="hover:bg-gray-50">
-              <td class="px-6 py-4 text-gray-800 font-semibold">معمل الفا اسكان</td>
-              <td class="px-6 py-4 text-gray-700">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</td>
-              <td class="px-6 py-4">
-                <a href="medicalbranchdetails.html">
-                  <button class="flex items-center gap-2 text-gray-600 hover:text-[#0166B3] bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-full transition">
-                    <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
-                    <span>عرض التفاصيل</span>
-                  </button>
-                </a>
-              </td>
-            </tr>
-
-            <tr class="hover:bg-gray-50">
-              <td class="px-6 py-4 text-gray-800 font-semibold">معمل الفا اسكان</td>
-              <td class="px-6 py-4 text-gray-700">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</td>
-              <td class="px-6 py-4">
-                <a href="./medicalbranchdetails.html"><button class="flex items-center gap-2 text-gray-600 hover:text-[#0166B3] bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-full transition">
-                  <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
-                  <span>عرض التفاصيل</span>
-                </button></a>
-              </td>
-            </tr>
-
-            <tr class="hover:bg-gray-50">
-              <td class="px-6 py-4 text-gray-800 font-semibold">معمل الفا اسكان</td>
-              <td class="px-6 py-4 text-gray-700">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</td>
-              <td class="px-6 py-4">
-                <a href="./medicalbranchdetails.html"><button class="flex items-center gap-2 text-gray-600 hover:text-[#0166B3] bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-full transition">
-                  <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
-                  <span>عرض التفاصيل</span>
-                </button></a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- Mobile List View -->
-      <div class="md:hidden space-y-2 font-bukra">
-        <!-- Result Card -->
-        <div class="bg-white border border-gray-200 rounded-lg p-3">
-          <div class="flex justify-between items-start mb-2">
-
-            <div class="flex-1 text-right">
-              <h3 class="text-[#0166B3] font-semibold mb-1">معمل الفا إسكان</h3>
-              <p class="text-gray-600 text-sm">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</p>
-            </div>
-             <a href="./medicalbranchdetails.html"><button class="text-gray-600">
-              <i class="fas fa-ellipsis-v"></i>
-            </button></a>
-          </div>
-        </div>
-        <div class="bg-gray-50 border border-gray-200 rounded-lg p-3">
-          <div class="flex justify-between items-start mb-2">
-
-            <div class="flex-1 text-right">
-              <h3 class="text-[#0166B3] font-semibold mb-1">معمل الفا إسكان</h3>
-              <p class="text-gray-600 text-sm">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</p>
-            </div>
-             <a href="./medicalbranchdetails.html"><button class="text-gray-600">
-              <i class="fas fa-ellipsis-v"></i>
-            </button></a>
-          </div>
-        </div>
-        <div class=" border border-gray-200 rounded-lg p-3">
-          <div class="flex justify-between items-start mb-2">
-
-            <div class="flex-1 text-right">
-              <h3 class="text-[#0166B3] font-semibold mb-1">معمل الفا إسكان</h3>
-              <p class="text-gray-600 text-sm">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</p>
-            </div>
-             <a href="./medicalbranchdetails.html"><button class="text-gray-600">
-              <i class="fas fa-ellipsis-v"></i>
-            </button></a>
-          </div>
-        </div>
-        <div class="bg-gray-50 border border-gray-200 rounded-lg p-3">
-          <div class="flex justify-between items-start mb-2">
-
-            <div class="flex-1 text-right">
-              <h3 class="text-[#0166B3] font-semibold mb-1">معمل الفا إسكان</h3>
-              <p class="text-gray-600 text-sm">مدرسه علي هليوبوليس للغات. 39 ابن الحكم الزيتون الحريه قسم الزيتون.</p>
-            </div>
-             <a href="./medicalbranchdetails.html"><button class="text-gray-600">
-              <i class="fas fa-ellipsis-v"></i>
-            </button></a>
-          </div>
-        </div>
-      
-
-      </div>
-
-      <!-- Pagination -->
-      <div class="flex justify-center items-center gap-2 mt-8">
-        <button class="px-3 py-2 border border-gray-300 p-2  rounded-lg transition">01</button>
-        <button class="px-3 py-2 hover:border hover:rounded-lg p-2 border-gray-300 transition">02</button>
-        <button class="px-3 py-2 hover:border hover:rounded-lg p-2 border-gray-300 transition">03</button>
-        <button class="px-3 py-2 hover:border hover:rounded-lg p-2 border-gray-300 transition">04</button>
-        <button class="px-3 py-2 hover:border hover:rounded-lg p-2 border-gray-300 transition">05</button>
-        <button class="px-3 py-2 hover:border hover:rounded-lg p-2 border-gray-300 transition">06</button>
-        <button class="px-3 py-2 hover:border hover:rounded-lg p-2 border-gray-300 transition">...</button>
+      <div class="py-4 text-gray-800 space-y-2 bg-[#E6F0F8] hidden" style="font-size: 12px; padding-right:10px; padding-left: 10px;" id="content-faq2">
+        <p>محتوى تفاصيل اشتراك أعضاء النقابات الفرعية هنا.</p>
       </div>
     </div>
-  </main>
 
-  <!-- Footer -->
+    <!-- Item 3 -->
+  <div class="bg-[#E6F0F8] rounded-xl overflow-hidden border border-gray-200">
+      <div class="p-5 flex items-center justify-between text-right cursor-pointer" onclick="toggleCollapse('faq3')">
+        <span class="font-bold text-gray-800">  المستندات المطلوبة للاشتراك في البرنامج المخفض ؟ </span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        style="background-color: black;"
+          stroke-width="2" stroke="white"
+          class="w-5 h-5 bg-white border border-white rounded-full p-1 transition-transform duration-300" id="icon-faq3">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+      <div class="py-4 text-gray-800 space-y-2 bg-[#E6F0F8] hidden" style="font-size: 12px; padding-right:10px; padding-left: 10px;" id="content-faq3">
+        <p>محتوى المستندات المطلوبة للاشتراك في البرنامج المخفض هنا.</p>
+      </div>
+    </div>
+    <!-- Item 4 -->
+  <div class="bg-[#E6F0F8] rounded-xl overflow-hidden border border-gray-200">
+      <div class="p-5 flex items-center justify-between text-right cursor-pointer" onclick="toggleCollapse('faq4')">
+        <span class="font-bold text-gray-800">  ما هي وثيقة تغطية علاج أمراض السرطان : اميس رعاية اكتر ؟</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        style="background-color: black;"
+          stroke-width="2" stroke="white"
+          class="w-5 h-5 bg-white border border-white rounded-full p-1 transition-transform duration-300" id="icon-faq4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+      <div class="py-4 text-gray-800 space-y-2 bg-[#E6F0F8] hidden" style="font-size: 12px; padding-right:10px; padding-left: 10px;" id="content-faq4">
+        <p>محتوى وثيقة تغطية علاج أمراض السرطان : اميس رعاية اكتر هنا.</p>
+      </div>
+    </div>
+
+    <!-- Item 5 -->
+  <div class="bg-[#E6F0F8] rounded-xl overflow-hidden border border-gray-200">
+      <div class="p-5 flex items-center justify-between text-right cursor-pointer" onclick="toggleCollapse('faq5')">
+        <span class="font-bold text-gray-800">  هل يوجد رسوم إضافية ؟</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        style="background-color: black;"
+          stroke-width="2" stroke="white"
+          class="w-5 h-5 bg-white border border-white rounded-full p-1 transition-transform duration-300" id="icon-faq5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+      <div class="py-4 text-gray-800 space-y-2 bg-[#E6F0F8] hidden" style="font-size: 12px; padding-right:10px; padding-left: 10px;" id="content-faq5">
+        <p>محتوى هل يوجد رسوم إضافية هنا.</p>
+      </div>
+    </div>
+    <!-- Item 6 -->
+    <div class="bg-[#E6F0F8] rounded-xl overflow-hidden border border-gray-200">
+      <div class="p-5 flex items-center justify-between text-right cursor-pointer" onclick="toggleCollapse('faq6')">
+        <span class="font-bold text-gray-800">طريقة استلام البطاقات</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        style="background-color: black;"
+          stroke-width="2" stroke="white"
+          class="w-5 h-5 bg-white border border-white rounded-full p-1 transition-transform duration-300" id="icon-faq6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+      <div class="py-4 text-gray-800 space-y-2 bg-[#E6F0F8] hidden" style="font-size: 12px; padding-right:10px; padding-left: 10px;" id="content-faq6">
+        <p>محتوى طريقة استلام البطاقات هنا.</p>
+      </div>
+    </div>
+
+    <!-- Item 7 -->
+    <div class=" bg-[#E6F0F8] rounded-xl overflow-hidden border border-gray-200">
+      <div class="p-5 flex items-center justify-between text-right cursor-pointer" onclick="toggleCollapse('faq7')">
+        <span class="font-bold text-gray-800"> هل يمكن الاستفادة بالخدمة قبل استلام البطاقة ؟</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        style="background-color: black;"
+          stroke-width="2" stroke="white"
+          class="w-5 h-5 bg-white border border-white rounded-full p-1 transition-transform duration-300" id="icon-faq7">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+      <div class="py-4 text-gray-800 space-y-2 bg-[#E6F0F8] hidden" style="font-size: 12px; padding-right:10px; padding-left: 10px;" id="content-faq7">
+        <p>محتوى هل يمكن الاستفادة بالخدمة قبل استلام البطاقة هنا.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+    </section>
+
+
+<script src="../js/ui.js"></script>
+      <!-- Footer -->
   <footer class="hidden md:block bg-[#1B2128] text-white py-16 px-5 w-full font-bukra">
     <div class="max-w-7xl mx-auto">
       <!-- Newsletter Section -->
@@ -478,7 +492,7 @@
         <div class="lg:col-span-1">
           <!-- Logo -->
           <div class="flex items-center gap-3 mb-6">
-            <img class="w-[120px] h-[65px]" src="./imgs/logo.png" alt="">
+            <img class="w-[120px] h-[65px]" src="../imgs/logo.png" alt="">
           </div>
 
           <!-- Description -->
@@ -631,7 +645,6 @@
       </div>
     </div>
   </footer>
-
 </body>
 
 </html>

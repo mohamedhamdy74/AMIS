@@ -11,10 +11,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="../src/output.css" />
 
     <title>أميس رعاية أكتر - استمارة الاشتراك - إضافة عضو تابع</title>
-  
   </head>
 
   <body class="bg-white">
@@ -25,7 +24,7 @@
         class="bg-white backdrop-blur-md rounded-full shadow-lg py-5 px-8 flex items-center justify-between gap-4"
       >
         <div class="flex items-center gap-8">
-          <img src="./imgs/cldlogo.png" alt="AMHS Logo" class="h-10" />
+          <img src="../imgs/cldlogo.png" alt="AMHS Logo" class="h-10" />
           <nav class="hidden md:flex gap-6 text-sm font-bold">
             <a
               href="index.html"
@@ -61,15 +60,14 @@
         <!-- زر اشترك و search -->
         <div class="relative flex gap-3 items-center">
           <a href="./referal-sign-up.html">
-            <button
-              class="btn-primary"
-            >
+            <button class="btn-primary">
               اشترك الآن
               <i class="fas fa-arrow-right rotate-225"></i>
             </button>
           </a>
           <button
-            id="toggleSearch" onclick="toggleSearch()"
+            id="toggleSearch"
+            onclick="toggleSearch()"
             class="bg-white px-3 py-2 rounded-full hover:bg-[#0166B3] hover:text-white transition"
           >
             <i class="fas fa-search"></i>
@@ -91,7 +89,7 @@
     <section
       class="relative w-full items-center justify-center hidden md:flex"
       style="
-        background-image: url('./imgs/Inner_Header.png');
+        background-image: url('../imgs/Inner_Header.png');
         background-size: cover;
         background-position: center;
         max-width: 1600px;
@@ -113,20 +111,17 @@
     </section>
 
     <div class="container mx-auto px-6">
-       <p class="section-title-mobile mt-3">
-          <span class="section-title-mobile-icon">
-            <i class="section-title-mobile-icon-i fa-solid fa-arrow-right"></i>
-          </span>
-            أميس رعاية أكتر
-        </p>
+      <p class="section-title-mobile mt-3">
+        <span class="section-title-mobile-icon">
+          <i class="section-title-mobile-icon-i fa-solid fa-arrow-right"></i>
+        </span>
+        أميس رعاية أكتر
+      </p>
       <div class="hidden md:block w-full py-8">
         <div class="text-right mb-8 hidden md:block">
-        
-          <h1 class="section-title">
-                أميس رعاية أكتر
-             </h1>
+          <h1 class="section-title">أميس رعاية أكتر</h1>
         </div>
-       
+
         <div class="flex justify-center mb-8 px-2">
           <nav
             class="hidden md:flex items-center justify-center gap-1 xs:gap-2 sm:gap-4 md:gap-8 lg:gap-12 max-w-[400px] sm:max-w-full"
@@ -206,6 +201,7 @@
           height="30"
           class="flex-shrink-0 cursor-pointer toggle-icon"
           id="toggleMembership"
+          onclick="toggleMembershipData()"
         >
           <circle
             cx="12"
@@ -223,7 +219,9 @@
         <div class="section-to-toggle">
           <!-- بيانات العضوية -->
           <!-- فورم الويب -->
-          <div class="text-[11px] md:text-lg md:block membership-data font-bukra text-nowrap">
+          <div
+            class="text-[11px] md:text-lg md:block membership-data font-bukra text-nowrap"
+          >
             <h2 class="font-cairo font-bold text-lg mb-4">بيانات العضوية</h2>
 
             <div class="overflow-hidden mb-8">
@@ -273,7 +271,9 @@
           </div>
 
           <!-- فورم الموبايل -->
-          <div class="hidden p-4 text-[11px] bg-white rounded-lg shadow-md text-nowrap">
+          <div
+            class="hidden p-4 text-[11px] bg-white rounded-lg shadow-md text-nowrap"
+          >
             <h2 class="font-bold text-lg mb-4">استمارة اشتراك</h2>
 
             <div class="flex flex-col mb-4 relative">
@@ -350,7 +350,7 @@
           </div>
           <!-- البيانات الشخصية -->
           <!-- نسخة الويب -->
-          <div class=" md:block font-bukra text-[11px] md:text-lg ">
+          <div class="md:block font-bukra text-[11px] md:text-lg">
             <h2 class="font-bold text-lg mb-4 font-cairo">البيانات الشخصية</h2>
 
             <div class="overflow-hidden mb-8">
@@ -387,7 +387,9 @@
         <div
           class="flex items-center justify-between mt-12 border-b-2 border-gray-300 pb-5 font-bukra"
         >
-          <h2 class="text-[12px] md:text-xl font-bold text-[#0166B3] flex-1 text-right">
+          <h2
+            class="text-[12px] md:text-xl font-bold text-[#0166B3] flex-1 text-right"
+          >
             العضو التابع
             <span class="font-semibold hidden md:inline"
               >( محمود محمد علي )</span
@@ -397,13 +399,12 @@
           <!-- الأيقونة -->
           <button
             id="showFormBtn"
+            onclick="toggleFormCard()"
             class="px-1 py-1 bg-white border border-[#0166B3] relative text-[#0166B3] rounded-full flex items-center gap-2 hover:bg-[#0166B3] hover:text-white transition-all"
           >
             <i class="fas fa-plus"></i>
           </button>
         </div>
-
-    
 
         <!-- كارت الفورم للويب -->
         <div
@@ -578,6 +579,7 @@
                           type="file"
                           class="hidden"
                           accept=".pdf,.jpg,.jpeg,.png"
+                          onchange="handleFileChange(event)"
                         />
                       </label>
                     </div>
@@ -627,6 +629,7 @@
                           type="file"
                           class="hidden"
                           accept=".pdf,.jpg,.jpeg,.png"
+                          onchange="handleFileChange(event)"
                         />
                       </label>
                     </div>
@@ -678,6 +681,7 @@
                           type="file"
                           class="hidden"
                           accept=".pdf,.jpg,.jpeg,.png"
+                          onchange="handleFileChange(event)"
                         />
                       </label>
                     </div>
@@ -743,6 +747,7 @@
             <button
               type="button"
               id="showFormBtnMobile"
+              onclick="showMobileForm()"
               class="w-40 py-3 border-2 border-[#0166B3] text-[#0166B3] rounded-full font-semibold hover:bg-[#0166B3] hover:text-white transition-all"
             >
               إضافة عضو تابع
@@ -753,422 +758,471 @@
     </div>
     <!-- نسخة الموبايل -->
     <div
-          id="mobileForm"
-          class="fixed inset-0 bg-black/50 flex items-end justify-center z-50 hidden p-4 rounded-xl shadow-lg border border-white md:hidden bg-gray-50"
-        >
-          <div class="w-full max-h-[90vh] overflow-y-auto bg-white rounded-t-3xl shadow-lg p-5 text-sm flex flex-col gap-2 sm:max-w-md">
-            <h2 class="font-bold text-lg">استمارة اشتراك</h2>
-
-            <!-- اسم عضو التابع -->
-            <div class="flex flex-col mb-4 relative">
-              <label class="font-semibold mb-2"
-                >اسم عضو التابع <span class="text-[#B50644]">*</span></label
-              >
-              <input
-                type="text"
-                placeholder="اسم العضو الأساسي"
-                class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600 pl-8"
-              />
-            </div>
-
-            <!-- صفة العضو التابع -->
-            <div class="flex flex-col mb-4 relative">
-              <label class="font-semibold mb-2"
-                >صفة العضو التابع <span class="text-[#B50644]">*</span></label
-              >
-              <input
-                type="text"
-                placeholder="صفة العضو التابع"
-                class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600 pl-8"
-              />
-            </div>
-
-            <!-- مولود حديث و تاريخ الميلاد -->
-            <div class="mb-4">
-              <div class="flex items-center  mb-2">
-                <input
-                  type="checkbox"
-                  class="w-5 h-5 accent-[#0166B3] rounded border-gray-300 focus:ring-[#0166B3]"
-                />
-                <h3
-                  class="text-lg font-semibold text-gray-800 relative right-3"
-                >
-                  مولود حديث
-                </h3>
-              </div>
-
-              <label class="font-semibold text-gray-700 mb-2 block"
-                >تاريخ الميلاد <span class="text-[#B50644]">*</span></label
-              >
-              <div class="relative w-full">
-                <input
-                  type="date"
-                  placeholder="حدد تاريخ الميلاد"
-                  class="w-full flex flex-row-reverse px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600 pl-8"
-                />
-                <!-- أيقونة التقويم باللون الأزرق -->
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 text-[#0166B3] pointer-events-none ml-2"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 11v6m-3-3h6"
-                  />
-                </svg>
-              </div>
-            </div>
-
-            <!-- رفع الملفات -->
-            <div class="space-y-4 pt-4">
-              <!-- Upload 1 -->
-
-              <div class="flex flex-col">
-                <label class="font-semibold text-gray-700 mb-2 text-right">
-                  الرقم القومي <span class="text-[#B50644]">*</span>
-                </label>
-
-                <input
-                  type="text"
-                  placeholder=" رقم القومي"
-                  class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm"
-                  style="color: rgb(143, 136, 136); opacity: 1"
-                  onfocus="this.placeholder='';"
-                  onblur="this.placeholder='';"
-                />
-
-                <!-- File Uploads -->
-              </div>
-              <div>
-                <h3 class="mb-2">
-                  صورة بطاقة الرقم القومي <span class="text-[#B50644]">*</span>
-                </h3>
-                <label
-                  class="border-2 border-dotted border-[#0166B3] rounded-lg p-4 hover:border-[#0166B3] transition-colors flex items-center gap-3 cursor-pointer"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="#0166B3"
-                    class="w-8 h-8"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M9 12h6m-3-3v6m3 9H6a2.25 2.25 0 01-2.25-2.25V4.5A2.25 2.25 0 016 2.25h7.5L18 6.75V21a2.25 2.25 0 01-2.25 2.25z"
-                    />
-                  </svg>
-                  <div class="flex flex-col text-sm text-gray-600">
-                    <span
-                      >سحب وادراج الملف هنا او
-                      <span class="text-[#0166B3]">اختار ملف</span></span
-                    >
-                    <span class="text-xs text-gray-400 mt-0.5"
-                      >صيغ الملفات المسموح بها: pdf, png, jpg - الحد الأقصى
-                      5mb</span
-                    >
-                  </div>
-                  <input
-                    type="file"
-                    class="hidden"
-                    accept=".pdf,.jpg,.jpeg,.png"
-                  />
-                </label>
-              </div>
-
-              <!-- Upload 2 -->
-              <div>
-                <h3 class="mb-2">
-                  الصورة الشخصية <span class="text-[#B50644]">*</span>
-                </h3>
-                <label
-                  class="border-2 border-dotted border-[#0166B3] rounded-lg p-4 hover:border-[#0166B3] transition-colors flex items-center gap-3 cursor-pointer"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="#0166B3"
-                    class="w-8 h-8"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M9 12h6m-3-3v6m3 9H6a2.25 2.25 0 01-2.25-2.25V4.5A2.25 2.25 0 016 2.25h7.5L18 6.75V21a2.25 2.25 0 01-2.25 2.25z"
-                    />
-                  </svg>
-                  <div class="flex flex-col text-sm text-gray-600">
-                    <span
-                      >سحب وادراج الملف هنا او
-                      <span class="text-[#0166B3]">اختار ملف</span></span
-                    >
-                    <span class="text-xs text-gray-400 mt-0.5"
-                      >الحد الأقصى لحجم الملف 2 ميجا، صيغة الملف jpg, png,
-                      jpeg</span
-                    >
-                  </div>
-                  <input
-                    type="file"
-                    class="hidden"
-                    accept=".pdf,.jpg,.jpeg,.png"
-                  />
-                </label>
-              </div>
-
-              <!-- Upload 3 -->
-              <div>
-                <h3 class="mb-2">
-                  مستندات اثبات صلة القرابة
-                  <span class="text-[#B50644]">*</span>
-                </h3>
-                <label
-                  class="border-2 border-dotted border-[#0166B3] rounded-lg p-4 hover:border-[#0166B3] transition-colors flex items-center gap-3 cursor-pointer"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="#0166B3"
-                    class="w-8 h-8"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M9 12h6m-3-3v6m3 9H6a2.25 2.25 0 01-2.25-2.25V4.5A2.25 2.25 0 016 2.25h7.5L18 6.75V21a2.25 2.25 0 01-2.25 2.25z"
-                    />
-                  </svg>
-                  <div class="flex flex-col text-sm text-gray-600">
-                    <span
-                      >سحب وادراج الملف هنا او
-                      <span class="text-[#0166B3]">اختار ملف</span></span
-                    >
-                    <span class="text-xs text-gray-400 mt-0.5"
-                      >الحد الأقصى لحجم الملف 2 ميجا، صيغة الملف jpg, png,
-                      jpeg</span
-                    >
-                  </div>
-                  <input
-                    type="file"
-                    class="hidden"
-                    accept=".pdf,.jpg,.jpeg,.png"
-                  />
-                </label>
-              </div>
-            </div>
-
-            <!-- أزرار -->
-            <div class="flex flex-col gap-2 mt-3">
-              <button type="submit"
-                class="w-full px-4 py-2 bg-[#0166B3] text-white rounded-full font-semibold hover:bg-[#0152a3] transition-colors">اضافة</button>
-              <button type="button" id="closeModalBtn"
-                class="w-full px-4 py-2 border-2 border-[#0166B3] text-[#0166B3] rounded-full font-semibold hover:bg-[#0166B3] hover:text-white transition-all">الغاء</button>
-            </div>
-          </div>
-        </div>
-
-
-
-     <!-- Footer -->
-  <footer class="hidden md:block bg-[#1B2128] text-white py-16 px-5 w-full font-bukra">
-    <div class="max-w-7xl mx-auto">
-      <!-- Newsletter Section -->
-      <div class="mb-12 ">
-        <div class="flex gap-3 items-center  justify-end font-cairo">
-          <div class="relative">
-            <i class="fa-solid fa-user text-gray-400 absolute right-3 top-1/2 -translate-y-1/2"></i>
-
-            <input type="email" placeholder="ادخل البريد الالكتروني"
-              class="flex-1 w-full pl-4 pr-20 py-3 bg-[#6B7280]/20 border border-gray-700 rounded-md text-[#9CA3AF] text-sm placeholder-gray-500 focus:outline-none focus:border-[#0166B3]">
-          </div>
-          <button
-            class="px-6 py-3 bg-[#0166B3] hover:bg-[#0152a3] text-white font-semibold rounded-md transition-colors duration-300 whitespace-nowrap">
-            متابعة
-          </button>
-        </div>
-        <div>
-          <h2 class="text-xl font-semibold text-right relative bottom-8">
-            هل ترغب في متابعة العروض؟
-          </h2>
-        </div>
-      </div>
+      id="mobileForm"
+      class="fixed inset-0 bg-black/50 flex items-end justify-center z-50 hidden p-4 rounded-xl shadow-lg border border-white md:hidden bg-gray-50"
+    >
       <div
-        class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
+        class="w-full max-h-[90vh] overflow-y-auto bg-white rounded-t-3xl shadow-lg p-5 text-sm flex flex-col gap-2 sm:max-w-md"
+      >
+        <h2 class="font-bold text-lg">استمارة اشتراك</h2>
 
-      </div>
+        <!-- اسم عضو التابع -->
+        <div class="flex flex-col mb-4 relative">
+          <label class="font-semibold mb-2"
+            >اسم عضو التابع <span class="text-[#B50644]">*</span></label
+          >
+          <input
+            type="text"
+            placeholder="اسم العضو الأساسي"
+            class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600 pl-8"
+          />
+        </div>
 
-      <!-- Footer Top Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <!-- صفة العضو التابع -->
+        <div class="flex flex-col mb-4 relative">
+          <label class="font-semibold mb-2"
+            >صفة العضو التابع <span class="text-[#B50644]">*</span></label
+          >
+          <input
+            type="text"
+            placeholder="صفة العضو التابع"
+            class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600 pl-8"
+          />
+        </div>
 
-        <!-- Column 1: Logo & Social Icons -->
-        <div class="lg:col-span-1">
-          <!-- Logo -->
-          <div class="flex items-center gap-3 mb-6">
-            <img class="w-[120px] h-[65px]" src="./imgs/logo.png" alt="">
+        <!-- مولود حديث و تاريخ الميلاد -->
+        <div class="mb-4">
+          <div class="flex items-center mb-2">
+            <input
+              type="checkbox"
+              class="w-5 h-5 accent-[#0166B3] rounded border-gray-300 focus:ring-[#0166B3]"
+            />
+            <h3 class="text-lg font-semibold text-gray-800 relative right-3">
+              مولود حديث
+            </h3>
           </div>
 
-          <!-- Description -->
-          <p class="text-gray-400 text-sm leading-relaxed mb-6">
-            إتخذت شركة (التجاريون للإدارة والخدمات المتكاملة) A.M.I.S شكل شركة مساهمة مصرية خاضعة للقانون 159 لسنة 1981،
-            منذ بدء نشاطها فى منتصف عام 1995.
-
-          </p>
-
-          <!-- Social Icons -->
-          <div class="flex gap-3 mt-6">
-            <a href="#"
-              class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#"
-              class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#"
-              class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#"
-              class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300">
-              <i class="fab fa-youtube"></i>
-            </a>
+          <label class="font-semibold text-gray-700 mb-2 block"
+            >تاريخ الميلاد <span class="text-[#B50644]">*</span></label
+          >
+          <div class="relative w-full">
+            <input
+              type="date"
+              placeholder="حدد تاريخ الميلاد"
+              class="w-full flex flex-row-reverse px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm text-gray-600 pl-8"
+            />
+            <!-- أيقونة التقويم باللون الأزرق -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 text-[#0166B3] pointer-events-none ml-2"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+              />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 11v6m-3-3h6"
+              />
+            </svg>
           </div>
         </div>
 
-        <!-- Column 2: روابط سريعة -->
+        <!-- رفع الملفات -->
+        <div class="space-y-4 pt-4">
+          <!-- Upload 1 -->
 
-        <!-- Column 3: روابط هامة -->
-        <div>
-          <h3 class="text-lg font-semibold mb-6">روابط هامة</h3>
-          <ul class="space-y-4">
-            <li>
-              <a href="#"
-                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
-                <i class="fas fa-angle-left text-xs"></i>
-                <i class="fas fa-angle-left text-xs relative left-2.5"></i>
-                الرؤية والرسالة
-              </a>
-            </li>
-            <li>
-              <a href="#"
-                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
-                <i class="fas fa-angle-left text-xs"></i>
-                <i class="fas fa-angle-left text-xs relative left-2.5"></i>
-                فريق العمل
-              </a>
-            </li>
-            <li>
-              <a href="#"
-                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
-                <i class="fas fa-angle-left text-xs"></i>
-                <i class="fas fa-angle-left text-xs relative left-2.5"></i>
-                الأخبار والمدونة
-              </a>
-            </li>
-            <li>
-              <a href="#"
-                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
-                <i class="fas fa-angle-left text-xs"></i>
-                <i class="fas fa-angle-left text-xs relative left-2.5"></i>
-                تواصل معنا
-              </a>
-            </li>
-          </ul>
+          <div class="flex flex-col">
+            <label class="font-semibold text-gray-700 mb-2 text-right">
+              الرقم القومي <span class="text-[#B50644]">*</span>
+            </label>
+
+            <input
+              type="text"
+              placeholder=" رقم القومي"
+              class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent bg-white text-sm"
+              style="color: rgb(143, 136, 136); opacity: 1"
+              onfocus="this.placeholder='';"
+              onblur="this.placeholder='';"
+            />
+
+            <!-- File Uploads -->
+          </div>
+          <div>
+            <h3 class="mb-2">
+              صورة بطاقة الرقم القومي <span class="text-[#B50644]">*</span>
+            </h3>
+            <label
+              class="border-2 border-dotted border-[#0166B3] rounded-lg p-4 hover:border-[#0166B3] transition-colors flex items-center gap-3 cursor-pointer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#0166B3"
+                class="w-8 h-8"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 12h6m-3-3v6m3 9H6a2.25 2.25 0 01-2.25-2.25V4.5A2.25 2.25 0 016 2.25h7.5L18 6.75V21a2.25 2.25 0 01-2.25 2.25z"
+                />
+              </svg>
+              <div class="flex flex-col text-sm text-gray-600">
+                <span
+                  >سحب وادراج الملف هنا او
+                  <span class="text-[#0166B3]">اختار ملف</span></span
+                >
+                <span class="text-xs text-gray-400 mt-0.5"
+                  >صيغ الملفات المسموح بها: pdf, png, jpg - الحد الأقصى
+                  5mb</span
+                >
+              </div>
+              <input
+                type="file"
+                class="hidden"
+                accept=".pdf,.jpg,.jpeg,.png"
+                onchange="handleFileChange(event)"
+              />
+            </label>
+          </div>
+
+          <!-- Upload 2 -->
+          <div>
+            <h3 class="mb-2">
+              الصورة الشخصية <span class="text-[#B50644]">*</span>
+            </h3>
+            <label
+              class="border-2 border-dotted border-[#0166B3] rounded-lg p-4 hover:border-[#0166B3] transition-colors flex items-center gap-3 cursor-pointer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#0166B3"
+                class="w-8 h-8"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 12h6m-3-3v6m3 9H6a2.25 2.25 0 01-2.25-2.25V4.5A2.25 2.25 0 016 2.25h7.5L18 6.75V21a2.25 2.25 0 01-2.25 2.25z"
+                />
+              </svg>
+              <div class="flex flex-col text-sm text-gray-600">
+                <span
+                  >سحب وادراج الملف هنا او
+                  <span class="text-[#0166B3]">اختار ملف</span></span
+                >
+                <span class="text-xs text-gray-400 mt-0.5"
+                  >الحد الأقصى لحجم الملف 2 ميجا، صيغة الملف jpg, png,
+                  jpeg</span
+                >
+              </div>
+              <input
+                type="file"
+                class="hidden"
+                accept=".pdf,.jpg,.jpeg,.png"
+                onchange="handleFileChange(event)"
+              />
+            </label>
+          </div>
+
+          <!-- Upload 3 -->
+          <div>
+            <h3 class="mb-2">
+              مستندات اثبات صلة القرابة
+              <span class="text-[#B50644]">*</span>
+            </h3>
+            <label
+              class="border-2 border-dotted border-[#0166B3] rounded-lg p-4 hover:border-[#0166B3] transition-colors flex items-center gap-3 cursor-pointer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#0166B3"
+                class="w-8 h-8"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 12h6m-3-3v6m3 9H6a2.25 2.25 0 01-2.25-2.25V4.5A2.25 2.25 0 016 2.25h7.5L18 6.75V21a2.25 2.25 0 01-2.25 2.25z"
+                />
+              </svg>
+              <div class="flex flex-col text-sm text-gray-600">
+                <span
+                  >سحب وادراج الملف هنا او
+                  <span class="text-[#0166B3]">اختار ملف</span></span
+                >
+                <span class="text-xs text-gray-400 mt-0.5"
+                  >الحد الأقصى لحجم الملف 2 ميجا، صيغة الملف jpg, png,
+                  jpeg</span
+                >
+              </div>
+              <input
+                type="file"
+                class="hidden"
+                accept=".pdf,.jpg,.jpeg,.png"
+                onchange="handleFileChange(event)"
+              />
+            </label>
+          </div>
         </div>
-        <div>
-          <h3 class="text-lg font-semibold mb-6"> روابط سريعة</h3>
-          <ul class="space-y-4">
-            <li>
-              <a href="#"
-                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
-                <i class="fas fa-angle-left text-xs"></i>
-                <i class="fas fa-angle-left text-xs relative left-2.5"></i>
-                الكتيب الطبي
-              </a>
-            </li>
-            <li>
-              <a href="#"
-                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2 relative ">
-                <i class="fas fa-angle-left text-xs"></i>
-                <i class="fas fa-angle-left text-xs relative left-2.5"></i>
-                طلبات الاسترداد
-              </a>
-            </li>
-            <li>
-              <a href="#"
-                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
-                <i class="fas fa-angle-left text-xs"></i>
-                <i class="fas fa-angle-left text-xs relative left-2.5"></i>
-                الشبكة الطبية
-              </a>
-            </li>
-            <li>
-              <a href="#"
-                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
-                <i class="fas fa-angle-left text-xs"></i>
-                <i class="fas fa-angle-left text-xs relative left-2.5"></i>
-                برنامج العلاج الشهري
-              </a>
-            </li>
-          </ul>
-        </div>
 
-
-        <!-- Column 4: تواصل معنا -->
-        <div>
-          <h3 class="text-lg font-semibold mb-6">تواصل معنا</h3>
-          <ul class="space-y-4">
-            <li>
-              <a href="mailto:info@youremail.com"
-                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
-                <i class="far fa-envelope w-4"></i>
-
-                info@youremail.com
-              </a>
-            </li>
-            <li>
-              <a href="tel:+123456789"
-                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
-                <i class="fas fa-phone w-4"></i>
-                01113311141
-              </a>
-            </li>
-            <li>
-              <a href="#"
-                class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2">
-                <i class="fas fa-map-marker-alt w-4"></i>
-                فروعنا
-              </a>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-
-      <!-- Footer Bottom -->
-      <div class="  pt-6 flex flex-col md:flex-row justify-between items-center  text-sm">
-        <a href="#" class=" transition-colors duration-300 ">الشروط والأحكام</a>
-        <a href="#" class=" duration-300 relative left-80">سياسة الاستخدام</a>
-        <div class="flex gap-6">
-
-          <p>جميع الحقوق محفوظة © شركة التجاريين للخدمات المتكاملة </p>
-
+        <!-- أزرار -->
+        <div class="flex flex-col gap-2 mt-3">
+          <button
+            type="submit"
+            class="w-full px-4 py-2 bg-[#0166B3] text-white rounded-full font-semibold hover:bg-[#0152a3] transition-colors"
+          >
+            اضافة
+          </button>
+          <button
+            type="button"
+            id="closeModalBtn"
+            class="w-full px-4 py-2 border-2 border-[#0166B3] text-[#0166B3] rounded-full font-semibold hover:bg-[#0166B3] hover:text-white transition-all"
+          >
+            الغاء
+          </button>
         </div>
       </div>
     </div>
-  </footer>
+
+    <!-- Footer -->
+    <footer
+      class="hidden md:block bg-[#1B2128] text-white py-16 px-5 w-full font-bukra"
+    >
+      <div class="max-w-7xl mx-auto">
+        <!-- Newsletter Section -->
+        <div class="mb-12">
+          <div class="flex gap-3 items-center justify-end font-cairo">
+            <div class="relative">
+              <i
+                class="fa-solid fa-user text-gray-400 absolute right-3 top-1/2 -translate-y-1/2"
+              ></i>
+
+              <input
+                type="email"
+                placeholder="ادخل البريد الالكتروني"
+                class="flex-1 w-full pl-4 pr-20 py-3 bg-[#6B7280]/20 border border-gray-700 rounded-md text-[#9CA3AF] text-sm placeholder-gray-500 focus:outline-none focus:border-[#0166B3]"
+              />
+            </div>
+            <button
+              class="px-6 py-3 bg-[#0166B3] hover:bg-[#0152a3] text-white font-semibold rounded-md transition-colors duration-300 whitespace-nowrap"
+            >
+              متابعة
+            </button>
+          </div>
+          <div>
+            <h2 class="text-xl font-semibold text-right relative bottom-8">
+              هل ترغب في متابعة العروض؟
+            </h2>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm"
+        ></div>
+
+        <!-- Footer Top Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12"
+        >
+          <!-- Column 1: Logo & Social Icons -->
+          <div class="lg:col-span-1">
+            <!-- Logo -->
+            <div class="flex items-center gap-3 mb-6">
+              <img class="w-[120px] h-[65px]" src="../imgs/logo.png" alt="" />
+            </div>
+
+            <!-- Description -->
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+              إتخذت شركة (التجاريون للإدارة والخدمات المتكاملة) A.M.I.S شكل شركة
+              مساهمة مصرية خاضعة للقانون 159 لسنة 1981، منذ بدء نشاطها فى منتصف
+              عام 1995.
+            </p>
+
+            <!-- Social Icons -->
+            <div class="flex gap-3 mt-6">
+              <a
+                href="#"
+                class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="w-9 h-9 bg-gray-800 rounded-md flex items-center justify-center text-gray-400 hover:bg-[#0166B3] hover:text-white transition-all duration-300"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: روابط سريعة -->
+
+          <!-- Column 3: روابط هامة -->
+          <div>
+            <h3 class="text-lg font-semibold mb-6">روابط هامة</h3>
+            <ul class="space-y-4">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <i class="fas fa-angle-left text-xs"></i>
+                  <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                  الرؤية والرسالة
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <i class="fas fa-angle-left text-xs"></i>
+                  <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                  فريق العمل
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <i class="fas fa-angle-left text-xs"></i>
+                  <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                  الأخبار والمدونة
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <i class="fas fa-angle-left text-xs"></i>
+                  <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                  تواصل معنا
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-6">روابط سريعة</h3>
+            <ul class="space-y-4">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <i class="fas fa-angle-left text-xs"></i>
+                  <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                  الكتيب الطبي
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2 relative"
+                >
+                  <i class="fas fa-angle-left text-xs"></i>
+                  <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                  طلبات الاسترداد
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <i class="fas fa-angle-left text-xs"></i>
+                  <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                  الشبكة الطبية
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <i class="fas fa-angle-left text-xs"></i>
+                  <i class="fas fa-angle-left text-xs relative left-2.5"></i>
+                  برنامج العلاج الشهري
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 4: تواصل معنا -->
+          <div>
+            <h3 class="text-lg font-semibold mb-6">تواصل معنا</h3>
+            <ul class="space-y-4">
+              <li>
+                <a
+                  href="mailto:info@youremail.com"
+                  class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <i class="far fa-envelope w-4"></i>
+
+                  info@youremail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:+123456789"
+                  class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <i class="fas fa-phone w-4"></i>
+                  01113311141
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 text-sm hover:text-[#0166B3] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <i class="fas fa-map-marker-alt w-4"></i>
+                  فروعنا
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div
+          class="pt-6 flex flex-col md:flex-row justify-between items-center text-sm"
+        >
+          <a href="#" class="transition-colors duration-300">الشروط والأحكام</a>
+          <a href="#" class="duration-300 relative left-80">سياسة الاستخدام</a>
+          <div class="flex gap-6">
+            <p>جميع الحقوق محفوظة © شركة التجاريين للخدمات المتكاملة</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/forms.js"></script>
+    <script src="../js/ui.js"></script>
   </body>
 </html>

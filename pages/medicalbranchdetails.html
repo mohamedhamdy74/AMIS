@@ -4,27 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./src/output.css">
+  <link rel="stylesheet" href="../src/output.css">
   <!-- Local Font Awesome -->
-  <link rel="stylesheet" href="./fonts/fontawesome/css/all.min.css" />
+  <link rel="stylesheet" href="../fonts/fontawesome/css/all.min.css" />
   <!-- Leaflet CSS & JS -->
-  <link rel="stylesheet" href="./libs/leaflet/leaflet.min.css" />
-  <script src="./libs/leaflet/leaflet.min.js" defer></script>
+  <link rel="stylesheet" href="../libs/leaflet/leaflet.min.css" />
+  <script src="../libs/leaflet/leaflet.min.js" defer></script>
   <title>تفاصيل الفرع الطبي - الموقع والمعلومات</title>
   <meta name="description" content="تفاصيل الفرع الطبي - الموقع على الخريطة، مواعيد العمل، بيانات التواصل والخدمات المتاحة">
-  <style>
-    .drop-shadow-lg {
-      text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-    }
-
-    .drop-shadow-md {
-      text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
-    }
-
-    .page-frame {
-      border-style: dotted;
-    }
-  </style>
+ 
 </head>
 
 <body class="font-cairo text-gray-800">
@@ -32,7 +20,7 @@
 
     <div class="bg-white  backdrop-blur-md rounded-full shadow-lg py-5 px-8   flex items-center justify-between gap-4 ">
       <div class="flex items-center gap-8">
-        <img src="./imgs/cldlogo.png" alt="AMHS Logo" class="h-10" />
+        <img src="../imgs/cldlogo.png" alt="AMHS Logo" class="h-10" />
         <nav class="hidden md:flex gap-6 text-sm font-bold">
           <a href="index.html"
             class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition ">الرئيسية</a>
@@ -151,7 +139,7 @@
 
   <!-- hero section تحت الـ navbar -->
   <section class="relative w-full flex items-center justify-center hidden md:flex"
-    style="background-image: url('./imgs/Inner_Header.png'); background-size: cover; background-position: center; max-width:1600px; margin: 0 auto;">
+    style="background-image: url('../imgs/Inner_Header.png'); background-size: cover; background-position: center; max-width:1600px; margin: 0 auto;">
     <div class="w-full h-[300px] relative flex items-center justify-center">
       <!-- overlay -->
       <div class="absolute inset-0 bg-black/30"></div>
@@ -318,7 +306,7 @@
         <div class="lg:col-span-1">
           <!-- Logo -->
           <div class="flex items-center gap-3 mb-6">
-            <img class="w-[120px] h-[65px]" src="./imgs/logo.png" alt="">
+            <img class="w-[120px] h-[65px]" src="../imgs/logo.png" alt="">
           </div>
 
           <!-- Description -->
@@ -471,10 +459,9 @@
       </div>
     </div>
   </footer>
-<script src="./background.js"></script>
-<script src="./map.js"></script>
-<script src="./forms.js"></script>
-<script src="./ui.js"></script>
+
+<script src="../js/map.js"></script>
+
 </body>
 
 </html>

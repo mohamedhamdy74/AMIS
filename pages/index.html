@@ -8,12 +8,12 @@
     <meta name="description" content="إدارة برامج الرعاية الصحية للشركات والجهات (TPA) - خدمات طبية شاملة وتأمين صحي متكامل">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="../src/output.css">
     <!-- Local Font Awesome -->
-    <link rel="stylesheet" href="./fonts/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="../fonts/fontawesome/css/all.min.css" />
     <!-- Leaflet CSS & JS -->
-    <link rel="stylesheet" href="./libs/leaflet/leaflet.min.css" />
-    <script src="./libs/leaflet/leaflet.min.js" defer></script>
+    <link rel="stylesheet" href="../libs/leaflet/leaflet.min.css" />
+    <script src="../libs/leaflet/leaflet.min.js" defer></script>
 </head>
 
 <body class="bg-white">
@@ -22,19 +22,19 @@
   
     <div class="bg-white  backdrop-blur-md rounded-full shadow-lg py-5 px-8   flex items-center justify-between gap-4 ">
       <div class="flex items-center gap-8">
-        <img src="./imgs/cldlogo.png" alt="AMHS Logo" class="h-10" />
+        <img src="../imgs/cldlogo.png" alt="AMHS Logo" class="h-10" />
         <nav class="hidden md:flex gap-6 text-sm font-bold">
-          <a href="index.html"
+          <a href="../pages/index.html"
             class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition ">الرئيسية</a>
-          <a href="new-register.html"
+          <a href="../pages/new-register.html"
             class=" hover:text-[#0166B3] flex items-center gap-1 border-b-2 border-transparent hover:border-[#1B2128] transition flex-row-reverse">
             <i class="fas fa-arrow-up rotate-45 text-gray-300  text-xs"></i>
             خدمات أونلاين
           </a>
-          <a href="membershipdetails.html"
+          <a href="../pages/membershipdetails.html"
             class=" hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">بطاقة العضوية
             الرقمية</a>
-          <a href="./signup.html"
+          <a href="../pages/signup.html"
             class=" hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">تجديد
             الاشتراك</a>
           <a href="./medical-network.html" class=" hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">
@@ -44,7 +44,7 @@
 
       <!-- زر اشترك و search -->
       <div class="relative flex gap-3 items-center">
-        <a href="./referal-sign-up.html">
+        <a href="../pages/referal-sign-up.html">
         <button
           class="btn-primary">
           اشترك الآن
@@ -64,7 +64,7 @@
   <!-- tab bar  -->
  <nav class="fixed  whitespace-nowrap w-full bottom-0  bg-white border-t border-gray-200 shadow-xl z-50 flex justify-evenly items-center   py-2.5  lg:hidden font-cairo" style="direction: rtl;">
 
-    <a href="./index.html" class="flex flex-col items-center justify-center text-[10px] font-semibold text-[#1B2128] ">
+    <a href="../pages/index.html" class="flex flex-col items-center justify-center text-[10px] font-semibold text-[#1B2128] ">
         <svg class="text-[#0166B3] mb-0.5" width="27" height="27" viewBox="0 0 27 27" fill="currentColor"  xmlns="http://www.w3.org/2000/svg">
 <path d="M9.75442 23.0043V19.5842C9.7544 18.7175 10.4864 18.0134 11.3932 18.0079H14.7225C15.6333 18.0079 16.3716 18.7136 16.3716 19.5842V22.9944C16.3716 23.7461 17.0061 24.357 17.7925 24.3625H20.0639C21.1248 24.3651 22.1431 23.9642 22.8942 23.2481C23.6453 22.532 24.0674 21.5598 24.0674 20.5458V10.8306C24.0674 10.0115 23.6876 9.23456 23.0302 8.70907L15.3137 2.81054C13.9648 1.77882 12.0383 1.81214 10.7294 2.88984L3.17874 8.70907C2.49036 9.21907 2.07893 9.9983 2.05859 10.8306V20.5359C2.05859 22.6492 3.85102 24.3625 6.06208 24.3625H8.28164C8.66028 24.3651 9.02437 24.2232 9.29309 23.9682C9.56182 23.7132 9.71294 23.3663 9.71293 23.0043H9.75442Z" fill="currentColor"/>
 </svg>
@@ -72,7 +72,7 @@
         <span>الرئيسية</span>
     </a>
 
-    <a href="./new-register.html" class="flex flex-col items-center justify-center text-[10px] font-medium text-gray-500 hover:text-[#0166B3]  transition-colors">
+    <a href="../pages/new-register.html" class="flex flex-col items-center justify-center text-[10px] font-medium text-gray-500 hover:text-[#0166B3]  transition-colors">
         <svg class="mb-0.5" width="27" height="27" viewBox="0 0 26 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 <path d="M3.42422 4.84123C4.68095 3.58427 6.36655 2.84907 8.14278 2.78317C9.91901 2.71726 11.6545 3.32552 13.0009 4.4859C14.3461 3.32745 16.0793 2.71988 17.8534 2.7848C19.6275 2.84973 21.3116 3.58236 22.5685 4.83604C23.8255 6.08971 24.5625 7.77189 24.6321 9.54581C24.7017 11.3197 24.0986 13.0545 22.9437 14.4027L14.5316 22.8419C14.1452 23.2285 13.6268 23.4547 13.0805 23.4752C12.5343 23.4957 12.0004 23.309 11.5861 22.9524L11.4669 22.843L3.05589 14.4027C1.90158 13.0556 1.29826 11.3225 1.36655 9.54981C1.43484 7.77712 2.1697 6.09553 3.42422 4.84123ZM4.95605 6.37306C4.07015 7.25921 3.55948 8.45246 3.53003 9.70515C3.50057 10.9578 3.9546 12.1738 4.79789 13.1006L4.95605 13.2674L12.9998 21.3111L18.7447 15.5641L14.9151 11.7356L13.7668 12.8839C13.1574 13.4936 12.3308 13.8362 11.4687 13.8364C10.6067 13.8366 9.77991 13.4944 9.17022 12.885C8.56053 12.2756 8.2179 11.4489 8.21769 10.5869C8.21749 9.72488 8.55973 8.89808 9.16914 8.2884L11.4463 6.01015C10.5402 5.28668 9.4058 4.90988 8.24687 4.94741C7.08794 4.98494 5.98034 5.43432 5.12289 6.2149L4.95605 6.37306ZM14.1492 9.43673C14.3524 9.23364 14.6279 9.11954 14.9151 9.11954C15.2024 9.11954 15.4779 9.23364 15.6811 9.43673L20.2766 14.0322L21.0436 13.2674C21.9443 12.3673 22.4571 11.1505 22.4723 9.87717C22.4875 8.60387 22.0038 7.37516 21.1248 6.45383C20.2458 5.53249 19.0412 4.99167 17.7686 4.94702C16.496 4.90237 15.2564 5.35743 14.315 6.2149L14.1492 6.37306L10.7021 9.82023C10.5143 10.0079 10.4019 10.2579 10.3864 10.5229C10.3708 10.788 10.4531 11.0495 10.6176 11.2578L10.7021 11.3521C10.8897 11.5398 11.1398 11.6522 11.4048 11.6678C11.6698 11.6833 11.9313 11.6011 12.1396 11.4366L12.2339 11.3521L14.1492 9.43673Z" fill="black"/>
 </svg>
@@ -80,7 +80,7 @@
         <span>خدمات أونلاين</span>
     </a>
 
-    <a href="./medical-network.html" class="flex flex-col items-center justify-center text-[10px] font-medium text-gray-500 hover:text-[#0166B3]  transition-colors">
+    <a href="../pages/medical-network.html" class="flex flex-col items-center justify-center text-[10px] font-medium text-gray-500 hover:text-[#0166B3]  transition-colors">
         <svg class="mb-0.5" width="27" height="27" viewBox="0 0 26 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7724 3.52051H15.2271C17.2182 3.52051 18.7956 3.52051 20.0295 3.68626C21.2992 3.85742 22.3272 4.21709 23.1387 5.02742C23.949 5.83884 24.3087 6.86692 24.4798 8.13659C24.5773 8.86567 24.6174 9.71392 24.6337 10.6965C24.6471 10.7789 24.6486 10.8628 24.638 10.9457C24.6445 11.5581 24.647 12.2226 24.6456 12.939V13.0603C24.6456 15.0515 24.6456 16.6288 24.4798 17.8628C24.3087 19.1324 23.949 20.1605 23.1387 20.9719C22.3272 21.7823 21.2992 22.1419 20.0295 22.3131C18.7945 22.4788 17.2182 22.4788 15.2271 22.4788H10.7724C8.78124 22.4788 7.20391 22.4788 5.96999 22.3131C4.70033 22.1419 3.67224 21.7823 2.86083 20.9719C2.05049 20.1605 1.69083 19.1324 1.51966 17.8628C1.35391 16.6278 1.35391 15.0515 1.35391 13.0603V12.939C1.35247 12.2226 1.35499 11.5581 1.36149 10.9457C1.35057 10.8629 1.35166 10.779 1.36474 10.6965C1.38208 9.71392 1.42216 8.86567 1.51966 8.13659C1.69083 6.86692 2.05049 5.83884 2.86083 5.02742C3.67224 4.21709 4.70033 3.85742 5.96999 3.68626C7.20499 3.52051 8.78124 3.52051 10.7724 3.52051ZM2.98108 11.6455C2.97963 12.0658 2.97891 12.5172 2.97891 12.9997C2.97891 15.0656 2.98108 16.5335 3.13058 17.6472C3.27683 18.7359 3.55199 19.3643 4.01024 19.8225C4.46849 20.2808 5.09683 20.5559 6.18666 20.7022C7.30033 20.8517 8.76716 20.8538 10.8331 20.8538H15.1664C17.2323 20.8538 18.7002 20.8517 19.8139 20.7022C20.9027 20.5559 21.531 20.2808 21.9892 19.8225C22.4475 19.3643 22.7227 18.7359 22.8689 17.6461C23.0184 16.5324 23.0206 15.0656 23.0206 12.9997C23.0206 12.5172 23.0199 12.0658 23.0184 11.6455H2.98108ZM22.9924 10.0205H3.00708C3.02874 9.38459 3.06558 8.83534 3.13058 8.35217C3.27683 7.26342 3.55199 6.63509 4.01024 6.17684C4.46849 5.71859 5.09683 5.44342 6.18666 5.29717C7.30033 5.14767 8.76716 5.14551 10.8331 5.14551H15.1664C17.2323 5.14551 18.7002 5.14767 19.8139 5.29717C20.9027 5.44342 21.531 5.71859 21.9892 6.17684C22.4475 6.63509 22.7227 7.26342 22.8689 8.35326C22.9339 8.83534 22.9707 9.38459 22.9924 10.0205ZM17.2843 13.2705H17.3818C17.8509 13.2705 18.281 13.2705 18.6298 13.3171C19.0155 13.3691 19.4217 13.4904 19.7565 13.8263C20.0912 14.1621 20.2137 14.5673 20.2657 14.9529C20.3122 15.3028 20.3122 15.7329 20.3122 16.2009V16.2984C20.3122 16.7675 20.3122 17.1976 20.2657 17.5464C20.2137 17.9321 20.0923 18.3383 19.7565 18.6731C19.4207 19.0078 19.0155 19.1303 18.6298 19.1823C18.2799 19.2288 17.8498 19.2288 17.3818 19.2288H17.2843C16.8152 19.2288 16.3852 19.2288 16.0363 19.1823C15.6507 19.1303 15.2444 19.0089 14.9097 18.6731C14.5749 18.3373 14.4525 17.9321 14.4005 17.5464C14.3539 17.1965 14.3539 16.7664 14.3539 16.2984V16.2009C14.3539 15.7318 14.3539 15.3018 14.4005 14.9529C14.4525 14.5673 14.5738 14.161 14.9097 13.8263C15.2455 13.4915 15.6507 13.3691 16.0363 13.3171C16.3862 13.2705 16.8163 13.2705 17.2843 13.2705ZM16.0602 14.9735L16.058 14.9746L16.0569 14.9778L16.0515 14.9887C16.0308 15.0471 16.0173 15.1079 16.0114 15.1696C15.9811 15.3971 15.9789 15.7156 15.9789 16.2497C15.9789 16.7838 15.9811 17.1023 16.0114 17.3298C16.0182 17.3954 16.0335 17.4598 16.0569 17.5215L16.058 17.5248L16.0612 17.5258L16.0721 17.5313C16.0959 17.541 16.1479 17.5573 16.253 17.5713C16.4805 17.6017 16.799 17.6038 17.3331 17.6038C17.8672 17.6038 18.1857 17.6017 18.4132 17.5713C18.4788 17.5646 18.5432 17.5493 18.6049 17.5258L18.6082 17.5248L18.6092 17.5215L18.6147 17.5107C18.6354 17.4522 18.6488 17.3915 18.6547 17.3298C18.6851 17.1023 18.6872 16.7838 18.6872 16.2497C18.6872 15.7156 18.6851 15.3971 18.6547 15.1696C18.648 15.104 18.6327 15.0395 18.6092 14.9778L18.6082 14.9746L18.6049 14.9735L18.5941 14.9681C18.5356 14.9474 18.4749 14.9339 18.4132 14.928C18.1857 14.8977 17.8672 14.8955 17.3331 14.8955C16.799 14.8955 16.4805 14.8977 16.253 14.928C16.1874 14.9348 16.1229 14.9501 16.0612 14.9735M5.68724 14.6247C5.68724 14.4092 5.77285 14.2025 5.92522 14.0502C6.07759 13.8978 6.28426 13.8122 6.49974 13.8122H8.66641C8.8819 13.8122 9.08856 13.8978 9.24093 14.0502C9.39331 14.2025 9.47891 14.4092 9.47891 14.6247C9.47891 14.8402 9.39331 15.0468 9.24093 15.1992C9.08856 15.3516 8.8819 15.4372 8.66641 15.4372H6.49974C6.28426 15.4372 6.07759 15.3516 5.92522 15.1992C5.77285 15.0468 5.68724 14.8402 5.68724 14.6247ZM5.68724 17.8747C5.68724 17.6592 5.77285 17.4525 5.92522 17.3002C6.07759 17.1478 6.28426 17.0622 6.49974 17.0622H10.8331C11.0486 17.0622 11.2552 17.1478 11.4076 17.3002C11.56 17.4525 11.6456 17.6592 11.6456 17.8747C11.6456 18.0902 11.56 18.2968 11.4076 18.4492C11.2552 18.6016 11.0486 18.6872 10.8331 18.6872H6.49974C6.28426 18.6872 6.07759 18.6016 5.92522 18.4492C5.77285 18.2968 5.68724 18.0902 5.68724 17.8747Z" fill="black"/>
 </svg>
@@ -88,7 +88,7 @@
         <span>بطاقة العضوية</span>
     </a>
 
-    <a href="./signup.html" class="flex flex-col items-center justify-center text-[10px] font-medium text-gray-500 hover:text-[#0166B3] transition-colors">
+    <a href="../pages/signup.html" class="flex flex-col items-center justify-center text-[10px] font-medium text-gray-500 hover:text-[#0166B3] transition-colors">
       <svg class="mb-0.5 " width="27" height="27" viewBox="0 0 26 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_279_2098)">
 <path d="M5.2002 2.2666C6.81703 2.26671 8.13372 3.58295 8.13379 5.2002C8.13379 6.02047 7.794 6.76259 7.24902 7.2959L7.07422 7.4668H10.6953L13.1973 4.96484C13.3277 4.83441 13.5385 4.83441 13.6689 4.96484L14.9688 6.26465C15.0774 6.37327 15.0969 6.53979 15.0225 6.66797L14.9844 6.71973L11.9512 10.1865C11.8872 10.2587 11.7959 10.3007 11.7002 10.3008H8.13379V15.5713L8.13477 15.5801L9.8623 25.5098V25.5107C9.87908 25.6068 9.85192 25.7057 9.78906 25.7812C9.72534 25.8567 9.63156 25.9004 9.5332 25.9004H6.93359C6.7746 25.9004 6.63747 25.7886 6.60645 25.6328V25.6318L5.73145 21.2568L5.5332 21.2764V25.5674C5.53299 25.7511 5.38438 25.9003 5.2002 25.9004H2.59961C2.41551 25.9002 2.26681 25.751 2.2666 25.5674V16.3672H0.433594C0.249188 16.3672 0.0996094 16.2172 0.0996094 16.0332V10.4004C0.0996094 8.78306 1.4163 7.46687 3.0332 7.4668H3.32715L3.15137 7.2959C2.60599 6.7626 2.2666 6.02046 2.2666 5.2002C2.26667 3.58289 3.58327 2.2666 5.2002 2.2666ZM13.3623 5.74219L11.0693 8.03613H11.0684C11.0062 8.09846 10.9218 8.13379 10.833 8.13379H3.0332C1.78341 8.13386 0.766602 9.15058 0.766602 10.4004V15.7002H2.2666V10.5H2.93359V25.2334H4.86621V16.9004C4.86621 16.7291 4.99664 16.5855 5.16699 16.5684C5.33264 16.5503 5.4925 16.6665 5.52637 16.835L7.19043 25.1533L7.20703 25.2334H9.1377L9.11719 25.1162L7.47168 15.6572V15.6562L7.4668 15.6006V9.9668C7.4669 9.78299 7.61555 9.63389 7.7998 9.63379H11.5488L11.5781 9.59961L14.2158 6.58594L14.2773 6.51562L13.4336 5.67188L13.3623 5.74219ZM5.2002 2.93359C3.95038 2.93359 2.93366 3.9504 2.93359 5.2002C2.93359 6.45005 3.95034 7.4668 5.2002 7.4668C6.44996 7.46669 7.4668 6.44999 7.4668 5.2002C7.46673 3.95046 6.44992 2.9337 5.2002 2.93359Z" fill="#1B1A1A" stroke="black" stroke-width="0.2"/>
@@ -140,7 +140,7 @@
 
                 <div class="flex flex-row flex-nowrap gap-4 justify-start lg:justify-start ">
 
-                    <a href="new-register.html" class="w-[150px] flex items-center justify-center gap-1 px-3 py-3 rounded-full text-sm transition
+                    <a href="../pages/new-register.html" class="w-[150px] flex items-center justify-center gap-1 px-3 py-3 rounded-full text-sm transition
                         bg-sky-700 text-white hover:bg-blue-700 border-2 border-transparent
                         lg:bg-sky-700 lg:border-transparent lg:text-white lg:hover:bg-blue-700
                     ">
@@ -148,7 +148,7 @@
                         <i class="fas  fa-arrow-right text-sm rotate-225 block lg:hidden"></i>
                     </a>
 
-                    <a href="register-more-care.html" class="text-sm flex items-center justify-center gap-1 px-1.5 py-3 rounded-full font-semibold transition
+                    <a href="../pages/register-more-care.html" class="text-sm flex items-center justify-center gap-1 px-1.5 py-3 rounded-full font-semibold transition
                         bg-transparent text-white hover:bg-white hover:text-blue-900 border-2 border-white
                         lg:border-2 lg:border-white lg:bg-transparent lg:text-white lg:hover:bg-white lg:hover:text-blue-900
                     ">
@@ -160,7 +160,7 @@
 
             <div class="hidden lg:block lg:px-10 relative w-full h-96">
                 <a class="absolute -mb-20 bottom-0 left-5 flex flex-row justify-center p-5 items-center gap-3 w-[300px] h-[200px] bg-black/20 backdrop-blur-lg rounded-3xl border border-black/30">
-                    <img class="w-[120px] h-[120px]" src="./imgs/doc.png" alt="">
+                    <img class="w-[120px] h-[120px]" src="../imgs/doc.png" alt="">
                     <h3 class="text-[40px] font-bold">الدليل الطبي</h3>
                 </a>
             </div>
@@ -218,8 +218,8 @@
                     
                     <div class="flex-shrink-0 w-[150px] lg:w-auto p-4 bg-white lg:bg-transparent rounded-xl flex flex-col items-center lg:items-start text-center lg:text-right gap-2 shadow-md hover:shadow-xl lg:shadow-none lg:hover:shadow-md transition">
                         <div class="relative flex pb-2 lg:pb-5 w-full border-b-0 lg:border-b border-gray-300">
-                            <img src="./imgs/medicalcalendar.png" alt="" class="h-12 w-12 lg:w-auto lg:h-auto mx-auto lg:mx-0" />
-                                                        <img src="./imgs/approval2.png" alt="" class="md:hidden absolute z-1 h-20  -top-4 w-20 left-1/2 -translate-x-1/2 lg:w-auto lg:h-auto mx-auto lg:mx-0" />
+                            <img src="../imgs/medicalcalendar.png" alt="" class="h-12 w-12 lg:w-auto lg:h-auto mx-auto lg:mx-0" />
+                                                        <img src="../imgs/approval2.png" alt="" class="md:hidden absolute z-1 h-20  -top-4 w-20 left-1/2 -translate-x-1/2 lg:w-auto lg:h-auto mx-auto lg:mx-0" />
 
                         </div>
                         <h3 class="text-sm lg:text-xl font-bold px-2 lg:px-0">برنامج العلاج الشهري</h3>
@@ -228,8 +228,8 @@
 
                     <div class="flex-shrink-0 w-[150px] lg:w-auto p-4 bg-white lg:bg-transparent rounded-xl flex flex-col items-center lg:items-start text-center lg:text-right gap-2 shadow-md hover:shadow-xl lg:shadow-none lg:hover:shadow-md transition">
                         <div class="relative flex pb-2 w-full lg:pb-5 border-b-0 lg:border-b border-gray-300">
-                            <img src="./imgs/medicalapproval.svg" alt="" class=" z-2 h-12 w-12 lg:w-auto lg:h-auto mx-auto lg:mx-0" />
-                            <img src="./imgs/approval2.png" alt="" class="md:hidden absolute z-1 h-20  -top-4 w-20 left-1/2 -translate-x-1/2 lg:w-auto lg:h-auto mx-auto lg:mx-0" />
+                            <img src="../imgs/medicalapproval.svg" alt="" class=" z-2 h-12 w-12 lg:w-auto lg:h-auto mx-auto lg:mx-0" />
+                            <img src="../imgs/approval2.png" alt="" class="md:hidden absolute z-1 h-20  -top-4 w-20 left-1/2 -translate-x-1/2 lg:w-auto lg:h-auto mx-auto lg:mx-0" />
                         </div>
                         <h3 class="text-sm lg:text-xl font-bold px-2 lg:px-0">الموافقات الطبية</h3>
                         <h4 class="text-gray-600 text-xs lg:text-sm px-2 lg:px-0 hidden lg:block">طلب خطابات التحويل</h4>
@@ -237,8 +237,8 @@
 
                     <div class="flex-shrink-0 w-[150px] lg:w-auto p-4 bg-white lg:bg-transparent rounded-xl flex flex-col items-center lg:items-start text-center lg:text-right gap-2 shadow-md hover:shadow-xl lg:shadow-none lg:hover:shadow-md transition">
                         <div class="relative flex pb-2 w-full lg:pb-5 border-b-0 lg:border-b border-gray-300">
-                            <img src="./imgs/demands.svg" alt="" class="h-12 w-12 lg:w-auto lg:h-auto mx-auto lg:mx-0" />
-                                                        <img src="./imgs/approval2.png" alt="" class="md:hidden absolute z-1 h-20  -top-4 w-20 left-1/2 -translate-x-1/2 lg:w-auto lg:h-auto mx-auto lg:mx-0" />
+                            <img src="../imgs/demands.svg" alt="" class="h-12 w-12 lg:w-auto lg:h-auto mx-auto lg:mx-0" />
+                                                        <img src="../imgs/approval2.png" alt="" class="md:hidden absolute z-1 h-20  -top-4 w-20 left-1/2 -translate-x-1/2 lg:w-auto lg:h-auto mx-auto lg:mx-0" />
 
                         </div>
                         <h3 class="text-sm lg:text-xl font-bold px-2 lg:px-0">طلبات الاسترداد</h3>
@@ -247,8 +247,8 @@
 
                     <div class="flex-shrink-0 w-[150px] lg:w-auto p-4 bg-white lg:bg-transparent rounded-xl flex flex-col items-center lg:items-start text-center lg:text-right gap-2 shadow-md hover:shadow-xl lg:shadow-none lg:hover:shadow-md transition">
                         <div class="relative flex pb-2 lg:pb-5 w-full border-b-0 lg:border-b border-gray-300">
-                            <img src="./imgs/req.svg" alt="" class="h-12 w-12 lg:w-auto lg:h-auto mx-auto lg:mx-0" />
-                                                        <img src="./imgs/approval2.png" alt="" class="md:hidden absolute z-1 h-20  -top-4 w-20 left-1/2 -translate-x-1/2 lg:w-auto lg:h-auto mx-auto lg:mx-0" />
+                            <img src="../imgs/req.svg" alt="" class="h-12 w-12 lg:w-auto lg:h-auto mx-auto lg:mx-0" />
+                                                        <img src="../imgs/approval2.png" alt="" class="md:hidden absolute z-1 h-20  -top-4 w-20 left-1/2 -translate-x-1/2 lg:w-auto lg:h-auto mx-auto lg:mx-0" />
 
                         </div>
                         <h3 class="text-sm lg:text-xl font-bold px-2 lg:px-0">إدارة الاشتراكات</h3>
@@ -257,8 +257,8 @@
                     
                     <div class="flex-shrink-0 w-[150px] lg:w-auto p-4 bg-white lg:bg-transparent rounded-xl flex flex-col items-center lg:items-start text-center lg:text-right gap-2 shadow-md hover:shadow-xl lg:shadow-none lg:hover:shadow-md transition">
                         <div class="relative flex pb-2 w-full lg:pb-5 border-b-0 lg:border-b border-gray-300">
-                            <img src="./imgs/pepole.svg" alt="" class="h-12 w-12 lg:w-auto lg:h-auto mx-auto lg:mx-0" />
-                                                            <img src="./imgs/approval2.png" alt="" class="md:hidden absolute z-1 h-20  -top-4 w-20 left-1/2 -translate-x-1/2 lg:w-auto lg:h-auto mx-auto lg:mx-0" />
+                            <img src="../imgs/pepole.svg" alt="" class="h-12 w-12 lg:w-auto lg:h-auto mx-auto lg:mx-0" />
+                                                            <img src="../imgs/approval2.png" alt="" class="md:hidden absolute z-1 h-20  -top-4 w-20 left-1/2 -translate-x-1/2 lg:w-auto lg:h-auto mx-auto lg:mx-0" />
 
                         </div>
                         <h3 class="text-sm lg:text-xl font-bold px-2 lg:px-0">إضافة عضو تابع جديد</h3>
@@ -286,7 +286,7 @@
        
            <div class="relative text-white px-4 md:px-8 order-1 lg:order-1  text-right flex flex-col gap-5 lg:justify-between lg:h-[450px]">
             <div class="absolute inset-0 z-0   lg:block">
-                <img src="./imgs/Pattern.png" alt="" class="w-full h-full object-cover">
+                <img src="../imgs/Pattern.png" alt="" class="w-full h-full object-cover">
             </div>
             <h2 class="relative z-10 text-lg text-nowrap md:text-5xl  font-extrabold leading-tight  drop-shadow-lg">
                  اعثر على مقدم <br class="hidden lg:block">الخدمة الأقرب إليك 
@@ -294,7 +294,7 @@
             <p class="relative z-10 text-[10px] md:text-2xl leading-relaxed opacity-95 font-regular">
                 شبكة طبية متكاملة لتلبية احتياجاتك الصحية في أي وقت وأي مكان استخدم أداة البحث لاختيار الطبيب أو المستشفى الأنسب لك من ضمن شبكتنا
             </p>
-            <button class="relative z-10 bg-transparent border-2 border-white text-white lg:px-8 py-4 rounded-full font-bold text-sm hover:bg-white hover:text-blue-600 transition transform hover:-translate-y-1 hover:shadow-2xl flex items-center justify-center gap-3  ml-30 lg:mx-0">
+            <button class="relative z-10 bg-transparent border-2 border-white text-white w-75 lg:px-4 py-4 rounded-full font-bold text-sm hover:bg-white hover:text-blue-600 transition transform hover:-translate-y-1 hover:shadow-2xl flex items-center justify-center gap-3  ml-30 lg:mx-0">
                 <span>تحميل الدليل الطبي</span>
                 <i class="fas fa-download"></i>
             </button>
@@ -347,7 +347,7 @@
                     </div>
                 </div>
 
-                <a href="./referalexport.html"><button
+                <a href="../pages/referalexport.html"><button
                     type="button"
                     class="w-full font-cairo bg-gray-900 text-white py-4 rounded-full font-bold  hover:bg-gray-800 transition transform hover:-translate-y-0.5 hover:shadow-xl flex items-center justify-center gap-3 mt-6"
                 >
@@ -395,7 +395,7 @@
         <div class="flex lg:grid lg:grid-cols-4 gap-4 lg:gap-20 pb-4 offer-container-mobile overflow-x-auto">
             
             <div class="relative flex-shrink-0 w-[270px] h-[400px] lg:w-auto lg:h-[500px] rounded-2xl text-white overflow-hidden shadow-md">
-                <img class=" absolute inset-0 object-cover w-full h-full rounded-2xl" src="./imgs/offer1.png" alt="">
+                <img class=" absolute inset-0 object-cover w-full h-full rounded-2xl" src="../imgs/offer1.png" alt="">
                 <div class="absolute inset-0 bg-black/30 z-0 lg:hidden"></div>
                 <div class="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold z-10 hidden lg:block">
                     January 28, 2024
@@ -406,7 +406,7 @@
             </div>
             
             <div class="relative flex-shrink-0 w-[270px] h-[400px] lg:w-auto lg:h-[500px] rounded-2xl text-white overflow-hidden shadow-md">
-                <img class=" absolute inset-0 object-cover w-full h-full rounded-2xl" src="./imgs/offer2.png" alt="">
+                <img class=" absolute inset-0 object-cover w-full h-full rounded-2xl" src="../imgs/offer2.png" alt="">
                 <div class="absolute inset-0 bg-black/30 z-0 lg:hidden"></div>
                 
                 <div class="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold z-10 hidden lg:block">
@@ -418,7 +418,7 @@
             </div>
             
             <div class="relative flex-shrink-0 w-[270px] h-[400px] lg:w-auto lg:h-[500px] rounded-2xl text-white overflow-hidden shadow-md">
-                <img class=" absolute inset-0 object-cover w-full h-full rounded-2xl" src="./imgs/offer3.png" alt="">
+                <img class=" absolute inset-0 object-cover w-full h-full rounded-2xl" src="../imgs/offer3.png" alt="">
                 <div class="absolute inset-0 bg-black/30 z-0 lg:hidden"></div>
                 
                 <div class="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold z-10 hidden lg:block">
@@ -430,7 +430,7 @@
             </div>
             
             <div class="relative flex-shrink-0 w-[270px] h-[400px] lg:w-auto lg:h-[500px] rounded-2xl text-white overflow-hidden shadow-md">
-                <img class=" absolute inset-0 object-cover w-full h-full rounded-2xl" src="./imgs/offer4.png" alt="">
+                <img class=" absolute inset-0 object-cover w-full h-full rounded-2xl" src="../imgs/offer4.png" alt="">
                 <div class="absolute inset-0 bg-black/30 z-0 lg:hidden"></div>
                 
                 <div class="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold z-10 hidden lg:block">
@@ -477,28 +477,28 @@
                 <!-- Mobile version -->
                 <div class="bg-white rounded-lg shadow-lg p-3 flex flex-col items-center gap-2 group cursor-pointer min-w-[140px]  lg:hidden">
                     <div class="w-24 h-16 rounded-2xl overflow-hidden border-4 border-white/30 shadow-xl">
-                        <img src="./imgs/Rectv1.png" alt="فيديو 1" class="w-full h-full object-cover">
+                        <img src="../imgs/Rectv1.png" alt="فيديو 1" class="w-full h-full object-cover">
                     </div>
                     <p class="text-gray-900 text-sm font-bold text-center">كيفية التسجيل في المنصة</p>
                 </div>
 
                 <div class="bg-white rounded-lg shadow-lg p-3 flex flex-col items-center gap-2 group cursor-pointer min-w-[140px] lg:hidden">
                     <div class="w-24 h-16 rounded-2xl overflow-hidden border-4 border-white/30 shadow-xl">
-                        <img src="./imgs/Rectv2.png" alt="فيديو 2" class="w-full h-full object-cover">
+                        <img src="../imgs/Rectv2.png" alt="فيديو 2" class="w-full h-full object-cover">
                     </div>
                     <p class="text-gray-900 text-sm font-bold text-center">البحث عن مقدمي الخدمة</p>
                 </div>
 
                 <div class="bg-white rounded-lg shadow-lg p-3 flex flex-col items-center gap-2 group cursor-pointer min-w-[140px] lg:hidden">
                     <div class="w-24 h-16 rounded-2xl overflow-hidden border-4 border-white/30 shadow-xl">
-                        <img src="./imgs/Rectv3.png" alt="فيديو 3" class="w-full h-full object-cover">
+                        <img src="../imgs/Rectv3.png" alt="فيديو 3" class="w-full h-full object-cover">
                     </div>
                     <p class="text-gray-900 text-sm font-bold text-center">حجز موعد طبي أونلاين</p>
                 </div>
 
                 <div class="bg-white rounded-lg shadow-lg p-3 flex flex-col items-center gap-2 group cursor-pointer min-w-[140px] lg:hidden">
                     <div class="w-24 h-16 rounded-2xl overflow-hidden border-4 border-white/30 shadow-xl">
-                        <img src="./imgs/Rectv4.png" alt="فيديو 4" class="w-full h-full object-cover">
+                        <img src="../imgs/Rectv4.png" alt="فيديو 4" class="w-full h-full object-cover">
                     </div>
                     <p class="text-gray-900 text-sm font-bold text-center">إدارة الاشتراكات والمدفوعات</p>
                 </div>
@@ -506,7 +506,7 @@
                 <!-- Desktop version -->
                 <div class="hidden lg:relative lg:flex lg:items-center lg:gap-2 lg:group lg:cursor-pointer" onmouseover="showVideoTitle(1)" onmouseout="hideVideoTitle(1)">
                     <div class="w-20 h-[60px] rounded-2xl overflow-hidden border-4 border-white/30 shadow-xl">
-                        <img src="./imgs/Rectv1.png" alt="فيديو 1" class="w-full h-full object-cover">
+                        <img src="../imgs/Rectv1.png" alt="فيديو 1" class="w-full h-full object-cover">
                     </div>
                     <div id="video-title-1" class="hidden absolute left-20 top-1/2 transform -translate-y-1/2 bg-white text-gray-800 px-4 py-2 rounded-lg shadow-lg whitespace-nowrap">
                         <p class="font-bold text-sm">كيفية التسجيل في المنصة</p>
@@ -515,7 +515,7 @@
 
                 <div class="hidden lg:relative lg:flex lg:items-center lg:gap-2 lg:group lg:cursor-pointer" onmouseover="showVideoTitle(2)" onmouseout="hideVideoTitle(2)">
                     <div class="w-20 h-[60px] rounded-2xl overflow-hidden border-4 border-white/30 shadow-xl">
-                        <img src="./imgs/Rectv2.png" alt="فيديو 2" class="w-full h-full object-cover">
+                        <img src="../imgs/Rectv2.png" alt="فيديو 2" class="w-full h-full object-cover">
                     </div>
                     <div id="video-title-2" class="hidden absolute left-20 top-1/2 transform -translate-y-1/2 bg-white text-gray-800 px-4 py-2 rounded-lg shadow-lg whitespace-nowrap">
                         <p class="font-bold text-sm">البحث عن مقدمي الخدمة</p>
@@ -524,7 +524,7 @@
 
                 <div class="hidden lg:relative lg:flex lg:items-center lg:gap-2 lg:group lg:cursor-pointer" onmouseover="showVideoTitle(3)" onmouseout="hideVideoTitle(3)">
                     <div class="w-20 h-[60px] rounded-2xl overflow-hidden border-4 border-white/30 shadow-xl">
-                        <img src="./imgs/Rectv3.png" alt="فيديو 3" class="w-full h-full object-cover">
+                        <img src="../imgs/Rectv3.png" alt="فيديو 3" class="w-full h-full object-cover">
                     </div>
                     <div id="video-title-3" class="hidden absolute left-20 top-1/2 transform -translate-y-1/2 bg-white text-gray-800 px-4 py-2 rounded-lg shadow-lg whitespace-nowrap">
                         <p class="font-bold text-sm">حجز موعد طبي أونلاين</p>
@@ -533,7 +533,7 @@
 
                 <div class="hidden lg:relative lg:flex lg:items-center lg:gap-2 lg:group lg:cursor-pointer" onmouseover="showVideoTitle(4)" onmouseout="hideVideoTitle(4)">
                     <div class="w-20 h-[60px] rounded-2xl overflow-hidden border-4 border-white/30 shadow-xl">
-                        <img src="./imgs/Rectv4.png" alt="فيديو 4" class="w-full h-full object-cover">
+                        <img src="../imgs/Rectv4.png" alt="فيديو 4" class="w-full h-full object-cover">
                     </div>
                     <div id="video-title-4" class="hidden absolute left-20 top-1/2 transform -translate-y-1/2 bg-white text-gray-800 px-4 py-2 rounded-lg shadow-lg whitespace-nowrap">
                         <p class="font-bold text-sm">إدارة الاشتراكات والمدفوعات</p>
@@ -571,7 +571,7 @@
                 </div>
                 <!-- img and description  -->
                             <div class="relative w-full h-40">
-                                <img src="./imgs/branch.png" alt="صورة الفرع" class="w-full h-full object-cover">
+                                <img src="../imgs/branch.png" alt="صورة الفرع" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                                 <div class="absolute bottom-3 right-3 text-white text-right">
                                     <p class="text-sm font-bold">91 أ ش محمد حسين هيكل - المنطقة</p>
@@ -597,7 +597,7 @@
                         <div class="relative flex-shrink-0 w-[270px] lg:w-auto bg-white h-auto rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 font-cairo" style="direction: rtl;">
                           <!-- img and description  -->
                             <div class="relative w-full h-40">
-                                <img src="./imgs/branch.png" alt="صورة الفرع" class="w-full h-full object-cover">
+                                <img src="../imgs/branch.png" alt="صورة الفرع" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                                 <div class="absolute bottom-3 right-3 text-white text-right">
                                     <p class="text-sm font-bold">91 أ ش محمد حسين هيكل - المنطقة</p>
@@ -623,7 +623,7 @@
                         <div class="relative flex-shrink-0 w-[270px] lg:w-auto bg-white h-auto rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 font-cairo" style="direction: rtl;">
                           <!-- img and description  -->
                             <div class="relative w-full h-40">
-                                <img src="./imgs/branch.png" alt="صورة الفرع" class="w-full h-full object-cover">
+                                <img src="../imgs/branch.png" alt="صورة الفرع" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                                 <div class="absolute bottom-3 right-3 text-white text-right">
                                     <p class="text-sm font-bold">91 أ ش محمد حسين هيكل - المنطقة</p>
@@ -649,7 +649,7 @@
                         <div class="relative flex-shrink-0 w-[270px] lg:w-auto bg-white h-auto rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 font-cairo" style="direction: rtl;">
                           <!-- img and description  -->
                             <div class="relative w-full h-40">
-                                <img src="./imgs/branch.png" alt="صورة الفرع" class="w-full h-full object-cover">
+                                <img src="../imgs/branch.png" alt="صورة الفرع" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                                 <div class="absolute bottom-3 right-3 text-white text-right">
                                     <p class="text-sm font-bold">91 أ ش محمد حسين هيكل - المنطقة</p>
@@ -681,12 +681,12 @@
     <section class="pb-20 lg:bg-white border-t border-gray-200 pt-5 lg:mt-0">
         <div class="container mx-auto px-4">
             <div class="flex justify-center items-center gap-3 md:gap-16 flex-wrap lg:flex-nowrap opacity-60 grayscale hover:grayscale-0 transition duration-500 overflow-x-auto lg:overflow-visible">
-                <img src="./imgs/bayern.png" alt="Bayern" class="h-4 lg:h-10 object-contain flex-shrink-0">
-                <img src="./imgs/evolved.png" alt="Evolved" class="h-4 lg:h-10 object-contain flex-shrink-0">
-                <img src="./imgs/woloves.png" alt="WOLVES" class="h-4 lg:h-10 object-contain flex-shrink-0">
-                <img src="./imgs/sauter.png" alt="SAUTER" class="h-4 lg:h-10 object-contain flex-shrink-0">
-                <img src="./imgs/acrevis.png" alt="acrevis" class="h-4 lg:h-10 object-contain flex-shrink-0">
-                <img src="./imgs/smartic.png" alt="SMATRIC" class="h-4 lg:h-10 object-contain flex-shrink-0">
+                <img src="../imgs/bayern.png" alt="Bayern" class="h-4 lg:h-10 object-contain flex-shrink-0">
+                <img src="../imgs/evolved.png" alt="Evolved" class="h-4 lg:h-10 object-contain flex-shrink-0">
+                <img src="../imgs/woloves.png" alt="WOLVES" class="h-4 lg:h-10 object-contain flex-shrink-0">
+                <img src="../imgs/sauter.png" alt="SAUTER" class="h-4 lg:h-10 object-contain flex-shrink-0">
+                <img src="../imgs/acrevis.png" alt="acrevis" class="h-4 lg:h-10 object-contain flex-shrink-0">
+                <img src="../imgs/smartic.png" alt="SMATRIC" class="h-4 lg:h-10 object-contain flex-shrink-0">
             </div>
         </div>
     </section>
@@ -732,7 +732,7 @@
         <div class="lg:col-span-1">
           <!-- Logo -->
           <div class="flex items-center gap-3 mb-6">
-            <img class="w-[120px] h-[65px]" src="./imgs/logo.png" alt="">
+            <img class="w-[120px] h-[65px]" src="../imgs/logo.png" alt="">
           </div>
 
           <!-- Description -->
@@ -885,10 +885,10 @@
       </div>
     </div>
   </footer>
-    <script src="./background.js"></script>
-    <script src="./map.js"></script>
-    <script src="./forms.js"></script>
-    <script src="./ui.js"></script>
+    <script src="../js/background.js"></script>
+    <script src="../js/map.js"></script>
+    <script src="../js/forms.js"></script>
+    <script src="../js/ui.js"></script>
 
 </body>
 

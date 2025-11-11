@@ -55,28 +55,28 @@ function initMap() {
             address: "شقة 805 - الدقي - القاهرة",
             phone: "02-26793013",
             coords: [30.0378, 31.2108], // الدقي
-            img: "./imgs/branch.png"
+            img: "../imgs/branch.png"
         },
         {
             name: "9 أ في مجمع حسن فتحي",
             address: "المنطقة السادسة - مدينة نصر",
             phone: "02-26711055",
             coords: [30.0594, 31.3362], // مدينة نصر
-            img: "./imgs/branch.png"
+            img: "../imgs/branch.png"
         },
         {
             name: "30 شارع شريف - وسط البلد",
             address: "بناية تجاريين القاهرة",
             phone: "02-25768490",
             coords: [30.0499, 31.2381], // وسط البلد
-            img: "./imgs/branch.png"
+            img: "../imgs/branch.png"
         },
         {
             name: "29 امتداد رمسيس - العباسية",
             address: "النقابة العامة للتجاريين",
             phone: "02-26784900",
             coords: [30.0715, 31.2805], // العباسية
-            img: "./imgs/branch.png"
+            img: "../imgs/branch.png"
         },
     ];
 
@@ -271,28 +271,28 @@ function initMap() {
             address: "شقة 805 - الدقي - القاهرة",
             phone: "02-26793013",
             coords: [30.0378, 31.2108], // الدقي
-            img: "./imgs/branch.png"
+            img: "../imgs/branch.png"
         },
         {
             name: "9 أ في مجمع حسن فتحي",
             address: "المنطقة السادسة - مدينة نصر",
             phone: "02-26711055",
             coords: [30.0594, 31.3362], // مدينة نصر
-            img: "./imgs/branch.png"
+            img: "../imgs/branch.png"
         },
         {
             name: "30 شارع شريف - وسط البلد",
             address: "بناية تجاريين القاهرة",
             phone: "02-25768490",
             coords: [30.0499, 31.2381], // وسط البلد
-            img: "./imgs/branch.png"
+            img: "../imgs/branch.png"
         },
         {
             name: "29 امتداد رمسيس - العباسية",
             address: "النقابة العامة للتجاريين",
             phone: "02-26784900",
             coords: [30.0715, 31.2805], // العباسية
-            img: "./imgs/branch.png"
+            img: "../imgs/branch.png"
         },
     ];
 

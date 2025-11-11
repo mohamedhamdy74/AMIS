@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-    <link rel="stylesheet" href="./src/output.css">
-    <title>تأكيد الاشتراك - أميس رعاية أكتر</title>
-    <meta name="description" content="تأكيد بيانات الاشتراك في برنامج أميس رعاية أكتر - مراجعة البيانات والدفع والتأكيد النهائي">
+    <link rel="stylesheet" href="../src/output.css">
+    <title>تأكيد الاشتراك - البرنامج المخفض</title>
+    <meta name="description" content="تأكيد بيانات الاشتراك في البرنامج المخفض - مراجعة البيانات والدفع والتأكيد النهائي">
 </head>
 
 <body class="font-cairo text-gray-800">
@@ -16,16 +16,16 @@
 
     <div class="bg-white  backdrop-blur-md rounded-full shadow-lg py-5 px-8   flex items-center justify-between gap-4 ">
       <div class="flex items-center gap-8">
-        <img src="./imgs/cldlogo.png" alt="AMHS Logo" class="h-10" />
+        <img src="../imgs/cldlogo.png" alt="AMHS Logo" class="h-10" />
         <nav class="hidden md:flex gap-6 text-sm font-bold">
-          <a href="index.html"
+          <a href="./index.html"
             class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition ">الرئيسية</a>
-          <a href="new-register.html"
+          <a href="./new-register.html"
             class=" hover:text-[#0166B3] flex items-center gap-1 border-b-2 border-transparent hover:border-[#1B2128] transition flex-row-reverse">
             <i class="fas fa-arrow-up rotate-45 text-gray-300  text-xs"></i>
             خدمات أونلاين
           </a>
-          <a href="membershipdetails.html"
+          <a href="./membershipdetails.html"
             class=" hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition">بطاقة العضوية
             الرقمية</a>
           <a href="./signup.html"
@@ -40,7 +40,7 @@
       <div class="relative flex gap-3 items-center">
         <a href="./referal-sign-up.html">
         <button
-          class="btn-primary">
+          class="bg-[#0166B3] text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition flex items-center gap-2">
           اشترك الآن
            <i class="fas fa-arrow-right rotate-225 "></i>
         </button>
@@ -62,7 +62,7 @@
 
     <!-- hero section تحت الـ navbar -->
     <section class="relative w-full flex items-center justify-center hidden md:flex"
-        style="background-image: url('./imgs/Inner_Header.png'); background-size: cover; background-position: center; max-width:1600px; margin: 0 auto;">
+        style="background-image: url('../imgs/Inner_Header.png'); background-size: cover; background-position: center; max-width:1600px; margin: 0 auto;">
         <div class="w-full h-[300px] relative flex items-center justify-center">
             <!-- overlay -->
             <div class="absolute inset-0 bg-black/30"></div>
@@ -75,8 +75,16 @@
             </div>
         </div>
     </section>
+  
 
-    <main dir="rtl" class="bg-white min-h-screen py-10 px-6 container mx-auto text-nowrap">
+    <main dir="rtl" class="bg-white min-h-screen px-2 py-3 md:py-10 md:px-6 container mx-auto text-nowrap">
+        <!-- mobile header   -->
+        <p class="section-title-mobile">
+            <span class="section-title-mobile-icon">
+                <i class="section-title-mobile-icon-i fa-solid fa-arrow-right"></i>
+            </span>
+            البرنامج المخفّض
+        </p>
         <!-- البرنامج المخفض -  اشتراك جديد -->
         <div class="text-right mb-8 hidden md:block">
 
@@ -85,11 +93,11 @@
                 <span class="breadcrumb-text">اشتراك جديد</span>
                 <i class="fa-solid fa-arrow-left breadcrumb-arrow"></i>
             </p>
-            <h1 class="section-title">أميس رعاية أكتر</h1>
+            <h1 class="section-title">البرنامج المخفض</h1>
 
         </div>
         <!-- Progress Steps -->
-        <div class="flex justify-center mb-8 px-2">
+        <div class="hidden md:flex justify-center mb-8 px-2">
 
             <nav
                 class="flex items-center justify-center gap-1 xs:gap-2 sm:gap-4 md:gap-8 lg:gap-12 max-w-[400px] sm:max-w-full">
@@ -135,12 +143,13 @@
         </div>
 
         <!-- Header Row -->
-        <div class="flex items-center justify-between mb-6 font-bukra">
-            <h2 class=" text-2xl font-semibold text-[#0166B3] "> بيانات العضوية الاساسية</h2>
+        <div class="flex items-center justify-between mb-4 font-bukra">
+            <h2 class="text-[12px] font-bold  md:text-2xl md:font-semibold md:text-[#0166B3] "> بيانات العضوية الاساسية</h2>
         </div>
 
+
         <!-- بيانات العضو -->
-        <div class="youssef text-[10px] md:text-sm shadow-md rounded-xl border border-gray-200 p-6 bg-white font-bukra">
+        <div class="youssef text-[10px] md:text-sm md:shadow-md rounded-xl md:border border-gray-200 md:p-6 bg-white font-bukra">
 
             <div class=" overflow-hidden mb-8">
 
@@ -201,7 +210,7 @@
 
 
 
-        <form class="mt-8 font-bukra ">
+        <form class="mt-8 md:font-bukra ">
             <!-- Right Side - Form Fields -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
                 <!-- Main Form Area (9 columns) -->
@@ -327,13 +336,15 @@
                 <!-- Modal Header -->
                 <div class="flex items-center justify-between p-4 border-b border-gray-200">
                     <div class="flex items-center gap-2">
-                        <button onclick="closeInvoiceModal()" class="p-2 border border-gray-300 rounded-full hover:bg-gray-50 transition">
+                        <button onclick="closeInvoiceModal()" class="p-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition">
                             <i class="fas fa-arrow-right text-gray-600"></i>
                         </button>
                     </div>
                     <span class="text-gray-400 font-medium">بيانات الفاتورة</span>
-                    <button onclick="shareInvoice()" class="p-2 border border-gray-300 rounded-full hover:bg-gray-50 transition">
-                        <i class="fas fa-share text-gray-600"></i>
+                    <button onclick="shareInvoice()"  class="p-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition">
+                        <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.34 12.26L13.17 16.24M13.16 5.26L6.34 9.24M18.75 3.75C18.75 5.40685 17.4069 6.75 15.75 6.75C14.0931 6.75 12.75 5.40685 12.75 3.75C12.75 2.09315 14.0931 0.75 15.75 0.75C17.4069 0.75 18.75 2.09315 18.75 3.75ZM6.75 10.75C6.75 12.4069 5.40685 13.75 3.75 13.75C2.09315 13.75 0.75 12.4069 0.75 10.75C0.75 9.09315 2.09315 7.75 3.75 7.75C5.40685 7.75 6.75 9.09315 6.75 10.75ZM18.75 17.75C18.75 19.4069 17.4069 20.75 15.75 20.75C14.0931 20.75 12.75 19.4069 12.75 17.75C12.75 16.0931 14.0931 14.75 15.75 14.75C17.4069 14.75 18.75 16.0931 18.75 17.75Z" stroke="#070815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
                     </button>
                 </div>
 
@@ -379,8 +390,8 @@
                       <div class="border border-gray-200 text-[10px] rounded-lg overflow-hidden mb-8">
                         <table class="w-full text-right  ">
                           <thead class=" text-[#0166B3]">
-                            <tr class="border-b border-gray-300 border-dashed ">
-                              <th class="py-3 col-span-2 px-4 font-semibold  w-full">البيان</th>
+                            <tr  class="border-b-2 border-gray-300 border-dashed ">
+                              <th class="py-3 col-span-2 px-4 font-semibold  w-full" >البيان</th>
                               <!-- <th class="py-3 px-4 font-semibold"> </th> -->
                             </tr>
                           </thead>
@@ -393,7 +404,7 @@
                               <td class="py-3 px-4 text-gray-500">عضو تابعي (<span class=" font-normal"> محمد علي </span>)</td>
                               <td class="py-3 px-4 text-nowrap">300.38 جم</td>
                             </tr>
-                            <tr class="font-bold border-b border-gray-300 border-dashed ">
+                            <tr class="font-bold border-b-2 border-gray-300 border-dashed ">
                               <td class="py-3 px-4 text-gray-500">مصاريف التوصيل</td>
                               <td class="py-3 px-4 text-nowrap">0.00 جم</td>
                             </tr>
@@ -408,7 +419,7 @@
                         <hr class="border-t border-gray-300 mb-8">
                       <!-- معلومات الفاتورة -->
                       <div class="grid grid-col-1 gap-4 text-gray-800 mb-10 border border-gray-300 rounded-lg p-3">
-                        <h3 class="border-b border-gray-300 border-dashed text-[#0166B3] pb-3">تفاصيل الفاتورة</h3>
+                        <h3 class="border-b-2 border-gray-300 border-dashed text-[#0166B3] pb-3">تفاصيل الفاتورة</h3>
                         <div class="flex items-center justify-between">
                           <p class="font-bold">رقم الفاتورة</p>
                           <p class="font-medium text-gray-500">890425191156932</p>
@@ -463,9 +474,9 @@
           </button>
         </div>
         <div>
-          <h2 class="text-xl font-semibold text-right relative bottom-8">
+          <h1 class="text-xl font-semibold text-right relative bottom-8">
             هل ترغب في متابعة العروض؟
-          </h2>
+          </h1>
         </div>
       </div>
       <div
@@ -480,7 +491,7 @@
         <div class="lg:col-span-1">
           <!-- Logo -->
           <div class="flex items-center gap-3 mb-6">
-            <img class="w-[120px] h-[65px]" src="./imgs/logo.png" alt="">
+            <img class="w-[120px] h-[65px]" src="../imgs/logo.png" alt="">
           </div>
 
           <!-- Description -->
@@ -634,6 +645,7 @@
     </div>
   </footer>
 
+<script src="../js/ui.js"></script>
 </body>
 
 </html>

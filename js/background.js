@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Array of background images
     const images = [
-        './imgs/homeimg.png',
-        './imgs/homepage2.jpg', // Add more images as needed
+        '../imgs/homeimg.png',
+        '../imgs/homepage2.jpg', // Add more images as needed
     ];
 
     let currentIndex = 0;
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function nextSlide() {
     const heroSection = document.querySelector('.hero-slider');
     if (heroSection) {
-        const images = ['./imgs/homeimg.png', './imgs/homepage2.jpg'];
+        const images = ['../imgs/homeimg.png', '../imgs/homepage2.jpg'];
         let currentIndex = 0;
         currentIndex = (currentIndex + 1) % images.length;
         heroSection.style.backgroundImage = `url('${images[currentIndex]}')`;
@@ -82,7 +82,7 @@ function nextSlide() {
 function prevSlide() {
     const heroSection = document.querySelector('.hero-slider');
     if (heroSection) {
-        const images = ['./imgs/homeimg.png', './imgs/homepage2.jpg'];
+        const images = ['../imgs/homeimg.png', '../imgs/homepage2.jpg'];
         let currentIndex = 0;
         currentIndex = (currentIndex - 1 + images.length) % images.length;
         heroSection.style.backgroundImage = `url('${images[currentIndex]}')`;

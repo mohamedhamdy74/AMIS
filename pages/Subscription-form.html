@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./src/output.css">
-   
-    <title>استمارة الاشتراك - أميس رعاية أكتر</title>
-    <meta name="description" content="استمارة الاشتراك في برنامج أميس رعاية أكتر - أدخل بياناتك الشخصية واستكمل عملية الاشتراك">
+    <link rel="stylesheet" href="../src/output.css">
+    
+    <title>استمارة الاشتراك - البرنامج المخفض</title>
+    <meta name="description" content="استمارة الاشتراك في البرنامج المخفض - أدخل بياناتك الشخصية واستكمل عملية الاشتراك">
 </head>
 
 <body class="bg-white font-cairo text-gray-800">
@@ -17,7 +17,7 @@
 
     <div class="bg-white  backdrop-blur-md rounded-full shadow-lg py-5 px-8   flex items-center justify-between gap-4 ">
       <div class="flex items-center gap-8">
-        <img src="./imgs/cldlogo.png" alt="AMHS Logo" class="h-10" />
+        <img src="../imgs/cldlogo.png" alt="AMHS Logo" class="h-10" />
         <nav class="hidden md:flex gap-6 text-sm font-bold">
           <a href="index.html"
             class="hover:text-[#0166B3] border-b-2 border-transparent hover:border-[#1B2128] transition ">الرئيسية</a>
@@ -62,7 +62,7 @@
 
     <!-- hero section تحت الـ navbar -->
     <section class="relative w-full flex items-center justify-center hidden md:flex"
-        style="background-image: url('./imgs/Inner_Header.png'); background-size: cover; background-position: center; max-width:1600px; margin: 0 auto;">
+        style="background-image: url('../imgs/Inner_Header.png'); background-size: cover; background-position: center; max-width:1600px; margin: 0 auto;">
         <div class="w-full h-[300px] relative flex items-center justify-center">
             <!-- overlay -->
             <div class="absolute inset-0 bg-black/30"></div>
@@ -87,18 +87,18 @@
             <span class="text-[#0166B3]">اشتراك جديد</span>
             <i class="fa-solid fa-arrow-left text-[#0166B3]"></i>
         </p>
-        <h1 class="text-2xl font-bold text-[#1B2128] font-cairo">أميس رعاية أكتر</h1>
+        <h1 class="text-2xl font-bold text-[#1B2128] font-cairo">البرنامج المخفّض</h1>
 
     </div>
 
     
-    <div class="container  mx-auto px-5   py-8">
+    <div class="container  mx-auto px-6 py-8">
 
         <p class="text-xl font-medium text-[#000000] block md:hidden flex items-center gap-2 mr-3 mb-7">
             <span class="w-8 h-8 border border-gray-300 rounded-md flex items-center justify-center bg-transparent">
                 <i class="fa-solid fa-arrow-right text[#000000] text-lg"></i>
             </span>
-             أميس رعاية أكتر
+            البرنامج المخفّض
         </p>
 
         <div class="flex justify-center mb-8 px-2">
@@ -163,11 +163,20 @@
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
                     <!-- Main Form Area (9 columns) -->
                     <div class="lg:col-span-12 space-y-4 font-bukra">
-                    
+                        <!-- الاسم بالعربي -->
+                        <div class="font-bukra">
 
-                        <!--  اسم العضو الاساسي -->
-                        <div>
-                            <label class="block text-sm  text-gray-700 mb-2">أسم العضو الأساسي <span
+                            <label class="font-cairo block text-lg font-bold text-[#1B2128] mb-2">بيانات العضوية </label>
+                            <label class="font-bukra block text-sm font-semibold text-[#1B2128] mb-2">نوع مقدم الطلب</label>
+                            <input type="text" placeholder="نوع مقدم الطلب"
+                                class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-sm"
+                                style="color: rgb(143, 136, 136); opacity: 1;" onfocus="this.placeholder='';"
+                                onblur="this.placeholder='نوع مقدم الطلب';" />
+                        </div>
+
+                        <!-- الاسم بالانجليزي -->
+                        <div class="font-bukra">
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">أسم العضو الأساسي <span
                                     class="text-[#B50644]">*</span></label>
                             <input type="text" placeholder="  أسم العضو الأساسي"
                                 class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-sm"
@@ -176,11 +185,31 @@
 
                         </div>
 
-
-
-                        <!-- الرقم القومي -->
+                        <!-- رقم الهوية -->
                         <div>
-                            <label class="block text-sm  text-gray-700 mb-2"> الرقم القومي <span
+                            <label class="block text-sm font-semibold text-gray-700 mb-2"> اختيار النقابة التابع لها
+                                <span class="text-[#B50644]">*</span></label>
+                            <input type="text" placeholder="برجاء اختيار النقابة "
+                                class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-sm"
+                                style="color: rgb(143, 136, 136); opacity: 1;" onfocus="this.placeholder='';"
+                                onblur="this.placeholder=' برجاء اختيار النقابة ';" />
+                        </div>
+
+                        <!-- الجنسية -->
+                        <div class="font-bukra">
+                            <label class="block text-sm font-semibold text-gray-700 mb-2"> رقم عضوية النقابة <span
+                                    class="text-[#B50644]">*</span></label>
+                            <input type="text" placeholder="رقم عضوية النقابة"
+                                class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-sm"
+                                style="color: rgb(143, 136, 136); opacity: 1;" onfocus="this.placeholder='';"
+                                onblur="this.placeholder=' برجاء اختيار النقابة ';" />
+
+                        </div>
+
+                        <!-- النوع -->
+                        <div class="font-bukra">
+                            <label class="font-cairo block text-lg font-bold text[#000000] mb-2">البيانات الشخصية </label>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2"> الرقم القومي <span
                                     class="text-[#B50644]">*</span></label>
                             <input type="text" placeholder="رقم الهاتف  "
                                 class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-sm"
@@ -189,9 +218,9 @@
 
                         </div>
 
-                        <!-- العنوان -->
+                        <!-- رقم الجوال -->
                         <div>
-                            <label class="block text-sm  text-gray-700 mb-2"> العنوان <span
+                            <label class="block text-sm font-semibold text-gray-700 mb-2"> العنوان <span
                                     class="text-[#B50644]">*</span></label>
                             <input type="text" placeholder="  أسم العضو الأساسي"
                                 class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-sm"
@@ -199,10 +228,10 @@
                                 onblur="this.placeholder=' برجاء اختيار النقابة ';" />
 
                         </div>
-                                                  
-                        <!-- رقم الهاتف  -->
+
+
                         <div>
-                            <label class="block text-sm  text-gray-700 mb-2"> رقم الهاتف <span
+                            <label class="block text-sm font-semibold text-gray-700 mb-2"> رقم الهاتف <span
                                     class="text-[#B50644]">*</span></label>
                             <input type="text" placeholder="رقم الهاتف"
                                 class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-sm"
@@ -212,33 +241,11 @@
 
                     <!-- البريد الالكتروني  -->
                     <div>
-                        <label class="block text-sm  text-gray-700 mb-2"> البريد الالكنروني</label>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2"> البريد الالكنروني</label>
                         <input type="text" placeholder="البريد الإلكتروني "
                             class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-sm" style="color: rgb(143, 136, 136); opacity: 1;" onfocus="this.placeholder='';" onblur="this.placeholder=' برجاء اختيار النقابة ';" />
                     </div>
-                    <!-- الجنسية  -->
-                      <div>
-                            <label class="block text-sm  text-gray-700 mb-2"> الجنسية <span
-                                    class="text-[#B50644]">*</span></label>
-                            <input type="text" placeholder="رقم الهاتف"
-                                class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-sm"
-                                style="color: rgb(143, 136, 136); opacity: 1;" onfocus="this.placeholder='';"
-                                onblur="this.placeholder=' برجاء اختيار النقابة ';" />
-                        </div>
-                    <!-- المحافظة  -->
-                      <div>
-                            <label class="block text-sm  text-gray-700 mb-2">اختيار المحافظ التابع لها<span
-                                    class="text-[#B50644]">*</span></label>
-                            <select type="text" placeholder="رقم الهاتف"
-                                class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0166B3] focus:border-transparent text-sm"
-                                style="color: rgb(143, 136, 136); opacity: 1;" onfocus="this.placeholder='';"
-                                onblur="this.placeholder=' برجاء اختيار النقابة ';" >
-                            <option value="Aswan">Aswan</option>
-                            <option value="Aswan">Aswan</option>
-                            <option value="Aswan">Aswan</option>
-                            <option value="Aswan">Aswan</option>
-                            </select>
-                        </div>
+
                     <!-- File Uploads -->
                     <div class="space-y-4 pt-4">
                         <!-- Upload 1 -->
@@ -300,6 +307,35 @@
                             </label>
                         </div>
 
+                        <!-- Upload 3 -->
+                        <div>
+                            <h3>
+                                مستندات اثبات صلة القرابة<span class="text-[#B50644]">*</span>
+                            </h3>
+                        </div>
+                        <div style="border-style: dotted;"
+                            class="border-2 border-dotted border-[#0166B3] rounded-lg p-4 hover:border-[#0166B3] transition-colors">
+                            <label class="flex items-center justify-between cursor-pointer">
+                                <div class="flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="#0166B3" class="w-8 h-8">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M9 12h6m-3-3v6m3 9H6a2.25 2.25 0 01-2.25-2.25V4.5A2.25 2.25 0 016 2.25h7.5L18 6.75V21a2.25 2.25 0 01-2.25 2.25z" />
+                                    </svg>
+
+                                    <div>
+                                        <p class="text-sm text-gray-600">
+                                            سحب وادراج الملف هنا او <span class="text-[#0166B3]">اختار ملف </span> (يمكن
+                                            ارفاق اكثر من ملف) </p>
+                                        <p class="text-xs text-gray-400 mt-0.5">
+                                            الحد الأقصى لحجم الملف 2 ميجا، صيغة الملف (jpg, png, jpeg)
+                                        </p>
+                                    </div>
+                                </div>
+                                <input type="file" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
+
+                            </label>
+                        </div>
                     </div>
                     </div>
 
@@ -310,11 +346,11 @@
                     class="hidden md:flex flex-row justify-between items-center gap-4 pt-8 mt-8 border-t-2 border-gray-200">
 
                     <!-- Left Buttons -->
-                    <div class="flex items-center gap-3 order-1">
-                        <a href="./membershipdetails-mc.html"><button type="button"
+                    <div class="flex gap-3 order-1">
+                        <a href="./membershipdetails.html"><button type="button"
                             class="px-8 py-3 bg-[#0166B3] text-white rounded-full font-semibold hover:bg-[#0152a3] transition-colors">
                             حفظ ومتابعة
-                        </button></a>   
+                        </button></a>
 
                         <button type="button"
                             class="px-8 py-3 border-2 border-[#0166B3] text-[#0166B3] rounded-full font-semibold hover:bg-[#0166B3] hover:text-white transition-all">
@@ -337,11 +373,11 @@
   <div class="flex gap-3 justify-start w-full">
     <button type="button"
       class="flex-1 px-4 py-2 bg-[#0166B3] text-white rounded-full font-semibold hover:bg-[#0152a3] transition-colors">
-     <a href="./membershipdetails-mc.html">حفظ ومتابعة</a>
+     <a href="./membershipdetails.html">حفظ ومتابعة</a>
     </button>
 
     <button type="button" id="addDependentMobile" onclick="openModal()"
-      class=" flex-1 px-4 py-2 border-2 border-[#0166B3] text-[#0166B3] rounded-full font-semibold hover:bg-[#0166B3] hover:text-white transition-all">
+      class="md:hidden flex-1 px-4 py-2 border-2 border-[#0166B3] text-[#0166B3] rounded-full font-semibold hover:bg-[#0166B3] hover:text-white transition-all">
       إضافة عضو تابع
     </button>
     
@@ -475,8 +511,7 @@
 
 
 
-    <!-- Footer -->
-    <!-- Footer -->
+      <!-- Footer -->
   <footer class="hidden md:block bg-[#1B2128] text-white py-16 px-5 w-full font-bukra">
     <div class="max-w-7xl mx-auto">
       <!-- Newsletter Section -->
@@ -511,7 +546,7 @@
         <div class="lg:col-span-1">
           <!-- Logo -->
           <div class="flex items-center gap-3 mb-6">
-            <img class="w-[120px] h-[65px]" src="./imgs/logo.png" alt="">
+            <img class="w-[120px] h-[65px]" src="../imgs/logo.png" alt="">
           </div>
 
           <!-- Description -->
